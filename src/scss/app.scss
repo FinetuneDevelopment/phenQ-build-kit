@@ -16,9 +16,12 @@
 /* Mixins, helpers and functions */
 @import 'base/mixins';
 
+// Utility classes
+@import 'base/utility-classes';
+@import 'base/backgrounds';
 /* Vendor */
 
 /* Components */
-
+@import 'base/typography';
 /* Browser specific styles */
 @import 'dirty/hacks';

@@ -1,0 +1,46 @@
+// All the font fun is here
+body {
+    background: $colour-offwhite;
+    color: $colour-dark-blue;
+    font-family: $colour-dark-blue;
+    font-size: $font-size-body;
+    line-height: 1.4;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: $heading-typeface;
+    margin: 0 0 .5em;
+    strong, b, em, i {
+        font-family: $heading-typeface-medium;
+    }
+}
+
+.heading-light {
+    font-family: $heading-typeface-light;
+    strong, b, em, i {
+        font-family: $heading-typeface-medium;
+    }
+}
+
+h1, .h1 {font-size: $font-size-h1;}
+h2, .h2 {font-size: $font-size-h2;}
+h3, .h3 {font-size: $font-size-h3;}
+h4, .h4 {font-size: $font-size-h4;}
+h5, .h5 {font-size: $font-size-h5;}
+h6, .h6 {font-size: $font-size-h6;}
+
+.lead {font-size: $font-size-big;}
+
+a {color: $colour-dark-blue;}
+em, i {
+    font-family: $body-typeface-italic;
+    font-style: normal;
+}
+strong, b {
+    font-family: $body-typeface-bold;
+    font-weight: normal;
+}
+
+p {margin: 0 0 1em;}
+
+code, pre, kbd {font-family: monaco, Consolas, 'Lucida Console', monospace;}

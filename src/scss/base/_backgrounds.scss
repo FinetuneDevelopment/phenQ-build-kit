@@ -1,0 +1,23 @@
+// These are dark colours, broadly speaking
+.bg-mid-blue    {background: $colour-mid-blue;}
+.bg-bright-blue {background: $colour-bright-blue;}
+.bg-dark-blue   {background: $colour-dark-blue;}
+
+.bg-grad-mid-blue  {background: linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);}
+.bg-grad-dark-blue {background: linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);}
+
+.bg-mid-blue, .bg-bright-blue, .bg-dark-blue,
+.bg-grad-mid-blue, .bg-grad-dark-blue {
+    color: $colour-offwhite;
+    a {color: inherit;}
+}
+
+// These are light colours, broadly speaking
+.bg-offwhite    {background: $colour-offwhite;}
+.bg-mint        {background: $colour-mint;}
+.bg-lemon       {background: $colour-lemon;}
+.bg-grey        {background: $colour-grey;}
+.bg-offwhite, .bg-mint, .bg-lemon, .bg-grey {
+    color: $colour-dark-blue;
+    a {color: inherit;}
+}

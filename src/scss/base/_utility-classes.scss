@@ -1,0 +1,28 @@
+// I guess really small modules?
+
+// This adds borders between bootstrap columns
+.border-between > [class*='col-']:before, .border-between > [class*='col-']:after {
+    background: #979797;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+.border-between > [class*='col-']:before {
+    left: -1px;
+}
+.border-between > [class*='col-']:after {
+    right: 0;
+}
+.border-between > [class*='col-']:first-child:before,
+.border-between > [class*='col-']:last-child:after {
+    display: none;
+}
+
+// Standard 
+.cta-box {
+    margin-bottom: $gutter;
+    padding: $gutter;
+    & > :last-child {margin-bottom: 0;}
+}

@@ -104,7 +104,7 @@ const config = function(env, args) {
         hash: false,
         filename: 'index.html',
         template: path.resolve(__dirname, 'src', 'index.html'),
-        favicon: path.resolve(__dirname, 'src', 'img/favicon', 'favicon.ico'),
+        favicon: path.resolve(__dirname, 'src/img/favicon', 'favicon.ico'),
       }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
@@ -120,8 +120,8 @@ const config = function(env, args) {
       }),
       new CopyWebpackPlugin([
         {
-          from: path.resolve(__dirname, 'src', 'images', 'content'),
-          to: path.resolve(__dirname, 'dist', 'images', 'content'),
+          from: path.resolve(__dirname, 'src', 'img', 'content'),
+          to: path.resolve(__dirname, 'dist', 'img', 'content'),
           toType: 'dir',
         },
       ]),
