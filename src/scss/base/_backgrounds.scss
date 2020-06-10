@@ -3,8 +3,8 @@
 .bg-bright-blue {background: $colour-bright-blue;}
 .bg-dark-blue   {background: $colour-dark-blue;}
 
-.bg-grad-mid-blue  {background: linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);}
-.bg-grad-dark-blue {background: linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);}
+.bg-grad-mid-blue  {background: $grad-mid-blue;}
+.bg-grad-dark-blue {background: $grad-dark-blue;}
 
 .bg-mid-blue, .bg-bright-blue, .bg-dark-blue,
 .bg-grad-mid-blue, .bg-grad-dark-blue {

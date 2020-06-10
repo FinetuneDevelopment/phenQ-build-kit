@@ -1,0 +1,30 @@
+// All button and some link styles
+.btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    background: transparent;
+    border: none;
+    display: inline-block;
+    font-family: $body-typeface-semibold;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: auto;
+}
+
+// White text on a blue gradient background.
+// Probably should only be used once per-page.
+.btn-primary {
+    background: $grad-mid-blue;
+    border-radius: $radius-medium;
+    color: $colour-offwhite;
+    font-size: 14px;
+    letter-spacing: .15em;
+    padding: 1em 2.1em;
+}
+.btn-primary:hover {
+    background: $colour-dark-blue;
+}

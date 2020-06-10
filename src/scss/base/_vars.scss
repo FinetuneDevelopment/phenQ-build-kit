@@ -30,5 +30,13 @@ $colour-mint:        #d7f4c8;
 $colour-lemon:       #ffeea0;
 $colour-grey:        #ececec;
 
+$grad-mid-blue:  linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);
+$grad-dark-blue: linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);
+
 // Call-to-action padding
 $gutter: 32px;
+
+// Border-radius for call-to-action buttons
+$radius-big:    20px;
+$radius-medium: 10px;
+$radius-small:   5px;
