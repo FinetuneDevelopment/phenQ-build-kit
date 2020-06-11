@@ -2,17 +2,30 @@
 .bg-bright-blue    {background: $colour-bright-blue;}
 .bg-mid-blue       {background: $colour-mid-blue;}
 .bg-dark-blue      {background: $colour-dark-blue;}
+.bg-grey           {background: $colour-grey;}
+.bg-red            {background: $colour-red;}
+.bg-green          {background: $colour-green;}
 
 .bg-grad-mid-blue  {background: $grad-mid-blue;}
 .bg-grad-dark-blue {background: $grad-dark-blue;}
 
+// This rule attempts to fix issues with dark
+// text on a dark background, plus issues with
+// links. See the colour stress test for details.
 .bg-mid-blue, .bg-bright-blue, .bg-dark-blue,
-.bg-grad-mid-blue, .bg-grad-dark-blue {
+.bg-grad-mid-blue, .bg-grad-dark-blue,
+.bg-grey, .bg-red, .bg-green {
+    border-color: $colour-offwhite;
     color: $colour-offwhite;
     a {color: inherit;}
     a:hover, a:focus,
     .btn:hover, .btn:focus {
         color: inherit;
+    }
+    a, .btn-arrow {
+        &:hover, &:focus {
+            &:before {border-color: inherit;}
+        }
     }
 }
 
@@ -20,8 +33,8 @@
 .bg-offwhite    {background: $colour-offwhite;}
 .bg-mint        {background: $colour-mint;}
 .bg-lemon       {background: $colour-lemon;}
-.bg-grey        {background: $colour-grey;}
-.bg-offwhite, .bg-mint, .bg-lemon, .bg-grey {
+.bg-light-grey  {background: $colour-light-grey;}
+.bg-offwhite, .bg-mint, .bg-lemon, .bg-light-grey {
     color: $colour-dark-blue;
     a {color: inherit;}
 }

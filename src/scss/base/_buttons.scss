@@ -14,6 +14,7 @@
     letter-spacing: .1em;
     line-height: 1.5;
     // Note that padding is not reset here as it is declaired elsewhere
+    text-align: center; // This is required for three button styles which have min-width
     text-decoration: none;
     text-transform: uppercase;
     //transition: all .2s;
@@ -25,6 +26,8 @@
     font-size: 14px;
     letter-spacing: .15em;
     padding: 1em 2.1em;
+    margin-right: 50px;
+    min-width: 200px;
 }
 
 //////////////////////////////////////////////
@@ -38,6 +41,7 @@
     &:hover, &:focus {
         background: $colour-dark-blue;
     }
+    &:before {border: none;}
 }
 
 /////////////////////////////////////////
@@ -64,7 +68,7 @@
         z-index: -1;
     }
     &:hover, &:focus {
-        background: $colour-grey;
+        background: $colour-light-grey;
         background-clip: padding-box;
     }
 }
@@ -90,7 +94,12 @@ input.btn-secondary {
         padding-right: 2em;
     }
     
+    // This makes up the ➜, plus there's an inheritance
+    // squabble with the default anchor underline behaviour
     &:before, &:after {
+        border: none;
+        bottom: unset;
+        left: unset;
         position: absolute;
         right: 0;
         top: 50%;
@@ -99,20 +108,19 @@ input.btn-secondary {
     }
     // Is this a terrible idea?
     &:after {content: "➜";}
-    // This is full of magic numbers, which suggests it
-    // won't pass browser testing.
+    // The extending stalk of the arrow above
+    // This rule is full of magic numbers, which
+    // suggests it won't pass browser testing.
     &:before {
-        $arrow-height: .15em;
-        background: $colour-dark-blue;
-        border-radius: $arrow-height;
+        border-top: solid .15em $colour-dark-blue;
         content: "";
-        height: $arrow-height;
         right: .2em;
         width: .7em;
     }
     // Pushes out the tail of the ➜
     &:hover:before, &:focus:before {
-        background: $colour-bright-blue;
+        border-color: $colour-bright-blue;
+        right: .2em;
         width: 1.2em;
     }
 }
@@ -131,7 +139,8 @@ input.btn-secondary {
     border-radius: 2em;
     color: $colour-offwhite;
     font-size: 14px;
-    padding: .43em 2em;
+    padding: .43em 1em;
+    min-width: 160px;
 
     &:hover, &:focus, &.off {
         @extend %pill-inactive;

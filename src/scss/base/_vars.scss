@@ -26,9 +26,12 @@ $colour-offwhite:    #fafafa;
 $colour-mid-blue:    #07b;
 $colour-bright-blue: #009fe3;
 $colour-dark-blue:   #273583;
+$colour-red:         #da3434;
+$colour-green:       #2e7b06;
 $colour-mint:        #d7f4c8;
 $colour-lemon:       #ffeea0;
-$colour-grey:        #ececec;
+$colour-light-grey:  #ececec;
+$colour-grey:        #7c7c7c;
 
 $grad-mid-blue:  linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);
 $grad-dark-blue: linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);

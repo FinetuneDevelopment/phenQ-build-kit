@@ -28,6 +28,27 @@
   </head>
   <body>
     <main class="container">
+      <h1>Digital style guide</h1>
+      <h2>Headings wrap test</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Nullam maximus, felis in fermentum</h1>
+          <h2>Integer euismod quam quis sem pulvinar, ut</h2>
+          <h3>Pellentesque nec justo nulla In vestibulum egestas tortor, vel convallis ante gravida sed</h3>
+          <h4>Quisque molestie felis eget nibh tincidunt, at pretium nisi euismod, ultrices fermentum mi urna eu velit.</h4>
+          <h5>Suspendisse potenti, suspendisse ultricies vulputate dignissim in eu justo magna. Integer magna metus, tincidunt ullamcorper turpis ut</h5>
+          <h6>Quisque tincidunt diam gravida erat fringilla porttitor. Nam vulputate porttitor velit, ac ullamcorper tellus pulvinar ut sed lorem turpis, fermentum sed nunc ornare, fringilla rhoncus nisl</h6>
+        </div>
+        <div class="col-sm-6">
+          <h1 class="heading-light">Integer laoreet efficitur volutpat</h1>
+          <h2 class="heading-light">Aenean eu ipsum hendrerit mauris venenatis suscipit</h2>
+          <h3 class="heading-light">Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque eu porta nibh</h3>
+          <h4 class="heading-light">In quis rutrum nunc. Aenean vitae gravida turpis, in cursus ex Duis volutpat est eget ex pulvinar</h4>
+          <h5 class="heading-light">Proin nec lacinia ex. Phasellus tristique ex rutrum, aliquet augue iaculis, egestas velit. Sed ultrices efficitur posuere. Proin semper facilisis arcu at vehicula</h5>
+          <h6 class="heading-light">Donec nec rhoncus magna. Praesent at augue tempor orci condimentum consequat. In eu justo magna. Integer magna metus, tincidunt ullamcorper turpis ut, eleifend interdum dui</h6>    
+        </div>
+      </div>
+
       <section>
         <h2>Headings using the <em>Gotham Rounded Bold</em> typeface</h2>
         <div class="row border-between">
@@ -148,8 +169,8 @@
                     <p><code>bg-mint</code> box. <a href="#">Link</a></p>
                     <div class="bg-dark-blue cta-box">
                       <p><code>bg-dark-blue</code> box. <a href="#">Link</a></p>
-                      <div class="bg-grey cta-box">
-                        <p><code>bg-grey</code> box. <a href="#">Link</a></p>
+                      <div class="bg-light-grey cta-box">
+                        <p><code>bg-light-grey</code> box. <a href="#">Link</a></p>
                         <div class="bg-grad-dark-blue cta-box">
                           <p><code>bg-grad-dark-blue</code> box. <a href="#">Link</a></p>
                         </div>
@@ -176,7 +197,7 @@
         <h3>Arrow buttons</h3>
         <div class="row">
           <div class="col-sm-3">
-            <div class="bg-grey cta-box radius-medium">
+            <div class="bg-light-grey cta-box radius-medium">
               <p><a href="#" class="btn btn-arrow">Link</a></p>
               <p><button type="button" class="btn btn-arrow">Button</button></p>
               <p><input type="submit" class="btn btn-arrow" value="Input"></p>
@@ -205,9 +226,17 @@
 
       <h3>Pill buttons</h3>
       <div class="row">
-        <div class="col-sm-3">
-          <p><span class="btn btn-pill">Tag pill active</span></p>
-          <p><span class="btn btn-pill off">Tag pill inactive</span></p>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <p><span class="btn btn-pill">Tag pill active</span></p>
+              <p><span class="btn btn-pill off">Tag pill inactive</span></p>
+            </div>
+            <div class="col-sm-6">
+              <h4>Large tag pill</h4>
+              <p class="lead">Used for blog tags and filtering</p>
+            </div>
+          </div>
           <p>
             <a href="#" class="btn btn-pill">Link</a>
             <button type="button" class="btn btn-pill">Button</button>
@@ -217,13 +246,17 @@
             <label for="pill-test" class="btn btn-pill">Label toggle</label>
           </p>
         </div>
-        <div class="col-sm-3">
-          <h4>Large tag pill</h4>
-          <p class="lead">Used for blog tags and filtering</p>
-        </div>
-        <div class="col-sm-3">
-          <p><span class="btn btn-pill-sm">Tag pill active</span></p>
-          <p><span class="btn btn-pill-sm off">Tag pill inactive</span></p>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <p><span class="btn btn-pill-sm">Tag pill active</span></p>
+              <p><span class="btn btn-pill-sm off">Tag pill inactive</span></p>
+            </div>
+            <div class="col-sm-6">
+              <h4>Small tag pill</h4>
+              <p class="lead">Used for blog tags and filtering</p>
+            </div>
+          </div>
           <p>
             <a href="#" class="btn btn-pill-sm">Link</a>
             <button type="button" class="btn btn-pill-sm">Button</button>
@@ -233,103 +266,201 @@
             <label for="pill-test-sm" class="btn btn-pill-sm">Label toggle</label>
           </p>
         </div>
-        <div class="col-sm-3">
-          <h4>Small tag pill</h4>
-          <p class="lead">Used for blog tags and filtering</p>
-        </div>
-      </div>
-      <p>Note that the arrow will not appear inside <q>empty</q> elements. This means that if it is to be used on a submit button for a form, that button must be a <code>button</code> tag, rather than a <code>input</code> which has a type of <code>submit</code>.</p>
-    </section>
-
-    <section>
-      <h2>Colours</h2>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="bg-bright-blue cta-box radius-medium">
-            <h3>Bright blue</h3>
-            <p><code>#009fe3<br>
-            .bg-bright-blue<br>
-            $colour-bright-blue</code></p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="bg-mid-blue cta-box radius-medium">
-            <h3>Mid blue</h3>
-            <p><code>#0077bb<br>
-            .bg-mid-blue<br>
-            $colour-mid-blue</code></p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="bg-dark-blue cta-box radius-medium">
-            <h3>Dark blue</h3>
-            <p><code>#273583<br>
-            .bg-dark-blue<br>
-            $colour-dark-blue</code></p>
-          </div>
-        </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="bg-grad-mid-blue cta-box radius-medium">
-            <h3>Mid blue gradient</h3>
-            <p>From <code>#273583</code> to <code>#009fe3<br>
-            .bg-grad-mid-blue<br>
-            $grad-mid-blue</code></p>
+      <section>
+        <h2>Colours</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="bg-bright-blue cta-box radius-medium">
+              <h3 class="h4">Bright blue</h3>
+              <p><code>#009fe3<br>
+              .bg-bright-blue<br>
+              $colour-bright-blue</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-mid-blue cta-box radius-medium">
+              <h3 class="h4">Mid blue</h3>
+              <p><code>#0077bb<br>
+              .bg-mid-blue<br>
+              $colour-mid-blue</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-dark-blue cta-box radius-medium">
+              <h3 class="h4">Dark blue</h3>
+              <p><code>#273583<br>
+              .bg-dark-blue<br>
+              $colour-dark-blue</code></p>
+            </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="bg-grad-dark-blue cta-box radius-medium">
-            <h3>Dark blue gradient</h3>
-            <p>From <code>#0d1649</code> to <code>#273583<br>
-            .bg-grad-dark-blue<br>
-            $grad-dark-blue</code></p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="bg-offwhite cta-box radius-medium">
-            <h3>Off-white</h3>
-            <p><code>#fafafa<br>
-            .bg-offwhite<br>
-            $colour-offwhite</code></p>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="bg-mint cta-box radius-medium">
-            <h3>Mint green</h3>
-            <p><code>#d7f4c8<br>
-            .bg-mint<br>
-            $colour-mint</code></p>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="bg-grad-mid-blue cta-box radius-medium">
+              <h3 class="h4">Mid blue gradient</h3>
+              <p>From <code>#273583</code> to <code>#009fe3<br>
+              .bg-grad-mid-blue<br>
+              $grad-mid-blue</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-grad-dark-blue cta-box radius-medium">
+              <h3 class="h4">Dark blue gradient</h3>
+              <p>From <code>#0d1649</code> to <code>#273583<br>
+              .bg-grad-dark-blue<br>
+              $grad-dark-blue</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-offwhite cta-box radius-medium">
+              <h3 class="h4">Off-white</h3>
+              <p><code>#fafafa<br>
+              .bg-offwhite<br>
+              $colour-offwhite</code></p>
+            </div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="bg-lemon cta-box radius-medium">
-            <h3>Lemon yellow</h3>
-            <p><code>#ffeea0<br>
-            .bg-lemon<br>
-            $colour-lemon</code></p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="bg-grey cta-box radius-medium">
-            <h3>Light grey</h3>
-            <p><code>#ececec<br>
-            .bg-grey<br>
-            $colour-grey</code></p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <fieldset>
-      <label>Form fields</label>
-      
-    </fieldset>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="bg-mint cta-box radius-medium">
+              <h3 class="h4">Mint green</h3>
+              <p><code>#d7f4c8<br>
+              .bg-mint<br>
+              $colour-mint</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-lemon cta-box radius-medium">
+              <h3 class="h4">Lemon yellow</h3>
+              <p><code>#ffeea0<br>
+              .bg-lemon<br>
+              $colour-lemon</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-light-grey cta-box radius-medium">
+              <h3 class="h4">Light grey</h3>
+              <p><code>#ececec<br>
+              .bg-light-grey<br>
+              $colour-light-grey</code></p>
+            </div>
+          </div>
+        </div>
 
-  </main>
+        <p>Note: the following colours are used to indicate the status of form fields and should not be used as call-to-action styles.</p>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="bg-grey cta-box radius-medium">
+              <h3 class="h4">Grey</h3>
+              <p><code>#7c7c7c<br>
+              .bg-grey-blue<br>
+              $colour-grey</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-green cta-box radius-medium">
+              <h3 class="h4">Success green</h3>
+              <p><code>#2e7b06<br>
+              .bg-green<br>
+              $colour-green</code></p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-red cta-box radius-medium">
+              <h3 class="h4">Error red</h3>
+              <p><code>#da3434<br>
+              .bg-red<br>
+              $colour-red</code></p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <form action="#" method="get">
+        <label class="h2">Form fields</label>
+
+        <div class="row">
+
+          <div class="col-sm-4">
+            <h3>Empty</h3>
+            <p class="form-molecule">
+              <input type="text" name="email1" id="email1" placeholder="Email address">
+              <label for="email1">Email address</label>
+            </p>
+          </div>
+
+          <div class="col-sm-4">
+            <h3>Filled</h3>
+            <p class="form-molecule">
+              <input type="text" name="email2" id="email2" placeholder="Email address" value="hello@phenq.com">
+              <label for="email2">Email address</label>
+            </p>
+          </div>
+
+          <div class="col-sm-4">
+            <h3>Positive</h3>
+            <p class="form-molecule">
+              <input type="text" name="email3" id="email3" placeholder="Email address" value="hello@phenq.com" class="valid" required>
+              <label for="email3">Email address</label>
+              <span class="message">Thank you for your data.</span>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-sm-4">
+            <h3>Error</h3>
+            <p>Error state using the <code>required</code> attribute.</p>
+            <p class="form-molecule">
+              <input type="email" name="email4" id="email4" placeholder="Email address" value="hell0#phenq.com" required>
+              <label for="email4">Email address</label>
+              <span class="message">Please enter a correctly formatted email address.</span>
+            </p>
+          </div>
+
+          <div class="col-sm-4">
+            <h3>Error</h3>
+            <p>Error state using a class.</p>
+            <p class="form-molecule error">
+              <input type="email" name="email5" id="email5" placeholder="Email address" value="hell0#phenq.com">
+              <label for="email5">Email address</label>
+              <span class="message">Please enter a correctly formatted email address.</span>
+            </p>
+          </div>
+
+          <div class="col-sm-4">
+            <h3>Dropdown</h3>
+            <p class="form-molecule">
+              <select name="ingredients" id="ingredients">
+                <optgroup label="Chemical ingredients">
+                  <option value="capsimax-powder">Capsimax Powder</option>
+                  <option value="chromium-picolinate">Chromium Picolinate</option>
+                  <option value="caffeine">Caffeine</option>
+                  <option value="nopal">Nopal</option>
+                  <option value="l-carnitine-fumarate">L-Carnitine Fumarate</option>
+                </optgroup>
+                <optgroup label="Emotional ingredients">
+                  <option value="love">Love</option>
+                  <option value="motivation">Motivation</option>
+                  <option value="happiness">Happiness</option>
+                  <option value="je-ne-sais-quoi">A certain je ne sais quoi</option>
+                </optgroup>
+              </select>
+              <label for="ingredients">What's your favourite ingredient in PhenQ?</label>
+            </p>
+          </div>
+
+        </div>
+        <p><input type="submit" value="Submit" class="btn btn-primary"></p>
+
+      </form>
+    </main>
   </body>
 </html>

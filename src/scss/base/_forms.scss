@@ -1,0 +1,93 @@
+// HTML forms
+
+input, select, textarea {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    box-shadow: none;
+    font-family: inherit;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+// This is the container class for the standard inputs,
+// which require some trickiness. Assumed markup pattern:
+// <p class="form-molecule">
+//   <input>
+//   <label>
+// </p>
+.form-molecule {
+    position: relative;
+
+    input, select, textarea {
+        border: solid 1px $colour-grey;
+        border-radius: $radius-small;
+        color: $colour-grey;
+        display: block;
+        font-family: $body-typeface-semibold;
+        font-size: 15px;
+        padding: 15px 10px 5px;
+        width: 100%;
+
+        // The appearance of the input element when there is no
+        // data and the placeholder text is showing
+        &:placeholder-shown {
+            border-color: $colour-light-grey;
+            padding: 10px;
+
+            // Hoyk that label out of there
+            & ~ label {z-index: -1;}
+        }
+
+        // User is typing
+        &:focus, &:hover {
+            border-color: $colour-dark-blue;
+        }
+
+        // User has made a TERRIBLE MISTAKE
+        &:invalid, &.error {
+            border-color: $colour-red;
+            color: $colour-red;
+
+            & ~ label {
+                color: $colour-red;
+            }
+            & ~ .message {
+                color: $colour-red;
+                display: block;
+            }
+        }
+
+        // User has given Dobbie DATA
+        // I can't use :valid here as it would match all inputs
+        // on the page which weren't explicitly wrong.
+        &.valid {
+            border-color: $colour-green;
+            color: $colour-green;
+
+            & ~ label {color: $colour-green;}
+        }
+    }
+
+    // This needs to sit inside the input element
+    label {
+        font-size: 10px;
+        left: 10px;
+        position: absolute;
+        top: 5px;
+    }
+
+    // This can hold tips, errors, encouragement. It's hidden by default.
+    .message {
+        display: none; // Because we want to hide it from speech readers too
+        font-family: $body-typeface-bold;
+        font-size: 10px;
+        margin: 5px 0;
+    }
+}

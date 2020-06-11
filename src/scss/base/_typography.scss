@@ -9,6 +9,8 @@ body {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: $heading-typeface;
+    font-weight: normal;
+    line-height: 1;
     margin: 0 0 .5em;
     strong, b, em, i {
         font-family: $heading-typeface-medium;
@@ -31,7 +33,25 @@ h6, .h6 {font-size: $font-size-h6;}
 
 .lead {font-size: $font-size-big;}
 
-a {color: $colour-dark-blue;}
+a {
+    color: $colour-dark-blue;
+    position: relative;
+    text-decoration: none;
+
+    &:before {
+        bottom: 0;
+        border-bottom: solid 1px $colour-dark-blue;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 100%;
+        transition: all .2s;
+    }
+    &:hover, &:focus {
+        &:before {right: 0;}
+    }
+}
+
 em, i {
     font-family: $body-typeface-italic;
     font-style: normal;
