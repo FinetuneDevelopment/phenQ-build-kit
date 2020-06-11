@@ -26,3 +26,7 @@
     padding: $gutter;
     & > :last-child {margin-bottom: 0;}
 }
+
+.radius-big    {border-radius: $radius-big;}
+.radius-medium {border-radius: $radius-medium;}
+.radius-small  {border-radius: $radius-small;}

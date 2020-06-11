@@ -7,24 +7,145 @@
             appearance: none;
     background: transparent;
     border: none;
+    cursor: pointer;
     display: inline-block;
     font-family: $body-typeface-semibold;
+    //font-family: $body-typeface-bold;
+    letter-spacing: .1em;
     line-height: 1.5;
+    // Note that padding is not reset here as it is declaired elsewhere
     text-decoration: none;
     text-transform: uppercase;
+    //transition: all .2s;
     width: auto;
 }
 
-// White text on a blue gradient background.
-// Probably should only be used once per-page.
-.btn-primary {
-    background: $grad-mid-blue;
-    border-radius: $radius-medium;
-    color: $colour-offwhite;
+// Primary and secondary buttons have some styles in common
+.btn-primary, .btn-secondary {
     font-size: 14px;
     letter-spacing: .15em;
     padding: 1em 2.1em;
 }
-.btn-primary:hover {
+
+//////////////////////////////////////////////
+// White text on a blue gradient background.
+// Probably should only be used once per-page.
+//////////////////////////////////////////////
+.btn-primary {
+    background: $grad-mid-blue;
+    border-radius: $radius-medium;
+    color: $colour-offwhite;
+    &:hover, &:focus {
+        background: $colour-dark-blue;
+    }
+}
+
+/////////////////////////////////////////
+// Gradient background on just the border
+/////////////////////////////////////////
+.btn-secondary {
+    background: $colour-offwhite;
+    background-clip: padding-box;
+    border-radius: $radius-medium;
+    border: solid $border-default transparent;
+    color: $colour-dark-blue;
+    position: relative;
+
+    &:before {
+        background: $grad-mid-blue;
+        border-radius: $radius-medium;
+        bottom: 0;
+        content: "";
+        left: 0;
+        margin: -$border-default;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    &:hover, &:focus {
+        background: $colour-grey;
+        background-clip: padding-box;
+    }
+}
+
+// Fallback styles for "empty" tags
+input.btn-secondary {
+    border: solid $border-default $colour-mid-blue;
+}
+
+////////////////////////////////////////////////////////////
+// Designed to sit against coloured backgrounds and suchlike
+////////////////////////////////////////////////////////////
+.btn-arrow {
+    //color: $colour-dark-blue;
+    font-family: $body-typeface-bold;
+    font-size: 16px;
+    padding: 0 1.5em 0 0;
+    position: relative;
+    transition: all .2s;
+
+    &:hover, &:focus {
+        color: $colour-bright-blue;
+        padding-right: 2em;
+    }
+    
+    &:before, &:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transition: all .2s;
+        transform: translate(0, -50%);
+    }
+    // Is this a terrible idea?
+    &:after {content: "➜";}
+    // This is full of magic numbers, which suggests it
+    // won't pass browser testing.
+    &:before {
+        $arrow-height: .15em;
+        background: $colour-dark-blue;
+        border-radius: $arrow-height;
+        content: "";
+        height: $arrow-height;
+        right: .2em;
+        width: .7em;
+    }
+    // Pushes out the tail of the ➜
+    &:hover:before, &:focus:before {
+        background: $colour-bright-blue;
+        width: 1.2em;
+    }
+}
+
+///////////////
+// Pill buttons
+///////////////
+%pill-inactive {
+    background: $colour-offwhite;
+    color: $colour-dark-blue;
+}
+
+.btn-pill, .btn-pill-sm {
     background: $colour-dark-blue;
+    border: solid 1px $colour-dark-blue;
+    border-radius: 2em;
+    color: $colour-offwhite;
+    font-size: 14px;
+    padding: .43em 2em;
+
+    &:hover, &:focus, &.off {
+        @extend %pill-inactive;
+    }
+}
+
+// For when pills are used to style checkbox toggles
+.toggle:checked {
+    & ~ .btn-pill, & ~ .btn-pill-sm {
+        @extend %pill-inactive;
+    }
+}
+.btn-pill-sm {
+    font-size: 12px;
+    // Annoying
+    padding: .21em 1.6em;
 }

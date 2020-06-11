@@ -1,7 +1,7 @@
 // These are dark colours, broadly speaking
-.bg-mid-blue    {background: $colour-mid-blue;}
-.bg-bright-blue {background: $colour-bright-blue;}
-.bg-dark-blue   {background: $colour-dark-blue;}
+.bg-bright-blue    {background: $colour-bright-blue;}
+.bg-mid-blue       {background: $colour-mid-blue;}
+.bg-dark-blue      {background: $colour-dark-blue;}
 
 .bg-grad-mid-blue  {background: $grad-mid-blue;}
 .bg-grad-dark-blue {background: $grad-dark-blue;}
@@ -10,6 +10,10 @@
 .bg-grad-mid-blue, .bg-grad-dark-blue {
     color: $colour-offwhite;
     a {color: inherit;}
+    a:hover, a:focus,
+    .btn:hover, .btn:focus {
+        color: inherit;
+    }
 }
 
 // These are light colours, broadly speaking
