@@ -1,0 +1,35 @@
+.tab-set {
+    border-bottom: solid 1px $colour-dark-blue;
+    font-family: $body-typeface-semibold;
+    font-size: 18px;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+
+    ul, ol, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul, ol {@include clearfix;}
+    li {float: left;}
+    // Default tabs
+    a, em {
+        border-radius: $radius-medium $radius-medium 0 0;
+        display: block;
+        font-family: $body-typeface-semibold;
+        padding: .4em .8em;
+        transition: all .2s;
+
+        &:before {display: none;}
+    }
+    // You are here
+    em, .selected {
+        background: $colour-dark-blue;
+        color: $colour-offwhite;
+    }
+    // Hover and focus state
+    a:hover, a:focus {
+        background: $colour-bright-blue;
+        color: $colour-offwhite;
+    }
+}

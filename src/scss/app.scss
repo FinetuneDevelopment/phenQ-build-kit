@@ -23,7 +23,9 @@
 @import 'base/forms';
 /* Vendor */
 
-/* Components */
+
 @import 'base/typography';
 /* Browser specific styles */
 @import 'dirty/hacks';
+/* Components */
+@import 'components/tabs';
