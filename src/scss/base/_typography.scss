@@ -8,20 +8,16 @@ body {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    font-family: $heading-typeface;
+    font-family: $heading-typeface-bold;
     font-weight: normal;
     line-height: 1;
     margin: 0 0 .5em;
-    strong, b, em, i {
-        font-family: $heading-typeface-medium;
-    }
+    strong, b, em, i {font-family: $heading-typeface-medium;}
 }
 
 .heading-light {
     font-family: $heading-typeface-light;
-    strong, b, em, i {
-        font-family: $heading-typeface-medium;
-    }
+    strong, b, em, i {font-family: $heading-typeface-medium;}
 }
 
 h1, .h1 {font-size: $font-size-h1;}
@@ -38,6 +34,7 @@ a {
     position: relative;
     text-decoration: none;
 
+    // A fake underline, which comes hoyking out on hover
     &:before {
         bottom: 0;
         border-bottom: solid 1px $colour-dark-blue;
@@ -53,11 +50,11 @@ a {
 }
 
 em, i {
-    font-family: $body-typeface-italic;
+    font-family: $body-typeface-light-italic;
     font-style: normal;
 }
 strong, b {
-    font-family: $body-typeface-bold;
+    font-family: $body-typeface-regular;
     font-weight: normal;
 }
 

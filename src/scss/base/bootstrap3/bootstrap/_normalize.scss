@@ -109,16 +109,19 @@ a:hover {
 
 abbr[title] {
   border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
 }
 
 //
 // Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+// Commented out as this is reset later
 //
 
-b,
+/*b,
 strong {
   font-weight: bold;
-}
+}*/
 
 //
 // Address styling not present in Safari and Chrome.

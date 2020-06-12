@@ -1,23 +1,40 @@
 // I guess really small modules?
 
+// Using arbitrary typefaces
+.type-gotham-light           {font-family: $heading-typeface-light;}
+.type-gotham-medium          {font-family: $heading-typeface-medium;}
+.type-gotham-bold            {font-family: $heading-typeface-bold;}
+
+.type-source-light           {font-family: $body-typeface;}
+.type-source-light-italic    {font-family: $body-typeface-light-italic;}
+.type-source-regular         {font-family: $body-typeface-regular;}
+.type-source-italic          {font-family: $body-typeface-italic;}
+.type-source-semibold        {font-family: $body-typeface-semibold;}
+.type-source-semibold-italic {font-family: $body-typeface-semibold-italic;}
+.type-source-bold            {font-family: $body-typeface-bold;}
+.type-source-bold-italic     {font-family: $body-typeface-bold-italic;}
+
 // This adds borders between bootstrap columns
-.border-between > [class*='col-']:before, .border-between > [class*='col-']:after {
-    background: #979797;
-    bottom: 0;
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 1px;
-}
-.border-between > [class*='col-']:before {
-    left: -1px;
-}
-.border-between > [class*='col-']:after {
-    right: 0;
-}
-.border-between > [class*='col-']:first-child:before,
-.border-between > [class*='col-']:last-child:after {
-    display: none;
+.border-between {
+    & > [class*='col-']:before, & > [class*='col-']:after {
+        // The design specifies #979797, but for consistancy...
+        background: $colour-grey;
+        bottom: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+    & > [class*='col-']:before {
+        left: -1px;
+    }
+    & > [class*='col-']:after {
+        right: 0;
+    }
+    & > [class*='col-']:first-child:before,
+    & > [class*='col-']:last-child:after {
+        display: none;
+    }
 }
 
 // Standard 

@@ -1,16 +1,18 @@
 // Typography
-$body-typeface-stack: Futura, 'Trebuchet MS', Arial, sans-serif;
-$body-typeface:                 Source-Sans-Pro-Light,           $body-typeface-stack;
-$body-typeface-italic:          Source-Sans-Pro-Light-Italic,    $body-typeface-stack;
-$body-typeface-semibold:        Source-Sans-Pro-SemiBold,        $body-typeface-stack;
-$body-typeface-semibold-italic: Source-Sans-Pro-SemiBold-Italic, $body-typeface-stack;
-$body-typeface-bold:            Source-Sans-Pro-Bold,            $body-typeface-stack;
-$body-typeface-bold-italic:     Source-Sans-Pro-Bold-Italic,     $body-typeface-stack;
-
 $heading-typeface-stack: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
-$heading-typeface:        Gotham-Rounded-Bold,   $heading-typeface-stack;
-$heading-typeface-medium: Gotham-Rounded-Medium, $heading-typeface-stack;
 $heading-typeface-light:  Gotham-Rounded-Light,  $heading-typeface-stack;
+$heading-typeface-medium: Gotham-Rounded-Medium, $heading-typeface-stack;
+$heading-typeface-bold:   Gotham-Rounded-Bold,   $heading-typeface-stack;
+
+$body-typeface-stack: Futura, 'Trebuchet MS', Arial, sans-serif;
+$body-typeface:                 Source-Sans-Light,           $body-typeface-stack;
+$body-typeface-light-italic:    Source-Sans-Light-Italic,    $body-typeface-stack;
+$body-typeface-regular:         Source-Sans-Regular,         $body-typeface-stack;
+$body-typeface-italic:          Source-Sans-Italic,          $body-typeface-stack;
+$body-typeface-semibold:        Source-Sans-SemiBold,        $body-typeface-stack;
+$body-typeface-semibold-italic: Source-Sans-SemiBold-Italic, $body-typeface-stack;
+$body-typeface-bold:            Source-Sans-Bold,            $body-typeface-stack;
+$body-typeface-bold-italic:     Source-Sans-Bold-Italic,     $body-typeface-stack;
 
 $font-size-body: 18px;
 $font-size-big:  25px;
