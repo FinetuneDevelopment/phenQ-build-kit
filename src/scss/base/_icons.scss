@@ -1,0 +1,104 @@
+// CSS shapes and icons
+// General icon class
+   .shape {
+	display: inline-block;
+	font-size: 1.2px;
+	font-style: normal;
+	font-weight: normal;
+	position: relative;
+	vertical-align: middle;
+
+    &:before, &:after {
+		content: "";
+		position: absolute;
+	}
+}
+
+// Arrows, in both square and rounded style.
+   .sh-arrow-right, .sh-arrow-right-round, .sh-arrow-left, .sh-arrow-left-round {
+	background: $colour-dark-blue;
+	height: 2em;
+	margin: 7em 1em 7em 0;
+	width: 15em;
+}
+.sh-arrow-left, .sh-arrow-left-round {
+	margin: 6.9em 0 6.9em 1em;
+}
+.sh-arrow-up, .sh-arrow-up-round, .sh-arrow-down, .sh-arrow-down-round {
+	background: $colour-dark-blue;
+	height: 15em;
+	margin: 1em 7em 0 7em;
+	width: 2em;
+}
+.sh-arrow-down, .sh-arrow-down-round {
+	margin: 0 7em 1em 7em;
+}
+.sh-arrow-up-round, .sh-arrow-right-round, .sh-arrow-down-round, .sh-arrow-left-round {
+	border-radius: 1.5em;
+}
+	// Arrow heads
+	.sh-arrow-up:before, .sh-arrow-up:after,
+	.sh-arrow-up-round:before, .sh-arrow-up-round:after,
+	.sh-arrow-down:before, .sh-arrow-down:after,
+	.sh-arrow-down-round:before, .sh-arrow-down-round:after {
+		background: $colour-dark-blue;
+		height: 7em;
+		width: 2em;
+	}
+	.sh-arrow-right:before, .sh-arrow-right:after,
+	.sh-arrow-right-round:before, .sh-arrow-right-round:after,
+	.sh-arrow-left:before, .sh-arrow-left:after,
+	.sh-arrow-left-round:before, .sh-arrow-left-round:after	{
+		background: $colour-dark-blue;
+		height: 2em;
+		width: 7em;
+	}
+	.sh-arrow-up:before, .sh-arrow-up:after       {top:    -1.4em;}
+	.sh-arrow-right:before, .sh-arrow-right:after {right:  -1.4em;}
+	.sh-arrow-down:before, .sh-arrow-down:after   {bottom: -1.4em;}
+	.sh-arrow-left:before, .sh-arrow-left:after	  {left:   -1.4em;}
+
+	.sh-arrow-up-round:before, .sh-arrow-up-round:after       {top:    -1.7em;}
+	.sh-arrow-right-round:before, .sh-arrow-right-round:after {right:  -1.7em;}
+	.sh-arrow-down-round:before, .sh-arrow-down-round:after   {bottom: -1.7em;}
+	.sh-arrow-left-round:before, .sh-arrow-left-round:after	  {left:   -1.7em;}
+
+	.sh-arrow-up-round:before, .sh-arrow-up-round:after,
+	.sh-arrow-right-round:before, .sh-arrow-right-round:after,
+	.sh-arrow-down-round:before, .sh-arrow-down-round:after,
+	.sh-arrow-left-round:before, .sh-arrow-left-round:after	{
+		border-radius: 1.5em;
+	}
+	// It looks like these rules could be combined, but they can't.
+	.sh-arrow-up:before, .sh-arrow-up-round:before {
+		left: -1.8em;
+		transform: rotate(45deg);
+	}
+	.sh-arrow-up:after, .sh-arrow-up-round:after {
+		left: 1.8em;
+		transform: rotate(-45deg);
+	}
+	.sh-arrow-right:before, .sh-arrow-right-round:before {
+		top: -1.8em;
+		transform: rotate(45deg);
+	}
+	.sh-arrow-right:after, .sh-arrow-right-round:after {
+		top: 1.8em;
+		transform: rotate(-45deg);
+	}
+	.sh-arrow-down:before, .sh-arrow-down-round:before {
+		left: -1.8em;
+		transform: rotate(-45deg);
+	}
+	.sh-arrow-down:after, .sh-arrow-down-round:after {
+		left: 1.8em;
+		transform: rotate(45deg);
+	}
+	.sh-arrow-left:before, .sh-arrow-left-round:before {
+		top: 1.8em;
+		transform: rotate(45deg);
+	}
+	.sh-arrow-left:after, .sh-arrow-left-round:after {
+		top: -1.8em;
+		transform: rotate(-45deg);
+	}

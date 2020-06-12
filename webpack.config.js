@@ -143,6 +143,12 @@ const config = function(env, args) {
         filename: 'guideline-forms/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-forms/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        inject: true,
+        hash: false,
+        filename: 'guideline-icons/index.html',
+        template: path.resolve(__dirname, 'src', 'guideline-icons/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
@@ -159,6 +165,12 @@ const config = function(env, args) {
         {
           from: path.resolve(__dirname, 'src', 'img', 'content'),
           to: path.resolve(__dirname, 'dist', 'img', 'content'),
+          toType: 'dir',
+        },
+        // Looks like each time a new folder is added inside img, a new rule will need to be added here.
+        {
+          from: path.resolve(__dirname, 'src', 'img', 'favicon'),
+          to: path.resolve(__dirname, 'dist', 'img', 'favicon'),
           toType: 'dir',
         },
       ]),
