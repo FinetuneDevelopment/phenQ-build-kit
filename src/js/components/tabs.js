@@ -27,6 +27,7 @@ function tabFactory() {
                 
                 btnPrevious.addEventListener('click', this.previousTab,false);
                 btnNext.addEventListener('click', this.nextTab,false);
+                // Scroll the current tab into view
             }
         }
     },
@@ -73,6 +74,7 @@ function tabFactory() {
         var tabset = e.target.closest('.tab-set'),
             selectedTab;
         
+        console.log(typeof this.currentTab);
         // The current tab might be marked in a number of different ways
         // (not included currently: radio buttons)
         if (tabset.querySelectorAll('em').length) {
@@ -89,6 +91,20 @@ function tabFactory() {
         if (selectedTab.nextElementSibling) {
             selectedTab.nextElementSibling.querySelector('a').click();
         }
+    },
+    // Pass this a tabset and it will return the currently selected tab
+    this.currentTab = function (tabset) {
+        // The current tab might be marked in a number of different ways
+        // (not included currently: radio buttons)
+        if (tabset.querySelectorAll('em').length) {
+            selectedTab = tabset.querySelector('em').parentElement;
+        } else if (tabset.querySelectorAll('.selected').length) {
+            selectedTab = tabset.querySelector('.selected').parentElement;
+        } else {
+            // Falls back to the first element
+            selectedTab = tabset.querySelectorAll('li')[0];
+        }
+        return selectedTab;
     }
 }
  

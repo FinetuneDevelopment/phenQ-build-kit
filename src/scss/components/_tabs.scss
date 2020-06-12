@@ -4,12 +4,12 @@
     font-size: 18px;
     margin: 0 0 1em;
     overflow: auto;
+    position: relative;
     scroll-behavior: smooth;
     text-transform: uppercase;
 
-    &[data-js="active"] {
-        overflow: hidden;
-    }
+    // Added by JavaScript. Without it, users get a scroll bar, like it's 1996.
+    &[data-js="active"] {overflow: hidden;}
 
     ul, ol, li {
         list-style: none;
