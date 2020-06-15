@@ -91,4 +91,18 @@ fieldset {
         font-size: 10px;
         margin: 5px 0;
     }
+
+    // Tricking select boxes into looking normal
+    select {
+        position: relative;
+        &:before {
+            background: red;
+            content: "";
+            height: .5em;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: .5em;
+        }
+    }        
 }
