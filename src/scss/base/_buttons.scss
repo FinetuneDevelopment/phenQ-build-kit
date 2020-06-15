@@ -141,13 +141,16 @@ input.btn-secondary {
     border: solid 1px $colour-dark-blue;
     border-radius: 2em;
     color: $colour-offwhite;
-    font-size: 14px;
-    padding: .43em 1em;
     min-width: 160px;
-
+    
     &:hover, &:focus, &.off {
         @extend %pill-inactive;
     }
+}
+.btn-pill {
+    font-size: 14px;
+    margin: 0 35px 17px 0; // Second value is ~half the first
+    padding: .43em 1em;
 }
 
 // For when pills are used to style checkbox toggles
@@ -158,6 +161,7 @@ input.btn-secondary {
 }
 .btn-pill-sm {
     font-size: 12px;
+    margin: 0 25px 12px 0; // Second value is ~half the first
     // Annoying
     padding: .21em 1.6em;
 }

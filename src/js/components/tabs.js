@@ -27,7 +27,7 @@ function tabFactory() {
                 
                 btnPrevious.addEventListener('click', this.previousTab,false);
                 btnNext.addEventListener('click', this.nextTab,false);
-                // Scroll the current tab into view
+                // To do: Scroll the current tab into view
             }
         }
     },
