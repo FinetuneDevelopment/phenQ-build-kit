@@ -11,19 +11,19 @@ function tabFactory() {
                 var scrollControl = document.createElement('p'),
                     currentTabs = tabset[i];
 
-                scrollControl.classList.add('scroll-control','hidden');
+                scrollControl.classList.add('scroll-control','hidden','text-right');
                 scrollControl.setAttribute('data-js', 'scroll-control');
                 // Need some SVGs here, eventually.
-                scrollControl.innerHTML = '<button class="btn btn-icon" type="button" data-js="previous" title="Select previous tab"><span class="shape sh-arrow-left-round"><span class="sr-only">Scroll tabs left</span></span></button> <button class="btn btn-icon" type="button" data-js="next" title="Select next tab"><span class="shape sh-arrow-right-round"><span class="sr-only">Scroll tabs right</span></span></button>';
-                // Insert the controls into the tabs
-                currentTabs.insertBefore(scrollControl, currentTabs.firstChild);
+                scrollControl.innerHTML = '<button class="btn btn-icon" type="button" data-js="previous" title="Scroll left"><span class="shape sh-arrow-left-round"><span class="sr-only">Scroll tabs left</span></span></button> <button class="btn btn-icon" type="button" data-js="next" title="Scroll right"><span class="shape sh-arrow-right-round"><span class="sr-only">Scroll tabs right</span></span></button>';
+                // Insert the controls before the tabs
+                currentTabs.insertAdjacentElement('beforebegin',scrollControl);
                 // Add an attribute, so CSS can hide the scrollbar
                 currentTabs.setAttribute('data-js', 'active');
                 // Check if we need to show the scroll buttons or not
                 this.scrollCheck();
                 // Set up click events
-                var btnPrevious = currentTabs.querySelector('[data-js="previous"]'),
-                    btnNext = currentTabs.querySelector('[data-js="next"]');
+                var btnPrevious = currentTabs.previousElementSibling.querySelector('[data-js="previous"]'),
+                    btnNext = currentTabs.previousElementSibling.querySelector('[data-js="next"]');
                 
                 btnPrevious.addEventListener('click', this.previousTab,false);
                 btnNext.addEventListener('click', this.nextTab,false);
@@ -37,63 +37,57 @@ function tabFactory() {
         var tabset = document.querySelectorAll('.tab-set');
         if (tabset.length) {
             for (var i = 0; i < tabset.length; i++) {
-                var nav = tabset[i].querySelectorAll('[data-js="scroll-control"]');
+                var nav = tabset[i].previousSibling;
                 // If the element has a scroll bar
                 if ((tabset[i].scrollWidth > tabset[i].clientWidth)) {
-                    nav[0].classList.remove('hidden');
+                    nav.classList.remove('hidden');
                 } else {
-                    nav[0].classList.add('hidden');
+                    nav.classList.add('hidden');
                 }
             }
         }
     },
     // User has clicked on the (<-) button
     this.previousTab = function (e) {
-        var tabset = e.target.closest('.tab-set'),
-            selectedTab;
+        var tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
+            pageMargin = Math.round(tabset.getBoundingClientRect().left),
+            tabNodes = tabset.querySelectorAll('li'),
+            arScrollpoints = [];
         
-        // The current tab might be marked in a number of different ways
-        // (not included currently: radio buttons)
-        if (tabset.querySelectorAll('em').length) {
-            selectedTab = tabset.querySelector('em').parentElement;
-        } else if (tabset.querySelectorAll('.selected').length) {
-            selectedTab = tabset.querySelector('.selected').parentElement;
-        } else {
-            // Falls back to the first element
-            selectedTab = tabset.querySelectorAll('li')[0];
+        // Builds up an array of the snap points of the tab navigation, from left to right.
+        for (var i = 0; i < tabNodes.length; i++) {
+            arScrollpoints[i] = (tabNodes[i].offsetLeft - pageMargin);
         }
-        // Scroll to the left the width of the currently selected tab
-        tabset.scroll((selectedTab.clientWidth * -1), 0);
-        // Click on the tab to the left of the current tab, if it exists
-        if (selectedTab.previousElementSibling) {
-            selectedTab.previousElementSibling.querySelector('a').click();
+        // Works out which snap point we're currently at.
+        for (var i = (arScrollpoints.length-1); i >= 0; i--) {
+            if (arScrollpoints[i] < tabset.scrollLeft) {
+                tabset.scroll(arScrollpoints[i], 0);
+                break;
+            }
         }
     },
     // User has clicked on the (->) button
     this.nextTab = function (e) {
-        var tabset = e.target.closest('.tab-set'),
-            selectedTab;
+        var tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
+            pageMargin = Math.round(tabset.getBoundingClientRect().left),
+            tabNodes = tabset.querySelectorAll('li'),
+            arScrollpoints = [];
         
-        console.log(typeof this.currentTab);
-        // The current tab might be marked in a number of different ways
-        // (not included currently: radio buttons)
-        if (tabset.querySelectorAll('em').length) {
-            selectedTab = tabset.querySelector('em').parentElement;
-        } else if (tabset.querySelectorAll('.selected').length) {
-            selectedTab = tabset.querySelector('.selected').parentElement;
-        } else {
-            // Falls back to the first element
-            selectedTab = tabset.querySelectorAll('li')[0];
+        // Builds up an array of the snap points of the tab navigation, from left to right.
+        for (var i = 0; i < tabNodes.length; i++) {
+            arScrollpoints[i] = (tabNodes[i].offsetLeft - pageMargin);
         }
-        // Scroll to the left the width of the currently selected tab
-        tabset.scroll(selectedTab.clientWidth, 0);
-        // Click on the tab to the left of the current tab, if it exists
-        if (selectedTab.nextElementSibling) {
-            selectedTab.nextElementSibling.querySelector('a').click();
+        // Works out which snap point we're currently at.
+        for (var i = 0; i < arScrollpoints.length; i++) {
+            if (arScrollpoints[i] > tabset.scrollLeft) {
+                tabset.scroll(arScrollpoints[i], 0);
+                break;
+            }
         }
     },
     // Pass this a tabset and it will return the currently selected tab
-    this.currentTab = function (tabset) {
+    this.currentTab = function (e) {
+        var tabset;  // Need to derive this from e
         // The current tab might be marked in a number of different ways
         // (not included currently: radio buttons)
         if (tabset.querySelectorAll('em').length) {

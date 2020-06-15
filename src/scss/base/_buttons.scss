@@ -23,11 +23,13 @@
 }
 
 // Primary and secondary buttons have some styles in common
+// Note that the margin bottom leads to a doubling of the gutters at the bottom of the paragraph
+// so should be used within a .mb-0 class.
 .btn-primary, .btn-secondary {
     font-size: 14px;
     letter-spacing: .15em;
     padding: 1em 2.1em;
-    margin-right: 50px;
+    margin: 0 50px 25px 0;
     min-width: 200px;
 }
 
@@ -177,4 +179,9 @@ input.btn-secondary {
     // buttons because it works best across all three tags. Might need
     // to revisit this, if the icons are inline SVGs.
     & > * {transform: translate(0,-($size/8));}
+    // Note that in this use case:
+    // Text (btn-icon) text
+    // The second "text" would be too close to the button, due to the
+    // below rule.
+    &:last-child {margin-right: 0;}
 }
