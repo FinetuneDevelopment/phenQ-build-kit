@@ -1,4 +1,12 @@
+'use strict';
+
 import '../scss/app.scss';
 
-// Your JS Code goes here
-import './components/tabs.js';
+import tabFactory from './components/tabs.js';
+const myTabs = new tabFactory();
+myTabs.init();
+window.addEventListener('resize', myTabs.scrollCheck);
+
+//import formFactory from './components/forms.js';
+//const myForm = new formFactory();
+//myForm.init();

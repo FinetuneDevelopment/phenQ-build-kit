@@ -1,7 +1,12 @@
-function tabFactory() {
+'use strict';
+
+export default function tabFactory() {
+
+    let myFactory = {};
     // https://itnext.io/different-ways-to-achieve-encapsulation-in-javascript-es6-7cb938e83f2d
-    //this.name = 'Sonic';
-    this.init = function () {
+    //this.localVariable = 'Some string';
+
+    myFactory.init = function () {
         var tabset = document.querySelectorAll('.tab-set');
         // Do we have owt to do?
         if (tabset.length) {
@@ -36,7 +41,7 @@ function tabFactory() {
     },
     // This function searches the DOM for tabsets and shows or hides the
     // scroll buttons, as required.
-    this.scrollCheck = function () {
+    myFactory.scrollCheck = function () {
         var tabset = document.querySelectorAll('.tab-set');
         if (tabset.length) {
             for (var i = 0; i < tabset.length; i++) {
@@ -51,7 +56,7 @@ function tabFactory() {
         }
     },
     // User has clicked on the (<-) button
-    this.previousTab = function (e) {
+    myFactory.previousTab = function (e) {
         var tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
             pageMargin = Math.round(tabset.getBoundingClientRect().left),
             tabNodes = tabset.querySelectorAll('li'),
@@ -70,7 +75,7 @@ function tabFactory() {
         }
     },
     // User has clicked on the (->) button
-    this.nextTab = function (e) {
+    myFactory.nextTab = function (e) {
         var tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
             pageMargin = Math.round(tabset.getBoundingClientRect().left),
             tabNodes = tabset.querySelectorAll('li'),
@@ -89,7 +94,8 @@ function tabFactory() {
         }
     },
     // Pass this a tabset and it will return the currently selected tab
-    this.currentTab = function (tabset) {
+    myFactory.currentTab = function (tabset) {
+        var selectedTab;
         // The current tab might be marked in a number of different ways
         // (not included currently: radio buttons)
         if (tabset.querySelectorAll('em').length) {
@@ -102,11 +108,5 @@ function tabFactory() {
         }
         return selectedTab;
     }
+    return myFactory;
 }
- 
-const myTabs = new tabFactory();
-myTabs.init();
-window.addEventListener('resize', myTabs.scrollCheck);
- 
-//console.log(myTabs.name) //valid value
-//console.log(myTabs.speed) // undefined
