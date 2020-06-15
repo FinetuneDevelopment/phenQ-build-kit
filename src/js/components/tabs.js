@@ -27,7 +27,10 @@ function tabFactory() {
                 
                 btnPrevious.addEventListener('click', this.previousTab,false);
                 btnNext.addEventListener('click', this.nextTab,false);
-                // To do: Scroll the current tab into view
+                // Gets the currently selected tab as far to the left as possible
+                var currentTabPos = this.currentTab(currentTabs).offsetLeft,
+                    pageMargin = Math.round(currentTabs.getBoundingClientRect().left);
+                currentTabs.scroll(currentTabPos - pageMargin, 0);
             }
         }
     },
@@ -86,8 +89,7 @@ function tabFactory() {
         }
     },
     // Pass this a tabset and it will return the currently selected tab
-    this.currentTab = function (e) {
-        var tabset;  // Need to derive this from e
+    this.currentTab = function (tabset) {
         // The current tab might be marked in a number of different ways
         // (not included currently: radio buttons)
         if (tabset.querySelectorAll('em').length) {
