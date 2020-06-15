@@ -1,32 +1,11 @@
-/* Core variables */
 @import 'base/vars';
-
-/* CSS Reset - now in Bootstrap */
-//@import 'base/reset';
-
-/* CSS print - now in Bootstrap */
-//@import 'base/print';
-
-/* Fonts */
 @import 'base/fonts';
-
-/* Bootstrap 3 */
 @import 'base/bootstrap3/_bootstrap.scss';
-
-/* Mixins, helpers and functions */
 @import 'base/mixins';
-
-// Utility classes
 @import 'base/utility-classes';
 @import 'base/backgrounds';
 @import 'base/buttons';
 @import 'base/forms';
 @import 'base/icons';
-/* Vendor */
-
-
 @import 'base/typography';
-/* Browser specific styles */
-@import 'dirty/hacks';
-/* Components */
 @import 'components/tabs';

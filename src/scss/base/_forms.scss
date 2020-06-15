@@ -7,8 +7,8 @@ input, select, textarea {
          -o-appearance: none;
             appearance: none;
     box-shadow: none;
-    font-family: inherit;
     max-width: 100%;
+    min-height: 43px;
 }
 
 fieldset {
@@ -94,15 +94,79 @@ fieldset {
 
     // Tricking select boxes into looking normal
     select {
-        position: relative;
-        &:before {
-            background: red;
-            content: "";
-            height: .5em;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: .5em;
+        background: url(/img/bg/select-default.svg) right 20px top 50% no-repeat;
+        &:focus {background: url(/img/bg/select-focus.svg) right 20px top 50% no-repeat;}
+    }
+
+    // Checkboxes and radio buttons
+    [type="checkbox"], [type="radio"] {
+        border: 0;
+        clip: rect(0,0,0,0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        & ~ label {
+            font-size: 18px;
+            left: 0;
+            position: relative;
+            top: 0;
+            &:before, &:after {
+                content: "";
+            }
+            // Frame for the inputs
+            &:before {
+                border: solid .2em $colour-dark-blue;
+                display: inline-block;
+                height: 1em;
+                margin: 0 .5em 0 0;
+                vertical-align: middle;
+                width: 1em;
+            }
+            // "On" status
+            &:after {
+                position: absolute;
+                transition: all .2s;
+            }
         }
-    }        
+    }
+
+    [type="checkbox"] ~ label:after {
+        border: solid .2em transparent;
+        left: .25em;
+        height: .8em;
+        top: .15em;
+        transform: rotate(0deg);
+        width: .5em;
+    }
+    // Selected state
+    [type="checkbox"]:checked ~ label:after {
+        border-bottom-color: $colour-bright-blue;
+        border-right-color: $colour-bright-blue;
+        transform: rotate(45deg);
+    }
+
+    [type="radio"] ~ label {
+        &:before {border-radius: 50%;}
+        // Unselected state, as a first frame for the animation
+        &:after {
+            background: transparent;
+            border-radius: 50%;
+            height: 0;
+            left: .5em;
+            position: absolute;
+            top: 56%;
+            width: 0;
+        }
+    }
+    // Selected state
+    [type="radio"]:checked ~ label:after {
+        background: $colour-bright-blue;
+        height: .4em;
+        left: .3em;
+        top: 44%;
+        width: .4em;
+    }
 }

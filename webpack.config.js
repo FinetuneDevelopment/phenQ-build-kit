@@ -173,6 +173,11 @@ const config = function(env, args) {
           to: path.resolve(__dirname, 'dist', 'img', 'favicon'),
           toType: 'dir',
         },
+        {
+          from: path.resolve(__dirname, 'src', 'img', 'bg'),
+          to: path.resolve(__dirname, 'dist', 'img', 'bg'),
+          toType: 'dir',
+        },
       ]),
     ],
   };
