@@ -53,3 +53,14 @@
 .affix {
   position: fixed;
 }
+
+// To remove gutters from grid
+// Classname from Bootstrap 4
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  & > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

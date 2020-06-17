@@ -2,6 +2,8 @@
   // Proper spacing between instances of .media
   margin-top: 15px;
 
+  img {max-width: unset;}
+
   &:first-child {
     margin-top: 0;
   }

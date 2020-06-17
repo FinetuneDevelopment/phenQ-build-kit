@@ -8,11 +8,16 @@ body {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    font-family: $heading-typeface-bold;
     font-weight: normal;
     line-height: 1;
     margin: 0 0 .5em;
     strong, b, em, i {font-family: $heading-typeface-light;}
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: $heading-typeface-bold;
+}
+h5, .h5, h6, .h6 {
+  font-family: $heading-typeface-medium;
 }
 
 .heading-light {

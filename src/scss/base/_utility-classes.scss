@@ -48,7 +48,18 @@
 .radius-medium {border-radius: $radius-medium;}
 .radius-small  {border-radius: $radius-small;}
 
+.shadow-light {
+  -webkit-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+     -moz-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+          box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+}
+
 .mb-0 {margin-bottom: 0 !important;}
+
+// Adding horizontal gutters between molecules
+.gutter-small  {margin-bottom:  50px !important;}
+.gutter-medium {margin-bottom: 100px !important;}
+.gutter-large  {margin-bottom: 200px !important;}
 
 // Colouring text in arbratory colours
 .txt-bright-blue {color: $colour-bright-blue;}

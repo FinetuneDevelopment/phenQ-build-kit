@@ -183,10 +183,13 @@ sub {
 
 //
 // Remove border when inside `a` element in IE 8/9/10.
+// 1. Ross, June 2020. I'm sure I read this was a bad idea, because of embedded Google Maps,
+// but I can't find it now.
 //
 
 img {
   border: 0;
+  max-width: 100%; // 1
 }
 
 //

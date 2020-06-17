@@ -1,0 +1,42 @@
+// Big old circles with text inside 'em.
+// Background colour and font size are controlled
+// with additional classes added to and inside
+// the element for flexibility
+.quote-disk {
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 100% 0 0;
+  position: relative;
+
+  
+  // This assumes there's only a single child element.
+  // Content is aligned to the middle of the circle
+  // and grows up and down as it increases until it's
+  // clipped.
+  & > * {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    
+    // Open quote
+    &::before {
+      background: $colour-off-white;
+      border-radius: 50%;
+      color: $colour-dark-blue;
+      content: "❝";
+      font-size: 50px;
+      left: 0;
+      line-height: 1;
+      padding: .3em .4em 0 .4em;
+      position: absolute;
+      top: -1.5em;
+    }
+
+    // Closing quote
+    &::after {
+      content: "❞";
+    }
+  }
+}
