@@ -13,6 +13,7 @@
     //font-family: $body-typeface-bold;
     letter-spacing: .1em;
     line-height: 1.5;
+    min-height: unset;
     // Note that padding is not reset here as it is declaired elsewhere
     text-align: center; // This is required for three button styles which have min-width
     text-decoration: none;
@@ -39,6 +40,7 @@
 //////////////////////////////////////////////
 .btn-primary {
     background: $grad-mid-blue;
+    border: solid 1px $colour-offwhite;
     border-radius: $radius-medium;
     color: $colour-offwhite;
     &:hover, &:focus {
@@ -143,6 +145,7 @@ input.btn-secondary {
     color: $colour-offwhite;
     min-width: 160px;
     
+    &:before {border: none;}
     &:hover, &:focus, &.off {
         @extend %pill-inactive;
     }

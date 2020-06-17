@@ -23,6 +23,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageMinPlugin = require('imagemin-webpack-plugin').default;
+const FileIncludeWebpackPlugin = require('file-include-webpack-plugin');
 
 let targetServerConfiguration = serverConfiguration.internal;
 
@@ -66,6 +67,7 @@ const config = function(env, args) {
               loader: 'url-loader',
               options: { name: 'fonts/[name].[hash:6].[ext]', publicPath: '../', limit: 8192 },
             },
+            
           ],
         },
       ],
@@ -99,6 +101,15 @@ const config = function(env, args) {
         notify: true,
         reloadDelay: 0,
       }),
+      new FileIncludeWebpackPlugin(
+        {
+          source: './src', // relative path to your templates
+          replace: [{
+            regex: /\[\[FILE_VERSION]]/, // additional things to replace
+            to: 'v=1.0.0',
+          }],
+        },
+      ),
       new HtmlWebpackPlugin({
         inject: true,
         hash: false,
@@ -108,46 +119,36 @@ const config = function(env, args) {
       }),
       // Design guideline pages
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-typeface/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-typeface/index.html'),
       }),
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-headings/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-headings/index.html'),
       }),
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-bodytext/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-bodytext/index.html'),
       }),
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-colours/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-colours/index.html'),
       }),
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-buttons/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-buttons/index.html'),
       }),
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-forms/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-forms/index.html'),
       }),
       new HtmlWebpackPlugin({
-        inject: true,
-        hash: false,
         filename: 'guideline-icons/index.html',
         template: path.resolve(__dirname, 'src', 'guideline-icons/index.html'),
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'home/index.html',
+        template: path.resolve(__dirname, 'src', 'home/index.html'),
       }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
