@@ -27,7 +27,7 @@ const FileIncludeWebpackPlugin = require('file-include-webpack-plugin');
 
 let targetServerConfiguration = serverConfiguration.internal;
 
-const config = function(env, args) {
+const config = function (env, args) {
   if (args.externalServer !== undefined && args.externalServer) {
     targetServerConfiguration = serverConfiguration.external;
   }
@@ -67,7 +67,7 @@ const config = function(env, args) {
               loader: 'url-loader',
               options: { name: 'fonts/[name].[hash:6].[ext]', publicPath: '../', limit: 8192 },
             },
-            
+
           ],
         },
       ],
@@ -177,6 +177,11 @@ const config = function(env, args) {
         {
           from: path.resolve(__dirname, 'src', 'img', 'bg'),
           to: path.resolve(__dirname, 'dist', 'img', 'bg'),
+          toType: 'dir',
+        },
+        {
+          from: path.resolve(__dirname, 'src', 'img', 'include'),
+          to: path.resolve(__dirname, 'dist', 'img', 'include'),
           toType: 'dir',
         },
       ]),

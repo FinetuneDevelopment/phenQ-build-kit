@@ -192,3 +192,13 @@ input.btn-secondary {
     // below rule.
     &:last-child {margin-right: 0;}
 }
+
+//////////////////////////////
+// Navigation buttons
+// Used in the main navigation
+//////////////////////////////
+.btn-nav {
+  font-family: $body-typeface-semibold;
+  font-size: 12px;
+  padding: 1.37em 2em;
+}
