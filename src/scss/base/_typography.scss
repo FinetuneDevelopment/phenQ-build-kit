@@ -1,6 +1,6 @@
 // All the font fun is here
 body {
-    background: $colour-offwhite;
+    background: $colour-off-white;
     color: $colour-dark-blue;
     font-family: $body-typeface;
     font-size: $font-size-body;
@@ -28,6 +28,14 @@ h5, .h5 {font-size: $font-size-h5;}
 h6, .h6 {font-size: $font-size-h6;}
 
 .lead {font-size: $font-size-big;}
+
+// Legal text which appears under call-to-action buttons, for example.
+.legal {
+  font-family: $body-typeface-regular;
+  font-size: $font-size-small;
+  letter-spacing: $button-spacing;
+  text-transform: uppercase;
+}
 
 a {
     color: $colour-dark-blue;

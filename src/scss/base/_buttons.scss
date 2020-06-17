@@ -11,7 +11,7 @@
     display: inline-block;
     font-family: $body-typeface-semibold;
     //font-family: $body-typeface-bold;
-    letter-spacing: .1em;
+    letter-spacing: $button-spacing;
     line-height: 1.5;
     min-height: unset;
     // Note that padding is not reset here as it is declaired elsewhere
@@ -40,9 +40,9 @@
 //////////////////////////////////////////////
 .btn-primary {
     background: $grad-mid-blue;
-    border: solid 1px $colour-offwhite;
+    border: solid 1px $colour-off-white;
     border-radius: $radius-medium;
-    color: $colour-offwhite;
+    color: $colour-off-white;
     &:hover, &:focus {
         background: $colour-dark-blue;
     }
@@ -53,7 +53,7 @@
 // Gradient background on just the border
 /////////////////////////////////////////
 .btn-secondary, .btn-icon {
-    background: $colour-offwhite;
+    background: $colour-off-white;
     background-clip: padding-box;
     border-radius: $radius-medium;
     border: solid $border-default transparent;
@@ -134,7 +134,7 @@ input.btn-secondary {
 // Pill buttons
 ///////////////
 %pill-inactive {
-    background: $colour-offwhite;
+    background: $colour-off-white;
     color: $colour-dark-blue;
 }
 
@@ -142,7 +142,7 @@ input.btn-secondary {
     background: $colour-dark-blue;
     border: solid 1px $colour-dark-blue;
     border-radius: 2em;
-    color: $colour-offwhite;
+    color: $colour-off-white;
     min-width: 160px;
     
     &:before {border: none;}

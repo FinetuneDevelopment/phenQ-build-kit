@@ -14,17 +14,20 @@ $body-typeface-semibold-italic: Source-Sans-SemiBold-Italic, $body-typeface-stac
 $body-typeface-bold:            Source-Sans-Bold,            $body-typeface-stack;
 $body-typeface-bold-italic:     Source-Sans-Bold-Italic,     $body-typeface-stack;
 
-$font-size-body: 18px;
-$font-size-big:  25px;
-$font-size-h1:   72px;
-$font-size-h2:   50px;
-$font-size-h3:   40px;
-$font-size-h4:   28px;
-$font-size-h5:   25px;
-$font-size-h6:   20px;
+$font-size-h1:    72px;
+$font-size-h2:    50px;
+$font-size-h3:    40px;
+$font-size-h4:    28px;
+$font-size-h5:    25px;
+$font-size-h6:    20px;
+$font-size-big:   25px;
+$font-size-body:  18px;
+$font-size-small: 12px;
+
+$button-spacing: .1em;
 
 // Colour palette
-$colour-offwhite:    #fafafa;
+$colour-off-white:   #fafafa;
 $colour-mid-blue:    #07b;
 $colour-bright-blue: #009fe3;
 $colour-dark-blue:   #273583;
@@ -34,7 +37,9 @@ $colour-mint:        #d7f4c8;
 $colour-lemon:       #ffeea0;
 $colour-light-grey:  #ececec;
 $colour-grey:        #7c7c7c;
+$colour-dark-grey:   #363636;
 
+// Gardients
 $grad-mid-blue:  linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);
 $grad-dark-blue: linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);
 
