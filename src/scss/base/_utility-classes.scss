@@ -48,11 +48,12 @@
 .radius-medium {border-radius: $radius-medium;}
 .radius-small  {border-radius: $radius-small;}
 
-.shadow-light {
-  -webkit-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
-     -moz-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
-          box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
-}
+// Created in error
+//.shadow-light {
+//  -webkit-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+//     -moz-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+//          box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+//}
 
 .mb-0 {margin-bottom: 0 !important;}
 
@@ -73,3 +74,7 @@
 .txt-mint        {color: $colour-mint;}
 .txt-lemon       {color: $colour-lemon;}
 .txt-light-grey  {color: $colour-light-grey;}
+
+// This class allows buttons to be put together closer than they usually would,
+// for example in a toolbar.
+.toolbar .btn {margin-right: 9px;}

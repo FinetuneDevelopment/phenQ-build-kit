@@ -1,0 +1,25 @@
+// Circles with icons inside them.
+// Background colour is controlled with additional
+// classes added to the element for flexibility.
+.icon-disk {
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+
+  & > * {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Sizes need to be explicitly set, as these might sit
+// inside Media Object and contain vectors.
+.icon-disk-medium {
+  height: 60px;
+  width: 60px;
+  
+  svg {width: 37px;}
+}

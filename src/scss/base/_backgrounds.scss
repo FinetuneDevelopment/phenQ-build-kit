@@ -20,8 +20,12 @@
 .bg-grad-mid-blue, .bg-grad-dark-blue,
 .bg-red, .bg-green,
 .bg-grey, .bg-dark-grey {
+    // These are set up so they can be inherited by the kids
     border-color: $colour-off-white;
-    color: $colour-off-white;
+    color:        $colour-off-white;
+    fill:         $colour-off-white;
+    stroke:       $colour-off-white;
+
     a {color: inherit;}
     a:hover, a:focus,
     .btn:hover, .btn:focus {
@@ -31,6 +35,14 @@
         &:hover, &:focus {
             &:before {border-color: inherit;}
         }
+    }
+    // This is very clever and I deserve a prize.
+    // (note that SVGs need to be put together in a certain way)
+    svg[stroke="none"], path[fill="#273583"] {
+      fill: inherit;
+    }
+    svg[fill="none"], path[stroke="#273583"] {
+      stroke: inherit;
     }
 }
 
@@ -51,5 +63,5 @@
   background: $colour-off-white url(/img/bg/bg-home.jpg) 50% 0 no-repeat;
   // This is to ensure that the following content gets pushed down,
   // if there's not enough content to do the job.
-  min-height: 950px;
+  min-height: 870px;
 }

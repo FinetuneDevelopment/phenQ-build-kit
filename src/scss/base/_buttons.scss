@@ -23,15 +23,25 @@
     width: auto;
 }
 
-// Primary and secondary buttons have some styles in common
+// Primary, secondary and config buttons have some styles in common
 // Note that the margin bottom leads to a doubling of the gutters at the bottom of the paragraph
 // so should be used within a .mb-0 class.
+.btn-primary, .btn-secondary, .btn-config {
+  font-size: 14px;
+  border-radius: $radius-medium;
+  letter-spacing: .15em;
+  margin: 0 50px 25px 0;
+
+  // This allows buttons to stack, but the following pattern:
+  // <a class="btn">Button</a> some text
+  // ... will leave "some text" too close to the button.
+  // This pattern will leave the margin in place:
+  // <a class="btn">Button</a> <span>some text</span>
+  &:last-child {margin-right: 0;}
+}
 .btn-primary, .btn-secondary {
-    font-size: 14px;
-    letter-spacing: .15em;
-    padding: 1em 2.1em;
-    margin: 0 50px 25px 0;
-    min-width: 200px;
+  min-width: 200px;
+  padding: 1em 2.1em;
 }
 
 //////////////////////////////////////////////
@@ -39,14 +49,13 @@
 // Probably should only be used once per-page.
 //////////////////////////////////////////////
 .btn-primary {
-    background: $grad-mid-blue;
-    border: solid 1px $colour-off-white;
-    border-radius: $radius-medium;
-    color: $colour-off-white;
-    &:hover, &:focus {
-        background: $colour-dark-blue;
-    }
-    &:before {border: none;}
+  background: $grad-mid-blue;
+  border: solid 1px $colour-off-white;
+  color: $colour-off-white;
+  &:hover, &:focus {
+      background: $colour-dark-blue;
+  }
+  &:before {border: none;}
 }
 
 /////////////////////////////////////////
@@ -55,7 +64,6 @@
 .btn-secondary, .btn-icon {
     background: $colour-off-white;
     background-clip: padding-box;
-    border-radius: $radius-medium;
     border: solid $border-default transparent;
     color: $colour-dark-blue;
     position: relative;
@@ -81,6 +89,22 @@
 // Fallback styles for "empty" tags
 input.btn-secondary {
     border: solid $border-default $colour-mid-blue;
+}
+
+////////////////////////////////////////////////////////////
+// Buttons which allows the user to configure their account,
+// for example accessing the cart or viewing their details.
+////////////////////////////////////////////////////////////
+.btn-config {
+  border: solid 1px $colour-dark-blue;
+  padding: 1em 1em;
+
+  &:before {border: none;}
+  // For example the user icon
+  svg {
+    height: 1.2em;
+    fill: $colour-dark-blue;
+  }
 }
 
 ////////////////////////////////////////////////////////////
