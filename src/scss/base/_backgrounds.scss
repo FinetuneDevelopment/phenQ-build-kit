@@ -44,6 +44,7 @@
     svg[fill="none"], path[stroke="#273583"] {
       stroke: inherit;
     }
+    .quote-banner footer {border-color: inherit;}
 }
 
 // These are light colours, broadly speaking
@@ -64,4 +65,8 @@
   // This is to ensure that the following content gets pushed down,
   // if there's not enough content to do the job.
   min-height: 870px;
+}
+.bg-night-girl {
+  background: #000 url(/img/bg/bg-night-girl.jpg) 0 0;
+  background-size: contain;
 }

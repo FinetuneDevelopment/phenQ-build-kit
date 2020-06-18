@@ -34,6 +34,10 @@ h6, .h6 {font-size: $font-size-h6;}
 
 .lead {font-size: $font-size-big;}
 
+.small, small {
+  font-size: $font-size-small;
+}
+
 // Legal text which appears under call-to-action buttons, for example.
 .legal {
   font-family: $body-typeface-regular;
@@ -69,6 +73,13 @@ em, i {
 strong, b {
     font-family: $body-typeface-bold;
     font-weight: normal;
+}
+
+// For legibility, I guess
+.small, small {
+  strong, b {
+    font-family: $body-typeface-semibold;
+  }
 }
 
 p {margin: 0 0 1em;}

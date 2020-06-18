@@ -48,7 +48,7 @@
 // White text on a blue gradient background.
 // Probably should only be used once per-page.
 //////////////////////////////////////////////
-.btn-primary {
+.btn.btn-primary {
   background: $grad-mid-blue;
   border: solid 1px $colour-off-white;
   color: $colour-off-white;
@@ -58,10 +58,14 @@
   &:before {border: none;}
 }
 
-/////////////////////////////////////////
+//////////////////////////////////////////
 // Gradient background on just the border
-/////////////////////////////////////////
-.btn-secondary, .btn-icon {
+// The .btn class is used to up the
+// inheritance, so that the chosen colours
+// remain inside coloured backgrounds.
+//////////////////////////////////////////
+.btn {
+  &.btn-secondary, &.btn-icon {
     background: $colour-off-white;
     background-clip: padding-box;
     border: solid $border-default transparent;
@@ -84,10 +88,10 @@
         background: $colour-light-grey;
         background-clip: padding-box;
     }
+  }
 }
-
 // Fallback styles for "empty" tags
-input.btn-secondary {
+input.btn.btn-secondary {
     border: solid $border-default $colour-mid-blue;
 }
 
@@ -196,7 +200,7 @@ input.btn-secondary {
 ///////////////
 // Icon buttons
 ///////////////
-.btn-icon {
+.btn.btn-icon {
     $size: 40px;
     border-radius: 50%;
     height: $size;

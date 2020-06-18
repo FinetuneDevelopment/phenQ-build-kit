@@ -1,0 +1,6 @@
+// This is (somehow) a layout which is both full bleed and also adhers to
+// the standard Bootstrap grid. It only works for 50/50 layouts where
+// one side is full bleed and the other is the Bootstrap grid equivalent.
+.bleed-grid {
+  position: relative;
+}

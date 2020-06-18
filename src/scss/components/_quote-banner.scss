@@ -1,0 +1,28 @@
+.quote-banner {
+  & > p {
+    line-height: 1.4;
+  }
+  
+  // Open quote, top left
+  &::before {
+    background: $colour-off-white;
+    border-radius: 50%;
+    color: $colour-dark-blue;
+    content: "❝";
+    display: block;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 .5em;
+    padding: .5em .4em .1em;
+    text-align: center;
+    width: 79px;
+  }
+
+  // The quote citation, bottom
+  footer {
+    border-top: solid 1px $colour-grey;
+    display: table;
+    min-width: 75%;
+    padding: .5em 0 0;
+  }
+}
