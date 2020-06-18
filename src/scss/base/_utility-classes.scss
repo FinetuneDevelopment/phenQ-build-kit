@@ -78,3 +78,14 @@
 // This class allows buttons to be put together closer than they usually would,
 // for example in a toolbar.
 .toolbar .btn {margin-right: 9px;}
+
+// Gives an image a gradient border and makes it a circle
+.img-profile {
+  background: $grad-light-blue;
+  display: inline-block;
+  padding: 1px;
+
+  &, img {
+    border-radius: 50%;
+  }
+}

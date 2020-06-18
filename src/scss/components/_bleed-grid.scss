@@ -1,6 +1,23 @@
 // This is (somehow) a layout which is both full bleed and also adhers to
 // the standard Bootstrap grid. It only works for 50/50 layouts where
 // one side is full bleed and the other is the Bootstrap grid equivalent.
+// Note that this module uses BEM as individual elements within it are useless elsewhere.
 .bleed-grid {
   position: relative;
+}
+
+.bleed-grid__img {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+}
+
+.bleed-grid__img-right {
+  left: 50%;
+  right: 0;
+}
+
+.bleed-grid__img-left {
+  left: 0;
+  right: 50%;
 }

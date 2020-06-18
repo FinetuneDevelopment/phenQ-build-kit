@@ -1,0 +1,21 @@
+// Generic block scrolling thing
+.block-scroll {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.block-scroll__child {
+  display: flex;
+  margin: 0 1em 0 0;
+  flex-basis: 370px;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+// Pushing the footer to the bottom of the box
+.block-scroll__footer {
+  margin-top: auto;
+}

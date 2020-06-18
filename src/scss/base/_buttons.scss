@@ -1,26 +1,24 @@
 // All button and some link styles
 .btn {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-        -ms-appearance: none;
-         -o-appearance: none;
-            appearance: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $body-typeface-semibold;
-    //font-family: $body-typeface-bold;
-    letter-spacing: $button-spacing;
-    line-height: 1.5;
-    min-height: unset;
-    // Note that padding is not reset here as it is declaired elsewhere
-    text-align: center; // This is required for three button styles which have min-width
-    text-decoration: none;
-    text-transform: uppercase;
-    //transition: all .2s;
-    vertical-align: top;
-    width: auto;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+       -o-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $body-typeface-semibold;
+  letter-spacing: $button-spacing;
+  line-height: 1.5;
+  min-height: unset;
+  // Note that padding is not reset here as it is declaired elsewhere
+  text-align: center; // This is required for three button styles which have min-width
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: auto;
 }
 
 // Primary, secondary and config buttons have some styles in common
@@ -73,17 +71,18 @@
     position: relative;
 
     &:before {
-        background: $grad-mid-blue;
-        border-radius: $radius-medium;
-        bottom: 0;
-        content: "";
-        left: 0;
-        margin: -$border-default;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -1;
+      background: $grad-mid-blue;
+      border-radius: $radius-medium;
+      bottom: 0;
+      content: "";
+      left: 0;
+      margin: -$border-default;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
     }
+
     &:hover, &:focus {
         background: $colour-light-grey;
         background-clip: padding-box;
@@ -92,7 +91,7 @@
 }
 // Fallback styles for "empty" tags
 input.btn.btn-secondary {
-    border: solid $border-default $colour-mid-blue;
+  border: solid $border-default $colour-mid-blue;
 }
 
 ////////////////////////////////////////////////////////////
@@ -115,110 +114,110 @@ input.btn.btn-secondary {
 // Designed to sit against coloured backgrounds and suchlike
 ////////////////////////////////////////////////////////////
 .btn-arrow {
-    //color: $colour-dark-blue;
-    font-family: $body-typeface-bold;
-    font-size: 16px;
-    padding: 0 1.5em 0 0;
-    position: relative;
-    transition: all .2s;
+  //color: $colour-dark-blue;
+  font-family: $body-typeface-bold;
+  font-size: 16px;
+  padding: 0 1.5em 0 0;
+  position: relative;
+  transition: all .2s;
 
-    &:hover, &:focus {
-        color: $colour-bright-blue;
-        padding-right: 2em;
-    }
-    
-    // This makes up the ➜, plus there's an inheritance
-    // squabble with the default anchor underline behaviour
-    &:before, &:after {
-        border: none;
-        bottom: unset;
-        left: unset;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transition: all .2s;
-        transform: translate(0, -50%);
-    }
-    // Is this a terrible idea?
-    &:after {content: "➜";}
-    // The extending stalk of the arrow above
-    // This rule is full of magic numbers, which
-    // suggests it won't pass browser testing.
-    &:before {
-        border-top: solid .15em $colour-dark-blue;
-        content: "";
-        right: .2em;
-        width: .7em;
-    }
-    // Pushes out the tail of the ➜
-    &:hover:before, &:focus:before {
-        border-color: $colour-bright-blue;
-        right: .2em;
-        width: 1.2em;
-    }
+  &:hover, &:focus {
+    color: $colour-bright-blue;
+    padding-right: 2em;
+  }
+  
+  // This makes up the ➜, plus there's an inheritance
+  // squabble with the default anchor underline behaviour
+  &:before, &:after {
+    border: none;
+    bottom: unset;
+    left: unset;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transition: all .2s;
+    transform: translate(0, -50%);
+  }
+  // Is this a terrible idea?
+  &:after {content: "➜";}
+  // The extending stalk of the arrow above
+  // This rule is full of magic numbers, which
+  // suggests it won't pass browser testing.
+  &:before {
+    border-top: solid .15em $colour-dark-blue;
+    content: "";
+    right: .2em;
+    width: .7em;
+  }
+  // Pushes out the tail of the ➜
+  &:hover:before, &:focus:before {
+    border-color: $colour-bright-blue;
+    right: .2em;
+    width: 1.2em;
+  }
 }
 
 ///////////////
 // Pill buttons
 ///////////////
 %pill-inactive {
-    background: $colour-off-white;
-    color: $colour-dark-blue;
+  background: $colour-off-white;
+  color: $colour-dark-blue;
 }
 
 .btn-pill, .btn-pill-sm {
-    background: $colour-dark-blue;
-    border: solid 1px $colour-dark-blue;
-    border-radius: 2em;
-    color: $colour-off-white;
-    min-width: 160px;
-    
-    &:before {border: none;}
-    &:hover, &:focus, &.off {
-        @extend %pill-inactive;
-    }
+  background: $colour-dark-blue;
+  border: solid 1px $colour-dark-blue;
+  border-radius: 2em;
+  color: $colour-off-white;
+  min-width: 160px;
+  
+  &:before {border: none;}
+  &:hover, &:focus, &.off {
+    @extend %pill-inactive;
+  }
 }
 .btn-pill {
-    font-size: 14px;
-    margin: 0 35px 17px 0; // Second value is ~half the first
-    padding: .43em 1em;
+  font-size: 14px;
+  margin: 0 35px 17px 0; // Second value is ~half the first
+  padding: .43em 1em;
 }
 
 // For when pills are used to style checkbox toggles
 .toggle:checked {
-    & ~ .btn-pill, & ~ .btn-pill-sm {
-        @extend %pill-inactive;
-    }
+  & ~ .btn-pill, & ~ .btn-pill-sm {
+    @extend %pill-inactive;
+  }
 }
 .btn-pill-sm {
-    font-size: 12px;
-    margin: 0 25px 12px 0; // Second value is ~half the first
-    // Annoying
-    padding: .21em 1.6em;
+  font-size: 12px;
+  margin: 0 25px 12px 0; // Second value is ~half the first
+  // Annoying
+  padding: .21em 1.6em;
 }
 
 ///////////////
 // Icon buttons
 ///////////////
 .btn.btn-icon {
-    $size: 40px;
-    border-radius: 50%;
-    height: $size;
-    line-height: $size;
-    padding: 0;
-    margin-right: 10px;
-    width: $size;
-    &:before {border-radius: 50%;}
-    // Because vertical-align wasn't being parsed on <button> tags,
-    // I've used this apprach to position the <span> tags inside the
-    // buttons because it works best across all three tags. Might need
-    // to revisit this, if the icons are inline SVGs.
-    & > * {transform: translate(0,-($size/8));}
-    // Note that in this use case:
-    // Text (btn-icon) text
-    // The second "text" would be too close to the button, due to the
-    // below rule.
-    &:last-child {margin-right: 0;}
+  $size: 40px;
+  border-radius: 50%;
+  height: $size;
+  line-height: $size;
+  padding: 0;
+  margin-right: 10px;
+  width: $size;
+  &:before {border-radius: 50%;}
+  // Because vertical-align wasn't being parsed on <button> tags,
+  // I've used this apprach to position the <span> tags inside the
+  // buttons because it works best across all three tags. Might need
+  // to revisit this, if the icons are inline SVGs.
+  & > * {transform: translate(0,-($size/8));}
+  // Note that in this use case:
+  // Text (btn-icon) text
+  // The second "text" would be too close to the button, due to the
+  // below rule.
+  &:last-child {margin-right: 0;}
 }
 
 //////////////////////////////

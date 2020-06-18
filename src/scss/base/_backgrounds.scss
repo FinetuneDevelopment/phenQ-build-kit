@@ -1,16 +1,18 @@
 // These are dark colours, broadly speaking
-.bg-bright-blue    {background: $colour-bright-blue;}
-.bg-mid-blue       {background: $colour-mid-blue;}
-.bg-dark-blue      {background: $colour-dark-blue;}
+.bg-bright-blue      {background: $colour-bright-blue;}
+.bg-mid-blue         {background: $colour-mid-blue;}
+.bg-dark-blue        {background: $colour-dark-blue;}
 // Form states
-.bg-red            {background: $colour-red;}
-.bg-green          {background: $colour-green;}
+.bg-red              {background: $colour-red;}
+.bg-green            {background: $colour-green;}
 // Used in various places
-.bg-grey           {background: $colour-grey;}
-.bg-dark-grey      {background: $colour-dark-grey;}
+.bg-grey             {background: $colour-grey;}
+.bg-dark-grey        {background: $colour-dark-grey;}
 // Gradients
-.bg-grad-mid-blue  {background: $grad-mid-blue;}
-.bg-grad-dark-blue {background: $grad-dark-blue;}
+.bg-grad-light-blue  {background: $grad-light-blue;}
+.bg-grad-mid-blue    {background: $grad-mid-blue;}
+.bg-grad-dark-blue   {background: $grad-dark-blue;}
+.bg-grad-dark-blue-v {background: $grad-dark-blue-v;}
 
 // This rule attempts to fix issues with dark
 // text on a dark background, plus issues with
@@ -18,6 +20,7 @@
 // regression testing.
 .bg-mid-blue, .bg-bright-blue, .bg-dark-blue,
 .bg-grad-mid-blue, .bg-grad-dark-blue,
+.bg-grad-dark-blue-v, .bg-grad-light-blue,
 .bg-red, .bg-green,
 .bg-grey, .bg-dark-grey {
     // These are set up so they can be inherited by the kids
@@ -67,6 +70,6 @@
   min-height: 870px;
 }
 .bg-night-girl {
-  background: #000 url(/img/bg/bg-night-girl.jpg) 0 0;
+  background: #080808 url(/img/bg/bg-night-girl.jpg) 0 0 no-repeat;
   background-size: contain;
 }

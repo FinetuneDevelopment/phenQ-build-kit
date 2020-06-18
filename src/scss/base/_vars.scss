@@ -39,9 +39,11 @@ $colour-light-grey:  #ececec;
 $colour-grey:        #7c7c7c;
 $colour-dark-grey:   #363636;
 
-// Gardients
-$grad-mid-blue:  linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);
-$grad-dark-blue: linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);
+// Gradients
+$grad-light-blue:  linear-gradient(90deg, $colour-bright-blue 0%, $colour-dark-blue 100%);
+$grad-mid-blue:    linear-gradient(90deg, $colour-dark-blue 0%, $colour-mid-blue 100%);
+$grad-dark-blue:   linear-gradient(90deg, #0d1649 0%, $colour-dark-blue 100%);
+$grad-dark-blue-v: linear-gradient(0deg, #0d1649 0%, $colour-dark-blue 100%);
 
 // Call-to-action padding
 $gutter: 32px;
