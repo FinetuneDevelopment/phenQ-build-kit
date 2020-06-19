@@ -1,10 +1,24 @@
 // Generic block scrolling thing
+
+// This sucks the block scroll controls up the same amount as
+// their height. Might need some modifying classes to
+// control this behaviour.
+[data-js="scroll-control"] {
+  margin-top: -58px;
+}
+
 .block-scroll {
   align-items: stretch;
   display: flex;
   justify-content: space-between;
   overflow: auto;
-}
+}  
+
+// JavaScript has found the markup, and thinks it's good.
+.block-scroll[data-active="true"] {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}  
 
 .block-scroll__child {
   display: flex;
