@@ -40,6 +40,14 @@
 .btn-primary, .btn-secondary {
   min-width: 200px;
   padding: 1em 2.1em;
+  
+    // Small variant for primary and secondary buttons
+    // Used in the main navigation
+    &.btn-sm {
+      min-width: 190px;
+      padding-bottom: .72em;
+      padding-top: .72em;
+    }
 }
 
 //////////////////////////////////////////////
@@ -50,9 +58,11 @@
   background: $grad-mid-blue;
   border: solid 1px $colour-off-white;
   color: $colour-off-white;
+
   &:hover, &:focus {
       background: $colour-dark-blue;
   }
+
   &:before {border: none;}
 }
 
@@ -100,7 +110,7 @@ input.btn.btn-secondary {
 ////////////////////////////////////////////////////////////
 .btn-config {
   border: solid 1px $colour-dark-blue;
-  padding: 1em 1em;
+  padding: .72em;
 
   &:before {border: none;}
   // For example the user icon
@@ -165,22 +175,20 @@ input.btn.btn-secondary {
   color: $colour-dark-blue;
 }
 
-.btn-pill, .btn-pill-sm {
+.btn-pill {
   background: $colour-dark-blue;
   border: solid 1px $colour-dark-blue;
   border-radius: 2em;
   color: $colour-off-white;
+  font-size: 14px;
+  margin: 0 35px 17px 0; // Second value is ~half the first
   min-width: 160px;
+  padding: .43em 1em;
   
   &:before {border: none;}
   &:hover, &:focus, &.off {
     @extend %pill-inactive;
   }
-}
-.btn-pill {
-  font-size: 14px;
-  margin: 0 35px 17px 0; // Second value is ~half the first
-  padding: .43em 1em;
 }
 
 // For when pills are used to style checkbox toggles
@@ -189,7 +197,7 @@ input.btn.btn-secondary {
     @extend %pill-inactive;
   }
 }
-.btn-pill-sm {
+.btn-pill.btn-sm {
   font-size: 12px;
   margin: 0 25px 12px 0; // Second value is ~half the first
   // Annoying
@@ -220,12 +228,14 @@ input.btn.btn-secondary {
   &:last-child {margin-right: 0;}
 }
 
-//////////////////////////////
+///////////////////////////////////////////////////
 // Navigation buttons
 // Used in the main navigation
-//////////////////////////////
+// Should be the same height as .btn-primary.btn-sm
+///////////////////////////////////////////////////
 .btn-nav {
+  border: solid 1px transparent; // Superstitious
   font-family: $body-typeface-semibold;
   font-size: 12px;
-  padding: 1.37em 2em;
+  padding: .97em 2em;
 }

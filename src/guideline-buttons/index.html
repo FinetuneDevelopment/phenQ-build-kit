@@ -45,16 +45,66 @@
       </ul>
     </nav>
 
-    <section>
+    <section class="gutter-medium" aria-label="Primary buttons">
       <h2>Primary buttons</h2>
-      <p class="mb-0"><a href="#" class="btn btn-primary">Link</a> <button type="button" class="btn btn-primary">Button</button> <input type="submit" class="btn btn-primary" value="Input"> <span class="btn btn-primary">Span</span></p>
+
+      <h3>Default size</h3>
+      <p>
+        <a href="#" class="btn btn-primary">Link</a>
+        <button type="button" class="btn btn-primary">Button</button>
+        <input type="submit" class="btn btn-primary" value="Input">
+        <span class="btn btn-primary">Span</span>
+      </p>
+
+      <h3>Small size</h3>
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <p>This is used in the navigation, to ensure the call-to-action is the same height as the other navigation items. It should not be used elsewhere on the page.</p>
+        </div>
+      </div>
+      <p>
+        <a href="#" class="btn btn-primary btn-sm">Link</a>
+        <button type="button" class="btn btn-primary btn-sm">Button</button>
+        <input type="submit" class="btn btn-primary btn-sm" value="Input">
+        <span class="btn btn-primary btn-sm">Span</span>
+      </p>
+    </section>
+
+    <section class="gutter-medium" aria-label="Secondary buttons">
 
       <h2>Secondary buttons</h2>
-      <p>Note that in order for the gradient border to work, the element cannot be <q>empty</q>. This means that if it
-        is to be used on a submit button for a form, that button must be a <code>button</code> tag, rather than a
-        <code>input</code> which has a type of <code>submit</code>. If the <code>btn-secondary</code> class is used on
-        an empty element, it will fall back to a bright blue border.</p>
-      <p class="mb-0"><a href="#" class="btn btn-secondary">Link</a> <button type="button" class="btn btn-secondary">Button</button> <input type="submit" class="btn btn-secondary" value="Input"> <span class="btn btn-secondary">Span</span></p>
+      <h3>Default size</h3>
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <p>Note that in order for the gradient border to work, the element cannot be <q>empty</q>. This means that if it
+            is to be used on a submit button for a form, that button must be a <code>button</code> tag, rather than a
+            <code>input</code> which has a type of <code>submit</code>. If the <code>btn-secondary</code> class is used on
+            an empty element, it will fall back to a bright blue border.</p>
+        </div>
+      </div>
+      <p>
+        <a href="#" class="btn btn-secondary">Link</a>
+        <button type="button" class="btn btn-secondary">Button</button>
+        <input type="submit" class="btn btn-secondary" value="Input">
+        <span class="btn btn-secondary">Span</span>
+      </p>
+
+      <h3>Small size</h3>
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <p>Not used anywhere, but this style naturally arose from the work on the small primary call-to-action.</p>
+        </div>
+      </div>
+      <p>
+        <a href="#" class="btn btn-secondary btn-sm">Link</a>
+        <button type="button" class="btn btn-secondary btn-sm">Button</button>
+        <input type="submit" class="btn btn-secondary btn-sm" value="Input">
+        <span class="btn btn-secondary btn-sm">Span</span>
+      </p>
+
+    </section>
+
+    <section class="gutter-medium" aria-label="Arrow buttons">
 
       <h2>Arrow buttons</h2>
       <div class="row">
@@ -86,69 +136,72 @@
       <p>Note that the arrow will not appear inside <q>empty</q> elements. This means that if it is to be used on a
         submit button for a form, that button must be a <code>button</code> tag, rather than a <code>input</code> which
         has a type of <code>submit</code>.</p>
+
     </section>
 
-    <h2>Pill buttons</h2>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-sm-6">
-            <p><span class="btn btn-pill">Tag pill active</span></p>
-            <p><span class="btn btn-pill off">Tag pill inactive</span></p>
+    <section class="gutter-medium" aria-label="Pill buttons">
+      <h2>Pill buttons</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <p><span class="btn btn-pill">Tag pill active</span></p>
+              <p><span class="btn btn-pill off">Tag pill inactive</span></p>
+            </div>
+            <div class="col-sm-6">
+              <h4>Large tag pill</h4>
+              <p class="lead">Used for blog tags and filtering</p>
+            </div>
           </div>
-          <div class="col-sm-6">
-            <h4>Large tag pill</h4>
-            <p class="lead">Used for blog tags and filtering</p>
-          </div>
+          <p>
+            <a href="#" class="btn btn-pill">Link</a>
+            <button type="button" class="btn btn-pill">Button</button>
+            <input type="submit" class="btn btn-pill" value="Input">
+            <span class="btn btn-pill">Span</span>
+            <input type="checkbox" id="pill-test" name="pill-test" class="toggle sr-only">
+            <label for="pill-test" class="btn btn-pill">Label toggle</label>
+          </p>
         </div>
-        <p class="mb-0">
-          <a href="#" class="btn btn-pill">Link</a>
-          <button type="button" class="btn btn-pill">Button</button>
-          <input type="submit" class="btn btn-pill" value="Input">
-          <span class="btn btn-pill">Span</span>
-          <input type="checkbox" id="pill-test" name="pill-test" class="toggle sr-only">
-          <label for="pill-test" class="btn btn-pill">Label toggle</label>
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-sm-6">
-            <p><span class="btn btn-pill-sm">Tag pill active</span></p>
-            <p><span class="btn btn-pill-sm off">Tag pill inactive</span></p>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <p><span class="btn btn-pill btn-sm">Tag pill active</span></p>
+              <p><span class="btn btn-pill btn-sm off">Tag pill inactive</span></p>
+            </div>
+            <div class="col-sm-6">
+              <h4>Small tag pill</h4>
+              <p class="lead">Used for blog tags and filtering</p>
+            </div>
           </div>
-          <div class="col-sm-6">
-            <h4>Small tag pill</h4>
-            <p class="lead">Used for blog tags and filtering</p>
-          </div>
+          <p>
+            <a href="#" class="btn btn-pill btn-sm">Link</a>
+            <button type="button" class="btn btn-pill btn-sm">Button</button>
+            <input type="submit" class="btn btn-pill btn-sm" value="Input">
+            <span class="btn btn-pill btn-sm">Span</span>
+            <input type="checkbox" id="pill-test-sm" name="pill-test-sm" class="toggle sr-only">
+            <label for="pill-test-sm" class="btn btn-pill btn-sm">Label toggle</label>
+          </p>
         </div>
-        <p class="mb-0">
-          <a href="#" class="btn btn-pill-sm">Link</a>
-          <button type="button" class="btn btn-pill-sm">Button</button>
-          <input type="submit" class="btn btn-pill-sm" value="Input">
-          <span class="btn btn-pill-sm">Span</span>
-          <input type="checkbox" id="pill-test-sm" name="pill-test-sm" class="toggle sr-only">
-          <label for="pill-test-sm" class="btn btn-pill-sm">Label toggle</label>
-        </p>
       </div>
-    </div>
+    </section>
 
-    <h2>Icon buttons</h2>
-    <p>These have a square aspect ratio and are used for interactive controls. See <a href="/guideline-icons">the icons
-        page</a>, for further examples of interactive icons.</p>
-    <p>
-      <a href="#" class="btn btn-icon"><span class="shape sh-arrow-left-round"><span class="sr-only">Move
-            left</span></span></a>
-      <button type="button" class="btn btn-icon"><span class="shape sh-arrow-left-round"><span class="sr-only">Move
-            left</span></span></button>
-      <span class="btn btn-icon"><span class="shape sh-arrow-left-round"><span class="sr-only">Move
-            left</span></span></span>
-      <a href="#" class="btn btn-icon"><span class="shape sh-arrow-right-round"><span class="sr-only">Move
-            right</span></span></a>
-      <button type="button" class="btn btn-icon"><span class="shape sh-arrow-right-round"><span class="sr-only">Move
-            right</span></span></button>
-      <span class="btn btn-icon"><span class="shape sh-arrow-right-round"><span class="sr-only">Move
-            right</span></span></span>
-    </p>
+    <section class="gutter-medium" aria-label="Icon buttons">
+      <h2>Icon buttons</h2>
+      <div class="row">
+        <div class="col-lg-8 col-md-10">
+          <p>These have a square aspect ratio and are used for interactive controls. See <a href="/guideline-icons">the icons page</a>, for further examples of interactive icons.</p>
+        </div>
+      </div>
+      <p>
+        <a href="#" class="btn btn-icon"><span class="shape sh-arrow-left-round"><span class="sr-only">Move left</span></span></a>
+        <button type="button" class="btn btn-icon"><span class="shape sh-arrow-left-round"><span class="sr-only">Move left</span></span></button>
+        <span class="btn btn-icon"><span class="shape sh-arrow-left-round"><span class="sr-only">Move left</span></span></span>
+        <a href="#" class="btn btn-icon"><span class="shape sh-arrow-right-round"><span class="sr-only">Move right</span></span></a>
+        <button type="button" class="btn btn-icon"><span class="shape sh-arrow-right-round"><span class="sr-only">Move right</span></span></button>
+        <span class="btn btn-icon"><span class="shape sh-arrow-right-round"><span class="sr-only">Move right</span></span></span>
+      </p>
+
+    </section>
 
   </main>
 </body>
