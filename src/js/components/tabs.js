@@ -37,6 +37,48 @@ export default function tabFactory() {
           pageMargin = Math.round(currentTabs.getBoundingClientRect().left);
         currentTabs.scroll(currentTabPos - pageMargin, 0);
       }
+
+      // Accessibility JavaScript for the pure CSS tabs
+      // All the secret, hidden radio buttons which control the tab set
+      var tabRadios = document.querySelectorAll('[name="tabs"]'),
+        tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+      for (var i = 0; i < tabRadios.length; i++) {
+
+        // We need to fiddle about with the markup, when the radio buttons change.
+        tabRadios[i].oninput = function () {
+          for (var j = 0; j < tabRadios.length; j++) {
+            // Set aria-selected on all radio buttons to false
+            tabRadios[j].setAttribute('aria-selected', false);
+            // Set the "hidden" attribute of all the tab panels
+            tabPanels[j].setAttribute('hidden', 'hidden');
+          }
+          // Set aria-selected on *this* radio button to true
+          this.setAttribute('aria-selected', true);
+          // Removes the "hidden" attribute on the currently selected tab pane
+          document.getElementById(this.getAttribute('aria-controls')).removeAttribute('hidden');
+        };
+
+        // Keyboard navigation in the tab set.
+        tabRadios[i].addEventListener('keydown', function (e) {
+          var oldKey = e.keyCode,
+            newKey = e.key;
+          // User hits home to move to the first tab
+          if (newKey === 'Home' || oldKey === 36) {
+            e.preventDefault();
+            var radio1 = tabRadios.item(0);
+            radio1.focus();
+            radio1.click();
+          }
+          // User hits the end key, to move to the last tab
+          else if (newKey === 'End' || oldKey === 35) {
+            e.preventDefault();
+            var radioLast = tabRadios.item(tabRadios.length - 1);
+            radioLast.focus();
+            radioLast.click();
+          }
+        });
+      }
     }
   },
     // This function searches the DOM for tabsets and shows or hides the

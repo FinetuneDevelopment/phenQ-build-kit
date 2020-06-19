@@ -41,6 +41,7 @@ $border-colour: #000;
   // Default tabs
   a, em, label {
     border-radius: $radius-medium $radius-medium 0 0;
+    cursor: pointer;
     display: inline-block;
     font-family: $body-typeface-semibold;
     min-width: 150px;

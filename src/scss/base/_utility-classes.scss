@@ -1,4 +1,4 @@
-// I guess really small modules?
+// Really small components
 
 // Using arbitrary typefaces
 .type-gotham-light           {font-family: $heading-typeface-light;}
@@ -52,6 +52,7 @@
 .radius-big    { border-radius: $radius-big; }
 .radius-medium { border-radius: $radius-medium; }
 .radius-small  { border-radius: $radius-small; }
+.round         { border-radius: 50%; }
 
 // Used in conjunction with the above classes, this makes a shape a bit
 // like an upside-down U. You know, ⋂.
@@ -143,4 +144,4 @@
   width: 1px;
 }
 // Like the above, but EVIL
-.hidden {display: none;}
+.hidden { display: none; }
