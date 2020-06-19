@@ -39,14 +39,19 @@
 
 // Standard 
 .cta-box {
-    margin-bottom: $gutter;
-    padding: $gutter;
-    & > :last-child {margin-bottom: 0;}
+  // If this is used inside a grid with other .cta-boxes, they'll all be the same size.
+  height: calc(100% - #{$gutter});
+  margin-bottom: $gutter;
+  padding: $gutter;
+  
+  // For the final block element inside the .cta-box
+  // (not the last .cta-box inside a container)
+  & > :last-child { margin-bottom: 0; }
 }
 
-.radius-big    {border-radius: $radius-big;}
-.radius-medium {border-radius: $radius-medium;}
-.radius-small  {border-radius: $radius-small;}
+.radius-big    { border-radius: $radius-big; }
+.radius-medium { border-radius: $radius-medium; }
+.radius-small  { border-radius: $radius-small; }
 
 // Used in conjunction with the above classes, this makes a shape a bit
 // like an upside-down U. You know, ⋂.
@@ -110,9 +115,17 @@
 
 // Say you have a CTA inside a Bootstrap column and you need it to have a vertical flexbox
 // layout, so you can push the button to the bottom (using a .mt-auto class, for example)
+// Works on elements which already have the whole height of the row, naturally.
 .flex-vert {
   display: flex;
   flex-direction: column;
+  // Risky...
+  height: 100%;
+}
+// The height property above causes issues when .flex-vert was added directly onto a Bootstrap
+// column.
+.flex-vert[class^='col'], .flex-vert[class*=' col'] {
+  height: auto;
 }
 
 .sr-only {
