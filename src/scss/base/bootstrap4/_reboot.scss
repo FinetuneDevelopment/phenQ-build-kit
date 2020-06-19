@@ -289,11 +289,12 @@ th {
 // Forms
 //
 
-label {
+//label {
   // Allow labels to use `margin` for spacing.
-  display: inline-block;
-  margin-bottom: $label-margin-bottom;
-}
+  //display: inline-block;
+  // Ross, June 2020.
+//  margin-bottom: $label-margin-bottom;
+//}
 
 // Remove the default `border-radius` that macOS Chrome adds.
 //

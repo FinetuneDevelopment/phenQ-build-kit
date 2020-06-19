@@ -1,0 +1,26 @@
+// Sits outside of .container and covers exactly half of the screen in one colour.
+// Used in conjunction with panels inside of .container to give the illusion that
+// the call-to-action panel extends right to the edge of the viewport. Because
+// grids are just a loose guideline, really.
+.bleed-bisect {
+  position: relative;
+}
+
+.bleed-bisect__child-right,
+.bleed-bisect__child-left {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+// Additional classes are required in order for this to have the correct background
+// colour.
+.bleed-bisect__child-right {
+  left: 50%;
+  right: 0;
+}
+.bleed-bisect__child-left {
+  left: 0;
+  right: 50%;
+}

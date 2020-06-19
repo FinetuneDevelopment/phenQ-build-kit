@@ -128,6 +128,9 @@
   height: auto;
 }
 
+// Sometimes required to snap columns into two (or more) rows
+.w-100 { width: 100% !important; }
+
 .sr-only {
   border: 0;
   clip: rect(0,0,0,0);
@@ -139,3 +142,5 @@
   white-space: nowrap;
   width: 1px;
 }
+// Like the above, but EVIL
+.hidden {display: none;}

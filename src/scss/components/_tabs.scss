@@ -1,51 +1,85 @@
+// Highest number of tabs required on the page.
+$tab-count: 10;
+$border-width: .05em;
+$border-colour: #000;
+
+// Because I use a loop to create the tabs rule, I need to use extend or the SCSS generates multiple similar rules.
+%show-tab {
+  display: block;
+}
+%selected-tab {
+  background: $colour-dark-blue;
+  color: $colour-off-white;
+}
+%focused-tab {
+  background: $colour-bright-blue;
+  color: $colour-off-white;
+}
+
 .tab-set {
-    border-bottom: solid 1px $colour-dark-blue;
+  border-bottom: solid 1px $colour-dark-blue;
+  font-family: $body-typeface-semibold;
+  font-size: 18px;
+  margin: 0 0 1em;
+  overflow: auto;
+  scroll-behavior: smooth;
+  text-transform: uppercase;
+
+  // Added by JavaScript. Without it, users get a scroll bar, like it's 1996.
+  &[data-js="active"] { overflow: hidden; }
+
+  ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  ul, ol {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Default tabs
+  a, em, label {
+    border-radius: $radius-medium $radius-medium 0 0;
+    display: inline-block;
     font-family: $body-typeface-semibold;
-    font-size: 18px;
-    margin: 0 0 1em;
-    overflow: auto;
-    scroll-behavior: smooth;
-    text-transform: uppercase;
+    min-width: 150px;
+    padding: .7em;
+    text-align: center;
+    transition: all .2s;
 
-    // Added by JavaScript. Without it, users get a scroll bar, like it's 1996.
-    &[data-js="active"] {overflow: hidden;}
+    &:before {display: none;}
+  }
+  // You are here
+  em, .selected {
+    @extend %selected-tab;
+  }
+  a:hover, a:focus {
+    @extend %focused-tab;
+  }
+}
 
-    ul, ol, li {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    ul, ol {
-        // If we're falling back to floating...
-        //@include clearfix;
-        display: flex;
-        justify-content: space-between;
-    }
-    // If we're falling back to floating...
-    //li {
-    //    float: left;
-    //    margin: 0 35px 0 0;
-    //}
+// Functional styling
+// Showing and hiding the tab panes
+[role="tabpanel"] {display: none;}
 
-    // Default tabs
-    a, em {
-        border-radius: $radius-medium $radius-medium 0 0;
-        display: inline-block;
-        font-family: $body-typeface-semibold;
-        min-width: 150px;
-        padding: .7em;
-        text-align: center;
-        transition: all .2s;
+//  Note that one of the limitations of this method is that the maximum number of tabs needs to be know in advance.
+// I'm hoping to disguise this limitation, via the sneaky use of SCSS loops.
+@for $i from 1 through $tab-count {
 
-        &:before {display: none;}
-    }
-    // You are here
-    em, .selected {
-        background: $colour-dark-blue;
-        color: $colour-off-white;
-    }
-    a:hover, a:focus {
-        background: $colour-bright-blue;
-        color: $colour-off-white;
-    }
+  // Showing the current tab pane
+  input[id="tab#{$i}"]:checked ~ [id="pane#{$i}"] {
+    @extend %show-tab;
+  }
+
+  // Selected tab
+  input[id="tab#{$i}"]:checked ~ .tab-set [for="tab#{$i}"] {
+    @extend %selected-tab;
+  }
+  
+  // Focused tab
+  // (this is the clever bit: the label gets a style when the hidden radio button goes into focus)
+  input[id="tab#{$i}"]:focus ~ .tab-set [for="tab#{$i}"] {
+    @extend %focused-tab;
+	}
 }
