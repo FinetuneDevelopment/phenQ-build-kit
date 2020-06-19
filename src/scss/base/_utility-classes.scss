@@ -48,6 +48,13 @@
 .radius-medium {border-radius: $radius-medium;}
 .radius-small  {border-radius: $radius-small;}
 
+// Used in conjunction with the above classes, this makes a shape a bit
+// like an upside-down U. You know, ⋂.
+.cap-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 // Created in error
 //.shadow-light {
 //  -webkit-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
@@ -88,4 +95,10 @@
   &, img {
     border-radius: 50%;
   }
+}
+
+// Say you have a set of icons or buttons and you want to make a quick-and-dirty navbar
+.space-between {
+  display: flex;
+  justify-content: space-between;
 }

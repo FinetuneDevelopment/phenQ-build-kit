@@ -41,10 +41,10 @@
     }
     // This is very clever and I deserve a prize.
     // (note that SVGs need to be put together in a certain way)
-    svg[stroke="none"], path[fill="#273583"] {
+    [stroke="none"], [fill="#273583"] {
       fill: inherit;
     }
-    svg[fill="none"], path[stroke="#273583"] {
+    [fill="none"], [stroke="#273583"] {
       stroke: inherit;
     }
     .quote-banner footer {border-color: inherit;}
@@ -57,6 +57,7 @@
 .bg-light-grey  {background: $colour-light-grey;}
 .bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey {
     color: $colour-dark-blue;
+
     a {color: inherit;}
 }
 
@@ -69,7 +70,16 @@
   // if there's not enough content to do the job.
   min-height: 870px;
 }
+
 .bg-night-girl {
   background: #080808 url(/img/bg/bg-night-girl.jpg) 0 0 no-repeat;
   background-size: contain;
+}
+
+.bg-pill-tile {
+  background: url(/img/bg/bg-pill-tile.png);
+  // Is this a terrible idea?
+  -webkit-box-shadow: inset 2em 0 1em 0 $colour-mint;
+     -moz-box-shadow: inset 2em 0 1em 0 $colour-mint;
+          box-shadow: inset 2em 0 1em 0 $colour-mint;
 }
