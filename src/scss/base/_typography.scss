@@ -62,6 +62,8 @@ a {
         transition: all .2s;
     }
     &:hover, &:focus {
+        text-decoration: none;
+        
         &:before {right: 0;}
     }
 }
