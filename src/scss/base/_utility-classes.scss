@@ -54,6 +54,7 @@
 .radius-small  { border-radius: $radius-small; }
 .round         { border-radius: 50%; }
 
+.img-fluid { max-width: 100%; }
 // Used in conjunction with the above classes, this makes a shape a bit
 // like an upside-down U. You know, ⋂.
 .cap-top {

@@ -219,7 +219,8 @@
         </div>
 
       </section>
-    </div>
+
+    </div><!-- .container -->
 
     <section aria-label="Bleed grid">
       <div class="bleed-grid bg-mint gutter-medium">
@@ -253,7 +254,53 @@
         </div>
       </div>
     </div>
+
+    <section class="bleed-bisect gutter-medium" aria-label="bleed-bisect">
+      <div class="bleed-bisect__child-right bg-mint"></div>
+      <div class="container">
+        <div class="cta-box radius-big bg-mint">
+          <div class="row align-items-center">
+            <div class="col">
+              <h2>Bleed bisect</h2>
+              <p>Bleed bisect must sit outside of <code>.container</code> and for the best visual effect, requires the following markup structure:</p>
+              <ul>
+                <li><code>.bleed-bisect</code>
+                  <ul>
+                    <li><code>.bleed-bisect__child-right</code> (for example)</li>
+                    <li><code>.container</code>
+                      <ul>
+                        <li><code>.cta-box .radius-big</code></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p>Note that both the <code>.bleed-bisect__child-right</code> and <code>.cta-box</code> should have the same background colour class applied to them.</p>
+            </div>
+            <p class="col"><img src="http://placeimg.com/538/538/animals" alt="" class="round img-fluid"></p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section class="bleed-bisect gutter-medium" aria-label="bleed-bisect">
+      <div class="bleed-bisect__child-left bg-dark-blue"></div>
+      <div class="container">
+        <div class="cta-box radius-big bg-dark-blue">
+          <div class="row align-items-center">
+            <p class="col"><img src="http://placeimg.com/538/538/people" alt="" class="round img-fluid"></p>
+            <div class="col">
+              <h2>Bleed bisect</h2>
+              <p>Using a class of <code>bleed-bisect__child-left</code>.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur, justo ac varius semper, nisi mi finibus eros, a faucibus mi leo eget nulla. Etiam vel sodales lorem, sed feugiat metus. Nam ac ultricies sapien. Vivamus interdum nulla ut arcu aliquet, sit amet sollicitudin sem volutpat.</p>
+              <p>Donec vestibulum rutrum enim, id feugiat justo commodo nec. Duis lacus purus, sagittis a consectetur ut, elementum sit amet risus. Duis ac ex cursus, accumsan velit vitae, sodales sem. In vel tincidunt enim. Aliquam odio ligula, venenatis at quam sed, hendrerit pulvinar enim.</p>
+              <p></p>Cras eu vulputate metus. Sed ante nulla, lacinia in justo et, hendrerit molestie tortor. In rutrum vulputate mauris, at mollis eros egestas eget. Aenean ut luctus dui. Duis euismod, ipsum nec condimentum commodo, turpis nibh pellentesque sapien, eget suscipit nibh nulla ac dui. Cras id lobortis sapien. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 </body>

@@ -2,6 +2,13 @@
 // Used in conjunction with panels inside of .container to give the illusion that
 // the call-to-action panel extends right to the edge of the viewport. Because
 // grids are just a loose guideline, really.
+// Markup structure:
+// .bleed-bisect
+// ├ .bleed-bisect__child-right or .bleed-bisect__child-left + background colour (empty element)
+// └ .container
+//   └ .cta-box .radius-big + background colour (same as above)
+//     └ Content goes here
+
 .bleed-bisect {
   position: relative;
 }
