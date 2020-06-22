@@ -77,9 +77,5 @@
 }
 
 .bg-pill-tile {
-  background: url(/img/bg/bg-pill-tile.png);
-  // Is this a terrible idea?
-  -webkit-box-shadow: inset 2em 0 1em 0 $colour-mint;
-     -moz-box-shadow: inset 2em 0 1em 0 $colour-mint;
-          box-shadow: inset 2em 0 1em 0 $colour-mint;
+  background: url(/img/bg/bg-pill-tile.png) 0 0 repeat-y;
 }
