@@ -29,36 +29,46 @@
     fill:         $colour-off-white;
     stroke:       $colour-off-white;
 
-    a {color: inherit;}
+    a, .btn-arrow {
+      color: inherit;
+    }
+
     a:hover, a:focus,
     .btn:hover, .btn:focus {
         color: inherit;
     }
+
     a, .btn-arrow {
-        &:hover, &:focus {
-            &:before {border-color: inherit;}
-        }
+      &:hover::before, &:focus::before {
+        border-color: inherit;
+      }
     }
+
     // This is very clever and I deserve a prize.
     // (note that SVGs need to be put together in a certain way)
     [stroke="none"], [fill="#273583"] {
       fill: inherit;
     }
+
     [fill="none"], [stroke="#273583"] {
       stroke: inherit;
     }
-    .quote-banner footer {border-color: inherit;}
+
+    .quote-banner footer {
+      border-color: inherit;
+    }
 }
 
 // These are light colours, broadly speaking
-.bg-off-white   {background: $colour-off-white;}
-.bg-mint        {background: $colour-mint;}
-.bg-lemon       {background: $colour-lemon;}
-.bg-light-grey  {background: $colour-light-grey;}
-.bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey {
+.bg-white      { background: $colour-white; }
+.bg-off-white  { background: $colour-off-white; }
+.bg-mint       { background: $colour-mint; }
+.bg-lemon      { background: $colour-lemon; }
+.bg-light-grey { background: $colour-light-grey; }
+.bg-white, .bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey {
     color: $colour-dark-blue;
 
-    a {color: inherit;}
+    a { color: inherit; }
 }
 
 ////////////////////
@@ -76,6 +86,7 @@
   background-size: contain;
 }
 
+// Sort of wallpaper of bottles of PhenQ
 .bg-pill-tile {
   background: url(/img/bg/bg-pill-tile.png) 0 0 repeat-y;
 }

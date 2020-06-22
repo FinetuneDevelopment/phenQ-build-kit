@@ -1,0 +1,32 @@
+// Usually used in groups of three, with the central product
+// using the .product-display-primary class.
+// Much of the styling is controlled with utility classes.
+// Only declarations which are unique to .product-display
+// live here.
+
+$product-margin-top: 22px;
+$product-padding-top: 50px;
+.product-display {
+  margin-bottom: 22px;
+  margin-top: $product-margin-top;
+  padding-bottom: $product-margin-top;
+  padding-top: $product-padding-top;
+  position: relative;
+}
+
+.product-display-primary {
+  margin: 0;
+  padding-bottom: $product-padding-top;
+  // In theory, this should allow the same markup to line up horizontally,
+  // across all three products.
+  padding-top: $product-margin-top + $product-padding-top;
+}
+
+// The primary product has an element usually reading "M O S T  P O P U L A R"
+.product-display__header {
+  left: 0;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

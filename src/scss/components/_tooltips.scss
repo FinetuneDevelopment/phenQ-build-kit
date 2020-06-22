@@ -1,0 +1,85 @@
+// (mostly) CSS tooltips
+// (JavaScript is used for ensuring they appear somewhere sensible
+// inside the viewport)
+.tooltip {
+  position: relative;
+
+  // Trying to increase the click area, without increasing the size
+  // of the icon.
+  label {
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    padding: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+
+    // The two triangles which overlap each other and give the illusion of
+    // a tick connecting the bubble to the (i) icon
+    &::before, &::after {
+      border: solid 15px transparent;
+      border-bottom: solid 17px $colour-bright-blue;
+      border-top: none;
+      content: "";
+      left: -5px;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      z-index: -1;
+    }
+
+    // We want the white triangle (::after) to appear
+    // immediately, where as we want the blue triange
+    // to fade in at the same time as the rest of the
+    // bubble.
+    &::before {
+      transition: opacity .5s;
+    }
+
+    // Note this causes the white triangle to overlap the
+    // bubble a little, but it's less CSS than drawing two
+    // triangles which fix exactly inside each other.
+    &::after {
+      border-bottom-color: $colour-white;
+      // ~ 2px border around the triangle
+      top: calc(100% + 3px);
+    }
+  }
+
+  // So the label shrink-wraps the SVG
+  svg {
+    display: block;
+  }
+
+  // The box with the tooltip text inside
+  .details {
+    background: $colour-off-white;
+    border: solid 2px $colour-bright-blue;
+    opacity: 0;
+    padding: 15px 20px;
+    position: absolute;
+    left: -150px;
+    margin: 16px 0 0;
+    top: 100%;
+    transition: opacity .5s;
+    width: 214px;
+    z-index: -1;
+  }
+
+  // The user has clicked on the tooltip icon
+  input:checked {
+
+    ~ .details {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    // Showing the speech bubble tick
+    ~ label::before, ~ label::after {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}

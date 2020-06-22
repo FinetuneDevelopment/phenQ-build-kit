@@ -23,7 +23,7 @@
 
 // Primary, secondary and config buttons have some styles in common
 // Note that the margin bottom leads to a doubling of the gutters at the bottom of the paragraph
-// so should be used within a .mb-0 class.
+// so should be used within a .flush class.
 .btn-primary, .btn-secondary, .btn-config {
   font-size: 14px;
   border-radius: $radius-medium;
@@ -124,7 +124,7 @@ input.btn.btn-secondary {
 // Designed to sit against coloured backgrounds and suchlike
 ////////////////////////////////////////////////////////////
 .btn-arrow {
-  //color: $colour-dark-blue;
+  color: $colour-dark-blue;
   font-family: $body-typeface-bold;
   font-size: 16px;
   padding: 0 1.5em 0 0;
@@ -165,6 +165,16 @@ input.btn.btn-secondary {
     border-color: $colour-bright-blue;
     right: .2em;
     width: 1.2em;
+  }
+
+  // Small varient, used inside tooltips
+  &.btn-sm {
+    font-size: 12px;
+
+    // That arrow is still nice and chunky though
+    &::before, &::after {
+      font-size: 16px;
+    }
   }
 }
 
