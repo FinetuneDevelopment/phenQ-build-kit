@@ -27,9 +27,12 @@
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
+  height: auto;
 }
 
 // Pushing the footer to the bottom of the box
 .block-scroll__footer {
   margin-top: auto;
+
+  & > * { margin-bottom: 0; }
 }

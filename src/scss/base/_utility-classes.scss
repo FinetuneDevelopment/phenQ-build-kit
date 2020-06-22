@@ -41,12 +41,21 @@
 .cta-box {
   // If this is used inside a grid with other .cta-boxes, they'll all be the same size.
   height: calc(100% - #{$gutter});
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: $gutter;
   padding: $gutter;
   
   // For the final block element inside the .cta-box
   // (not the last .cta-box inside a container)
-  & > :last-child { margin-bottom: 0; }
+  & > :last-child {
+    margin-top: auto;
+    margin-bottom: 0;
+
+    // Hmmm.
+    & .btn { margin-bottom: 0; }
+  }
 }
 
 .radius-big    { border-radius: $radius-big; }
