@@ -41,7 +41,6 @@
 .cta-box {
   // If this is used inside a grid with other .cta-boxes, they'll all be the same size.
   height: calc(100% - #{$gutter});
-  //height: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: $gutter;
