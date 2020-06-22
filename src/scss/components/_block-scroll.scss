@@ -12,6 +12,8 @@
   display: flex;
   justify-content: space-between;
   overflow: auto;
+  // Required, so we can measure the scroll amount
+  position: relative;
 }  
 
 // JavaScript has found the markup, and thinks it's good.
@@ -20,12 +22,34 @@
   scroll-behavior: smooth;
 }  
 
-.block-scroll__child {
-  margin: 0 1em 0 0;
-  flex-basis: 370px;
+// The (<-) and (->) buttons, which JavaScript shows and hides, as required
+.scroll-control {
+  position: relative;
+  z-index: 1;
+}
+
+.block-scroll__child,
+.block-scroll__child-wide {
   flex-grow: 0;
   flex-shrink: 0;
+  // Gutter between items
+  margin: 0 1em 0 0;
+}
+.block-scroll__child:last-child,
+.block-scroll__child-wide:last-child {
+  margin: 0;
+}
+
+// This is based on the reviews scroller
+.block-scroll__child {
+  flex-basis: 370px;
   height: auto;
+}
+
+// This is as wide as the parent scroller, so only one child
+// is seen through the scroll port at any one time.
+.block-scroll__child-wide {
+  width: 100%;
 }
 
 // Fixing the bottom gutter

@@ -6,6 +6,7 @@ export default function blockScroll() {
 
   myFactory.init = function () {
     var scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
+
     // Do we have owt to do?
     if (scrollSet.length) {
       // Might need to do this more than once.
@@ -37,11 +38,13 @@ export default function blockScroll() {
     // scroll buttons, as required.
     myFactory.scrollCheck = function () {
       var scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
+
       if (scrollSet.length) {
         // Go through each matching set of scrollable items
         for (var i = 0; i < scrollSet.length; i++) {
           var currentScroll = scrollSet[i],
-            scrollNav = currentScroll.previousSibling;
+            scrollNav = currentScroll.previousElementSibling;
+
           // If the element has a scroll bar
           if ((currentScroll.scrollWidth > currentScroll.clientWidth)) {
             scrollNav.classList.remove('hidden');
@@ -54,13 +57,12 @@ export default function blockScroll() {
     // User has clicked on the (<-) button
     myFactory.previousItem = function (e) {
       var scrollParent = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
-        pageMargin = Math.round(scrollParent.getBoundingClientRect().left),
         blockScrollItems = scrollParent.querySelectorAll('[data-js="block-scroll-item"]'),
         arScrollpoints = [];
 
       // Builds up an array of the snap points of the tab navigation, from left to right.
       for (var i = 0; i < blockScrollItems.length; i++) {
-        arScrollpoints[i] = (blockScrollItems[i].offsetLeft - pageMargin);
+        arScrollpoints[i] = (blockScrollItems[i].offsetLeft);
       }
       // Works out which snap point we're currently closest to, working from the end back.
       for (var i = (arScrollpoints.length - 1); i >= 0; i--) {
@@ -79,14 +81,14 @@ export default function blockScroll() {
     // User has clicked on the (->) button
     myFactory.nextItem = function (e) {
       var scrollParent = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
-        pageMargin = Math.round(scrollParent.getBoundingClientRect().left),
         blockScrollItems = scrollParent.querySelectorAll('[data-js="block-scroll-item"]'),
         arScrollpoints = [];
 
       // Builds up an array of the snap points of the tab navigation, from left to right.
       for (var i = 0; i < blockScrollItems.length; i++) {
-        arScrollpoints[i] = (blockScrollItems[i].offsetLeft - pageMargin);
+        arScrollpoints[i] = (blockScrollItems[i].offsetLeft);
       }
+
       // Works out which snap point we're currently at.
       for (var i = 0; i < arScrollpoints.length; i++) {
         if (arScrollpoints[i] > scrollParent.scrollLeft) {

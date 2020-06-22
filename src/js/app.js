@@ -10,8 +10,4 @@ window.addEventListener('resize', myTabs.scrollCheck);
 import blockScroll from './components/block-scroll.js';
 const myBlockScroll = new blockScroll();
 myBlockScroll.init();
-//window.addEventListener('resize', myBlockSctoll.scrollCheck);
-
-//import formFactory from './components/forms.js';
-//const myForm = new formFactory();
-//myForm.init();
+//window.addEventListener('resize', myBlockScroll.scrollCheck);
