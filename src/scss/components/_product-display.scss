@@ -30,3 +30,12 @@ $product-padding-top: 50px;
   right: 0;
   top: 0;
 }
+
+// This is an ultra-specific class used to squeeze a paragraph into the exact
+// space usually taken up by the class .gutter-small. This is required so that
+// one product can have an extra line of text where a gutter appears in the
+// other products and everything after this point still remains in line.
+.product-display__gsmall {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
