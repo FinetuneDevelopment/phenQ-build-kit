@@ -48,6 +48,9 @@ $grad-dark-blue-v: linear-gradient(0deg, #0d1649 0%, $colour-dark-blue 100%);
 
 // Call-to-action padding
 $gutter: 32px;
+// Spacing, used in gutter classes
+// (sorry for my terrible naming convention)
+$space: 50px;
 
 // Border-radius for call-to-action buttons
 $radius-big:    20px;

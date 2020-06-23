@@ -1,0 +1,23 @@
+.faq {
+  .details {
+    display: none;
+  }
+  input:checked {
+
+    ~ .details {
+      display: block;
+    }
+    ~ label .faq__icon {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.faq__icon {
+  display: inline-block;
+  // Bigger target, mate.
+  padding: 0 .2em;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: all .2s;
+}
