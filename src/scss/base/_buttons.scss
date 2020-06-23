@@ -210,9 +210,10 @@ input.btn.btn-secondary {
 }
 .btn-pill.btn-sm {
   font-size: 12px;
-  margin: 0 25px 12px 0; // Second value is ~half the first
+  margin: 0 8px 4px 0; // Second value is ~half the first
+  min-width: 1em;
   // Annoying
-  padding: .21em 1.6em;
+  padding: .21em .6em;
 }
 
 ///////////////

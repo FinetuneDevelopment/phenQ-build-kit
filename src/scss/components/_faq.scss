@@ -1,7 +1,15 @@
 .faq {
+
+  // Clicky parts
+  label {
+    cursor: pointer;
+  }
+
+  // Expanded panels
   .details {
     display: none;
   }
+
   input:checked {
 
     ~ .details {
