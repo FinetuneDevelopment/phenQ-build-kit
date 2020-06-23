@@ -1,40 +1,40 @@
 // These are dark colours, broadly speaking
-.bg-bright-blue      {background: $colour-bright-blue;}
-.bg-mid-blue         {background: $colour-mid-blue;}
-.bg-dark-blue        {background: $colour-dark-blue;}
+.bg-bright-blue      { background: $colour-bright-blue; }
+.bg-mid-blue         { background: $colour-mid-blue; }
+.bg-dark-blue        { background: $colour-dark-blue; }
 // Form states
-.bg-red              {background: $colour-red;}
-.bg-green            {background: $colour-green;}
+.bg-red              { background: $colour-red; }
+.bg-green            { background: $colour-green; }
 // Used in various places
-.bg-grey             {background: $colour-grey;}
-.bg-dark-grey        {background: $colour-dark-grey;}
+.bg-grey             { background: $colour-grey; }
+.bg-dark-grey        { background: $colour-dark-grey; }
 // Gradients
-.bg-grad-light-blue  {background: $grad-light-blue;}
-.bg-grad-mid-blue    {background: $grad-mid-blue;}
-.bg-grad-dark-blue   {background: $grad-dark-blue;}
-.bg-grad-dark-blue-v {background: $grad-dark-blue-v;}
+.bg-grad-light-blue  { background: $grad-light-blue; }
+.bg-grad-mid-blue    { background: $grad-mid-blue; }
+.bg-grad-dark-blue   { background: $grad-dark-blue; }
+.bg-grad-dark-blue-v { background: $grad-dark-blue-v; }
 
-// This rule attempts to fix issues with dark
-// text on a dark background, plus issues with
-// links. See the colour stress test for
-// regression testing.
-.bg-mid-blue, .bg-bright-blue, .bg-dark-blue,
-.bg-grad-mid-blue, .bg-grad-dark-blue,
-.bg-grad-dark-blue-v, .bg-grad-light-blue,
-.bg-red, .bg-green,
-.bg-grey, .bg-dark-grey {
+// This rule attempts to fix issues with dark text on a dark background, plus issues with
+// links. See the colour stress test for regression testing.
+// This was the old selector. The generated rule was MASSIVE. Note that no properties other
+// than background should be added to light classes.
+// .bg-mid-blue, .bg-bright-blue, .bg-dark-blue,
+// .bg-grad-mid-blue, .bg-grad-dark-blue,
+// .bg-grad-dark-blue-v, .bg-grad-light-blue,
+// .bg-red, .bg-green,
+// .bg-grey, .bg-dark-grey
+[class^="bg-"], [class*=" bg-"] {
     // These are set up so they can be inherited by the kids
     border-color: $colour-off-white;
     color:        $colour-off-white;
     fill:         $colour-off-white;
     stroke:       $colour-off-white;
 
-    a, .btn-arrow {
-      color: inherit;
-    }
-
+    a, .btn-arrow,
     a:hover, a:focus,
-    .btn:hover, .btn:focus {
+    .btn:hover, .btn:focus,
+    input, select, textarea {
+        background: inherit;
         color: inherit;
     }
 
@@ -46,7 +46,7 @@
 
     // This is very clever and I deserve a prize.
     // (note that SVGs need to be put together in a certain way)
-    [stroke="none"], [fill="#273583"] {
+    [stroke="none"], [fill="#273583"], [fill^="url"] {
       fill: inherit;
     }
 
@@ -69,6 +69,15 @@
     color: $colour-dark-blue;
 
     a { color: inherit; }
+
+    [stroke="none"], [fill="#273583"] {
+      fill: $colour-dark-blue;
+    }
+
+    [fill="none"], [stroke="#273583"] {
+      stroke: $colour-dark-blue;
+    }
+
 }
 
 ////////////////////
@@ -76,6 +85,7 @@
 ////////////////////
 .bg-home {
   background: $colour-off-white url(/img/bg/bg-home.jpg) 50% 0 no-repeat;
+  color: $colour-dark-blue;
   // This is to ensure that the following content gets pushed down,
   // if there's not enough content to do the job.
   min-height: 870px;

@@ -1,17 +1,17 @@
 // All the font fun is here
 body {
-    background: $colour-off-white;
-    color: $colour-dark-blue;
-    font-family: $body-typeface;
-    font-size: $font-size-body;
-    line-height: 1.4;
+  background: $colour-off-white;
+  color: $colour-dark-blue;
+  font-family: $body-typeface;
+  font-size: $font-size-body;
+  line-height: 1.4;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    font-weight: normal;
-    line-height: 1.1;
-    margin: 0 0 .8em;
-    strong, b, em, i {font-family: $heading-typeface-bold;}
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .8em;
+  strong, b, em, i { font-family: $heading-typeface-bold; }
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: $heading-typeface-light;
@@ -22,17 +22,17 @@ h5, .h5, h6, .h6 {
 
 .heading-bold {
   font-family: $heading-typeface-bold;
-    strong, b, em, i {font-family: $heading-typeface-light;}
+    strong, b, em, i { font-family: $heading-typeface-light; }
 }
 
-h1, .h1 {font-size: $font-size-h1;}
-h2, .h2 {font-size: $font-size-h2;}
-h3, .h3 {font-size: $font-size-h3;}
-h4, .h4 {font-size: $font-size-h4;}
-h5, .h5 {font-size: $font-size-h5;}
-h6, .h6 {font-size: $font-size-h6;}
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
 
-.lead {font-size: $font-size-big;}
+.lead { font-size: $font-size-big; }
 
 // Legal text which appears under call-to-action buttons, for example.
 .legal {
@@ -60,7 +60,7 @@ a {
     &:hover, &:focus {
         text-decoration: none;
         
-        &:before {right: 0;}
+        &:before {right: 0; }
     }
 }
 
@@ -83,6 +83,8 @@ strong, b {
   }
 }
 
-p {margin: 0 0 1em;}
+p {margin: 0 0 1em; }
 
-code, pre, kbd {font-family: monaco, Consolas, 'Lucida Console', monospace;}
+code, pre, kbd {
+  font-family: monaco, Consolas, 'Lucida Console', monospace;
+}

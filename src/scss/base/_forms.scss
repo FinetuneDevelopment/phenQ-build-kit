@@ -170,3 +170,32 @@ fieldset {
         width: .4em;
     }
 }
+
+// More compact forms can be found elsewhere - for example the email signup
+// in the site footer.
+.form-compact {
+  border-bottom: solid 1px $colour-dark-blue;
+  position: relative;
+
+  input, select, textarea {
+    border: none;
+  }
+
+  // So that the label and the placeholder text line up
+  textarea {
+    padding: 9px 0 0;
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 1;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .2s;
+  }
+  :placeholder-shown ~ label {
+    font-size: unset;
+    line-height: 43px;
+  }
+}

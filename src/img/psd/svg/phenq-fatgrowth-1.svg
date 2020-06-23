@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>EBC3E801-5A27-492C-8C21-25A5E2E880AE</title>
-    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1.0_phenq-design" transform="translate(-139.000000, -1366.000000)">
-            <rect fill="#FAFAFA" x="0" y="0" width="1440" height="9871"></rect>
-            <rect id="Rectangle" fill="#FFFFFF" x="0" y="1108" width="1440" height="1253"></rect>
-            <g id="phenq-fatgrowth" transform="translate(139.000000, 1366.000000)">
+    <title>EA1CAA92-F7F8-4AA5-A960-19DA799A74F3</title>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="phenqicons" transform="translate(-732.000000, -145.000000)">
+            <rect id="Rectangle-Copy-19" stroke="#979797" x="721.5" y="134.5" width="80" height="80"></rect>
+            <g id="phenq-fatgrowth" transform="translate(732.000000, 145.000000)">
                 <circle id="Oval" fill="#D7F4C8" cx="29.625" cy="29.625" r="29.625"></circle>
-                <g id="components/benefits/icons/reduceface" transform="translate(12.000000, 12.000000)" stroke="#273583" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3825">
+                <g id="components/benefits/icons/reduceface" transform="translate(13.000000, 12.000000)" stroke="#273583" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3825">
                     <g id="Group">
                         <g id="Light">
                             <line x1="17.2535994" y1="34.4772446" x2="17.2535994" y2="29.2352656" id="Shape"></line>

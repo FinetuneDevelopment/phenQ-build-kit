@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>FCF56884-9BFC-4269-8C6B-5E173848FEDF</title>
-    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1.0_phenq-design" transform="translate(-140.000000, -1607.000000)">
-            <rect fill="#FAFAFA" x="0" y="0" width="1440" height="9871"></rect>
-            <rect id="Rectangle" fill="#FFFFFF" x="0" y="1108" width="1440" height="1253"></rect>
-            <g id="phenq-boostsenergy" transform="translate(140.000000, 1607.000000)">
+    <title>9B6D35C2-E6D3-44E2-BD88-590155793173</title>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="phenqicons" transform="translate(-1106.000000, -143.000000)">
+            <rect id="Rectangle-Copy-23" stroke="#979797" x="1095.5" y="134.5" width="80" height="80"></rect>
+            <g id="phenq-boostsenergy" transform="translate(1106.000000, 143.000000)">
                 <circle id="Oval" fill="#D7F4C8" cx="30" cy="30" r="30"></circle>
-                <g id="components/benefits/icons/reduceface" transform="translate(11.392405, 11.392405)" stroke="#273583" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4">
+                <g id="components/benefits/icons/reduceface" transform="translate(11.392405, 12.392405)" stroke="#273583" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4">
                     <g id="Group" transform="translate(0.000000, 2.278481)">
                         <g id="Light">
                             <path d="M1.75369198,15.0777954 L12.7768987,15.0777954 C13.0522227,15.0780204 13.3094727,14.940738 13.4625527,14.7118935 L15.7024657,11.3528481 C15.8676744,11.1052171 16.1535886,10.9659303 16.4504165,10.9884742 C16.7472444,11.0110181 17.0088428,11.1918881 17.1347574,11.4616297 L21.5189873,20.8564082 C21.6554293,21.149096 21.9502473,21.3351225 22.2731629,21.3323157 C22.5960784,21.3294449 22.8875804,21.1382639 23.0188555,20.8432226 L25.3626055,15.568961 C25.4933765,15.2693241 25.7889068,15.0753217 26.115836,15.0744989 L36.2209916,15.0744989" id="Shape"></path>

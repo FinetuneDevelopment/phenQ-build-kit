@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>9722DE36-0BFC-4D49-ABB2-C30FE5E99A4E</title>
-    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1.0_phenq-design" transform="translate(-926.000000, -1366.000000)">
-            <rect fill="#FAFAFA" x="0" y="0" width="1440" height="9871"></rect>
-            <rect id="Rectangle" fill="#FFFFFF" x="0" y="1108" width="1440" height="1253"></rect>
-            <g id="phenq-foodcravings" transform="translate(926.000000, 1366.000000)">
+    <title>9DDF57EE-A816-41CB-A140-B66581BE89C3</title>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="phenqicons" transform="translate(-919.000000, -145.000000)">
+            <rect id="Rectangle-Copy-21" stroke="#979797" x="911.5" y="134.5" width="80" height="80"></rect>
+            <g id="phenq-foodcravings" transform="translate(919.000000, 145.000000)">
                 <circle id="Oval" fill="#D7F4C8" cx="30" cy="30" r="30"></circle>
                 <g id="components/benefits/icons/reduceface" transform="translate(10.632911, 10.392405)" stroke="#273583" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4">
                     <g id="Group" transform="translate(3.797468, 0.240506)">

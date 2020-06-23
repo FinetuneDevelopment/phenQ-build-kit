@@ -61,6 +61,7 @@
 
   &:hover, &:focus {
       background: $colour-dark-blue;
+      color: $colour-off-white;
   }
 
   &:before {border: none;}
@@ -250,4 +251,13 @@ input.btn.btn-secondary {
   font-family: $body-typeface-semibold;
   font-size: 12px;
   padding: .97em 2em;
+}
+
+//////////////////////////////////////////////
+// Used in the email signup form in the footer
+//////////////////////////////////////////////
+.btn-clear {
+  background: transparent;
+  color: inherit;
+  padding: 0;
 }
