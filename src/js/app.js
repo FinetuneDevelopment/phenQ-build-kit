@@ -2,6 +2,10 @@
 
 import '../scss/app.scss';
 
+import clicks from './components/clicks.js';
+const myClicks = new clicks();
+myClicks.init();
+
 import tabFactory from './components/tabs.js';
 const myTabs = new tabFactory();
 myTabs.init();

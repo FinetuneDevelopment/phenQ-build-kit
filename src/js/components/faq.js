@@ -5,9 +5,6 @@ export default function faqFactory() {
     labels = document.querySelectorAll('label[data-js="label-toggle"]');
 
   myFactory.init = function () {
-    // If a user clicks on the label for a selected radio button,
-    // the radio button is toggled off
-
     // Do we have owt to do?
     if (labels.length) {
 
