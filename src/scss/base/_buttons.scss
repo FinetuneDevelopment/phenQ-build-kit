@@ -260,4 +260,10 @@ input.btn.btn-secondary {
   background: transparent;
   color: inherit;
   padding: 0;
+
+  // This can also be used to remove the default link styling,
+  // which has the underline on hover effect.
+  &::before {
+    display: none;
+  }
 }

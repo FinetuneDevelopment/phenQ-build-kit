@@ -151,6 +151,10 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'guideline-panels/index.html'),
       }),
       new HtmlWebpackPlugin({
+        filename: 'guideline-interactive/index.html',
+        template: path.resolve(__dirname, 'src', 'guideline-interactive/index.html'),
+      }),
+      new HtmlWebpackPlugin({
         filename: 'home/index.html',
         template: path.resolve(__dirname, 'src', 'home/index.html'),
       }),
