@@ -27,13 +27,10 @@ export default function tabFactory() {
     // Checking if the passed element is a child of an element which has a class
     // which matches the passed classname.
     myFactory.isChild = function (element, classname) {
-      if (
-        typeof element.className !== 'object' // SVGs are weird, man.
-        &&
-        element.className.split(' ').indexOf(classname) >= 0
-      ) {
+      if (typeof element.className !== 'object' && // SVGs are weird, man.
+        element.className.split(' ').indexOf(classname) >= 0) {
         return true;
-      } else if (element.tagName !== 'BODY') { // If you've reached the body, you've gone too far
+      } else if (element.tagName !== 'HTML') { // If you've reached the body, you've gone too far
         return element.parentNode && myFactory.isChild(element.parentNode, classname);
       } else {
         return false;
