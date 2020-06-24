@@ -186,15 +186,18 @@ input.btn.btn-secondary {
   background: $colour-off-white;
   color: $colour-dark-blue;
 }
-
-.btn-pill {
+.btn-pill, .toggle:checked + .btn-pill {
   background: $colour-dark-blue;
   border: solid 1px $colour-dark-blue;
   border-radius: 2em;
   color: $colour-off-white;
+
+}
+.btn-pill {
   font-size: 14px;
   margin: 0 35px 17px 0; // Second value is ~half the first
-  min-width: 160px;
+  // Did not survive contact with actual page layouts
+  // min-width: 160px;
   padding: .43em 1em;
   
   &:before {border: none;}
@@ -204,10 +207,8 @@ input.btn.btn-secondary {
 }
 
 // For when pills are used to style checkbox toggles
-.toggle:checked {
-  & ~ .btn-pill, & ~ .btn-pill-sm {
-    @extend %pill-inactive;
-  }
+label.btn-pill, label.btn-pill-sm {
+  @extend %pill-inactive;
 }
 .btn-pill.btn-sm {
   font-size: 12px;

@@ -162,6 +162,14 @@ const config = function (env, args) {
         filename: 'about/index.html',
         template: path.resolve(__dirname, 'src', 'about/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'blog/index.html',
+        template: path.resolve(__dirname, 'src', 'blog/index.html'),
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'blog/article/index.html',
+        template: path.resolve(__dirname, 'src', 'blog/article/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),

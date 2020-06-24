@@ -42,9 +42,15 @@
   // If this is used inside a grid with other .cta-boxes, they'll all be the same size.
   height: calc(100% - #{$gutter});
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   margin-bottom: $gutter;
   padding: $gutter;
+  
+  // The flex rules above can play merry-hell if the .cta-box is just hanging out at the
+  // end of a long article.
+  &.orphan {
+    height: auto;
+  }
   
   // For the final block element inside the .cta-box
   // (not the last .cta-box inside a container)
