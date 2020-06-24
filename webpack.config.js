@@ -158,6 +158,10 @@ const config = function (env, args) {
         filename: 'home/index.html',
         template: path.resolve(__dirname, 'src', 'home/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'about/index.html',
+        template: path.resolve(__dirname, 'src', 'about/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
