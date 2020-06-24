@@ -46,14 +46,12 @@
       </ul>
     </nav>
 
-    <section aria-label="Tabs">
+    <section aria-label="Tabs" class="gutter-medium">
       <h2>Tabs</h2>
       <input type="radio" id="tab1" name="tabs" aria-controls="pane1" class="sr-only" checked>
       <input type="radio" id="tab2" name="tabs" aria-controls="pane2" class="sr-only">
       <input type="radio" id="tab3" name="tabs" aria-controls="pane3" class="sr-only">
       <input type="radio" id="tab4" name="tabs" aria-controls="pane4" class="sr-only">
-      <input type="radio" id="tab5" name="tabs" aria-controls="pane5" class="sr-only">
-      <input type="radio" id="tab6" name="tabs" aria-controls="pane6" class="sr-only">
       <nav class="tab-set gutter-small">
         <ul>
           <li><label for="tab1" id="click-tab1">Styling</label></li>
@@ -109,6 +107,109 @@
       </section>
 
     </section><!-- .tabs -->
+
+    <section aria-label="Scroller" class="gutter-medium">
+      <header class="row">
+        <div class="col-lg-8 col-sm-10">
+          <h2>Scroller</h2>
+          <p>Scrollers will take the width of their container and by default, their children will be 370px wide.</p>
+          <p>Child elements can take a width of 100% if a <code>block-scroll__child-wide</code> class is used directly on them. This means that each child will fit exactly inside the scrolling container and will be replaced with a different child, when the user interacts with the left and right buttons.</p>
+        </div>
+      </header>
+
+      <div class="cta-box bg-mint radius-medium">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="h4">Full-width children</h3>
+            <div class="block-scroll" data-js="block-scroll">
+
+              <div class="block-scroll__child-wide" data-js="block-scroll-item">
+                <p>Donec pretium pharetra velit, vel fringilla elit rhoncus at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis bibendum convallis. Donec vitae neque tristique, elementum orci vitae, porta odio. Nam aliquam metus et fringilla tristique. Sed nec orci molestie, euismod elit vel, tempus turpis. Nunc ullamcorper turpis sed mi commodo, eget ornare quam feugiat. Aliquam aliquet dictum arcu, eget tincidunt ligula scelerisque in. Morbi fringilla finibus purus non consectetur. Morbi elementum tellus id bibendum efficitur.</p>
+              </div>
+              <div class="block-scroll__child-wide" data-js="block-scroll-item">
+                <p>Curabitur lorem enim, efficitur vitae pellentesque fringilla, volutpat vehicula leo. Donec quis molestie dui. Donec nec dui sit amet purus euismod vulputate id nec dolor. Nam gravida posuere sem eu imperdiet. Donec eu pellentesque justo. Mauris id est porta, pulvinar metus at, pulvinar purus.</p>
+              </div>
+              <div class="block-scroll__child-wide" data-js="block-scroll-item">
+                <p>Aliquam et sem lacus. Duis a egestas tortor. Praesent eget nulla sollicitudin, tristique massa imperdiet, dignissim sem. Fusce a dui scelerisque erat iaculis elementum sed ac leo. Sed in lorem neque. Morbi scelerisque justo eu risus mattis, sit amet tincidunt urna fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget ante ac urna rhoncus sollicitudin eget nec quam. Aenean nec dapibus ipsum. Nulla nec ligula quis dolor feugiat fermentum sit amet ac sapien.</p>
+              </div>
+              <div class="block-scroll__child-wide" data-js="block-scroll-item">
+                <p>Aenean volutpat tortor magna, volutpat rutrum justo bibendum sed. Sed suscipit, dui at ultrices congue, neque orci luctus ex, sit amet commodo justo mauris sed elit. Donec id risus at dui hendrerit dignissim. Aenean ut purus eget felis lobortis dapibus eget id enim. Aenean pulvinar, sem eget mollis fringilla, magna arcu bibendum neque, porta tempor elit felis et arcu. Phasellus ullamcorper interdum lobortis. Praesent vel lacinia lectus, aliquam pharetra ante. Mauris feugiat dapibus tempor. Quisque sapien sem, pharetra ut risus sed, condimentum congue neque.</p>
+              </div>
+              <div class="block-scroll__child-wide" data-js="block-scroll-item">
+                <p>Sed convallis ipsum at nibh efficitur, in accumsan ligula aliquam. Donec ac dictum dui, id efficitur augue. Nulla imperdiet dui lorem, vitae euismod massa dignissim eget. Sed eleifend nulla neque, id imperdiet dolor elementum nec. Vestibulum bibendum justo vel ultrices rhoncus. Donec elementum auctor velit, vel dignissim risus fringilla eu. Integer quis cursus leo. Cras pulvinar urna quis nunc euismod mattis. Ut at nisl sed neque tempor dictum. Proin ac eleifend ante, vitae commodo sapien. Sed eget nulla congue, tempus ante placerat, dignissim lacus. Nunc lacinia diam vel vehicula sagittis.</p>
+              </div>
+              <div class="block-scroll__child-wide" data-js="block-scroll-item">
+                <p>Quisque massa mi, commodo eu velit eu, luctus viverra dui. Aliquam nunc elit, porta sed commodo ac, vulputate ullamcorper diam.</p>
+              </div>
+
+            </div><!-- .block-scroll -->
+          </div><!-- .col -->
+          <div class="col-md-6">
+            <h3 class="h4">Fixed-width children</h3>
+            <div class="block-scroll" data-js="block-scroll">
+
+              <div class="block-scroll__child" data-js="block-scroll-item">
+                <p>Sed convallis ipsum at nibh efficitur, in accumsan ligula aliquam. Donec ac dictum dui, id efficitur augue. Nulla imperdiet dui lorem, vitae euismod massa dignissim eget. Sed eleifend nulla neque, id imperdiet dolor elementum nec. Vestibulum bibendum justo vel ultrices rhoncus. Donec elementum auctor velit, vel dignissim risus fringilla eu. Integer quis cursus leo. Cras pulvinar urna quis nunc euismod mattis. Ut at nisl sed neque tempor dictum. Proin ac eleifend ante, vitae commodo sapien. Sed eget nulla congue, tempus ante placerat, dignissim lacus. Nunc lacinia diam vel vehicula sagittis.</p>
+              </div>
+              <div class="block-scroll__child" data-js="block-scroll-item">
+                <p>Donec pretium pharetra velit, vel fringilla elit rhoncus at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis bibendum convallis. Donec vitae neque tristique, elementum orci vitae, porta odio. Nam aliquam metus et fringilla tristique. Sed nec orci molestie, euismod elit vel, tempus turpis. Nunc ullamcorper turpis sed mi commodo, eget ornare quam feugiat. Aliquam aliquet dictum arcu, eget tincidunt ligula scelerisque in. Morbi fringilla finibus purus non consectetur. Morbi elementum tellus id bibendum efficitur.</p>
+              </div>
+              <div class="block-scroll__child" data-js="block-scroll-item">
+                <p>Curabitur lorem enim, efficitur vitae pellentesque fringilla, volutpat vehicula leo. Donec quis molestie dui. Donec nec dui sit amet purus euismod vulputate id nec dolor. Nam gravida posuere sem eu imperdiet. Donec eu pellentesque justo. Mauris id est porta, pulvinar metus at, pulvinar purus.</p>
+              </div>
+              <div class="block-scroll__child" data-js="block-scroll-item">
+                <p>Aliquam et sem lacus. Duis a egestas tortor. Praesent eget nulla sollicitudin, tristique massa imperdiet, dignissim sem. Fusce a dui scelerisque erat iaculis elementum sed ac leo. Sed in lorem neque. Morbi scelerisque justo eu risus mattis, sit amet tincidunt urna fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eget ante ac urna rhoncus sollicitudin eget nec quam. Aenean nec dapibus ipsum. Nulla nec ligula quis dolor feugiat fermentum sit amet ac sapien.</p>
+              </div>
+              <div class="block-scroll__child" data-js="block-scroll-item">
+                <p>Aenean volutpat tortor magna, volutpat rutrum justo bibendum sed. Sed suscipit, dui at ultrices congue, neque orci luctus ex, sit amet commodo justo mauris sed elit. Donec id risus at dui hendrerit dignissim. Aenean ut purus eget felis lobortis dapibus eget id enim. Aenean pulvinar, sem eget mollis fringilla, magna arcu bibendum neque, porta tempor elit felis et arcu. Phasellus ullamcorper interdum lobortis. Praesent vel lacinia lectus, aliquam pharetra ante. Mauris feugiat dapibus tempor. Quisque sapien sem, pharetra ut risus sed, condimentum congue neque.</p>
+              </div>
+              <div class="block-scroll__child" data-js="block-scroll-item">
+                <p>Quisque massa mi, commodo eu velit eu, luctus viverra dui. Aliquam nunc elit, porta sed commodo ac, vulputate ullamcorper diam.</p>
+              </div>
+
+            </div><!-- .block-scroll -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div>
+
+    </section>
+
+    <section aria-label="Tooltips">
+      <div class="row">
+        <div class="col-lg-8 col-sm-10">
+          <h2>Tooltips</h2>
+          <p>Tooltips must have unique IDs.</p>
+          <p>
+            <strong>Product name</strong>
+            <span class="tooltip" data-js="tooltip">
+              <input type="checkbox" name="tip1" id="tip1" class="sr-only">
+              <label for="tip1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M49.876 100c9.112 0 17.535-2.278 25.298-6.834a47.284 47.284 0 0 0 17.744-17.744c4.556-7.756 6.834-16.186 6.834-25.298S97.475 32.6 92.92 24.826A47.284 47.284 0 0 0 75.174 7.081C67.418 2.525 58.988.247 49.876.247c-9.03 0-17.422 2.278-25.178 6.834A49.082 49.082 0 0 0 6.834 24.946C2.278 32.7 0 41.094 0 50.124s2.278 17.422 6.834 25.178c4.316 7.516 10.23 13.466 17.744 17.864C32.334 97.722 40.764 100 49.876 100zm0-9.83a38.966 38.966 0 0 1-20.142-5.515 38.816 38.816 0 0 1-14.387-14.387 38.966 38.966 0 0 1-5.515-20.142 38.966 38.966 0 0 1 5.515-20.142 38.816 38.816 0 0 1 14.387-14.387 38.966 38.966 0 0 1 20.142-5.515 38.966 38.966 0 0 1 20.142 5.515 38.816 38.816 0 0 1 14.387 14.387 38.966 38.966 0 0 1 5.515 20.142 38.966 38.966 0 0 1-5.515 20.142 38.816 38.816 0 0 1-14.387 14.387 38.966 38.966 0 0 1-20.142 5.515zm4.916-55.032v-10.07h-9.83v10.07zm0 40.045V45.208h-9.83v29.974z" fill="#07b"></path>
+                </svg>
+              </label>
+              <span class="details small shadow-light radius-medium">
+                Phasellus sit amet lacus auctor, condimentum nisi vitae, bibendum nisi. Nulla vulputate massa ut elit faucibus vehicula. Aenean euismod elementum convallis.
+                <br><br>
+                <a href="#" class="btn btn-arrow btn-sm">Find out more<span class="sr-only"> about Latin filler text</span></a>
+              </span>
+            </span>
+            <strong>Warning</strong>
+            <span class="tooltip" data-js="tooltip">
+              <input type="checkbox" name="tip2" id="tip2" class="sr-only">
+              <label for="tip2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M49.876 100c9.112 0 17.535-2.278 25.298-6.834a47.284 47.284 0 0 0 17.744-17.744c4.556-7.756 6.834-16.186 6.834-25.298S97.475 32.6 92.92 24.826A47.284 47.284 0 0 0 75.174 7.081C67.418 2.525 58.988.247 49.876.247c-9.03 0-17.422 2.278-25.178 6.834A49.082 49.082 0 0 0 6.834 24.946C2.278 32.7 0 41.094 0 50.124s2.278 17.422 6.834 25.178c4.316 7.516 10.23 13.466 17.744 17.864C32.334 97.722 40.764 100 49.876 100zm0-9.83a38.966 38.966 0 0 1-20.142-5.515 38.816 38.816 0 0 1-14.387-14.387 38.966 38.966 0 0 1-5.515-20.142 38.966 38.966 0 0 1 5.515-20.142 38.816 38.816 0 0 1 14.387-14.387 38.966 38.966 0 0 1 20.142-5.515 38.966 38.966 0 0 1 20.142 5.515 38.816 38.816 0 0 1 14.387 14.387 38.966 38.966 0 0 1 5.515 20.142 38.966 38.966 0 0 1-5.515 20.142 38.816 38.816 0 0 1-14.387 14.387 38.966 38.966 0 0 1-20.142 5.515zm4.916-55.032v-10.07h-9.83v10.07zm0 40.045V45.208h-9.83v29.974z" fill="#07b"></path>
+                </svg>
+              </label>
+              <span class="details shadow-light radius-small">
+                Praesent quis elit orci. Phasellus dapibus, diam sed vulputate sollicitudin, ante orci consectetur est, at aliquam elit orci sed erat. Suspendisse ultricies vitae nisl vel fringilla. Fusce iaculis massa mauris.
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
 
   </main>
 </body>

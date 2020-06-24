@@ -23,15 +23,15 @@ export default function blockScroll() {
         currentScroll.insertAdjacentElement('beforebegin', scrollControl);
         // Add an attribute, so CSS can hide the scrollbar
         currentScroll.setAttribute('data-active', 'true');
-        // Check if we need to show the scroll buttons or not
-        this.scrollCheck();
         // Set up click events
         var btnPrevious = currentScroll.previousElementSibling.querySelector('[data-js="previous"]'),
           btnNext = currentScroll.previousElementSibling.querySelector('[data-js="next"]');
 
         btnPrevious.addEventListener('click', this.previousItem, false);
         btnNext.addEventListener('click', this.nextItem, false);
+        // Check if we need to show the scroll buttons or not
       }
+      this.scrollCheck();
     }
   },
     // This function searches the DOM for Block Scrolls and shows or hides the

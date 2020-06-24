@@ -24,8 +24,6 @@ export default function tabFactory() {
         currentTabs.insertAdjacentElement('beforebegin', scrollControl);
         // Add an attribute, so CSS can hide the scrollbar
         currentTabs.setAttribute('data-js', 'active');
-        // Check if we need to show the scroll buttons or not
-        this.scrollCheck();
         // Set up click events
         var btnPrevious = currentTabs.previousElementSibling.querySelector('[data-js="previous"]'),
           btnNext = currentTabs.previousElementSibling.querySelector('[data-js="next"]');
@@ -37,6 +35,9 @@ export default function tabFactory() {
           pageMargin = Math.round(currentTabs.getBoundingClientRect().left);
         currentTabs.scroll(currentTabPos - pageMargin, 0);
       }
+      // Check if we need to show the scroll buttons on all of the
+      // tabs we've just created
+      this.scrollCheck();
 
       // Accessibility JavaScript for the pure CSS tabs
       // All the secret, hidden radio buttons which control the tab set
