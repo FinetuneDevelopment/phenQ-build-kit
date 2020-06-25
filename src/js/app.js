@@ -19,3 +19,7 @@ myBlockScroll.init();
 import faq from './components/faq.js';
 const myFaq = new faq();
 myFaq.init();
+
+import shareLinks from './components/share-links.js';
+const myShareLinks = new shareLinks();
+myShareLinks.init();
