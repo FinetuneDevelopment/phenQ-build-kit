@@ -1,5 +1,8 @@
 'use strict';
 
+// This updates the aria-expanded attribute and gives users the amazing
+// ability to DESELECT radio buttons, once they've selected them. The
+// functional parts of the FAQ are handled by CSS, because I'm peverse.
 export default function faqFactory() {
   let myFactory = {},
     labels = document.querySelectorAll('label[data-js="label-toggle"]');

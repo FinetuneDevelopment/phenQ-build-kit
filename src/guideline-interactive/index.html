@@ -174,7 +174,7 @@
 
     </section>
 
-    <section aria-label="Tooltips">
+    <section class="gutter-medium" aria-label="Tooltips">
       <div class="row">
         <div class="col-lg-8 col-sm-10">
           <h2>Tooltips</h2>
@@ -209,6 +209,134 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <section class="gutter-medium" aria-label="Accordions">
+      <h2>Accordions</h2>
+      <p class="gutter-medium">Accordions come in two types:</p>
+
+      <section class="row" aria-label="Accordions - one pane open at a time">
+        <h3 class="col-sm-4">Only one pane open at a time</h3>
+        <div class="col-sm-8">
+
+          <div class="faq gutter-small">
+            <input type="radio" name="faq" id="faq1" class="sr-only">
+            <label for="faq1" class="row" data-js="label-toggle">
+              <span class="h5 col-sm-10 col-11">CSS functionality</span>
+              <span class="col-sm-2 col-1 text-right">
+                <span class="h4 type-gotham-medium faq__icon">+</span>
+              </span>
+            </label>
+
+            <div class="details row" role="region">
+              <div class="col-sm-10 col-11">
+                <p>Most of the functional aspects of the accordions are handled by CSS. However, there are numerous modifying classes used, which means the same functionality can be applied to accordions which look different.</p>
+                <p>For example, the only restriction placed by the CSS functionality is that the <code>label</code> (the accordion header) and the <code>.details</code> element follow the input element in the markup as siblings.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq gutter-small">
+            <input type="radio" name="faq" id="faq2" class="sr-only">
+            <label for="faq2" class="row" data-js="label-toggle">
+              <span class="h5 col-sm-10 col-11">JavaScript functionality</span>
+              <span class="col-sm-2 col-1 text-right">
+                <span class="h4 type-gotham-medium faq__icon">+</span>
+              </span>
+            </label>
+
+            <div class="details row" role="region">
+              <div class="col-sm-10 col-11">
+                <p>The JavaScript does two things:</p>
+                <ol>
+                  <li>Updates the <code>aria-expanded</code> attribute, as the user interacts with the controls</li>
+                  <li>Allows the user to click on an open accordion header, in order to close it (as the CSS functionality is based on radio buttons, this requires the current radio button to be deselected, which is not possible with HTML)</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="faq gutter-small">
+              <input type="radio" name="faq" id="faq3" class="sr-only">
+              <label for="faq3" class="row" data-js="label-toggle">
+                <span class="h5 col-sm-10 col-11">Configuring the accordion</span>
+                <span class="col-sm-2 col-1 text-right">
+                  <span class="h4 type-gotham-medium faq__icon">+</span>
+                </span>
+              </label>
+
+              <div class="details row" role="region">
+                <div class="col-sm-10 col-11">
+                  <p>If all of the hidden <code>input</code> elements are left unchecked, all panes of the accordion will be closed.</p>
+                  <p>Add a <code>checked</code> attribute to the pane which should be open, when the user first lands on the page.</p>
+                  <p>If more than one <code>input</code> element has a <code>checked</code> attribute, then the last element of that type will be open.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="row" aria-label="Accordions - more than one pane open at a time">
+        <h3 class="col-sm-4">More than one pane can be open at a time</h3>
+        <div class="col-sm-8">
+
+          <div class="faq gutter-small">
+            <input type="checkbox" name="faq2" id="faq2-1" class="sr-only">
+            <label for="faq2-1" class="row" data-js="label-toggle">
+              <span class="h5 col-sm-10 col-11">Configuring</span>
+              <span class="col-sm-2 col-1 text-right">
+                <span class="h4 type-gotham-medium faq__icon">+</span>
+              </span>
+            </label>
+
+            <div class="details row" role="region">
+              <div class="col-sm-10 col-11">
+                <p>Change the <code>type</code> attribute of the input element from <code>radio</code> to <code>checkbox</code>.</p>
+                <p>Multiple accordion panes can be set to open by adding a <code>checked</code> attribute to any of these checkboxes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq gutter-small">
+            <input type="checkbox" name="faq2" id="faq2-2" class="sr-only">
+            <label for="faq2-2" class="row" data-js="label-toggle">
+              <span class="h5 col-sm-10 col-11">Cras blandit nisl id tempor malesuada</span>
+              <span class="col-sm-2 col-1 text-right">
+                <span class="h4 type-gotham-medium faq__icon">+</span>
+              </span>
+            </label>
+
+            <div class="details row" role="region">
+              <div class="col-sm-10 col-11">
+                <p>Nulla non porta justo. Mauris eget turpis sit amet neque luctus pretium. Duis lectus sapien, egestas sit amet commodo vitae, vulputate ut turpis. Sed maximus aliquam nisl. Duis eu est eget leo porta ultrices. Etiam placerat arcu non neque condimentum, non tincidunt ante interdum.</p>
+                <p>In eu mattis mi, in tristique mi. Phasellus et elit quis neque maximus tincidunt ut a tortor. Proin volutpat augue id pulvinar dapibus. Nam posuere hendrerit quam vitae suscipit. Pellentesque molestie elit a bibendum efficitur. Fusce molestie tortor lorem, vitae eleifend orci pretium a. Praesent euismod mollis turpis, ac pretium ipsum volutpat nec.</p>
+              </div>
+            </div>
+
+            <div class="faq gutter-small">
+              <input type="checkbox" name="faq2" id="faq2-3" class="sr-only">
+              <label for="faq2-3" class="row" data-js="label-toggle">
+                <span class="h5 col-sm-10 col-11">Etiam mauris sapien, elementum sit amet malesuada tristique, finibus a arcu</span>
+                <span class="col-sm-2 col-1 text-right">
+                  <span class="h4 type-gotham-medium faq__icon">+</span>
+                </span>
+              </label>
+
+              <div class="details row" role="region">
+                <div class="col-sm-10 col-11">
+                  <p>Quisque a mi aliquet dolor volutpat malesuada vel nec nibh. Vivamus venenatis ac mauris eget interdum. Praesent elementum accumsan felis at pulvinar. Nunc a nisl vel lorem ornare imperdiet. Integer elementum urna lacus, et tincidunt eros vehicula a. Cras eu lectus interdum ligula imperdiet imperdiet. Nunc efficitur enim vitae nibh dictum, sit amet dapibus diam cursus.</p>
+                  <p>Maecenas nulla turpis, egestas eu sollicitudin vel, bibendum ac turpis. Phasellus laoreet mattis nunc eget maximus. Duis consectetur orci sagittis lacus tincidunt mollis. Sed commodo imperdiet urna, eget dignissim diam egestas non. Nulla vitae tellus enim.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </section>
 
   </main>

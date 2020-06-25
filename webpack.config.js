@@ -170,6 +170,10 @@ const config = function (env, args) {
         filename: 'blog/article/index.html',
         template: path.resolve(__dirname, 'src', 'blog/article/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'faq/index.html',
+        template: path.resolve(__dirname, 'src', 'faq/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),

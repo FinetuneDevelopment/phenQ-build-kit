@@ -1,3 +1,8 @@
+// This doesn't care about the name or ID values in the attributes
+// which means you can have multiple FAQs on a page, as long as
+// they are grouped together using the name attribute and have
+// unique IDs.
+
 .faq {
 
   // Clicky parts
@@ -15,12 +20,16 @@
     ~ .details {
       display: block;
     }
+
+    // + becomes ×
     ~ label .faq__icon {
       transform: rotate(45deg);
     }
   }
 }
 
+// Assumes that inside this class is a + sign,
+// or things might look a bit weird.
 .faq__icon {
   display: inline-block;
   // Bigger target, mate.
