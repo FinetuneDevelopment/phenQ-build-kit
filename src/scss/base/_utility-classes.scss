@@ -68,6 +68,10 @@
 .radius-small  { border-radius: $radius-small; }
 .round         { border-radius: 50%; }
 
+// This is used to add a stroke around .icon-disk elements but, I dunno, it might be useful
+// elsewhere.
+.border-thin { border: solid 1px $colour-dark-blue; }
+
 .img-fluid { max-width: 100%; }
 // Used in conjunction with the above classes, this makes a shape a bit
 // like an upside-down U. You know, ⋂.

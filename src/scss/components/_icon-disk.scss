@@ -7,6 +7,10 @@
   text-align: center;
   position: relative;
 
+  // This style might be applied to an anchar tag
+  // and we don't need the underline style.
+  &:before { border: none; }
+
   & > * {
     left: 50%;
     position: absolute;
@@ -22,4 +26,11 @@
   width: 60px;
   
   svg {width: 37px;}
+}
+
+.icon-disk-small {
+  height: 42px;
+  width: 42px;
+  
+  svg {width: 22px;}
 }
