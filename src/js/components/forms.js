@@ -1,11 +1,11 @@
 'use strict';
 
 export default function formFactory() {
-    let myFactory = {};
+  let myFactory = {};
 
-    myFactory.init = function () {
+  myFactory.init = function () {
 
-    }
+  }
 
-    return myFactory;
+  return myFactory;
 }

@@ -10,10 +10,68 @@
   }
 }
 
-.main-navigation {
+.logo-nav__toggle label {
+  cursor: pointer;
+  outline: solid .8em transparent;
+  // To give the illusion that it joins up with the mobile navigation menu
+  padding: 0 0 .8em;
+  transition: all .2s;
+}
+
+.logo-nav__nav {
   ul, ol, li {
     list-style: none;
     margin: 0;
     padding: 0;
+  } 
+}
+
+// The burger menu is defined in _icons.scss, but it's secondary form is 
+// styled here - from ≡ to ×
+[id="nav-toggle"]:checked ~ .logo-nav__toggle {
+
+  label {
+    background: $colour-light-grey;
+    outline-color: $colour-light-grey;
+  }
+
+  .logo-nav__text::before {
+    content: "Close ";
+  }
+
+  & .sh-burger {
+    border-color: transparent;
+  
+    // Deploying strike foils
+    &::before { transform: rotate( 45deg); }
+    &::after  { transform: rotate(-45deg); }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  // Hoiks the nav off to the left
+  .logo-nav__nav {
+    background: $colour-light-grey;
+    display: block;
+    right: 100%;
+    padding: $gutter;
+    position: absolute;
+    top: 3.5em;
+    transition: all .2s;
+    width: 100%;
+    z-index: 1;
+    
+    .space-between {
+      display: block;
+    }
+  }
+  [id="nav-toggle"]:checked ~ .logo-nav__nav {
+    right: 0;
+  }
+  .btn-nav {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
   }
 }

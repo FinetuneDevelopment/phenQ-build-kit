@@ -32,11 +32,18 @@
     <div class="bg-mint">
       <div class="container">
         <div class="media logo-nav">
+          <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only">
           <p class="mr-3">
             <!--@@include('../includes/logo-phenq.svg')-->
-            <a href="/home/" class="btn btn-clear"><img src="/img/include/logo-phenq.svg" alt="PhenQ" class="logo"></a>
+            <img src="/img/include/logo-phenq.svg" alt="PhenQ" class="logo">
           </p>
-          <nav class="media-body main-navigation" aria-label="Main">
+          <p class="media-body d-md-none d-lg-none d-xl-none text-right logo-nav__toggle">
+            <label for="nav-toggle" aria-label="Toggle menu open and closed" title="Toggle menu open and closed">
+              <span class="logo-nav__text text-uppercase type-source-semibold small text-breath">Menu</span>
+              <span class="shape sh-burger"></span>
+            </label>
+          </p>
+          <nav class="logo-nav__nav media-body" aria-label="Main">
             <ul class="space-between">
               <li><a href="/about/" class="btn btn-nav">About PhenQ</a></li>
               <li><em title="You are here" class="btn btn-nav">Blog</em></li>

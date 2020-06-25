@@ -23,3 +23,7 @@ myFaq.init();
 import shareLinks from './components/share-links.js';
 const myShareLinks = new shareLinks();
 myShareLinks.init();
+
+import nav from './components/nav.js';
+const myNav = new nav();
+myNav.init();
