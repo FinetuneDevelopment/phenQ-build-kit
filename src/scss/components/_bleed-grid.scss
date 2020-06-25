@@ -3,7 +3,7 @@
 // one side is full bleed and the other is the Bootstrap grid equivalent.
 // Note that this module uses BEM as individual elements within it are
 // useless elsewhere.
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   .bleed-grid {
     position: relative;
   }

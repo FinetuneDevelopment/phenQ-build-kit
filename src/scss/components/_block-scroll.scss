@@ -1,12 +1,5 @@
 // Generic block scrolling thing
 
-// This sucks the block scroll controls up the same amount as
-// their height. Might need some modifying classes to
-// control this behaviour.
-[data-js="scroll-control"] {
-  margin-top: -58px;
-}
-
 .block-scroll {
   align-items: stretch;
   display: flex;
@@ -14,7 +7,7 @@
   overflow: auto;
   // Required, so we can measure the scroll amount
   position: relative;
-}  
+}
 
 // JavaScript has found the markup, and thinks it's good.
 .block-scroll[data-active="true"] {
@@ -24,6 +17,10 @@
 
 // The (<-) and (->) buttons, which JavaScript shows and hides, as required
 .scroll-control {
+  // This sucks the block scroll controls up the same amount as
+  // their height. Might need some modifying classes to
+  // control this behaviour.
+  margin-top: -58px;
   position: relative;
   z-index: 1;
 }
@@ -35,6 +32,7 @@
   // Gutter between items
   margin: 0 1em 0 0;
 }
+
 .block-scroll__child:last-child,
 .block-scroll__child-wide:last-child {
   margin: 0;
@@ -45,9 +43,21 @@
   flex-basis: 370px;
   height: auto;
 }
+
 @include media-breakpoint-down(sm) {
-  .block-scroll__child {
+  .block-scroll__child,
+  .block-scroll__child_xs {
     flex-basis: 80%;
+  }
+
+  // This takes a normal Bootstrap row and turns it into a scroller,
+  // but only on mobile
+  .block-scroll-xs {
+    flex-wrap: nowrap;
+  }
+  .block-scroll__child_xs {
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 }
 // This is as wide as the parent scroller, so only one child
