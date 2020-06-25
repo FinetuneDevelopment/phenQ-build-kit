@@ -250,25 +250,22 @@
 
     </div><!-- .container -->
 
-    <section aria-label="Bleed grid">
-      <div class="bleed-grid bg-mint gutter-medium">
-        <div class="bleed-grid__img bleed-grid__img-right" style="background: url(http://placeimg.com/500/500/tech); background-size: cover;"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-xs-6">
-              <br><br>
-              <h2>Bleed grid</h2>
-              <p>Bleed grids are a hybrid of full-bleed layouts and the standard grid. They only allow for two column layouts, but are configurable so that the full-bleed image can sit to the right or left.</p>
-              <p>Note that bleed grid mark-up must be placed outside of any <code>container</code> elements.</p>
-              <br><br>
-            </div>
+    <section class="bleed-grid bg-mint gutter-medium" aria-label="Bleed grid right">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-xs-6">
+            <br><br>
+            <h2>Bleed grid</h2>
+            <p>Bleed grids are a hybrid of full-bleed layouts and the standard grid. They only allow for two column layouts, but are configurable so that the full-bleed image can sit to the right or left.</p>
+            <p>Note that bleed grid mark-up must be placed outside of any <code>container</code> elements.</p>
+            <br><br>
           </div>
         </div>
       </div>
+      <div class="bleed-grid__img bleed-grid__img-right" style="background: url(http://placeimg.com/500/500/tech); background-size: cover;"></div>
     </section>
 
-    <div class="bleed-grid bg-dark-blue gutter-medium">
-      <div class="bleed-grid__img bleed-grid__img-left" style="background: url(http://placeimg.com/500/500/animals); background-size: cover;"></div>
+    <section class="bleed-grid bg-dark-blue gutter-medium" aria-label="Bleed grid left">
       <div class="container">
         <div class="row">
           <div class="col-md-5 col-xs-6 offset-md-7 offset-xs-6">
@@ -281,7 +278,8 @@
           </div>
         </div>
       </div>
-    </div>
+      <div class="bleed-grid__img bleed-grid__img-left" style="background: url(http://placeimg.com/500/500/animals); background-size: cover;"></div>
+    </section>
 
     <section class="bleed-bisect gutter-medium" aria-label="bleed-bisect">
       <div class="bleed-bisect__child-right bg-mint"></div>

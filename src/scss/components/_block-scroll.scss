@@ -45,7 +45,11 @@
   flex-basis: 370px;
   height: auto;
 }
-
+@include media-breakpoint-down(sm) {
+  .block-scroll__child {
+    flex-basis: 80%;
+  }
+}
 // This is as wide as the parent scroller, so only one child
 // is seen through the scroll port at any one time.
 .block-scroll__child-wide {

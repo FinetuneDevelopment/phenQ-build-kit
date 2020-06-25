@@ -105,3 +105,8 @@
 .bg-pill-tile {
   background: url(/img/bg/bg-pill-tile.png) 0 0 repeat-y;
 }
+@include media-breakpoint-down(sm) {
+  .bg-pill-tile {
+    background: url(/img/bg/bg-pill-tile-mobile.png);
+  }
+}
