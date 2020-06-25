@@ -50,6 +50,14 @@
     }
 }
 
+@include media-breakpoint-down(sm) {
+  // Not sure how wide to make this rule. .btn seems too wide.
+  .btn-primary, .btn-secondary {
+    display: block;
+    margin-right: 0;
+  }
+}
+
 //////////////////////////////////////////////
 // White text on a blue gradient background.
 // Probably should only be used once per-page.
@@ -146,35 +154,57 @@ input.btn.btn-secondary {
     left: unset;
     position: absolute;
     right: 0;
-    top: 50%;
+    // When the button wraps (on mobile, for example) the
+    // arrow needs to align with the bottom line of text.
+    bottom: 0;
     transition: all .2s;
-    transform: translate(0, -50%);
   }
   // Is this a terrible idea?
-  &:after {content: "➜";}
+  &:after {
+    content: "➜";
+    height: 1.6em;
+    line-height: 1.6em;
+  }
   // The extending stalk of the arrow above
   // This rule is full of magic numbers, which
   // suggests it won't pass browser testing.
   &:before {
     border-top: solid .15em $colour-dark-blue;
     content: "";
+    height: .8em;
     right: .2em;
     width: .7em;
   }
   // Pushes out the tail of the ➜
   &:hover:before, &:focus:before {
     border-color: $colour-bright-blue;
+    // Needed, although it doesn't look like it
     right: .2em;
     width: 1.2em;
   }
 
   // Small varient, used inside tooltips
+  // Lord forgive me for these magic numbers
   &.btn-sm {
     font-size: 12px;
+    padding: 0 1.8em 0 0;
 
     // That arrow is still nice and chunky though
+    // (which causes everything to be recalculated)
     &::before, &::after {
-      font-size: 16px;
+      font-size: $font-size-body;
+    }
+
+    &::before {
+      height: $font-size-body / 1.8;
+    }
+    
+    &::after {
+      height: $font-size-body;
+      line-height: $font-size-body;
+    }
+    &:hover, &:focus {
+      padding-right: 2.6em;
     }
   }
 }

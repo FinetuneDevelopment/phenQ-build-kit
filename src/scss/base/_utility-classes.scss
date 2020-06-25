@@ -94,6 +94,12 @@
 .gutter-medium { margin-bottom: $space * 2 !important; }
 .gutter-large  { margin-bottom: $space * 4 !important; }
 
+@include media-breakpoint-down(sm) {
+  .gutter-small  { margin-bottom: $space / 4 !important; }
+  .gutter-medium { margin-bottom: $space / 2 !important; }
+  .gutter-large  { margin-bottom: $space !important; }
+}
+
 // This is used to make round images sit uncomfortably close to each other
 .overlap-small { margin-top: -$space !important; }
 
