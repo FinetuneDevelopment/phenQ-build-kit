@@ -1,5 +1,5 @@
 <svg
-  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#273583" stroke-width="3.5" stroke-linecap="round">
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#273583" stroke-width="3.5" stroke-linecap="round" aria-label="Happy, contented face">
   <path d="m 66.311375,64.77266 a 4.1833258,4.1833258 0 0 1 4.054023,5.220283 20.891276,20.891276 0 0 1 -40.476847,0 4.1833258,4.1833258 0 0 1 4.054023,-5.220283 z"/>
   <path d="m 60.576416,39.27719 a 9.8625076,9.8625076 0 0 0 16.715556,0 m -37.609367,0 a 9.8625076,9.8625076 0 0 1 -16.715556,0"/>
   <circle cx="50.128242" cy="50.146229" r="48.055008"/>
