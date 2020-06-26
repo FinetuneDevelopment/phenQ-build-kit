@@ -55,6 +55,9 @@
   .btn-primary, .btn-secondary {
     display: block;
     margin-right: 0;
+    min-width: 0;
+    padding-left: .5em;
+    padding-right: .5em;
   }
 }
 
