@@ -63,6 +63,12 @@
   }
 }
 
+@include media-breakpoint-down(md) {
+  .cta-box {
+    padding: $gutter / 2;
+  }
+}
+
 .radius-big    { border-radius: $radius-big; }
 .radius-medium { border-radius: $radius-medium; }
 .radius-small  { border-radius: $radius-small; }

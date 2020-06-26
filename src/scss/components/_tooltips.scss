@@ -1,6 +1,6 @@
 // (mostly) CSS tooltips
-// (JavaScript is used for ensuring they appear somewhere sensible
-// inside the viewport)
+// JavaScript is used for ensuring they appear somewhere sensible
+// inside the viewport (this has not yet been done!)
 .tooltip {
   position: relative;
 
@@ -88,4 +88,19 @@
   input:focus ~ label, label:hover {
     border: dotted 2px $colour-dark-blue;
   }
+}
+
+@include media-breakpoint-down(sm) {
+  .tooltip {
+    position: static;
+
+    .details {
+      border-radius: $radius-small;
+      left: 0;
+      margin: 41px 0 0;
+      right: 0;
+      top: unset;
+      width: auto;
+    }
+  } 
 }
