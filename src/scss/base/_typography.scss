@@ -58,6 +58,14 @@ h6, .h6 { font-size: $font-size-h6; }
   text-transform: uppercase;
 }
 
+// On small breakpoints, legal text mimics button styles
+@include media-breakpoint-down(sm) {
+  .legal {
+    display: block;
+    text-align: center;
+  }
+}
+
 a {
     color: $colour-dark-blue;
     position: relative;

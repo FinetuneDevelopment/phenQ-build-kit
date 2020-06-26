@@ -97,7 +97,10 @@
 }
 
 @include media-breakpoint-down(md) {
-  .bg-home { background-image: url(/img/bg/bg-home-mobile.jpg); }
+  .bg-home {
+    background-image: url(/img/bg/bg-home-mobile.jpg);
+    min-height: 0;
+  }
 
   // The content needs to push clear of the imagry, in tablet
   // BEM naming altered to avoid .bg- inheretence matching
