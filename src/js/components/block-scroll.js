@@ -5,15 +5,15 @@ export default function blockScroll() {
   let myFactory = {};
 
   myFactory.init = function () {
-    var scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
+    let scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
 
     // Do we have owt to do?
     if (scrollSet.length) {
       // Might need to do this more than once.
-      for (var i = 0; i < scrollSet.length; i++) {
+      for (let i = 0; i < scrollSet.length; i++) {
         // Tab scroll controls
-        var scrollControl = document.createElement('p'),
-          currentScroll = scrollSet[i];
+        let scrollControl = document.createElement('p');
+        let currentScroll = scrollSet[i];
 
         scrollControl.classList.add('scroll-control', 'hidden', 'text-right');
         scrollControl.setAttribute('data-js', 'scroll-control');
@@ -24,8 +24,8 @@ export default function blockScroll() {
         // Add an attribute, so CSS can hide the scrollbar
         currentScroll.setAttribute('data-active', 'true');
         // Set up click events
-        var btnPrevious = currentScroll.previousElementSibling.querySelector('[data-js="previous"]'),
-          btnNext = currentScroll.previousElementSibling.querySelector('[data-js="next"]');
+        let btnPrevious = currentScroll.previousElementSibling.querySelector('[data-js="previous"]');
+        let btnNext = currentScroll.previousElementSibling.querySelector('[data-js="next"]');
 
         btnPrevious.addEventListener('click', this.previousItem, false);
         btnNext.addEventListener('click', this.nextItem, false);
@@ -37,13 +37,13 @@ export default function blockScroll() {
     // This function searches the DOM for Block Scrolls and shows or hides the
     // scroll buttons, as required.
     myFactory.scrollCheck = function () {
-      var scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
+      let scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
 
       if (scrollSet.length) {
         // Go through each matching set of scrollable items
-        for (var i = 0; i < scrollSet.length; i++) {
-          var currentScroll = scrollSet[i],
-            scrollNav = currentScroll.previousElementSibling;
+        for (let i = 0; i < scrollSet.length; i++) {
+          let currentScroll = scrollSet[i];
+          let scrollNav = currentScroll.previousElementSibling;
 
           // If the element has a scroll bar
           if ((currentScroll.scrollWidth > currentScroll.clientWidth)) {
@@ -56,16 +56,16 @@ export default function blockScroll() {
     },
     // User has clicked on the (<-) button
     myFactory.previousItem = function (e) {
-      var scrollParent = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
-        blockScrollItems = scrollParent.querySelectorAll('[data-js="block-scroll-item"]'),
-        arScrollpoints = [];
+      let scrollParent = e.target.closest('[data-js="scroll-control"]').nextElementSibling;
+      let blockScrollItems = scrollParent.querySelectorAll('[data-js="block-scroll-item"]');
+      let arScrollpoints = [];
 
       // Builds up an array of the snap points of the tab navigation, from left to right.
-      for (var i = 0; i < blockScrollItems.length; i++) {
+      for (let i = 0; i < blockScrollItems.length; i++) {
         arScrollpoints[i] = (blockScrollItems[i].offsetLeft);
       }
       // Works out which snap point we're currently closest to, working from the end back.
-      for (var i = (arScrollpoints.length - 1); i >= 0; i--) {
+      for (let i = (arScrollpoints.length - 1); i >= 0; i--) {
         // If it only needs to scroll a tiny amount, then skip the current point and move onto the next one.
         // This happens if the user clicks the button during the animation and helps to make the scroll feel
         // less laggy.
@@ -80,17 +80,17 @@ export default function blockScroll() {
     },
     // User has clicked on the (->) button
     myFactory.nextItem = function (e) {
-      var scrollParent = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
-        blockScrollItems = scrollParent.querySelectorAll('[data-js="block-scroll-item"]'),
-        arScrollpoints = [];
+      let scrollParent = e.target.closest('[data-js="scroll-control"]').nextElementSibling;
+      let blockScrollItems = scrollParent.querySelectorAll('[data-js="block-scroll-item"]');
+      let arScrollpoints = [];
 
       // Builds up an array of the snap points of the tab navigation, from left to right.
-      for (var i = 0; i < blockScrollItems.length; i++) {
+      for (let i = 0; i < blockScrollItems.length; i++) {
         arScrollpoints[i] = (blockScrollItems[i].offsetLeft);
       }
 
       // Works out which snap point we're currently at.
-      for (var i = 0; i < arScrollpoints.length; i++) {
+      for (let i = 0; i < arScrollpoints.length; i++) {
         if (arScrollpoints[i] > scrollParent.scrollLeft) {
           // If it only needs to scroll a tiny amount, then skip the current point and move onto the next one.
           // This happens if the user clicks the button during the animation and helps to make the scroll feel

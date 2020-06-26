@@ -38,13 +38,30 @@
   margin: 0;
 }
 
-// This is based on the reviews scroller
 .block-scroll__child {
+  // This width is based on the reviews scroller
   flex-basis: 370px;
   height: auto;
 }
 
 @include media-breakpoint-down(sm) {
+  // Because I'd like the scroller to sit within .container. I need
+  // to break the default behaviour of .row
+  .row.block-scroll-xs {
+    margin-left: 0;
+    margin-right: 0;
+
+    .block-scroll__child_xs {
+      margin-right: $gutter;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .block-scroll__child_xs:last-child {
+      margin-right: 0;
+    }
+  }
+  
   .block-scroll__child,
   .block-scroll__child_xs {
     flex-basis: 80%;
@@ -55,11 +72,13 @@
   .block-scroll-xs {
     flex-wrap: nowrap;
   }
+
   .block-scroll__child_xs {
     flex-grow: 0;
     flex-shrink: 0;
   }
 }
+
 // This is as wide as the parent scroller, so only one child
 // is seen through the scroll port at any one time.
 .block-scroll__child-wide {
