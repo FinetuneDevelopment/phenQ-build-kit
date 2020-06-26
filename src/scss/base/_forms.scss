@@ -178,6 +178,7 @@ fieldset {
   position: relative;
 
   input, select, textarea {
+    background: transparent;
     border: none;
   }
 
@@ -195,7 +196,7 @@ fieldset {
     transition: all .2s;
   }
   :placeholder-shown ~ label {
-    font-size: unset;
+    font-size: inherit;
     line-height: 43px;
   }
 }

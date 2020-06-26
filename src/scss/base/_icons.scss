@@ -1,8 +1,17 @@
-// Most of the below may go at some point, when I switch over to inline SVGs.
-.icon-x-small svg { width: 14px; }
-.icon-small svg   { width: 22px; }
+// Height added for IE11. Assumes square icons, I guess, but will resize vectors inside the viewBox.
+.icon-x-small svg {
+  height: 14px;
+  width: 14px;
+}
+.icon-small svg   {
+  height: 22px;
+  width: 22px;
+}
 // Used in the footer
-.icon-medium svg  { width: 44px; }
+.icon-medium svg  {
+  height: 44px;
+  width: 44px;
+}
 
 // CSS shapes and icons
 // General icon class

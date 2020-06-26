@@ -129,6 +129,7 @@ input.btn.btn-secondary {
   svg {
     height: 1.2em;
     fill: $colour-dark-blue;
+    width: 1.2em; // IE needs this
   }
 }
 
@@ -175,6 +176,7 @@ input.btn.btn-secondary {
     border-top: solid .15em $colour-dark-blue;
     content: "";
     height: .8em;
+    left: auto;
     right: .2em;
     width: .7em;
   }
@@ -231,6 +233,7 @@ input.btn.btn-secondary {
   margin: 0 35px 17px 0; // Second value is ~half the first
   // Did not survive contact with actual page layouts
   // min-width: 160px;
+  min-height: 0;
   padding: .43em 1em;
   
   &:before {border: none;}

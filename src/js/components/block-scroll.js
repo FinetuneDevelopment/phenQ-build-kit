@@ -15,7 +15,10 @@ export default function blockScroll() {
         let scrollControl = document.createElement('p');
         let currentScroll = scrollSet[i];
 
-        scrollControl.classList.add('scroll-control', 'hidden', 'text-right');
+        // IE, you encouragable scamp!
+        scrollControl.classList.add('scroll-control');
+        scrollControl.classList.add('hidden');
+        scrollControl.classList.add('text-right');
         scrollControl.setAttribute('data-js', 'scroll-control');
         // Need some SVGs here, eventually.
         scrollControl.innerHTML = '<button class="btn btn-icon" type="button" data-js="previous" title="Scroll left"><span class="shape sh-arrow-left-round"><span class="sr-only">Scroll left</span></span></button> <button class="btn btn-icon" type="button" data-js="next" title="Scroll right"><span class="shape sh-arrow-right-round"><span class="sr-only">Scroll right</span></span></button>';
@@ -73,7 +76,8 @@ export default function blockScroll() {
           scrollParent.scroll(arScrollpoints[(i - 1)], 0);
           break;
         } else if (arScrollpoints[i] < scrollParent.scrollLeft) {
-          scrollParent.scroll(arScrollpoints[i], 0);
+          //scrollParent.scroll(arScrollpoints[i], 0);
+          scrollParent.scrollLeft = arScrollpoints[i];
           break;
         }
       }
@@ -96,10 +100,12 @@ export default function blockScroll() {
           // This happens if the user clicks the button during the animation and helps to make the scroll feel
           // less laggy.
           if (i < arScrollpoints.length && (arScrollpoints[i] - scrollParent.scrollLeft) < 10) {
-            scrollParent.scroll(arScrollpoints[(i + 1)], 0);
+            //scrollParent.scroll(arScrollpoints[(i + 1)], 0);
+            scrollParent.scrollLeft = arScrollpoints[(i + 1)];
             break;
           } else if (arScrollpoints[i] > scrollParent.scrollLeft) {
-            scrollParent.scroll(arScrollpoints[i], 0);
+            //scrollParent.scroll(arScrollpoints[i], 0);
+            scrollParent.scrollLeft = arScrollpoints[i];
             break;
           }
         }

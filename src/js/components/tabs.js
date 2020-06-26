@@ -33,7 +33,8 @@ export default function tabFactory() {
         // Gets the currently selected tab as far to the left as possible
         var currentTabPos = this.currentTab(currentTabs).offsetLeft,
           pageMargin = Math.round(currentTabs.getBoundingClientRect().left);
-        currentTabs.scroll(currentTabPos - pageMargin, 0);
+        //currentTabs.scroll(currentTabPos - pageMargin, 0);
+        currentTabs.scrollLeft = currentTabPos - pageMargin;
       }
       // Check if we need to show the scroll buttons on all of the
       // tabs we've just created
@@ -112,7 +113,8 @@ export default function tabFactory() {
       // Works out which snap point we're currently closest to, working from the end back.
       for (var i = (arScrollpoints.length - 1); i >= 0; i--) {
         if (arScrollpoints[i] < tabset.scrollLeft) {
-          tabset.scroll(arScrollpoints[i], 0);
+          //tabset.scroll(arScrollpoints[i], 0);
+          tabset.scrollLeft = arScrollpoints[i];
           break;
         }
       }
@@ -131,7 +133,8 @@ export default function tabFactory() {
       // Works out which snap point we're currently at.
       for (var i = 0; i < arScrollpoints.length; i++) {
         if (arScrollpoints[i] > tabset.scrollLeft) {
-          tabset.scroll(arScrollpoints[i], 0);
+          //tabset.scroll(arScrollpoints[i], 0);
+          tabset.scrollLeft = arScrollpoints[i];
           break;
         }
       }

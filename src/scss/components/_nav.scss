@@ -4,7 +4,9 @@
 .logo-nav {
   padding: 12px 0 75px;
 
+  // This only works for one specific SVG, regrettably
   .logo {
+    height: 22px;
     margin: 12px 0;
     width: 90px;
   }
