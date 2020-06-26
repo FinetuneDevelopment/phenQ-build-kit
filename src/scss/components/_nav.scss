@@ -65,9 +65,12 @@
       display: block;
     }
   }
+
+  // Displays the menu
   [id="nav-toggle"]:checked ~ .logo-nav__nav {
     right: 0;
   }
+
   .btn-nav {
     display: block;
     padding-left: 0;

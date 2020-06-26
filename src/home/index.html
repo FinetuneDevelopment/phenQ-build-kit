@@ -32,7 +32,7 @@
     <div class="bg-home">
       <div class="container">
         <div class="media logo-nav">
-          <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only">
+          <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only" aria-controls="logo-nav__nav">
           <p class="mr-3">
             <!--@@include('../includes/logo-phenq.svg')-->
             <img src="/img/include/logo-phenq.svg" alt="PhenQ" class="logo">
@@ -43,7 +43,7 @@
               <span class="shape sh-burger"></span>
             </label>
           </p>
-          <nav class="logo-nav__nav media-body" aria-label="Main">
+          <nav class="logo-nav__nav media-body" id="logo-nav__nav" aria-label="Main">
             <ul class="space-between">
               <li><a href="/about/" class="btn btn-nav">About PhenQ</a></li>
               <li><a href="/blog/" class="btn btn-nav">Blog</a></li>
