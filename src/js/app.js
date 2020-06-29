@@ -29,3 +29,7 @@ myShareLinks.init();
 import nav from './components/nav.js';
 const myNav = new nav();
 myNav.init();
+
+import offGrid from './components/off-grid.js';
+const myOffGrid = new offGrid();
+myOffGrid.init();
