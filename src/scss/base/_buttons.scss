@@ -270,9 +270,9 @@ label.btn-pill, label.btn-pill-sm {
   // I've used this apprach to position the <span> tags inside the
   // buttons because it works best across all three tags. Might need
   // to revisit this, if the icons are inline SVGs.
-  & > * {transform: translate(0,-($size/8));}
+  & > * {transform: translate(0,-($size/10));}
   // Note that in this use case:
-  // Text (btn-icon) text
+  // Text <btn-icon> text
   // The second "text" would be too close to the button, due to the
   // below rule.
   &:last-child {margin-right: 0;}
