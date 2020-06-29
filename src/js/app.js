@@ -2,6 +2,8 @@
 
 import '../scss/app.scss';
 
+import './polyfills/closest.js';
+
 import clicks from './components/clicks.js';
 const myClicks = new clicks();
 myClicks.init();
