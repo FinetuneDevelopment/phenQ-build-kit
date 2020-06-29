@@ -40,7 +40,8 @@
     "node": ">=10.13.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.0"
+    "autoprefixer": "^9.8.0",
+    "scroll-behavior-polyfill": "^2.0.13"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

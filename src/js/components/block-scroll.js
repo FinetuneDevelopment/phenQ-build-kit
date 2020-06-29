@@ -26,6 +26,8 @@ export default function blockScroll() {
         currentScroll.insertAdjacentElement('beforebegin', scrollControl);
         // Add an attribute, so CSS can hide the scrollbar
         currentScroll.setAttribute('data-active', 'true');
+        // Marks the element, so the pollyfill will work (Safari and Edge)
+        currentScroll.style.scrollBehavior = 'smooth';
         // Set up click events
         let btnPrevious = currentScroll.previousElementSibling.querySelector('[data-js="previous"]');
         let btnNext = currentScroll.previousElementSibling.querySelector('[data-js="next"]');

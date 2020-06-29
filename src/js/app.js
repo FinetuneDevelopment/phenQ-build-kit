@@ -4,6 +4,8 @@ import '../scss/app.scss';
 
 import './polyfills/closest.js';
 
+import 'scroll-behavior-polyfill';
+
 import clicks from './components/clicks.js';
 const myClicks = new clicks();
 myClicks.init();

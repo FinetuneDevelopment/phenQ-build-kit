@@ -174,6 +174,10 @@ const config = function (env, args) {
         filename: 'faq/index.html',
         template: path.resolve(__dirname, 'src', 'faq/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'profile/index.html',
+        template: path.resolve(__dirname, 'src', 'profile/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),

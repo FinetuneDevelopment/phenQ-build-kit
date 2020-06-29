@@ -4,16 +4,26 @@
   align-items: stretch;
   display: flex;
   justify-content: space-between;
-  overflow: auto;
+  // Required, for the touch behaviour
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   // Required, so we can measure the scroll amount
   position: relative;
+  scroll-behavior: smooth;
+  
+  // This would be safer hidden behind the data-active
+  // attribute but Webkit didn't like that combination
+  // of selectors, unfortunately.
+  &::-webkit-scrollbar { width: 0; }
+
+  // JavaScript has found the markup, and thinks it's good.
+  &[data-active="true"] {
+    // Hides the scrollbars, but they still work
+    -ms-overflow-style: none;
+    scrollbar-width: none;   
+  }  
 }
 
-// JavaScript has found the markup, and thinks it's good.
-.block-scroll[data-active="true"] {
-  overflow: hidden;
-  scroll-behavior: smooth;
-}  
 
 // The (<-) and (->) buttons, which JavaScript shows and hides, as required
 .scroll-control {
