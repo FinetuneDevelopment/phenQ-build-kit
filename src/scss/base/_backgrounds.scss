@@ -46,9 +46,24 @@
     background: inherit;
   }
 
-  a, .btn-arrow {
+  a {
     &:hover::before, &:focus::before {
       border-color: inherit;
+    }
+  }
+
+  // Yeah, not my proudest moment
+  .btn-arrow {
+    &::before, &::after {
+      border-color: inherit;  
+    }
+
+    &:hover, &:focus {
+      border-color: inherit;
+
+      &::before, &::after {
+        border-color: inherit;  
+      }
     }
   }
 

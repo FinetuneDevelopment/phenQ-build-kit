@@ -152,40 +152,48 @@ input.btn.btn-secondary {
   
   // This makes up the ➜, plus there's an inheritance
   // squabble with the default anchor underline behaviour
-  &:before, &:after {
-    border: none;
-    bottom: unset;
-    left: unset;
+  &::before, &::after {
+    border: 0;
     position: absolute;
-    right: 0;
-    // When the button wraps (on mobile, for example) the
-    // arrow needs to align with the bottom line of text.
-    bottom: 0;
     transition: all .2s;
   }
-  // Is this a terrible idea?
-  &:after {
-    content: "➜";
-    height: 1.6em;
-    line-height: 1.6em;
+
+  // >
+  &::after {
+    border-top: solid .15em $colour-dark-blue;
+    border-right: solid .15em $colour-dark-blue;
+    bottom: .55em;
+    content: "";
+    height: .6em;
+    right: .2em;
+    transform: rotate(45deg);
+    transform-origin: bottom;
+    width: .6em;
   }
+  
   // The extending stalk of the arrow above
   // This rule is full of magic numbers, which
   // suggests it won't pass browser testing.
-  &:before {
+  &::before {
     border-top: solid .15em $colour-dark-blue;
+    // When the button wraps (on mobile, for example) the
+    // arrow needs to align with the bottom line of text.
+    bottom: 0;
     content: "";
     height: .8em;
     left: auto;
-    right: .2em;
+    right: 0;
     width: .7em;
   }
+
   // Pushes out the tail of the ➜
-  &:hover:before, &:focus:before {
-    border-color: $colour-bright-blue;
-    // Needed, although it doesn't look like it
-    right: .2em;
+  &:hover::before, &:focus::before {
     width: 1.2em;
+  }
+  
+  &:hover::before, &:focus::before,
+  &:hover::after, &:focus::after {
+    border-color: $colour-bright-blue;
   }
 
   // Small varient, used inside tooltips
@@ -205,9 +213,11 @@ input.btn.btn-secondary {
     }
     
     &::after {
-      height: $font-size-body;
-      line-height: $font-size-body;
+      bottom: .31em;
+      height: $font-size-body * .5;
+      width: $font-size-body * .5;
     }
+
     &:hover, &:focus {
       padding-right: 2.6em;
     }
