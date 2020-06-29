@@ -29,7 +29,7 @@ export default function offGrid() {
           if (direction === 'left') {
             currentOffGrid.style.marginLeft = -1 * leftGutter + 'px';
           } else if (direction === 'right') {
-            currentOffGrid.style.marginRight = -1 * leftGutter + 'px';
+            currentOffGrid.style.marginRight = -1 * (leftGutter - 1) + 'px';
           }
         }
       }

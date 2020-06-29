@@ -4,23 +4,26 @@ export default function formFactory() {
   let myFactory = {};
 
   myFactory.init = function () {
-    const navCheckbox = document.getElementById('nav-toggle');
-    const navAnchors = document.querySelectorAll('.logo-nav__nav a');
 
-    window.addEventListener('resize', this.ariaUpdate);
-    navCheckbox.addEventListener('change', this.ariaUpdate);
-    this.ariaUpdate();
+    if (document.getElementById('nav-toggle') && document.querySelectorAll('.logo-nav__nav a')) {
+      const navCheckbox = document.getElementById('nav-toggle');
+      const navAnchors = document.querySelectorAll('.logo-nav__nav a');
 
-    // Listens for navigation items falling into focus, then
-    // shows the navigation when that happens
-    for (var i = 0; i < navAnchors.length; i++) {
-      let thisAnchor = navAnchors[i];
-      thisAnchor.addEventListener('focus', function () {
-        navCheckbox.checked = true;
-      }, true);
-      thisAnchor.addEventListener('blur', function () {
-        navCheckbox.checked = false;
-      }, true);
+      window.addEventListener('resize', this.ariaUpdate);
+      navCheckbox.addEventListener('change', this.ariaUpdate);
+      this.ariaUpdate();
+
+      // Listens for navigation items falling into focus, then
+      // shows the navigation when that happens
+      for (var i = 0; i < navAnchors.length; i++) {
+        let thisAnchor = navAnchors[i];
+        thisAnchor.addEventListener('focus', function () {
+          navCheckbox.checked = true;
+        }, true);
+        thisAnchor.addEventListener('blur', function () {
+          navCheckbox.checked = false;
+        }, true);
+      }
     }
 
   },
