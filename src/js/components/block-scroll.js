@@ -35,6 +35,7 @@ export default function blockScroll() {
         btnPrevious.addEventListener('click', this.previousItem, false);
         btnNext.addEventListener('click', this.nextItem, false);
       }
+      window.addEventListener('resize', this.scrollCheck);
       this.scrollCheck();
     }
   },

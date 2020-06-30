@@ -45,6 +45,7 @@ export default function tabFactory() {
       // Check if we need to show the scroll buttons on all of the
       // tabs we've just created
       this.scrollCheck();
+      window.addEventListener('resize', this.scrollCheck);
 
       // Accessibility JavaScript for the pure CSS tabs
       // All the secret, hidden radio buttons which control the tab set

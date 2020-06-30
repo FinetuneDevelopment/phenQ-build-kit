@@ -1,11 +1,10 @@
 'use strict';
 
-export default function tabFactory() {
+export default function clickFactory() {
 
   let myFactory = {};
 
-  // Taken from
-  // https://gomakethings.com/listening-for-click-events-with-vanilla-javascript/
+  // Listens for clicks, then takes action (or none)
   myFactory.init = function () {
     document.addEventListener('click', function (event) {
 
