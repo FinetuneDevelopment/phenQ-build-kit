@@ -29,7 +29,7 @@
 
 <body>
   <main>
-    <div class="bg-home">
+    <div class="bg-home gutter-medium">
       <div class="container">
         <div class="media logo-nav">
           <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only" aria-controls="logo-nav__nav">
@@ -47,10 +47,11 @@
             <ul class="space-between">
               <li><a href="/about/" class="btn btn-nav">About PhenQ</a></li>
               <li><a href="/blog/" class="btn btn-nav">Blog</a></li>
-              <li><a href="/faq/" class="btn btn-nav"><abbr title="Frequenly Asked Questions">FAQ</abbr>s</a></li>
+              <li><a href="#faq" class="btn btn-nav"><abbr title="Frequenly Asked Questions">FAQ</abbr>s</a></li>
+              <li><a href="#ingredients" class="btn btn-nav">Ingredients</a></li>
               <li><a href="/contact/" class="btn btn-nav">Contact us</a></li>
               <li class="toolbar">
-                <a href="/order/" class="btn btn-primary btn-sm">Order now</a>
+                <a href="#order-now" class="btn btn-primary btn-sm">Order now</a>
                 <a href="/cart/" class="btn btn-config">Cart <strong>2</strong></a>
                 <a href="/profile/" class="btn btn-config"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <path d="M57.8 60.083H42.2C21.653 60.1 4.994 73 4.97 87.015v8.387C4.97 97.1 6.986 100 9.473 100h81.055c2.487 0 4.503-2.902 4.503-4.598v-8.387C95.006 73 78.347 60.083 57.8 60.083zM86.024 92.33h-72.05v-5.315c0-10.638 12.64-19.26 28.234-19.26H57.8c15.593 0 28.234 8.624 28.234 19.26zM50 54.36a27.018 27.018 0 1 0-27.018-27.018A27.018 27.018 0 0 0 50 54.359zm0-45.03a18.012 18.012 0 1 1-18.012 18.012A18.012 18.012 0 0 1 50 9.328z" />
@@ -68,7 +69,7 @@
             <div class="col-sm-10 col-lg-6">
               <p class="lead">PhenQ delivers clinically-proven thermogenic ingredients to support all 5 body-sculpting efforts* &mdash; and works even for the most sluggish of metabolisms</p>
               <p>
-                <a href="#" class="btn btn-primary flush">Order now</a>
+                <a href="#order-now" class="btn btn-primary flush">Order now</a>
                 <br class="d-none d-md-block d-lg-block d-xl-block">
                 <small class="legal">60-day money back guarantee</small>
               </p>
@@ -81,23 +82,37 @@
     <div class="container">
 
       <!-- Quotes from third parties -->
-      <div class="row gutter-large">
+      <div class="row gutter-medium">
         <blockquote class="col-sm text-center">
-          <p><img src="/img/content/logo-healthinsiders.png" alt="Healthinsiders" class="img-fluid"></p>
-          <p class="txt-dark-grey">&ldquo;PhenQ provides an easier solution to getting your desired body&rdquo;</p>
+          <p><img src="/img/content/logo-health-and-fitness.png" alt="Health &amp; Fitness magazine" class="img-fluid"></p>
+          <p class="txt-dark-grey">&ldquo;Nulla non condimentum quam, congue placerat nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum tristique metus vel orci congue congue.&rdquo;</p>
         </blockquote>
         <blockquote class="col-sm text-center">
-          <p><img src="/img/content/logo-organic-avenue.png" alt="Organic Avenue" class="img-fluid"></p>
-          <p class="txt-dark-grey">&ldquo;The go-to weight loss aid of 2019&rdquo;</p>
+          <p><img src="/img/content/logo-sante+.png" alt="Santé" class="img-fluid"></p>
+          <p class="txt-dark-grey">&ldquo;Quisque volutpat mi nec urna bibendum, a ultrices ante aliquet. Duis faucibus eu velit sagittis consequat.&rdquo;</p>
         </blockquote>
         <blockquote class="col-sm text-center">
-          <p><img src="/img/content/logo-mbpi.png" alt="MBPI.org" class="img-fluid"></p>
-          <p class="txt-dark-grey">&ldquo;PhenQ is without doubt one of the best supplements for weight loss currently
-            available&rdquo;</p>
+          <p><img src="/img/content/logo-good-housekeeping.png" alt="Good Housekeeping" class="img-fluid"></p>
+          <p class="txt-dark-grey">&ldquo;Donec libero nisi, eleifend at lacinia non, lobortis et sem. Nulla mollis ante nisi, nec auctor massa facilisis a.&rdquo;</p>
         </blockquote>
       </div>
 
-      <section aria-title="The 5 Body-Sculpting Efforts Of PhenQ" class="gutter-medium">
+      <div class="row gutter-large">
+        <blockquote class="col-sm text-center">
+          <p><img src="/img/content/logo-womens-fitness.png" alt="Women's Fitness" class="img-fluid"></p>
+          <p class="txt-dark-grey">&ldquo;Donec non justo elit. Cras pellentesque in massa eget facilisis. Sed porta quam non vulputate tincidunt.&rdquo;</p>
+        </blockquote>
+        <blockquote class="col-sm text-center">
+          <p><img src="/img/include/logo-shape.svg" alt="Shape" class="quote-logo"></p>
+          <p class="txt-dark-grey">&ldquo;Quisque scelerisque, ante ac auctor dapibus, est nulla mattis quam, in commodo nisi nisi sit amet lacus. Integer mollis justo ut massa venenatis, vitae maximus nibh mattis. In viverra sem ac lacus consectetur dapibus ut in ligula.&rdquo;</p>
+        </blockquote>
+        <blockquote class="col-sm text-center">
+          <p><img src="/img/content/logo-top-sante.png" alt="Top Sante. Good health starts here." class="img-fluid"></p>
+          <p class="txt-dark-grey">&ldquo;Nulla vitae varius eros. Pellentesque tincidunt libero eget varius commodo. Suspendisse eu laoreet neque.&rdquo;</p>
+        </blockquote>
+      </div>
+
+      <section aria-title="The 5 Body-Sculpting Efforts Of PhenQ" class="gutter-medium" id="body-sculpting">
         <header class="row gutter-medium">
           <h2 class="h3 col-sm-7 col-lg-5">The 5 Body-Sculpting <br class="d-none d-sm-block">Efforts <em>Of PhenQ</em></h2>
           <p class="col-sm-5 col-md-4 offset-md-1 col-lg-4 offset-lg-3 align-self-end"><a href="#" class="btn btn-arrow">More about the health benefits</a></p>
@@ -203,7 +218,7 @@
           <section class="col-sm">
             <div class="cta-box radius-medium text-center bg-grad-dark-blue">
               <h3 class="h4">Backed by Science,<br><em>Proven by You.</em></h3>
-              <p><a href="#" class="btn btn-primary">Order now</a></p>
+              <p><a href="#order-now" class="btn btn-primary">Order now</a></p>
             </div>
           </section>
 
@@ -668,7 +683,7 @@
                 </svg>
               </span>
             </p>
-            <p><a href="#" class="btn btn-primary flush">Order now</a><br><small class="legal">60-day money back guarantee</small></p>
+            <p><a href="#order-now" class="btn btn-primary flush">Order now</a><br><small class="legal">60-day money back guarantee</small></p>
             <br><br>
           </div>
         </div>
@@ -678,7 +693,7 @@
     <!-- The 6 Powerful Slimming Ingredients In Each Serving Of PhenQ -->
     <div class="container">
 
-      <section class="gutter-medium" aria-label="The 6 Powerful Slimming Ingredients In Each Serving Of PhenQ">
+      <section class="gutter-medium" aria-label="The 6 Powerful Slimming Ingredients In Each Serving Of PhenQ" id="ingredients">
         <header class="row">
           <h2 class="col-sm-6 col-md-7 col-lg-5">The 6 Powerful Slimming Ingredients <br class="d-sm-none"><em>In Each Serving Of PhenQ</em></h2>
           <p class="col-9 col-sm-6 col-md-5 col-lg-4 offset-lg-3 lead">We've replaced fillers and caking agents with even more responsibly sourced, all natural nutrients and all at the optimal levels that can be difficult to attain in our modern diets.</p>
@@ -686,48 +701,42 @@
 
         <div class="row gutter-medium block-scroll block-scroll-xs" data-js="block-scroll">
 
-          <section class="col-md-4 col-sm-6 flex-vert block-scroll__child_xs" data-js="block-scroll-item">
-            <p><img src="http://placeimg.com/360/210/tech" alt="" class="cap-top radius-medium img-fluid"></p>
+          <section class="col-md-4 col-sm-6 block-scroll__child_xs" data-js="block-scroll-item">
+            <p><img src="https://loremflickr.com/360/210/sunset" alt="" class="cap-top radius-medium img-fluid"></p>
             <h3 class="h4 heading-bold">a-Lacys Reset®</h3>
             <p>(alpha lipoic acid, cysteine base, and magnesium) Synthesized together for an even stronger “metabo-burn,” this patented formula is scientifically proven to reduce weight, suppress appetite, and sustain energy levels.</p>
-            <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more<span class="sr-only"> about a-Lacys Reset®</span></a></p>
           </section>
 
-          <section class="col-md-4 col-sm-6 flex-vert block-scroll__child_xs" data-js="block-scroll-item">
-            <p><img src="http://placeimg.com/360/210/nature" alt="" class="cap-top radius-medium img-fluid"></p>
+          <section class="col-md-4 col-sm-6 block-scroll__child_xs" data-js="block-scroll-item">
+            <p><img src="https://loremflickr.com/360/210/capsicum" alt="" class="cap-top radius-medium img-fluid"></p>
             <h3 class="h4 heading-bold">Capsimax Powder</h3>
             <p>Capsimax Powder is a blend blend of capsicum, piperine, caffeine, and niacin (vitamin B3). What makes Capsimax Powder so powerful? Each ingredient compliments each other ingredient— making the sum of Capsimax a highly effective weight loss aid.</p>
-            <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more<span class="sr-only"> about Capsimax Powder</span></a></p>
           </section>
 
-          <section class="col-md-4 col-sm-6 flex-vert block-scroll__child_xs" data-js="block-scroll-item">
-            <p><img src="http://placeimg.com/360/210/architecture" alt="" class="cap-top radius-medium img-fluid"></p>
+          <section class="col-md-4 col-sm-6 block-scroll__child_xs" data-js="block-scroll-item">
+            <p><img src="https://loremflickr.com/360/210/chrome" alt="" class="cap-top radius-medium img-fluid"></p>
             <h3 class="h4 heading-bold">Chromium Picolinate</h3>
             <p>In an 8-week study, 42 healthy, overweight women were given either chromium picolinate or a placebo. After 8 weeks, the study concluded chromium picolinate may help reduce food intake by curbing one’s appetite.</p>
-            <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more<span class="sr-only"> about Chromium Picolinate</span></a></p>
           </section>
 
           <div class="w-100 d-none d-md-block d-lg-block d-xl-block gutter-medium"></div>
 
-          <section class="col-md-4 col-sm-6 flex-vert block-scroll__child_xs" data-js="block-scroll-item">
-            <p><img src="http://placeimg.com/360/210/people" alt="" class="cap-top radius-medium img-fluid"></p>
+          <section class="col-md-4 col-sm-6 block-scroll__child_xs" data-js="block-scroll-item">
+            <p><img src="https://loremflickr.com/360/210/coffee" alt="" class="cap-top radius-medium img-fluid"></p>
             <h3 class="h4 heading-bold">Caffeine</h3>
             <p>There’s a good reason why you’ll find caffeine in so many weight loss supplements and energy drinks. As a stimulant, its ability to increase alertness, focus and reduce fatigue<sup>4</sup>> are well known. It can also help you feel less hungry, boost the fat burning process by increasing thermogenesis, and help you to get more out of your exercise routine by improving your performance<sup>5</sup>.</p>
-            <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more<span class="sr-only"> about Caffeine</span></a></p>
           </section>
 
-          <section class="col-md-4 col-sm-6 flex-vert block-scroll__child_xs" data-js="block-scroll-item">
-            <p><img src="https://loremflickr.com/360/210/" alt="" class="cap-top radius-medium img-fluid"></p>
+          <section class="col-md-4 col-sm-6 block-scroll__child_xs" data-js="block-scroll-item">
+            <p><img src="https://loremflickr.com/360/210/cacti" alt="" class="cap-top radius-medium img-fluid"></p>
             <h3 class="h4 heading-bold">Nopal</h3>
             <p>The nopal cactus is high in fibre, helping you gain more control over your hunger. It’s also extremely rich in amino acids, providing you with much needed energy through your weight loss journey, as well as helping reduce extra weight caused by fluid retention by helping flush fluids from your tissues into your bloodstream.</p>
-            <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more<span class="sr-only"> about Nopal</span></a></p>
           </section>
 
-          <section class="col-md-4 col-sm-6 flex-vert block-scroll__child_xs" data-js="block-scroll-item">
-            <p><img src="http://placeimg.com/360/210/animals" alt="" class="cap-top radius-medium img-fluid"></p>
+          <section class="col-md-4 col-sm-6 block-scroll__child_xs" data-js="block-scroll-item">
+            <p><img src="http://placeimg.com/360/210/pineapple" alt="" class="cap-top radius-medium img-fluid"></p>
             <h3 class="h4 heading-bold">L-Carnitine Fumarate</h3>
             <p>The naturally occurring amino acid L-carnitine is found in foods such as red meat, nuts and green vegetables. It helps your body turn its fat stores into energy, meaning you’ll not only burn fat but combat the tiredness often caused by dieting too.</p>
-            <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more<span class="sr-only"> about L-Carnitine Fumarate</span></a></p>
           </section>
 
         </div>
@@ -840,7 +849,7 @@
 
         <div class="row text-center">
 
-          <section class="col-md" aria-label="1 bottle">
+          <section class="col-lg" aria-label="1 bottle">
             <div class="product-display bg-white shadow-light radius-big">
               <p><img src="/img/content/img-product-one.png" alt="" class="img-fluid"></p>
               <h3 class="h4 heading-bold gutter-small">1 bottle</h3>
@@ -848,7 +857,7 @@
               <p class="h2 type-gotham-medium flush">$69.95</p>
               <p class="type-source-bold text-uppercase text-breath">Saving $10</p>
               <p class="flush"><a href="#" class="btn btn-primary flush">Order now</a></p>
-              <p><small class="legal">Free delivery, cancel anytime</small></p>
+              <p><small class="legal">Free delivery</small></p>
               <p>
                 <span class="logo-block bg-light-grey radius-small">
                   <img src="/img/include/logo-visa.svg" alt="Visa">
@@ -860,17 +869,19 @@
                   <img src="/img/include/logo-american-express.svg" alt="American Express">
                 </span>
                 <span class="logo-block bg-light-grey radius-small">
-                  <img src="/img/include/logo-discover.svg" alt="Discover">
+                  <img src="/img/include/logo-skrill.svg" alt="Skrill">
                 </span>
                 <span class="logo-block bg-light-grey radius-small">
-                  <img src="/img/include/logo-klarna.svg" alt="Klarna">
+                  <img src="/img/include/logo-paysafecard.svg" alt="Pay Safe Card">
+                </span>
+                <span class="logo-block bg-light-grey radius-small">
+                  <img src="/img/include/logo-sezzle.svg" alt="Sezzle">
                 </span>
               </p>
-              <p class="small">Pay monthly, 0% <abbr title="annual percentage rate">APR</abbr> Pay with Klarna</p>
             </div>
           </section>
 
-          <section class="col-md" aria-label="2 bottle + 1 free">
+          <section class="col-lg" aria-label="2 bottle + 1 free" id="order-now">
             <div class="product-display bg-mint product-display-primary radius-medium">
               <header class="bg-dark-blue radius-medium cap-top product-display__header">
                 <p class="type-source-bold text-breath text-uppercase flush">Most popular</p>
@@ -881,7 +892,7 @@
               <p class="h2 type-gotham-medium flush">$139.90</p>
               <p class="type-source-bold text-uppercase text-breath">Saving $110</p>
               <p class="flush"><a href="#" class="btn btn-primary flush">Order now</a></p>
-              <p><small class="legal">Free delivery, cancel anytime</small></p>
+              <p><small class="legal">Free delivery</small></p>
               <p>
                 <span class="logo-block bg-light-grey radius-small">
                   <img src="/img/include/logo-visa.svg" alt="Visa">
@@ -893,17 +904,19 @@
                   <img src="/img/include/logo-american-express.svg" alt="American Express">
                 </span>
                 <span class="logo-block bg-light-grey radius-small">
-                  <img src="/img/include/logo-discover.svg" alt="Discover">
+                  <img src="/img/include/logo-skrill.svg" alt="Skrill">
                 </span>
                 <span class="logo-block bg-light-grey radius-small">
-                  <img src="/img/include/logo-klarna.svg" alt="Klarna">
+                  <img src="/img/include/logo-paysafecard.svg" alt="Pay Safe Card">
+                </span>
+                <span class="logo-block bg-light-grey radius-small">
+                  <img src="/img/include/logo-sezzle.svg" alt="Sezzle">
                 </span>
               </p>
-              <p class="small">Pay monthly, 0% <abbr title="annual percentage rate">APR</abbr> Pay with Klarna</p>
             </div>
           </section>
 
-          <section class="col-md" aria-label="3 bottle + 1 free">
+          <section class="col-lg" aria-label="3 bottle + 1 free">
             <div class="product-display bg-white shadow-light radius-big">
               <p><img src="/img/content/img-product-three.png" alt="" class="img-fluid"></p>
               <h3 class="h4 heading-bold flush">3 bottle + 1 free</h3>
@@ -927,7 +940,7 @@
               <p class="h2 type-gotham-medium flush">$189.95</p>
               <p class="type-source-bold text-uppercase text-breath">Saving $210</p>
               <p class="flush"><a href="#" class="btn btn-primary flush">Order now</a></p>
-              <p><small class="legal">Free delivery, cancel anytime</small></p>
+              <p><small class="legal">Free delivery</small></p>
               <p>
                 <span class="logo-block bg-light-grey radius-small">
                   <img src="/img/include/logo-visa.svg" alt="Visa">
@@ -939,20 +952,22 @@
                   <img src="/img/include/logo-american-express.svg" alt="American Express">
                 </span>
                 <span class="logo-block bg-light-grey radius-small">
-                  <img src="/img/include/logo-discover.svg" alt="Discover">
+                  <img src="/img/include/logo-skrill.svg" alt="Skrill">
                 </span>
                 <span class="logo-block bg-light-grey radius-small">
-                  <img src="/img/include/logo-klarna.svg" alt="Klarna">
+                  <img src="/img/include/logo-paysafecard.svg" alt="Pay Safe Card">
+                </span>
+                <span class="logo-block bg-light-grey radius-small">
+                  <img src="/img/include/logo-sezzle.svg" alt="Sezzle">
                 </span>
               </p>
-              <p class="small">Pay monthly, 0% <abbr title="annual percentage rate">APR</abbr> Pay with Klarna</p>
             </div>
           </section>
 
         </div>
       </section>
 
-      <section aria-title="If You Have Questions, We Have Answers" class="gutter-medium">
+      <section aria-title="If You Have Questions, We Have Answers" class="gutter-medium" id="faq">
         <header class="row align-items-end gutter-medium">
           <h2 class="h3 col-sm-8 flush">If You Have Questions, <br class="d-none d-sm-block"><em>We Have Answers</em></h2>
           <p class="col-sm-4 text-right"><a href="#" class="btn btn-arrow text-nowrap">View all <abbr>FAQ</abbr>s</a></p>
@@ -1126,6 +1141,7 @@
                 </svg>
               </p>
             </div>
+            <p><a href="https://www.wolfsonbrands.com/" class="btn btn-arrow" target="_blank">Brought to you by Wolfson brands</a></p>
             <p class="small">
               <span class="text-uppercase">Wolfson Berg Limited</span><br>
               120 High Road<br>
