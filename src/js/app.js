@@ -10,6 +10,10 @@ import clicks from './components/clicks.js';
 const myClicks = new clicks();
 myClicks.init();
 
+import blank from './components/blank.js';
+const myBlank = new blank();
+myBlank.init();
+
 import tabFactory from './components/tabs.js';
 const myTabs = new tabFactory();
 myTabs.init();

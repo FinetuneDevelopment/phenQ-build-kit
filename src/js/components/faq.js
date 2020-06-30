@@ -13,9 +13,9 @@ export default function faqFactory() {
 
       this.expandedStatus();
       // Might need to do this more than once.
-      for (var i = 0; i < labels.length; i++) {
-        var myLabel = labels[i],
-          thisRadio = document.getElementById(myLabel.getAttribute('for'));
+      for (let i = 0; i < labels.length; i++) {
+        let myLabel = labels[i];
+        let thisRadio = document.getElementById(myLabel.getAttribute('for'));
 
         myLabel.addEventListener('click', myFactory.deselectRadio, true);
 
@@ -28,7 +28,7 @@ export default function faqFactory() {
   },
     // Deselects the associated radio button, if required
     myFactory.deselectRadio = function (e) {
-      var thisRadio = document.getElementById(this.getAttribute('for'));
+      let thisRadio = document.getElementById(this.getAttribute('for'));
       if (thisRadio.checked === true) {
         thisRadio.checked = false;
         e.preventDefault();
@@ -37,8 +37,8 @@ export default function faqFactory() {
     // Sets up the aria-expanded attribute for the tabs
     myFactory.expandedStatus = function () {
       if (labels.length) {
-        for (var i = 0; i < labels.length; i++) {
-          var myLabel = labels[i],
+        for (let i = 0; i < labels.length; i++) {
+          let myLabel = labels[i],
             myId = myLabel.getAttribute('for'),
             thisRadio = document.getElementById(myId);
 
