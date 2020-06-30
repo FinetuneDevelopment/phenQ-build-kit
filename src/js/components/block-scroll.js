@@ -34,7 +34,6 @@ export default function blockScroll() {
 
         btnPrevious.addEventListener('click', this.previousItem, false);
         btnNext.addEventListener('click', this.nextItem, false);
-        // Check if we need to show the scroll buttons or not
       }
       this.scrollCheck();
     }

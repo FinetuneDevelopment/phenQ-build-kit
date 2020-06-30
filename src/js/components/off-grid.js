@@ -17,7 +17,8 @@ export default function offGrid() {
       let offGrids = document.querySelectorAll('[data-offgrid]');
 
       // Do we have owt to do?
-      if (offGrids.length) {
+      // Sorry - this was causing havock in IE and block-scroll.
+      if (offGrids.length && !window.document.documentMode) {
 
         // Might need to do this more than once.
         for (let i = 0; i < offGrids.length; i++) {
