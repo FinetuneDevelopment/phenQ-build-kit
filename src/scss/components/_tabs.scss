@@ -22,6 +22,9 @@ $border-colour: #000;
   font-size: 18px;
   margin: 0 0 1em;
   overflow: auto;
+  // So we don't have to mess around with getBoundingClientRect() in JavaScript,
+  // to work out the width of the tabs
+  position: relative;
   scroll-behavior: smooth;
   text-transform: uppercase;
 
