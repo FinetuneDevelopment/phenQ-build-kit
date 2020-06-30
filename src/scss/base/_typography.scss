@@ -17,7 +17,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   line-height: 1.1;
   margin: 0 0 .8em;
-  strong, b, em, i { font-family: $heading-typeface-bold; }
+
+  strong, b, em, i {
+    font-family: $heading-typeface-bold;
+    font-style: normal;
+  }
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: $heading-typeface-light;
@@ -28,7 +32,8 @@ h5, .h5, h6, .h6 {
 
 .heading-bold {
   font-family: $heading-typeface-bold;
-    strong, b, em, i { font-family: $heading-typeface-light; }
+
+  strong, b, em, i { font-family: $heading-typeface-light; }
 }
 
 h1, .h1 { font-size: $font-size-h1; }
@@ -89,8 +94,7 @@ a {
 }
 
 em, i {
-    font-family: $body-typeface-light-italic;
-    font-style: normal;
+    font-family: $body-typeface-stack;
 }
 strong, b {
     font-family: $body-typeface-bold;

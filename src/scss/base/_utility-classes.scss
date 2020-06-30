@@ -1,18 +1,14 @@
 // Really small components
 
 // Using arbitrary typefaces
-.type-gotham-light           {font-family: $heading-typeface-light !important; }
-.type-gotham-medium          {font-family: $heading-typeface-medium !important; }
-.type-gotham-bold            {font-family: $heading-typeface-bold !important; }
+.type-gotham-light    {font-family: $heading-typeface-light !important; }
+.type-gotham-medium   {font-family: $heading-typeface-medium !important; }
+.type-gotham-bold     {font-family: $heading-typeface-bold !important; }
 
-.type-source-light           {font-family: $body-typeface !important; }
-.type-source-light-italic    {font-family: $body-typeface-light-italic !important; }
-.type-source-regular         {font-family: $body-typeface-regular !important; }
-.type-source-italic          {font-family: $body-typeface-italic !important; }
-.type-source-semibold        {font-family: $body-typeface-semibold !important; }
-.type-source-semibold-italic {font-family: $body-typeface-semibold-italic !important; }
-.type-source-bold            {font-family: $body-typeface-bold !important; }
-.type-source-bold-italic     {font-family: $body-typeface-bold-italic !important; }
+.type-source-light    {font-family: $body-typeface !important; }
+.type-source-regular  {font-family: $body-typeface-regular !important; }
+.type-source-semibold {font-family: $body-typeface-semibold !important; }
+.type-source-bold     {font-family: $body-typeface-bold !important; }
 
 // This adds borders between bootstrap columns
 .border-between {
