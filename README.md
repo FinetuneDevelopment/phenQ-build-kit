@@ -89,7 +89,7 @@ const serverConfiguration = {
 
 * _SASS_ files are located under `/src/scss/`
 * _JavaScript_ files with support of _ES6 / ECMAScript 2016(ES7)_ files are located under `/src/js/`
-* _Image_ files are located under `/src/images/`
+* _Image_ files are located under `/src/img/`
 * _Font_ files are located under `/src/fonts/`
 * _HTML_ files are located under `/src/`
 
