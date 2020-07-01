@@ -143,6 +143,7 @@
 // Say you have a set of icons or buttons and you want to make a quick-and-dirty navbar
 .space-between {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
