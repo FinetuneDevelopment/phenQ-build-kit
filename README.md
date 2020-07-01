@@ -1,5 +1,6 @@
-# Webpack 4 Boilerplate
+# PhenQ Digital Design Guidelines and flat HTML prototype
 
+<!--
 [![GitHub Version](https://badge.fury.io/gh/weareathlon%2Ffrontend-webpack-boilerplate.svg)](https://badge.fury.io/gh/weareathlon%2Ffrontend-webpack-boilerplate)
 [![Build Status](https://api.travis-ci.org/weareathlon/frontend-webpack-boilerplate.svg?branch=master)](https://travis-ci.org/weareathlon/frontend-webpack-boilerplate)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/WeAreAthlon/frontend-webpack-boilerplate)](https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues)
@@ -9,7 +10,7 @@
 [![npm](https://img.shields.io/npm/dm/@weareathlon/frontend-webpack-boilerplate)](https://www.npmjs.com/package/@weareathlon/frontend-webpack-boilerplate)
 [![GitHub License](https://img.shields.io/github/license/WeAreAthlon/frontend-webpack-boilerplate)](https://github.com/WeAreAthlon/frontend-webpack-boilerplate/blob/master/LICENSE)
 
-![Front-end Webpack Boilerplate](https://repository-images.githubusercontent.com/96102257/4be7b600-61f1-11e9-9ebf-67b17d5ba125)
+![Front-end Webpack Boilerplate](https://repository-images.githubusercontent.com/96102257/4be7b600-61f1-11e9-9ebf-67b17d5ba125)-->
 
 ## Features
 
@@ -42,7 +43,7 @@
 
 ## Installation
 
-1. Choose and download the template from [List of Releases](https://github.com/WeAreAthlon/frontend-webpack-boilerplate/releases).
+1. Choose and download the template from [List of Releases](https://github.com/FinetuneDevelopment/phenQ-build-kit).
 2. Extract the release archive to a new directory, rename it to your project name and browse the directory.
 3. Install all dependencies using `npm` clean install. 
 
