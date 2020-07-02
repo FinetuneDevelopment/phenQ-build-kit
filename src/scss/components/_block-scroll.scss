@@ -32,6 +32,9 @@
   // control this behaviour.
   margin-top: -58px;
   position: relative;
+  // We need the container to shrink-wrap the contents, so it doesn't interfer
+  // with content to the left of the buttons.
+  float: right;
   z-index: 1;
 }
 

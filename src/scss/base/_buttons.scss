@@ -12,6 +12,9 @@
   font-family: $body-typeface-semibold;
   letter-spacing: $button-spacing;
   line-height: 1.5;
+  // To fix an issue in IE11 where buttons were escaping out of their containers if
+  // they had oversized images inside them.
+  max-width: 100%;
   min-height: unset;
   // Note that padding is not reset here as it is declaired elsewhere
   text-align: center; // This is required for three button styles which have min-width

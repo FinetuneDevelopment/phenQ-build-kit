@@ -18,7 +18,6 @@ export default function blockScroll() {
         // IE, you encouragable scamp!
         scrollControl.classList.add('scroll-control');
         scrollControl.classList.add('hidden');
-        scrollControl.classList.add('text-right');
         scrollControl.setAttribute('data-js', 'scroll-control');
 
         scrollControl.innerHTML = '<button class="btn btn-icon icon-x-small" type="button" data-js="previous" title="Scroll left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Arrow left"><path d="M50.078 100l8.855-8.84L23.99 56.076h76.1V43.8h-76.1L58.933 8.7 50.078-.148 0 49.93z" fill="#273583"/></svg></button> <button class="btn btn-icon icon-x-small" type="button" data-js="next" title="Scroll right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Arrow right"><path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="#273583"/></svg></button>';
