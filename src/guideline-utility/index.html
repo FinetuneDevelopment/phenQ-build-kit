@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Utility classes | PhenQ Digital Design Guidelines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="font" href="/fonts/GothamRounded-Bold.f80c31.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/GothamRounded-Light.86592c.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/GothamRounded-Medium.9a9e3f.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Source-Sans-Pro-Bold.81e4a6.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Source-Sans-Pro-Light.fe2b16.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Source-Sans-Pro-Regular.3c9e9a.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/Source-Sans-Pro-SemiBold.df087f.woff2" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="description" content="Examples of utility classes which can be added to different elements and used to enhance certain markup patterns.">
+  <meta property="fb:admins" content="1570989889829468">
+  <meta property="og:title" content="Examples of utility classes which can be added to different elements and used to enhance certain markup patterns.">
+  <meta property="og:description" content="Examples of utility classes which can be added to different elements and used to enhance certain markup patterns.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/guidelines-utility/">
+  <meta property="og:site_name" content="PhenQ Digital Design Guidelines">
+  <!-- To do -->
+  <meta property="og:image" content=" ">
+  <meta itemprop="image" content=" ">
+  <link rel="image_src" href=" ">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0077bb">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <main class="container">
+    <h1>Utility classes</h1>
+    <nav class="tab-set">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/guideline-typeface/">Typefaces</a></li>
+        <li><a href="/guideline-headings/">Headings</a></li>
+        <li><a href="/guideline-bodytext/">Bodytext</a></li>
+        <li><a href="/guideline-colours/">Colours</a></li>
+        <li><a href="/guideline-buttons/">Buttons</a></li>
+        <li><a href="/guideline-forms/">Forms</a></li>
+        <li><a href="/guideline-panels/">Panels</a></li>
+        <li><a href="/guideline-interactive/">Interactive</a></li>
+        <li><a href="/guideline-icons/">Icons</a></li>
+        <li><em title="You are here">Utility classes</em></li>
+      </ul>
+    </nav>
+
+    <section aria-label="Typefaces" class="gutter-medium">
+      <h2>Typefaces</h2>
+      <p>Arbitrary typefaces can be applied to any element using a select of class names:</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Class name</th>
+            <th scope="col">Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <p><code>type-gotham-light</code></p>
+            </th>
+            <td>
+              <p class="type-gotham-light">This text is using the Gotham Light typeface</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p><code>type-gotham-medium</code></p>
+            </th>
+            <td>
+              <p class="type-gotham-medium">This text is using the Gotham Medium typeface</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p><code>type-gotham-bold</code></p>
+            </th>
+            <td>
+              <p class="type-gotham-bold">This text is using the Gotham Bold typeface</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p><code>type-source-light</code></p>
+            </th>
+            <td>
+              <p class="type-source-light">This text is using the Source Light typeface</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p><code>type-source-regular</code></p>
+            </th>
+            <td>
+              <p class="type-source-regular">This text is using the Source Regular typeface</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p><code>type-source-semibold</code></p>
+            </th>
+            <td>
+              <p class="type-source-semibold">This text is using the Source Semibold typeface</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <p><code>type-source-bold</code></p>
+            </th>
+            <td>
+              <p class="type-source-bold">This text is using the Source Bold typeface</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="gutter-medium" aria-label="Border radius">
+      <h2>Border radius</h2>
+      <h3>Sizes</h3>
+      <p>Border radius has three different sizes:</p>
+      <div class="row gutter-small">
+        <div class="col">
+          <p class="cta-box bg-dark-blue radius-big"><code>radius-big</code></p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-dark-blue radius-medium"><code>radius-medium</code></p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-dark-blue radius-small"><code>radius-small</code></p>
+        </div>
+      </div>
+
+      <h3>Caps</h3>
+      <p>Border radius can be used in conjunction with a <code>cap-top</code> class to add an image to the top of a call-to-action with two rounded corners.</p>
+
+      <div class="row gutter-medium">
+        <section class="col">
+          <p><img src="http://placeimg.com/408/238/animals" alt="" class="cap-top radius-medium img-fluid"></p>
+          <h4>Example cap top</h4>
+        </section>
+        <section class="col">
+          <p><img src="http://placeimg.com/408/238/nature" alt="" class="cap-top radius-medium img-fluid"></p>
+          <h4>Example cap top</h4>
+        </section>
+        <section class="col">
+          <p><img src="http://placeimg.com/408/238/tech" alt="" class="cap-top radius-medium img-fluid"></p>
+          <h4>Example cap top</h4>
+        </section>
+      </div>
+
+      <p>Additionally, any image can become round by adding a <code>round</code> class onto it.</p>
+      <p>Note that by default, images will break out of their containers. If you wish to restrain an image to to more than 100% of its container, a class of <code>img-fluid</code> should be added to it.</p>
+
+      <div class="row">
+        <p class="col"><img src="http://placeimg.com/500/500/people" alt="" class="round img-fluid"></p>
+        <p class="col"><img src="http://placeimg.com/400/400/people" alt="" class="round img-fluid"></p>
+      </div>
+      <div class="row">
+        <p class="col"><img src="http://placeimg.com/300/300/people" alt="" class="round img-fluid"></p>
+        <p class="col"><img src="http://placeimg.com/200/200/people" alt="" class="round img-fluid"></p>
+        <p class="col"><img src="http://placeimg.com/100/100/people" alt="" class="round img-fluid"></p>
+      </div>
+    </section>
+
+    <section class="gutter-medium" aria-label="Borders">
+      <h2>Borders</h2>
+      <p>Borders are sparingly used but are sometimes applied around icons. The <code>border-thin</code> class can be used for this purpose.</p>
+
+      <p>
+        <a href="https://www.instagram.com/phen_q/" target="_blank" class="icon-disk icon-disk-small border-thin" title="Visit us on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#273583" aria-label="Instagram">
+            <path d="M12 2.2h4.8c3.3.2 4.8 1.7 5 5a83.4 83.4 0 010 9.7c-.2 3.2-1.7 4.7-5 4.9a83 83 0 01-9.6 0c-3.3-.2-4.8-1.7-5-5a83 83 0 010-9.6c.2-3.3 1.7-4.8 5-5H12zM12 0H7C2.8.4.4 2.8 0 7a84.3 84.3 0 000 10c.3 4.3 2.7 6.7 7 7a85.6 85.6 0 0010 0c4.3-.3 6.7-2.7 7-7a84.3 84.3 0 000-10c-.3-4.3-2.7-6.7-7-7h-5zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.8 1.4 1.4 0 000-2.8z"></path>
+          </svg>
+        </a>
+        &nbsp; &nbsp;
+        <a href="https://www.facebook.com/PhenQOfficial/" target="_blank" class="icon-disk icon-disk-small border-thin" title="Visit us on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#273583" aria-label="Facebook">
+            <path d="M57.7 99.66v-45.3h15.16l2.33-17.66H57.7V25.41c0-5.07 1.37-8.6 8.71-8.6h9.37V1.06c-1.6-.24-7.16-.72-13.6-.72-13.5 0-22.74 8.24-22.74 23.34V36.7H24.22v17.67h15.22v45.29z"></path>
+          </svg>
+        </a>
+        &nbsp; &nbsp;
+        <a href="https://www.pinterest.co.uk/phenq/" target="_blank" class="icon-disk icon-disk-small border-thin" title="Visit us on Pinterest">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-label="Pinterest" fill="#273583" viewBox="0 0 24 24">
+            <path d="M0 12a12 12 0 007.7 11.3c0-1-.2-2.5 0-3.5l1.5-6s-.4-.7-.4-1.8c0-1.6 1-3 2.2-3 1 0 1.5.9 1.5 1.8 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2 0 3.7-2.3 3.7-5.5 0-3-2-5-5-5a5.2 5.2 0 00-5.4 5.3 4 4 0 001 2.7.4.4 0 010 .4L7.3 16c0 .3-.2.3-.4.2-1.5-.7-2.5-3-2.5-4.6 0-3.8 2.8-7.3 8-7.3 4 0 7.3 3 7.3 7s-2.6 7.4-6.2 7.4c-1.2 0-2.4-.7-2.7-1.4l-.8 2.8c-.3 1-1 2.5-1.5 3.3A12 12 0 100 12"></path>
+          </svg>
+        </a>
+        &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/in/phenq-buy-355a40115/" target="_blank" class="icon-disk icon-disk-small border-thin" title="Visit us on LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#273583" aria-label="LinkedIn">
+            <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+          </svg>
+        </a>
+      </p>
+    </section>
+
+    <section class="gutter-medium" aria-label="Drop shadows">
+      <h2>Drop shadows</h2>
+      <p>PhenQ is designed in a <q>flat</q> style so care should be taken when using any elements which break with this pattern. One example of this is the drop-shadow used in the product display panel. This shadow can be applied to any element using the <code>shadow-light</code> class:</p>
+
+      <div class="row">
+        <div class="col">
+          <p class="cta-box bg-mint shadow-light">Example of drop shadow</p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-lemon shadow-light">Example of drop shadow</p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-grey shadow-light">Example of drop shadow</p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-mint shadow-light">Example of drop shadow</p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-lemon shadow-light">Example of drop shadow</p>
+        </div>
+        <div class="col">
+          <p class="cta-box bg-grey shadow-light">Example of drop shadow</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gutter-medium" aria-label="Vertical spacing">
+      <h2>Vertical spacing</h2>
+      <p>Vertical spacing is achieved using four different classes:</p>
+      <ul>
+        <li><code>gutter-large</code> adds a large space under elements. It is mostly used on the home page.</li>
+        <li><code>gutter-medium</code> is a useful class for adding white space between blocks of discrete content on the page</li>
+        <li><code>gutter-small</code> is sometimes useful within blocks, for adding a small amount of whitespace</li>
+        <li><code>flush</code> removes any pre-existing margin bottom on an element</li>
+      </ul>
+
+      <div class="row">
+        <div class="col">
+          <p class="h4">Heading four</p>
+          <p>Following text</p>
+        </div>
+        <div class="col">
+          <p class="h4 flush">Heading four with <code>flush</code> class</p>
+          <p>Following text</p>
+        </div>
+      </div>
+      <p>Additionally, images can be persuaded to sit closer together using the <code>overlap-small</code> class. This pulls the following image up with a negative margin, allowing for some off-grid layouts.</p>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <p><img src="http://placeimg.com/350/350/people" alt="" class="round img-fluid"></p>
+          <p class="overlap-small text-right"><img src="http://placeimg.com/100/100/people" alt="" class="round img-fluid"></p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="gutter-medium" aria-label="Text alignment">
+      <h2>Text alignment</h2>
+      <p>Text can be aligned with a few different classes:</p>
+      <ul>
+        <li><code>text-left</code> aligns text to the left (note that most text is already aligned this way)</li>
+        <li><code>text-center</code> aligns text to the centre</li>
+        <li><code>text-right</code> aligns text to the right</li>
+      </ul>
+    </section>
+
+    <section class="gutter-medium" aria-label="Text adjustment">
+      <h2>Text adjustment</h2>
+      <p>Text can be adjusted in a few ways:</p>
+      <ul>
+        <li><code>text-uppercase</code> converts text to uppercase</li>
+        <li><code>text-breath</code> adds a little bit of letter-spacing than usual to the text. This is primarily used for certain headings or legal text which is rarely used across the site.</li>
+      </ul>
+    </section>
+
+    <section class="gutter-medium" aria-label="Quick layouts">
+      <h2>Quick layouts</h2>
+      <p>Using the <code>space-between</code> class, a quick navbar-like layout can be achieved. It takes a number of elements and spaces them out within their container, wrapping onto a second line, if required.</p>
+      <p class="space-between">
+        <button type="button" class="btn btn-pill">Example button</button>
+        <button type="button" class="btn btn-pill">Another button</button>
+        <button type="button" class="btn btn-pill">Third button</button>
+        <button type="button" class="btn btn-pill">More buttons</button>
+        <button type="button" class="btn btn-pill">Lost count</button>
+        <button type="button" class="btn btn-pill">Final button</button>
+      </p>
+    </section>
+
+  </main>
+</body>
+
+</html>

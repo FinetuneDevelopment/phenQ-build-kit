@@ -4,6 +4,14 @@ export default function blockScroll() {
 
   let myFactory = {};
 
+  // Turns any arbitrary element into a scrolling element, as long as it has the following markup:
+  // <div class="scroll-control" data-js="scroll-control">
+  //  <div class="block-scroll__child" data-js="block-scroll-item">Scroll item</div>
+  //  <div class="block-scroll__child" data-js="block-scroll-item">Scroll item</div>
+  //  ...
+  // </div>
+  // Comes in two flavours, .block-scroll__child (fixed width) and
+  // .block-scroll__child-wide (always 100% of the width of the parent)
   myFactory.init = function () {
     let scrollSet = document.querySelectorAll('[data-js="block-scroll"]');
 

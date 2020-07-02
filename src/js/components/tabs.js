@@ -6,6 +6,8 @@ export default function tabFactory() {
   // https://itnext.io/different-ways-to-achieve-encapsulation-in-javascript-es6-7cb938e83f2d
   //this.localVariable = 'Some string';
 
+  // The functional aspects of tabs are handled by CSS but this handles overflow in a slightly
+  // better way, updates aria attributes and so on.
   myFactory.init = function () {
     let tabset = document.querySelectorAll('.tab-set');
     // Do we have owt to do?
@@ -13,20 +15,19 @@ export default function tabFactory() {
       // Might need to do this more than once.
       for (let i = 0; i < tabset.length; i++) {
         // Tab scroll controls
-        let scrollControl = document.createElement('p'),
-          currentTabs = tabset[i];
+        let scrollControl = document.createElement('p');
+        let currentTabs = tabset[i];
 
         scrollControl.classList.add('scroll-control', 'hidden', 'text-right');
         scrollControl.setAttribute('data-js', 'scroll-control');
-        // Need some SVGs here, eventually.
-        scrollControl.innerHTML = '<button class="btn btn-icon" type="button" data-js="previous" title="Scroll left"><span class="shape sh-arrow-left-round"><span class="sr-only">Scroll tabs left</span></span></button> <button class="btn btn-icon" type="button" data-js="next" title="Scroll right"><span class="shape sh-arrow-right-round"><span class="sr-only">Scroll tabs right</span></span></button>';
+        scrollControl.innerHTML = '<button class="btn btn-icon icon-x-small" type="button" data-js="previous" title="Scroll left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Arrow left"><path d="M50.078 100l8.855-8.84L23.99 56.076h76.1V43.8h-76.1L58.933 8.7 50.078-.148 0 49.93z" fill="#273583"/></svg></button> <button class="btn btn-icon icon-x-small" type="button" data-js="next" title="Scroll right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Arrow right"><path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="#273583"/></svg></button>';
         // Insert the controls before the tabs
         currentTabs.insertAdjacentElement('beforebegin', scrollControl);
         // Add an attribute, so CSS can hide the scrollbar
         currentTabs.setAttribute('data-js', 'active');
         // Set up click events
-        let btnPrevious = currentTabs.previousElementSibling.querySelector('[data-js="previous"]'),
-          btnNext = currentTabs.previousElementSibling.querySelector('[data-js="next"]');
+        let btnPrevious = currentTabs.previousElementSibling.querySelector('[data-js="previous"]');
+        let btnNext = currentTabs.previousElementSibling.querySelector('[data-js="next"]');
 
         btnPrevious.addEventListener('click', this.previousTab, false);
         btnNext.addEventListener('click', this.nextTab, false);
@@ -35,7 +36,7 @@ export default function tabFactory() {
         let currentTab = this.currentTab(currentTabs);
         let currentTabPos = currentTab.offsetLeft;
         let currentTabWidth = currentTab.offsetWidth;
-        let pageMargin = Math.round(currentTabs.getBoundingClientRect().left);
+        // let pageMargin = Math.round(currentTabs.getBoundingClientRect().left);
         // Is the current tab within view?
         if (currentTabs.offsetWidth < (currentTabPos + currentTabWidth)) {
           // Scroll the tabset as far left as required in order to show the right hand edge of the current tab
@@ -49,8 +50,8 @@ export default function tabFactory() {
 
       // Accessibility JavaScript for the pure CSS tabs
       // All the secret, hidden radio buttons which control the tab set
-      let tabRadios = document.querySelectorAll('[name="tabs"]'),
-        tabPanels = document.querySelectorAll('[role="tabpanel"]');
+      let tabRadios = document.querySelectorAll('[name="tabs"]');
+      let tabPanels = document.querySelectorAll('[role="tabpanel"]');
 
       for (let i = 0; i < tabRadios.length; i++) {
 
@@ -70,8 +71,8 @@ export default function tabFactory() {
 
         // Keyboard navigation in the tab set.
         tabRadios[i].addEventListener('keydown', function (e) {
-          let oldKey = e.keyCode,
-            newKey = e.key;
+          let oldKey = e.keyCode;
+          let newKey = e.key;
           // User hits home to move to the first tab
           if (newKey === 'Home' || oldKey === 36) {
             e.preventDefault();
@@ -108,10 +109,10 @@ export default function tabFactory() {
     },
     // User has clicked on the (<-) button
     myFactory.previousTab = function (e) {
-      let tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
-        pageMargin = Math.round(tabset.getBoundingClientRect().left),
-        tabNodes = tabset.querySelectorAll('li'),
-        arScrollpoints = [];
+      let tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling;
+      let pageMargin = Math.round(tabset.getBoundingClientRect().left);
+      let tabNodes = tabset.querySelectorAll('li');
+      let arScrollpoints = [];
 
       // Builds up an array of the snap points of the tab navigation, from left to right.
       for (let i = 0; i < tabNodes.length; i++) {
@@ -128,10 +129,10 @@ export default function tabFactory() {
     },
     // User has clicked on the (->) button
     myFactory.nextTab = function (e) {
-      let tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling,
-        pageMargin = Math.round(tabset.getBoundingClientRect().left),
-        tabNodes = tabset.querySelectorAll('li'),
-        arScrollpoints = [];
+      let tabset = e.target.closest('[data-js="scroll-control"]').nextElementSibling;
+      let pageMargin = Math.round(tabset.getBoundingClientRect().left);
+      let tabNodes = tabset.querySelectorAll('li');
+      let arScrollpoints = [];
 
       // Builds up an array of the snap points of the tab navigation, from left to right.
       for (let i = 0; i < tabNodes.length; i++) {

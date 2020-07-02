@@ -7,7 +7,7 @@ export default function offGrid() {
   // either the right or the left side of the screen, allowing it to be both
   // inside and outside the grid at the same time.
   // Assumption: the element is the same distance from both sides of the screen
-  // (originally it was clever than this, but it didn't work)
+  // (originally it was more clever than this, but it didn't work)
   myFactory.init = function () {
 
     window.addEventListener('resize', this.gridMeasure);

@@ -3,6 +3,7 @@
 export default function formFactory() {
   let myFactory = {};
 
+  // Keeps the aria attributes up-to-date, after the CSS has done its magic.
   myFactory.init = function () {
 
     if (document.getElementById('nav-toggle') && document.querySelectorAll('.logo-nav__nav a')) {

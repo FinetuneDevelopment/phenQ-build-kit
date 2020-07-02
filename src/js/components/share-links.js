@@ -3,6 +3,8 @@
 export default function formFactory() {
   let myFactory = {};
 
+  // Social share links the old-fashioned way because we shouldn't need to get
+  // an API key just to give them free traffic.
   myFactory.init = function () {
     let shareWidgetLinks = document.querySelectorAll('[data-js="share-links"] a');
     let thisURL = document.location;
