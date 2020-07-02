@@ -2,6 +2,7 @@
 // Gotham-Rounded-typeface
 //////////////////////////
 @font-face {
+  font-display: swap;
   font-family:'Gotham-Rounded-Light';
   src: url('../fonts/GothamRounded-Light.woff2') format('woff2'),
   url('../fonts/GothamRounded-Light.woff') format('woff');
@@ -12,6 +13,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family:'Gotham-Rounded-Medium';
   src: url('../fonts/GothamRounded-Medium.woff2') format('woff2'),
   url('../fonts/GothamRounded-Medium.woff') format('woff');
@@ -22,6 +24,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family:'Gotham-Rounded-Bold';
   src: url('../fonts/GothamRounded-Bold.woff2') format('woff2'),
   url('../fonts/GothamRounded-Bold.woff') format('woff');
@@ -35,6 +38,7 @@
 // Source Sans typeface
 ///////////////////////
 @font-face {
+  font-display: swap;
   font-family:'Source-Sans-Light';
   src: url('../fonts/Source-Sans-Pro-Light.woff2') format('woff2'),
   url('../fonts/Source-Sans-Pro-Light.woff') format('woff');
@@ -45,6 +49,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family:'Source-Sans-Regular';
   src: url('../fonts/Source-Sans-Pro-Regular.woff2') format('woff2'),
   url('../fonts/Source-Sans-Pro-Regular.woff') format('woff');
@@ -55,6 +60,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family:'Source-Sans-SemiBold';
   src: url('../fonts/Source-Sans-Pro-SemiBold.woff2') format('woff2'),
   url('../fonts/Source-Sans-Pro-SemiBold.woff') format('woff');
@@ -65,6 +71,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family:'Source-Sans-Bold';
   src: url('../fonts/Source-Sans-Pro-Bold.woff2') format('woff2'),
   url('../fonts/Source-Sans-Pro-Bold.woff') format('woff');
