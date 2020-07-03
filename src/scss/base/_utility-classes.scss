@@ -156,6 +156,7 @@
   // Risky...
   height: 100%;
 }
+
 // The height property above causes issues when .flex-vert was added directly onto a Bootstrap
 // column.
 .flex-vert[class^='col'], .flex-vert[class*=' col'] {
@@ -195,7 +196,6 @@
 
   // The SVGs might go inline at some point...
   img {
-    //max-height: 18px;
     height: 13px; // IE again
     width: 40px;
   }

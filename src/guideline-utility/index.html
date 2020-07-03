@@ -56,7 +56,7 @@
 
     <section aria-label="Typefaces" class="gutter-medium">
       <h2>Typefaces</h2>
-      <p>Arbitrary typefaces can be applied to any element using a select of class names:</p>
+      <p>Arbitrary typefaces can be applied to any element using a number of different class names:</p>
       <table>
         <thead>
           <tr>
@@ -131,13 +131,22 @@
       <p>Border radius has three different sizes:</p>
       <div class="row gutter-small">
         <div class="col">
-          <p class="cta-box bg-dark-blue radius-big"><code>radius-big</code></p>
+          <div class="cta-box bg-dark-blue radius-big">
+            <p><code>radius-big</code></p>
+            <p>Generally used on call-to-action panels which span the width of the page, such as <a href="/guideline-panels/#bleed-bisect">bleed bisect</a>.</p>
+          </div>
         </div>
         <div class="col">
-          <p class="cta-box bg-dark-blue radius-medium"><code>radius-medium</code></p>
+          <div class="cta-box bg-dark-blue radius-medium">
+            <p><code>radius-medium</code></p>
+            <p>Used on call-to-action panels within a grid layout, such as this example here.</p>
+          </div>
         </div>
         <div class="col">
-          <p class="cta-box bg-dark-blue radius-small"><code>radius-small</code></p>
+          <div class="cta-box bg-dark-blue radius-small">
+            <p><code>radius-small</code></p>
+            <p>Used on elements within call-to-action panels, such as background colour blocks set behind third-party logos.</p>
+          </div>
         </div>
       </div>
 
@@ -233,12 +242,14 @@
     <section class="gutter-medium" aria-label="Vertical spacing">
       <h2>Vertical spacing</h2>
       <p>Vertical spacing is achieved using four different classes:</p>
-      <ul>
-        <li><code>gutter-large</code> adds a large space under elements. It is mostly used on the home page.</li>
-        <li><code>gutter-medium</code> is a useful class for adding white space between blocks of discrete content on the page</li>
-        <li><code>gutter-small</code> is sometimes useful within blocks, for adding a small amount of whitespace</li>
-        <li><code>flush</code> removes any pre-existing margin bottom on an element</li>
-      </ul>
+      <h3><code>gutter-large</code></h3>
+      <p>This adds a large space under elements. It is mostly used on the home page.</p>
+      <h3><code>gutter-medium</code></h3>
+      <p>This can be added to each discrete block of content which takes up the full width of the page.</p>
+      <h3><code>gutter-small</code></h3>
+      <p>This is sometimes useful within blocks, for adding a small amount of whitespace between blocks of similar content, such as different <code>row</code>s within the same section.</p>
+      <h3><code>flush</code></h3>
+      <p>This removes any pre-existing margin bottom from an element.</p>
 
       <div class="row">
         <div class="col">
@@ -250,6 +261,7 @@
           <p>Following text</p>
         </div>
       </div>
+
       <p>Additionally, images can be persuaded to sit closer together using the <code>overlap-small</code> class. This pulls the following image up with a negative margin, allowing for some off-grid layouts.</p>
       <div class="row">
         <div class="col-md-6 col-lg-4">
@@ -262,12 +274,28 @@
 
     <section class="gutter-medium" aria-label="Text alignment">
       <h2>Text alignment</h2>
-      <p>Text can be aligned with a few different classes:</p>
-      <ul>
-        <li><code>text-left</code> aligns text to the left (note that most text is already aligned this way)</li>
-        <li><code>text-center</code> aligns text to the centre</li>
-        <li><code>text-right</code> aligns text to the right</li>
-      </ul>
+      <p>Text can be aligned with three classes:</p>
+
+      <div class="row gutter-small">
+        <div class="col">
+          <div class="cta-box bg-mid-blue radius-medium text-left">
+            <p><code>text-left</code></p>
+            <p>Vivamus libero nisl, porta porttitor iaculis eu, ultrices sed quam. Vivamus ultricies volutpat sem, in dictum nisl posuere luctus. Curabitur ultricies elementum eros, at bibendum quam rutrum vitae.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="cta-box bg-mid-blue radius-medium text-center">
+            <p><code>text-center</code></p>
+            <p>Suspendisse potenti. Nunc ut blandit velit, a pharetra leo. In eu velit a est scelerisque tincidunt ultricies et urna. Suspendisse placerat risus mauris, non pretium diam tincidunt sed. Ut vitae gravida sem.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="cta-box bg-mid-blue radius-medium text-right">
+            <p><code>text-right</code></p>
+            <p>Vivamus ornare malesuada malesuada. Nam ullamcorper sapien mauris, non faucibus purus scelerisque eget. Cras ultrices faucibus convallis. Morbi dictum varius sapien nec pretium. Vestibulum tincidunt nec nulla ut blandit.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="gutter-medium" aria-label="Text adjustment">
@@ -277,10 +305,15 @@
         <li><code>text-uppercase</code> converts text to uppercase</li>
         <li><code>text-breath</code> adds a little bit of letter-spacing than usual to the text. This is primarily used for certain headings or legal text which is rarely used across the site.</li>
       </ul>
+      <p>These classes can be combined with others to create one-off styles:</p>
+      <p class="small text-breath text-uppercase type-gotham-light">Contact our legal team for further information</p>
+      <p class="h3 text-breath type-source-bold txt-dark-grey">New for summer 2021</p>
     </section>
 
     <section class="gutter-medium" aria-label="Quick layouts">
       <h2>Quick layouts</h2>
+
+      <h3>Space between</h3>
       <p>Using the <code>space-between</code> class, a quick navbar-like layout can be achieved. It takes a number of elements and spaces them out within their container, wrapping onto a second line, if required.</p>
       <p class="space-between">
         <button type="button" class="btn btn-pill">Example button</button>
@@ -290,6 +323,57 @@
         <button type="button" class="btn btn-pill">Lost count</button>
         <button type="button" class="btn btn-pill">Final button</button>
       </p>
+
+      <h3>Flex-vert</h3>
+      <p>Adding a <code>flex-vert</code> class onto an element inside a Bootstrap column (or added directly to the column itself) gives it a vertical flexbox layout. This means that the last child of a <code>flex-vert</code> class can have a <code>mt-auto</code> class applied to it, which will align those elements to the bottom of the column.</p>
+      <p>If a <code>cta-box</code> class is used inside the Bootstrap column then the <code>flex-vert</code> class should be applied to that element and not the parent column.</p>
+
+      <div class="row">
+        <div class="col flex-vert">
+          <h4>Heading</h4>
+          <p>Ut vel accumsan libero, vitae dignissim nisl. Maecenas eu lobortis justo. Nunc non erat non mi semper consectetur. Vestibulum a odio arcu.</p>
+          <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more</a></p>
+        </div>
+        <div class="col flex-vert">
+          <h4>Heading</h4>
+          <p>Duis pretium ac lorem sit amet cursus. Suspendisse potenti. Vivamus imperdiet, lacus et egestas lacinia, neque sem tristique eros, vel convallis justo ante at quam.</p>
+          <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more</a></p>
+        </div>
+        <div class="col flex-vert">
+          <h4>Heading</h4>
+          <p>Aliquam sem elit, gravida at placerat vitae, pharetra in metus. Donec faucibus neque vel velit congue feugiat eget vitae tellus. Pellentesque et magna eu leo posuere luctus.</p>
+          <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more</a></p>
+        </div>
+        <div class="col flex-vert">
+          <h4>Heading</h4>
+          <p> Etiam tristique arcu quis massa pulvinar venenatis. Nullam libero ante, luctus vel eleifend vitae, feugiat ut orci.</p>
+          <p class="mt-auto"><a href="#" class="btn btn-arrow">Find out more</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gutter-medium" aria-label="Accessibility">
+      <h2>Accessibility</h2>
+      <p>Elements can be hidden for all browsers other than speech readers using a <code>sr-only</code> class. For example, in the below call-to-action, the phrase <q>Find out more</q> is not accessible as it does not uniquely identify the target of the link:</p>
+      <p><a href="#" class="btn btn-secondary">Find out more</a></p>
+      <p>A more accessible version of this link might look like this:</p>
+      <p><a href="#" class="btn btn-secondary">Find out more about the twelve eating habits for weight loss</a></p>
+      <p>This extra information can be conveyed only to users of screen readers by wrapping it in a <code>sr-only</code> class:</p>
+      <p><a href="#" class="btn btn-secondary">Find out more<span class="sr-only"> about the twelve eating habits for weight loss</span></a></p>
+      <p>It is appropriate to hide some elements from all users. For example, the arrows which control scrollable elements only appear when there is enough space for the elements to scroll:</p>
+      <p>
+        <button class="btn btn-icon icon-x-small" type="button" data-js="previous" title="Scroll left">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Arrow left">
+            <path d="M50.078 100l8.855-8.84L23.99 56.076h76.1V43.8h-76.1L58.933 8.7 50.078-.148 0 49.93z" fill="#273583"></path>
+          </svg>
+        </button>
+        <button class="btn btn-icon icon-x-small" type="button" data-js="next" title="Scroll right">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Arrow right">
+            <path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="#273583"></path>
+          </svg>
+        </button>
+      </p>
+      <p>When there is nothing for these controls to do, a class of <code>hidden</code> is added to them with JavaScript, which hides them from all users.</p>
     </section>
 
   </main>
