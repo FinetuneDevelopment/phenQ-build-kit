@@ -19,6 +19,11 @@
 
 @media print {
   .logo-nav { padding: 0; }
+
+  .logo-nav__nav,
+  .logo-nav__toggle {
+    display: none;
+  }
 }
 
 .logo-nav__toggle label {
