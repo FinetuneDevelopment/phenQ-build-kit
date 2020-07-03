@@ -58,6 +58,11 @@
     & .btn { margin-bottom: 0; }
   }
 }
+@media print {
+  .cta-box {
+    padding: 0;
+  }
+}
 
 @include media-breakpoint-down(md) {
   .cta-box {

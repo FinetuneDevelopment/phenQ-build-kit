@@ -38,3 +38,11 @@
   transform-origin: center;
   transition: all .2s;
 }
+
+@media print {
+  .faq .details {
+    display: block !important;
+  }
+  
+  .faq__icon { display: none; }
+}

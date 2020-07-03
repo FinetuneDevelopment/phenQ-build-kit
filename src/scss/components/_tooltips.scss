@@ -104,3 +104,8 @@
     }
   } 
 }
+
+@media print {
+ // Is this ethical?
+ .tooltip { display: none; }
+}

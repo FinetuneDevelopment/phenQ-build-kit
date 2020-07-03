@@ -102,3 +102,19 @@
 .block-scroll__footer > * {
   margin-bottom: 0;
 }
+
+@media print {
+  .block-scroll, .block-scroll-xs {
+    flex-wrap: wrap;
+  }
+  .block-scroll__child,
+  .block-scroll__child-wide,
+  .block-scroll__child_xs {
+    flex-basis: 100%;
+    margin: 0 0 1em;
+  }
+
+  .scroll-control {
+    display: none;
+  }
+}

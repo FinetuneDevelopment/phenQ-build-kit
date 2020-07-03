@@ -102,3 +102,12 @@ $border-colour: #000;
     @extend %focused-tab;
 	}
 }
+
+@media print {
+  .tab-set {
+    display: none;
+  }
+  [role="tabpanel"] {
+    display: block !important;
+  }
+}

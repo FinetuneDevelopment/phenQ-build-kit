@@ -34,3 +34,17 @@
     color: $colour-dark-blue;
   }
 }
+
+@media print {
+  .quote-banner {
+    margin-bottom: 1em;
+
+    &::before {
+      color: #000;
+      margin: 0 0 -.5em;
+      padding: 0;
+      text-align: left;
+      width: auto;
+    }
+  }
+}

@@ -116,6 +116,10 @@
   min-height: 800px;
 }
 
+@media print {
+  .bg-home { min-height: 0; }
+}
+
 @include media-breakpoint-down(md) {
   .bg-home {
     background-image: url(/img/bg/bg-home-mobile.jpg);

@@ -17,6 +17,10 @@
   }
 }
 
+@media print {
+  .logo-nav { padding: 0; }
+}
+
 .logo-nav__toggle label {
   cursor: pointer;
   outline: solid .8em transparent;

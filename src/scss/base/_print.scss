@@ -1,29 +1,27 @@
-/**
- * Print Stylesheet
-*/
-
 @media print {
-  @page { margin: 1cm; }
+  $print-space: 1cm;
+  $colour-black: #000;
+  @page { margin: $print-space; }
 
-  body {
-    background: $white;
-    color: $black;
+  html body {
+    background: transparent;
+    color: $colour-black;
   }
 
-  a {
-    page-break-inside: avoid;
+  //a, blockquote, table, pre, ul, ol, dl  {
+    //page-break-before: avoid;
+  //}
+  // Note that the Bootstrap class .d-print-none will hide stuff in print
+  html [class^="bg-"], html [class*=" bg-"] {
+    background: transparent !important;
+    border-color: $colour-black;
+    fill:         $colour-black;
+    stroke:       $colour-black;
+    color:        $colour-black !important;
   }
 
-  blockquote {
-    page-break-inside: avoid;
-  }
+  html .gutter-small  { margin-bottom: $print-space !important; }
+  html .gutter-medium { margin-bottom: $print-space * 1.5 !important; }
+  html .gutter-large  { margin-bottom: $print-space * 2 !important; }
 
-  table,
-  pre {
-    page-break-inside: avoid;
-  }
-
-  ul, ol, dl  {
-    page-break-before: avoid;
-  }
 }

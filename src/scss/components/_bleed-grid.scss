@@ -25,10 +25,24 @@
   }
 }
 
-// On mobile, any bleed gred images are exactly square
+// On mobile, any bleed grid images are exactly square
 @include media-breakpoint-down(sm) {
   .bleed-grid__img-right,
   .bleed-grid__img-left {
     padding-top: 100%;
   }
+}
+
+@media print {
+  .bleed-grid__img {
+    display: none;
+  }
+  
+  // If the image is missing, we can assume that the first .col child can be full width.
+  .bleed-grid > .container > .row {
+    & > [class^="col"], & > [class*=" col"] {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }  
 }
