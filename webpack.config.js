@@ -190,6 +190,10 @@ const config = function (env, args) {
         filename: 'privacy-policy/index.html',
         template: path.resolve(__dirname, 'src', 'privacy-policy/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'terms-conditions/index.html',
+        template: path.resolve(__dirname, 'src', 'terms-conditions/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
