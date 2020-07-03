@@ -198,6 +198,10 @@ const config = function (env, args) {
         filename: 'contact-us/index.html',
         template: path.resolve(__dirname, 'src', 'contact-us/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'track-your-order/index.html',
+        template: path.resolve(__dirname, 'src', 'track-your-order/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
