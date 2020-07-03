@@ -194,6 +194,10 @@ const config = function (env, args) {
         filename: 'terms-conditions/index.html',
         template: path.resolve(__dirname, 'src', 'terms-conditions/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'contact-us/index.html',
+        template: path.resolve(__dirname, 'src', 'contact-us/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
