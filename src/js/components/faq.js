@@ -44,6 +44,9 @@ export default function faqFactory() {
 
           if (thisRadio.checked === true) {
             myLabel.setAttribute('aria-expanded', true);
+            // Scrolls the page to this position
+            // (required as the FAQs on the privacy policy page were LOOOOOOOOOOOOOOONG)
+            myLabel.scrollIntoView(true);
           } else {
             myLabel.setAttribute('aria-expanded', false);
           }
