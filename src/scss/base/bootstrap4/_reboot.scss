@@ -46,13 +46,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
-  @include font-size($font-size-base);
+  //font-family: $font-family-base;
+  //@include font-size($font-size-base);
   font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
+  //line-height: $line-height-base;
+  //color: $body-color;
   text-align: left; // 3
-  background-color: $body-bg; // 2
+  //background-color: $body-bg; // 2
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
@@ -100,8 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 // Similarly, the top margin on `<p>`s get reset. However, we also reset the
 // bottom margin to use `rem` units instead of `em`.
 p {
-  margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+//  margin-top: 0;
+//  margin-bottom: $paragraph-margin-bottom;
 }
 
 // Abbreviations
