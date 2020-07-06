@@ -35,6 +35,8 @@
   // We need the container to shrink-wrap the contents, so it doesn't interfer
   // with content to the left of the buttons.
   float: right;
+  // For an issue with tabs where the controls wouldn't go to the right
+  text-align: right;
   z-index: 1;
 }
 
