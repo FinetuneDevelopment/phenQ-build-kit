@@ -1,0 +1,35 @@
+// So I assumed I'd need to write some bespoke CSS here for the country chooser, but I ended
+// up reusing the tooltip markup. However, the flags gotta live somewhere...
+
+// Freak Flags, Copyright ©2020 Michael P. Cohen. Freak flags is licenced under the MIT licence.  
+// For complete information visit: www.freakflagsprite.com 
+.fflag {
+    background-image:url(/img/bg/sprite-flag-42.png);
+    background-repeat:no-repeat;
+    background-size: 100% 49494%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: content-box;
+}
+.fflag-CA {background-position:center 0.2287%}
+.fflag-MX {background-position:center 0.4524%}
+.fflag-US {background-position:center 0.6721%}
+.fflag-DK {background-position:center 0.8958%}
+.fflag-FR {background-position:center 1.1162%}
+.fflag-DE {background-position:center 1.3379%}
+.fflag-GR {background-position:left 1.5589%}
+.fflag-IT {background-position:center 1.7836%}
+.fflag-NL {background-position:center 2.0047%}
+.fflag-PL {background-position:center 2.2247%}
+.fflag-PT {background-position:center 2.4467%}
+.fflag-ES {background-position:left 2.6674%}
+.fflag-SE {background-position:center 2.8931%}
+.fflag-GB {background-position:center 3.1125%}
+.fflag-AU {background-position:center 3.3325%}
+
+.fflag.ff-sm {width: 18px;height: 11px}
+.fflag.ff-md {width: 27px;height: 17px}
+.fflag.ff-lg {width: 42px;height: 27px}
+.fflag.ff-xl {width: 60px;height: 37px}

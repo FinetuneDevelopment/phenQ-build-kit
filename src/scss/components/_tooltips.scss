@@ -2,20 +2,18 @@
 // JavaScript is used for ensuring they appear somewhere sensible
 // inside the viewport (this has not yet been done!)
 .tooltip {
+  display: inline-block;
   position: relative;
 
   // Trying to increase the click area, without increasing the size
   // of the icon.
   label {
     border: solid 2px transparent;
-    border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    height: 21px;
     padding: 2px;
     position: relative;
     vertical-align: middle;
-    width: 21px;
 
     // The two triangles which overlap each other and give the illusion of
     // a tick connecting the bubble to the (i) icon
@@ -24,7 +22,10 @@
       border-bottom: solid 17px $colour-bright-blue;
       border-top: none;
       content: "";
-      left: -6px;
+      // The middle of the tooltip trigger...
+      left: 50%;
+      // ... minus half the width of the ^
+      margin: 0 0 0 -16px;
       opacity: 0;
       position: absolute;
       top: 100%;
@@ -62,11 +63,25 @@
     padding: 15px 20px;
     position: absolute;
     left: -120px;
-    margin: 16px 0 0;
+    margin: 14px 0 0;
     top: 100%;
     transition: opacity .5s;
+    // Default width
     width: 214px;
     z-index: -1;
+  }
+
+  // Used for the country selector
+  .details-wide {
+    width: 300px;
+  }
+
+  // Aligns the right hand side of the tooltip bubble to the
+  // right hand edge of the tooltip trigger
+  &.tooltip-left .details {
+    left: auto;
+    // So the tooltip has space for the curve to meet the ^
+    right: $radius-medium * -1;
   }
 
   // The user has clicked on the tooltip icon

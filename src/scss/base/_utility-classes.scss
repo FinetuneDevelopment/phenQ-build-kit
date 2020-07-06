@@ -109,6 +109,7 @@
 
 // This is used to make round images sit uncomfortably close to each other
 .overlap-small { margin-top: -$space !important; }
+// [class*='col-']:before, & > [class*='col-']
 
 // Colouring text in arbratory colours
 .txt-bright-blue { color: $colour-bright-blue; }
