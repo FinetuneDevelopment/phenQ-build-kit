@@ -31,6 +31,12 @@ export default function blankFactory() {
         }
       }
     }
+
+    // OK, this doesn't really belong in this file, but it's so wee, it's not
+    // worth creating a file for it.
+    if (document.body) {
+      document.body.classList.add('js');
+    }
   }
 
   return myFactory;

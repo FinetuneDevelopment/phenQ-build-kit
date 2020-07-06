@@ -1,20 +1,25 @@
 // HTML forms
 
+// By default, input elements are wee (see currency chooser, top of page)
 input, select, textarea {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-        -ms-appearance: none;
-         -o-appearance: none;
-            appearance: none;
-    box-shadow: none;
-    max-width: 100%;
-    min-height: 43px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+       -o-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  background: $colour-off-white;
+  border: solid 1px $colour-grey;
+  border-radius: $radius-small;
+  color: $colour-grey;
+  display: block;
+  font-family: $body-typeface-semibold;
 }
 
 fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 // This is the container class for the standard inputs,
@@ -24,151 +29,150 @@ fieldset {
 //   <label>
 // </p>
 .form-molecule {
-    position: relative;
+  position: relative;
 
-    input, select, textarea {
-        border: solid 1px $colour-grey;
-        border-radius: $radius-small;
-        color: $colour-grey;
+  input, select, textarea {
+    font-size: 15px;
+    max-width: 100%;
+    min-height: 43px;
+    padding: 15px 10px 5px;
+    width: 100%;
+
+    // The appearance of the input element when there is no
+    // data and the placeholder text is showing
+    &:placeholder-shown {
+      border-color: $colour-light-grey;
+      padding: 10px;
+
+      // Hoyk that label out of there
+      & ~ label {z-index: -1;}
+    }
+
+    // User is typing
+    &:focus, &:hover {
+      border-color: $colour-dark-blue;
+    }
+
+    // User has made a TERRIBLE MISTAKE
+    &:invalid, &.error {
+      border-color: $colour-red;
+      color: $colour-red;
+
+      & ~ label {
+        color: $colour-red;
+      }
+    & ~ .message {
+        color: $colour-red;
         display: block;
-        font-family: $body-typeface-semibold;
-        font-size: 15px;
-        padding: 15px 10px 5px;
-        width: 100%;
-
-        // The appearance of the input element when there is no
-        // data and the placeholder text is showing
-        &:placeholder-shown {
-            border-color: $colour-light-grey;
-            padding: 10px;
-
-            // Hoyk that label out of there
-            & ~ label {z-index: -1;}
-        }
-
-        // User is typing
-        &:focus, &:hover {
-            border-color: $colour-dark-blue;
-        }
-
-        // User has made a TERRIBLE MISTAKE
-        &:invalid, &.error {
-            border-color: $colour-red;
-            color: $colour-red;
-
-            & ~ label {
-                color: $colour-red;
-            }
-            & ~ .message {
-                color: $colour-red;
-                display: block;
-            }
-        }
-
-        // User has given Dobbie DATA
-        // I can't use :valid here as it would match all inputs
-        // on the page which weren't explicitly wrong.
-        &.valid {
-            border-color: $colour-green;
-            color: $colour-green;
-
-            & ~ label {color: $colour-green;}
-        }
+      }
     }
 
-    // This needs to sit inside the input element
-    label {
-        font-size: 10px;
-        left: 10px;
+    // User has given Dobbie DATA
+    // I can't use :valid here as it would match all inputs
+    // on the page which weren't explicitly wrong.
+    &.valid {
+      border-color: $colour-green;
+      color: $colour-green;
+
+      & ~ label {color: $colour-green;}
+    }
+  }
+
+  // This needs to sit inside the input element
+  label {
+    font-size: 10px;
+    left: 10px;
+    position: absolute;
+    top: 5px;
+  }
+
+  // This can hold tips, errors, encouragement. It's hidden by default.
+  .message {
+    display: none; // Because we want to hide it from speech readers too
+    font-family: $body-typeface-bold;
+    font-size: 10px;
+    margin: 5px 0;
+  }
+
+  // Tricking select boxes into looking normal
+  select {
+    background: $colour-off-white url(/img/bg/select-default.svg) right 20px top 50% no-repeat;
+    padding-right: 30px;
+
+    &:focus {background: $colour-off-white url(/img/bg/select-focus.svg) right 20px top 50% no-repeat;}
+  }
+
+  // Checkboxes and radio buttons
+  [type="checkbox"], [type="radio"] {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    & ~ label {
+      font-size: 18px;
+      left: 0;
+      position: relative;
+      top: 0;
+      &:before, &:after {
+          content: "";
+      }
+      // Frame for the inputs
+      &:before {
+        border: solid .2em $colour-dark-blue;
+        display: inline-block;
+        height: 1em;
+        margin: 0 .5em 0 0;
+        vertical-align: middle;
+        width: 1em;
+      }
+      // "On" status
+      &:after {
         position: absolute;
-        top: 5px;
+        transition: all .2s;
+      }
     }
+  }
 
-    // This can hold tips, errors, encouragement. It's hidden by default.
-    .message {
-        display: none; // Because we want to hide it from speech readers too
-        font-family: $body-typeface-bold;
-        font-size: 10px;
-        margin: 5px 0;
-    }
+  [type="checkbox"] ~ label:after {
+    border: solid .2em transparent;
+    left: .25em;
+    height: .8em;
+    top: .15em;
+    transform: rotate(0deg);
+    width: .5em;
+  }
+  // Selected state
+  [type="checkbox"]:checked ~ label:after {
+    border-bottom-color: $colour-bright-blue;
+    border-right-color: $colour-bright-blue;
+    transform: rotate(45deg);
+  }
 
-    // Tricking select boxes into looking normal
-    select {
-        background: url(/img/bg/select-default.svg) right 20px top 50% no-repeat;
-        &:focus {background: url(/img/bg/select-focus.svg) right 20px top 50% no-repeat;}
+  [type="radio"] ~ label {
+    &:before {border-radius: 50%;}
+    // Unselected state, as a first frame for the animation
+    &:after {
+      background: transparent;
+      border-radius: 50%;
+      height: 0;
+      left: .5em;
+      position: absolute;
+      top: 56%;
+      width: 0;
     }
-
-    // Checkboxes and radio buttons
-    [type="checkbox"], [type="radio"] {
-        border: 0;
-        clip: rect(0,0,0,0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-        & ~ label {
-            font-size: 18px;
-            left: 0;
-            position: relative;
-            top: 0;
-            &:before, &:after {
-                content: "";
-            }
-            // Frame for the inputs
-            &:before {
-                border: solid .2em $colour-dark-blue;
-                display: inline-block;
-                height: 1em;
-                margin: 0 .5em 0 0;
-                vertical-align: middle;
-                width: 1em;
-            }
-            // "On" status
-            &:after {
-                position: absolute;
-                transition: all .2s;
-            }
-        }
-    }
-
-    [type="checkbox"] ~ label:after {
-        border: solid .2em transparent;
-        left: .25em;
-        height: .8em;
-        top: .15em;
-        transform: rotate(0deg);
-        width: .5em;
-    }
-    // Selected state
-    [type="checkbox"]:checked ~ label:after {
-        border-bottom-color: $colour-bright-blue;
-        border-right-color: $colour-bright-blue;
-        transform: rotate(45deg);
-    }
-
-    [type="radio"] ~ label {
-        &:before {border-radius: 50%;}
-        // Unselected state, as a first frame for the animation
-        &:after {
-            background: transparent;
-            border-radius: 50%;
-            height: 0;
-            left: .5em;
-            position: absolute;
-            top: 56%;
-            width: 0;
-        }
-    }
-    // Selected state
-    [type="radio"]:checked ~ label:after {
-        background: $colour-bright-blue;
-        height: .4em;
-        left: .3em;
-        top: 44%;
-        width: .4em;
-    }
+  }
+  // Selected state
+  [type="radio"]:checked ~ label:after {
+    background: $colour-bright-blue;
+    height: .4em;
+    left: .3em;
+    top: 44%;
+    width: .4em;
+  }
 }
 
 // More compact forms can be found elsewhere - for example the email signup
