@@ -25,11 +25,24 @@
   }
 }
 
+// Desktop and mobile
+.bleed-grid__img img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 // On mobile, any bleed grid images are exactly square
 @include media-breakpoint-down(sm) {
-  .bleed-grid__img-right,
-  .bleed-grid__img-left {
+  .bleed-grid__img {
     padding-top: 100%;
+
+    // Bit mental, but to account for the padding-top rule above
+    img {
+      margin: 0 0 -100%;
+      transform: translate(0, -100%);
+    }
   }
 }
 

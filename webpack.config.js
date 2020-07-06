@@ -202,6 +202,10 @@ const config = function (env, args) {
         filename: 'track-your-order/index.html',
         template: path.resolve(__dirname, 'src', 'track-your-order/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'complete-keto-meal-shake/index.html',
+        template: path.resolve(__dirname, 'src', 'complete-keto-meal-shake/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
