@@ -95,6 +95,7 @@
     color: $colour-dark-blue;
     position: relative;
 
+    // The psudo-element which forms the gradient background
     &:before {
       background: $grad-mid-blue;
       border-radius: $radius-medium;
@@ -114,8 +115,11 @@
     }
   }
 }
-// Fallback styles for "empty" tags
-input.btn.btn-secondary {
+// Fallback styles for "empty" tags and contexts where the gradient pseudo-element
+// will not work.
+input.btn.btn-secondary,
+[class^="bg-"] .btn-secondary,
+[class*=" bg-"] .btn-secondary {
   border: solid $border-default $colour-mid-blue;
 }
 

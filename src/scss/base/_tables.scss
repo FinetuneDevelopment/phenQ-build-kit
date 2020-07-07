@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+
+caption {
+  text-align: left;
+}
+
+th { font-weight: normal; }
+
+// The breath of an ant
+th, td {
+  border-bottom: solid 1px $colour-light-grey;
+  padding: .5em 1em;
+
+  *:last-child { margin-bottom: 0; }
+}

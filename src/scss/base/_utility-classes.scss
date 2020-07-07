@@ -79,6 +79,20 @@
 // elsewhere.
 .border-thin { border: solid 1px $colour-dark-blue; }
 
+// Colouring borders in arbratory colours
+.border-bright-blue { border-color: $colour-bright-blue !important; }
+.border-mid-blue    { border-color: $colour-mid-blue !important; }
+.border-dark-blue   { border-color: $colour-dark-blue !important; }
+.border-red         { border-color: $colour-red !important; }
+.border-green       { border-color: $colour-green !important; }
+.border-grey        { border-color: $colour-grey !important; }
+.border-dark-grey   { border-color: $colour-dark-grey !important; }
+.border-white       { border-color: $colour-white !important; }
+.border-off-white   { border-color: $colour-off-white !important; }
+.border-mint        { border-color: $colour-mint !important; }
+.border-lemon       { border-color: $colour-lemon !important; }
+.border-light-grey  { border-color: $colour-light-grey !important; }
+
 .img-fluid { max-width: 100%; }
 // Used in conjunction with the above classes, this makes a shape a bit
 // like an upside-down U. You know, ⋂.
@@ -115,6 +129,8 @@
 .pt       { padding-top: $gutter;}
 .pt-large { padding-top: $gutter * 2;}
 
+.bdr-bottom { border-bottom: solid 1px $colour-light-grey; }
+
 // Colouring text in arbratory colours
 .txt-bright-blue { color: $colour-bright-blue; }
 .txt-mid-blue    { color: $colour-mid-blue; }
@@ -134,7 +150,7 @@
 .text-right     { text-align: right; }
 .text-uppercase { text-transform: uppercase; }
 .text-breath    { letter-spacing: .08em; }
-
+.text-nowrap    { white-space: nowrap; }
 // This class allows buttons to be put together closer than they usually would,
 // for example in a toolbar.
 .toolbar .btn { margin-right: 9px; }

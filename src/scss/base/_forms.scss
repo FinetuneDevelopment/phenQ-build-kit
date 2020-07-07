@@ -12,7 +12,6 @@ input, select, textarea {
   border: solid 1px $colour-grey;
   border-radius: $radius-small;
   color: $colour-grey;
-  display: block;
   //font-family: $body-typeface-semibold;
 }
 
@@ -23,6 +22,9 @@ select {
 
   &:focus {background: $colour-off-white url(/img/bg/select-focus.svg) right 10px top 50% no-repeat;}
 }
+
+// Sometimes not much data needs to be collected
+.input-sm { width: 4em; }
 
 // Look, it's just another tag, man.
 fieldset {
@@ -41,6 +43,7 @@ fieldset {
   position: relative;
 
   input, select, textarea {
+    display: block;
     font-size: 15px;
     max-width: 100%;
     min-height: 43px;

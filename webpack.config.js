@@ -206,6 +206,10 @@ const config = function (env, args) {
         filename: 'complete-keto-meal-shake/index.html',
         template: path.resolve(__dirname, 'src', 'complete-keto-meal-shake/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'cart/index.html',
+        template: path.resolve(__dirname, 'src', 'cart/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),

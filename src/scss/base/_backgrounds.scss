@@ -46,10 +46,8 @@
     background-color: inherit;
   }
 
-  a {
-    &:hover::before, &:focus::before {
-      border-color: inherit;
-    }
+  a:hover::before, a:focus::before {
+    border-color: inherit;
   }
 
   // Yeah, not my proudest moment
@@ -126,7 +124,7 @@
     min-height: 0;
   }
 
-  // The content needs to push clear of the imagry, in tablet
+  // The content needs to push clear of the imagry, in tablet.
   // BEM naming altered to avoid .bg- inheretence matching
   .bghome__header { margin-top: 135px; }
 }
