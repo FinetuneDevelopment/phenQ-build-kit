@@ -13,9 +13,18 @@ input, select, textarea {
   border-radius: $radius-small;
   color: $colour-grey;
   display: block;
-  font-family: $body-typeface-semibold;
+  //font-family: $body-typeface-semibold;
 }
 
+// Tricking select boxes into looking normal
+select {
+  background: $colour-off-white url(/img/bg/select-default.svg) right 10px top 50% no-repeat;
+  padding-right: 20px;
+
+  &:focus {background: $colour-off-white url(/img/bg/select-focus.svg) right 10px top 50% no-repeat;}
+}
+
+// Look, it's just another tag, man.
 fieldset {
   border: none;
   margin: 0;
@@ -78,6 +87,12 @@ fieldset {
     }
   }
 
+  // Select boxes within .form-molecule have slightly more space
+  select, select:focus {
+    background-position: right 20px top 50%;
+    padding-right: 30px;
+  }
+
   // This needs to sit inside the input element
   label {
     font-size: 10px;
@@ -92,14 +107,6 @@ fieldset {
     font-family: $body-typeface-bold;
     font-size: 10px;
     margin: 5px 0;
-  }
-
-  // Tricking select boxes into looking normal
-  select {
-    background: $colour-off-white url(/img/bg/select-default.svg) right 20px top 50% no-repeat;
-    padding-right: 30px;
-
-    &:focus {background: $colour-off-white url(/img/bg/select-focus.svg) right 20px top 50% no-repeat;}
   }
 
   // Checkboxes and radio buttons
@@ -182,13 +189,8 @@ fieldset {
   position: relative;
 
   input, select, textarea {
-    background: transparent;
+    background-color: transparent;
     border: none;
-  }
-
-  // So that the label and the placeholder text line up
-  textarea {
-    padding: 9px 0 0;
   }
 
   label {
@@ -201,7 +203,7 @@ fieldset {
   }
   :placeholder-shown ~ label {
     font-size: inherit;
-    line-height: 43px;
+    line-height: 26px;
   }
 }
 

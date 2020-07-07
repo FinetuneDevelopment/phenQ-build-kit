@@ -38,25 +38,31 @@
   <main>
     <div class="bg-home gutter-medium">
       <div class="container">
-        <div class="media">
+        <div class="media pt-small">
           <div class="media-body"></div>
           <form method="post">
-            <p>
-              <label for="aelia_cs_currencies" class="sr-only">Currency</label>
-              <select id="aelia_cs_currencies" class="input-sm" name="aelia_cs_currency">
-                <option value="GBP" selected>GBP</option>
-                <option value="AUD">AUD</option>
-                <option value="CAD">CAD</option>
-                <option value="CHF">CHF</option>
-                <option value="EUR">EUR</option>
-                <option value="MXN">MXN</option>
-                <option value="USD">USD</option>
-              </select>
-              <button type="submit" class="btn btn-arrow btn-sm" data-js="hidden">Change Currency</button>
+            <p class="form-compact">
+              <span class="media">
+                <select id="aelia_cs_currencies" class="media-body" name="aelia_cs_currency">
+                  <option value="GBP" selected>GBP</option>
+                  <option value="AUD">AUD</option>
+                  <option value="CAD">CAD</option>
+                  <option value="CHF">CHF</option>
+                  <option value="EUR">EUR</option>
+                  <option value="MXN">MXN</option>
+                  <option value="USD">USD</option>
+                </select>
+                <button title="Change Currency" aria-label="Change Currency" class="icon-x-small btn btn-clear" data-js="hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="#273583"></path>
+                  </svg>
+                </button>
+                <label for="aelia_cs_currencies" class="sr-only">Please select your preferred currency</label>
+              </span>
             </p>
           </form>
           <nav aria-label="Country selector">
-            <span class="tooltip tooltip-left" data-js="tooltip">
+            <span class="tooltip tooltip-left" data-js="tooltip" style="top: -.3em;">
               <input type="checkbox" name="country-selector" id="country-selector" class="sr-only">
               <label for="country-selector">
                 <span class="fflag ff-md fflag-GB"></span>

@@ -109,7 +109,11 @@
 
 // This is used to make round images sit uncomfortably close to each other
 .overlap-small { margin-top: -$space !important; }
-// [class*='col-']:before, & > [class*='col-']
+
+// Used to add spacing above the language bar, but might be useful elsewhere
+.pt-small { padding-top: $gutter / 2;}
+.pt       { padding-top: $gutter;}
+.pt-large { padding-top: $gutter * 2;}
 
 // Colouring text in arbratory colours
 .txt-bright-blue { color: $colour-bright-blue; }
@@ -172,11 +176,12 @@
 // Sometimes required to snap columns into two (or more) rows
 .w-100 { width: 100% !important; }
 
-.sr-only, .js [data-js="hidden"] {
+.sr-only, .js.js [data-js="hidden"] {
   border: 0;
   clip: rect(0,0,0,0);
   height: 1px;
   margin: -1px;
+  min-width: 0;
   overflow: hidden;
   padding: 0;
   position: absolute;
