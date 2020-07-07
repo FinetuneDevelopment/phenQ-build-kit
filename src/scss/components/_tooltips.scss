@@ -7,7 +7,9 @@
   top: -.2em;
 
   // Trying to increase the click area, without increasing the size
-  // of the icon.
+  // of the icon. Note that the label element needs to be a fixed
+  // height, so that the mobile version of the tooltip displays
+  // the correct distance from it.
   label {
     border: solid 2px transparent;
     cursor: pointer;
@@ -107,13 +109,13 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .tooltip {
+  .tooltip.tooltip {
     position: static;
 
     .details {
       border-radius: $radius-small;
       left: 0;
-      margin: 41px 0 0;
+      margin: 46px 0 0;
       right: 0;
       top: unset;
       width: auto;

@@ -191,6 +191,10 @@
 // Like the above, but EVIL
 .hidden { display: none; }
 
+// Not delighted with this pattern but was used to get the tooltips to behave
+// outside of the grid on mobile
+.pos-rel { position: relative; }
+
 // For debug purposes
 .input-radio {
   -webkit-appearance: radio;
