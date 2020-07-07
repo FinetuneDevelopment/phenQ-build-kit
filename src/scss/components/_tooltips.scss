@@ -111,11 +111,15 @@
 @include media-breakpoint-down(sm) {
   .tooltip.tooltip {
     position: static;
+    vertical-align: top;
 
     .details {
       border-radius: $radius-small;
       left: 0;
-      margin: 46px 0 0;
+      // This is related to the line height of the element 
+      // inside of which the tooltip sits. This means it's
+      // a bit of a fudge.
+      margin: 45px 0 0;
       right: 0;
       top: unset;
       width: auto;
