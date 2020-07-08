@@ -213,6 +213,7 @@ fieldset {
   input, select, textarea {
     background-color: transparent;
     border: none;
+    padding: 9px 0;
   }
 
   label {
@@ -223,9 +224,14 @@ fieldset {
     top: 0;
     transition: all .2s;
   }
-  :placeholder-shown ~ label {
-    font-size: inherit;
-    line-height: 26px;
+
+  :placeholder-shown {
+    color: transparent;
+
+    & ~ label {
+      font-size: inherit;
+      line-height: 43px;
+    }
   }
 }
 
