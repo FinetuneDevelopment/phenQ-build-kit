@@ -407,6 +407,9 @@ fieldset {
   border: 0;
 }
 
+// Let's get rid of pointless attributes!
+iframe { border: 0;}
+
 // 1. Correct the text wrapping in Edge and IE.
 // 2. Correct the color inheritance from `fieldset` elements in IE.
 legend {

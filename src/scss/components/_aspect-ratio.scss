@@ -1,0 +1,34 @@
+// These are for embedded video, but are built so that you
+// can fill them with content too and this content will
+// push the boxes out of their aspect ratio, if it becomes
+// too tall.
+.ratio {
+  position: relative;
+
+  // For example an iframe, an image or summit.
+  .ratio__child {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+  }
+  
+  &::after { // to clear float
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  // Add new ratios here, as required
+  &.ratio-16-9::before { padding-top: 9 / 16 * 100%; }
+  &.ratio-square::before { padding-top: 1 / 1 * 100%; }
+}

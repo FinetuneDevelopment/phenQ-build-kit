@@ -26,13 +26,6 @@ select {
 // Sometimes not much data needs to be collected
 .input-sm { width: 4em; }
 
-// Look, it's just another tag, man.
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
 // This is the container class for the standard inputs,
 // which require some trickiness. Assumed markup pattern:
 // <p class="form-molecule">
