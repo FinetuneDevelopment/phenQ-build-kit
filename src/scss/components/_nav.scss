@@ -51,6 +51,7 @@
     outline-color: $colour-light-grey;
   }
 
+  // I personally think this is a lovely touch and wish I'd thought of it years ago.
   .logo-nav__text::before {
     content: "Close ";
   }
@@ -69,10 +70,11 @@
   .logo-nav__nav {
     background: $colour-light-grey;
     display: block;
-    right: 100%;
+    // This should be enough space to clear the burger menu
+    margin: 2.6em 0 0;
     padding: $gutter;
     position: absolute;
-    top: 3.5em;
+    right: 100%;
     transition: all .2s;
     width: 100%;
     z-index: 1;

@@ -121,6 +121,7 @@
 @include media-breakpoint-down(md) {
   .bg-home {
     background-image: url(/img/bg/bg-home-mobile.jpg);
+    background-position: 50% -28px;
     min-height: 0;
   }
 
@@ -130,7 +131,10 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .bg-home { background-size: 500px 233px; }
+  .bg-home {
+    background-position: 50% 28px;
+    background-size: 488px 265px;
+  }
 
   .bghome__header { margin-top: 40px; }
 }
