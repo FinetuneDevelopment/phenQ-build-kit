@@ -54,10 +54,13 @@ fieldset {
     // data and the placeholder text is showing
     &:placeholder-shown {
       border-color: $colour-light-grey;
+      color: transparent;
       padding: 10px;
 
-      // Hoyk that label out of there
-      & ~ label {z-index: -1;}
+      & ~ label {
+        font-size: 15px;
+        line-height: 33px;
+      }
     }
 
     // User is typing
@@ -90,6 +93,19 @@ fieldset {
     }
   }
 
+  // Replicating the error styles when the class is used on a
+  // parent element instead of directly on the input itself.
+  &.error {
+    input, select, textarea {
+      border-color: $colour-red;
+      color: $colour-red;
+
+      &:placeholder-shown { color: transparent; }
+
+      & ~ label { color: $colour-red; }
+    }
+  }
+
   // Select boxes within .form-molecule have slightly more space
   select, select:focus {
     background-position: right 20px top 50%;
@@ -102,6 +118,7 @@ fieldset {
     left: 10px;
     position: absolute;
     top: 5px;
+    transition: all .2s;
   }
 
   // This can hold tips, errors, encouragement. It's hidden by default.
@@ -155,6 +172,7 @@ fieldset {
     transform: rotate(0deg);
     width: .5em;
   }
+
   // Selected state
   [type="checkbox"]:checked ~ label:after {
     border-bottom-color: $colour-bright-blue;
@@ -175,6 +193,7 @@ fieldset {
       width: 0;
     }
   }
+
   // Selected state
   [type="radio"]:checked ~ label:after {
     background: $colour-bright-blue;
