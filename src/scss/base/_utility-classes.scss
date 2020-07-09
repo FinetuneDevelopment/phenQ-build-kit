@@ -208,6 +208,7 @@
 // Used in conjunction with the above class to allow
 // *some* elements to display, when they fall into focus
 .kb-focus.kb-focus:focus {
+  border: unset;
   height: auto;
   margin: unset;
   min-width: unset;

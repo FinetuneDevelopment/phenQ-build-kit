@@ -328,6 +328,25 @@
         <button type="button" class="btn btn-pill">Final button</button>
       </p>
 
+      <h3>Button toolbars</h3>
+      <p>By default, buttons have margins which push against each other. Using a <code>toolbar</code> class allows buttons to sit closer together than they usually would.</p>
+
+      <h4>Default layout</h4>
+      <p>
+        <button type="button" class="btn btn-secondary">Example button</button>
+        <button type="button" class="btn btn-secondary">Another button</button>
+        <button type="button" class="btn btn-secondary">Third button</button>
+        <button type="button" class="btn btn-secondary">More buttons</button>
+      </p>
+
+      <h4>Toolbar layout</h4>
+      <p class="toolbar">
+        <button type="button" class="btn btn-secondary">Example button</button>
+        <button type="button" class="btn btn-secondary">Another button</button>
+        <button type="button" class="btn btn-secondary">Third button</button>
+        <button type="button" class="btn btn-secondary">More buttons</button>
+      </p>
+
       <h3>Flex-vert</h3>
       <p>Adding a <code>flex-vert</code> class onto an element inside a Bootstrap column (or added directly to the column itself) gives it a vertical flexbox layout. This means that the last child of a <code>flex-vert</code> class can have a <code>mt-auto</code> class applied to it, which will align those elements to the bottom of the column.</p>
       <p>If a <code>cta-box</code> class is used inside the Bootstrap column then the <code>flex-vert</code> class should be applied to that element and not the parent column.</p>
@@ -358,6 +377,7 @@
 
     <section class="gutter-medium" aria-label="Accessibility">
       <h2>Accessibility</h2>
+      <h3>Hiding text for screen readers</h3>
       <p>Elements can be hidden for all browsers other than speech readers using a <code>sr-only</code> class. For example, in the below call-to-action, the phrase <q>Find out more</q> is not accessible as it does not uniquely identify the target of the link:</p>
       <p><a href="#" class="btn btn-secondary">Find out more</a></p>
       <p>A more accessible version of this link might look like this:</p>
@@ -378,6 +398,24 @@
         </button>
       </p>
       <p>When there is nothing for these controls to do, a class of <code>hidden</code> is added to them with JavaScript, which hides them from all users.</p>
+
+      <h3>Showing elements on focus</h3>
+      <p>Sometimes, it may be required to hide an element until it falls into focus. For example, the currency selector has a submit button which is hidden for users who have enabled JavaScript, but which still traps focus. For this reason, the button appears for the benefit of users who are navigating using the keyboard.</p>
+      <p>Adding a class of <code>kb-focus</code> in conjunction with <code>sr-only</code> allows elements to be hidden until they fall into focus.</p>
+      <div class="row">
+        <div class="col">
+          <p><label for="focus1">1. Click here to put the input field in focus</label></p>
+          <p><input type="text" id="focus1" name="focus1"></p>
+        </div>
+        <div class="col">
+          <p><label for="focus2">2. Hit tab to show the text field below</label></p>
+          <p><input type="text" id="focus2" name="focus2" class="sr-only kb-focus"></p>
+        </div>
+        <div class="col">
+          <p><label for="focus3">3. Hit tab a third time to hide the second input</label></p>
+          <p><input type="text" id="focus3" name="focus3"></p>
+        </div>
+      </div>
     </section>
 
   </main>
