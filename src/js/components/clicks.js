@@ -15,7 +15,12 @@ export default function clickFactory() {
           // Go through every tooltip on the page...
           for (var i = 0; i < tipSet.length; i++) {
             // ... and uncheck the checkbox (or radio button) inside
-            tipSet[i].querySelector('input').checked = false;
+            let thisToggle = tipSet[i].querySelector('input');
+            if (thisToggle.checked) {
+              let focusOut = new Event('change');
+              thisToggle.checked = false;
+              thisToggle.dispatchEvent(focusOut);
+            }
           }
         }
       }

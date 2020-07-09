@@ -38,3 +38,7 @@ myNav.init();
 import offGrid from './components/off-grid.js';
 const myOffGrid = new offGrid();
 myOffGrid.init();
+
+import toolTip from './components/tooltips.js';
+const myToolTip = new toolTip();
+myToolTip.init();

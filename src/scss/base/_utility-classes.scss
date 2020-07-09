@@ -203,7 +203,19 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+  
+  // Never forget our keyboard navigating siblings.
+  &:focus {
+    height: auto;
+    margin: unset;
+    min-width: unset;
+    overflow: visible;
+    padding: unset;
+    position: static;
+    width: auto;
+  }
 }
+
 // Like the above, but EVIL
 .hidden { display: none; }
 
