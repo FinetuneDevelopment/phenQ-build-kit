@@ -121,9 +121,22 @@
       // a bit of a fudge.
       margin: 45px 0 0;
       right: 0;
+      // An absolutely-positioned element which has no top
+      // property declared will work like a hybrid of
+      // position relative and absolute.
       top: unset;
       width: auto;
     }
+
+    // The .tooltip was designed to be applied to an inline
+    // element (such as a span), so it could be added anywhere
+    // inside content and sit adjacent to the normal flow.
+    // However, if it's added on a block level element, the
+    // trick I useto get it working on mobile doesn't work as
+    // .details is pushed further down the page. This varient
+    // is designed to work where both .tooltip and .details
+    // are block.
+    .details-block { margin: 10px 0 0; }
   } 
 }
 
