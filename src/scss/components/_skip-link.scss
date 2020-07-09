@@ -1,0 +1,44 @@
+// The "skip to main content" link, which only appears when it falls into focus.
+// This is mostly functional CSS: utility classes add some of the appearance.
+.skip {
+  background: $colour-lemon;
+  border-bottom: solid 1px $colour-dark-blue;
+  color: $colour-dark-blue;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  top: -100%;
+  transition: all .2s;
+  z-index: 1;
+
+  // The triangle at the bottom of the yellow box
+  &::before, &::after {
+    border: solid 15px transparent;
+    border-top: solid 17px $colour-dark-blue;
+    border-bottom: none;
+    bottom: auto;
+    content: "";
+    // The middle of the tooltip trigger...
+    left: 50%;
+    // ... minus half the width of the ^
+    margin: 0 0 0 -16px;
+    position: absolute;
+    top: 100%;
+  }
+
+  // Note this causes the yellow triangle to overlap the
+  // bubble a little, but it's less CSS than drawing two
+  // triangles which fix exactly inside each other.
+  &::after {
+    border-top-color: $colour-lemon;
+    // ~ 1px border around the triangle
+    top: calc(100% - 1.5px);
+  }
+}
+
+.skip:focus {
+  top: 0;
+
+  &::before { right: auto; }
+}
