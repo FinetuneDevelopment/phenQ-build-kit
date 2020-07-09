@@ -88,7 +88,8 @@
 .bg-mint       { background: $colour-mint; }
 .bg-lemon      { background: $colour-lemon; }
 .bg-light-grey { background: $colour-light-grey; }
-.bg-white, .bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey {
+.bg-white, .bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey,
+.bg-home {
     color: $colour-dark-blue;
 
     a { color: inherit; }

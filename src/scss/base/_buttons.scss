@@ -112,6 +112,7 @@
     &:hover, &:focus {
         background: $colour-light-grey;
         background-clip: padding-box;
+        color: $colour-dark-blue;
     }
   }
 }
