@@ -8,25 +8,25 @@
   margin-bottom: 1em;
 
   // Clicky parts
-  label {
-    cursor: pointer;
-  }
+  label { cursor: pointer; }
 
   // Expanded panels
-  .details {
-    display: none;
-  }
+  .details { display: none; }
 
   input:checked {
-
-    ~ .details {
-      display: block;
-    }
+    ~ .details { display: block; }
 
     // + becomes ×
-    ~ label .faq__icon {
-      transform: rotate(45deg);
-    }
+    ~ label .faq__icon { transform: rotate(45deg); }
+  }
+
+  input:focus {
+    ~ label {
+      // This is temporary
+      -webkit-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+         -moz-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+              box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+     }
   }
 }
 
