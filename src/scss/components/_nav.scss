@@ -89,6 +89,12 @@
     right: 0;
   }
 
+  // For my keyboard navigation siblings
+  [id="nav-toggle"]:focus ~ .logo-nav__toggle label {
+    border: solid .2em $colour-dark-blue;
+  }
+
+
   .btn-nav {
     display: block;
     padding-left: 0;
