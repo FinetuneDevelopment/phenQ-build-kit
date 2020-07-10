@@ -11,10 +11,7 @@
     width: 90px;
   }
 
-  // Still need a "you are here" style
-  em {
-    font-style: normal;
-  }
+  em { font-style: normal; }
 }
 
 @media print {
@@ -98,11 +95,18 @@
     border-bottom: dotted .2em $colour-dark-blue;
   }
 
-
-  .btn-nav {
+  .btn-nav.btn-nav {
+    border: 0;
+    border-radius: 0;
     display: block;
+    font-size: $font-size-body;
     padding-left: 0;
     padding-right: 0;
     text-align: left;
+
+    &:hover, &:focus {
+      background: $colour-off-white;
+      color: $colour-dark-blue;
+    }
   }
 }

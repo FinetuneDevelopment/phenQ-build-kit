@@ -300,6 +300,8 @@ label.btn-pill, label.btn-pill-sm {
 // Navigation buttons
 // Used in the main navigation
 // Should be the same height as .btn-primary.btn-sm
+// Note that there are some mobile specifi styles
+// in _nav.scss.
 ///////////////////////////////////////////////////
 .btn-nav {
   border: solid 1px transparent; // Superstitious
@@ -318,7 +320,7 @@ label.btn-pill, label.btn-pill-sm {
 // This selector is subtle. It's to capture the following two markup contexts:
 // <em title="You are here" class="btn btn-nav">This is the current page</em>
 // <em><a href="/url/" class="btn btn-nav">This is the PARENT of the current page</a></em>
-em.btn-nav.btn-nav, em .btn-nav.btn-nav,  {
+em.btn-nav.btn-nav, em .btn-nav.btn-nav {
   &, &:hover {
     border-color: $colour-dark-blue;
     background: $colour-dark-blue;
@@ -326,11 +328,7 @@ em.btn-nav.btn-nav, em .btn-nav.btn-nav,  {
   }
 }
 
-@include media-breakpoint-down(md) {
-  .btn-nav {
-    font-size: $font-size-body;
-  }
-}
+em.btn-nav.btn-nav { cursor: default; }
 
 //////////////////////////////////////////////
 // Used in the email signup form in the footer
