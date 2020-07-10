@@ -70,6 +70,10 @@
   .logo-nav__nav {
     background: $colour-light-grey;
     display: block;
+    // This will probably be the distance between the burger
+    // menu and the bottom of the page, once the language
+    // bar has been moved into the navigation bar.
+    height: calc(100vh - 2.6em);
     // This should be enough space to clear the burger menu
     margin: 2.6em 0 0;
     padding: $gutter;
@@ -91,7 +95,7 @@
 
   // For my keyboard navigation siblings
   [id="nav-toggle"]:focus ~ .logo-nav__toggle label {
-    border: solid .2em $colour-dark-blue;
+    border-bottom: dotted .2em $colour-dark-blue;
   }
 
 

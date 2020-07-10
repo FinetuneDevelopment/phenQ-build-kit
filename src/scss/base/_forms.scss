@@ -231,6 +231,11 @@ select {
   }
 }
 
+// Used in the header of the page
+.form-compact-nobrd {
+  border: 0;
+}
+
 .form-compact__submit {
   min-height: 43px;
   padding: 0 0 0 34px;

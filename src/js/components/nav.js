@@ -8,7 +8,8 @@ export default function formFactory() {
 
     if (document.getElementById('nav-toggle') && document.querySelectorAll('.logo-nav__nav a')) {
       const navCheckbox = document.getElementById('nav-toggle');
-      const navAnchors = document.querySelectorAll('.logo-nav__nav a');
+      // A long list of stuff which might both sit inside the navigation and fall into focus
+      const navFocusEl = document.querySelectorAll('.logo-nav__nav a, .logo-nav__nav input, .logo-nav__nav button, .logo-nav__nav select');
 
       window.addEventListener('resize', this.ariaUpdate);
       navCheckbox.addEventListener('change', this.ariaUpdate);
@@ -16,37 +17,46 @@ export default function formFactory() {
 
       // Listens for navigation items falling into focus, then
       // shows the navigation when that happens
-      for (var i = 0; i < navAnchors.length; i++) {
-        let thisAnchor = navAnchors[i];
+      for (var i = 0; i < navFocusEl.length; i++) {
+        let thisAnchor = navFocusEl[i];
         thisAnchor.addEventListener('focus', function () {
+          let focusIn = new Event('change');
           navCheckbox.checked = true;
+          navCheckbox.dispatchEvent(focusIn);
         }, true);
         thisAnchor.addEventListener('blur', function () {
+          let focusOut = new Event('change');
           navCheckbox.checked = false;
+          navCheckbox.dispatchEvent(focusOut);
         }, true);
       }
     }
 
   },
     myFactory.ariaUpdate = function () {
-      let navToggle = document.querySelector('.logo-nav__toggle label');
+      let theBody = document.querySelector('body');
+      let navLabel = document.querySelector('.logo-nav__toggle label');
       let navCheckbox = document.getElementById('nav-toggle');
 
       // Are we in mobile view?
-      if (navToggle.offsetParent) {
-        navToggle.setAttribute('aria-haspopup', 'true');
+      if (navLabel.offsetParent) {
+        navLabel.setAttribute('aria-haspopup', 'true');
 
         // Is the navigation bar visible?
         if (navCheckbox.checked) {
-          navToggle.setAttribute('aria-expanded', 'true');
+          navLabel.setAttribute('aria-expanded', 'true');
+          theBody.style.overflow = 'hidden';
+
         } else {
-          navToggle.setAttribute('aria-expanded', 'false');
+          navLabel.setAttribute('aria-expanded', 'false');
+          theBody.style.overflow = 'visible';
         }
       }
       // The navigation is in desktop mode
       else {
-        navToggle.removeAttribute('aria-haspopup');
-        navToggle.removeAttribute('aria-expanded');
+        navLabel.removeAttribute('aria-haspopup');
+        navLabel.removeAttribute('aria-expanded');
+        theBody.style.overflow = 'visible';
       }
     }
 

@@ -310,6 +310,12 @@ label.btn-pill, label.btn-pill-sm {
   &:before { display: none; }
 }
 
+@include media-breakpoint-down(md) {
+  .btn-nav {
+    font-size: $font-size-body;
+  }
+}
+
 //////////////////////////////////////////////
 // Used in the email signup form in the footer
 //////////////////////////////////////////////

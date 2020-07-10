@@ -62,6 +62,8 @@
   .details {
     background: $colour-off-white;
     border: solid 2px $colour-bright-blue;
+    height: 0;
+    overflow: hidden;
     opacity: 0;
     padding: 15px 20px;
     position: absolute;
@@ -91,7 +93,9 @@
   input:checked {
 
     ~ .details {
+      height: auto;
       opacity: 1;
+      overflow: visible;
       z-index: 1;
     }
 
@@ -132,7 +136,7 @@
     // element (such as a span), so it could be added anywhere
     // inside content and sit adjacent to the normal flow.
     // However, if it's added on a block level element, the
-    // trick I useto get it working on mobile doesn't work as
+    // trick I use to get it working on mobile doesn't work as
     // .details is pushed further down the page. This varient
     // is designed to work where both .tooltip and .details
     // are block.
