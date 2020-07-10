@@ -111,7 +111,7 @@ select {
     left: 10px;
     position: absolute;
     top: 5px;
-    transition: all .2s;
+    transition: all .5s;
   }
 
   // This can hold tips, errors, encouragement. It's hidden by default.
@@ -218,7 +218,7 @@ select {
     left: 0;
     position: absolute;
     top: 0;
-    transition: all .2s;
+    transition: all .5s;
   }
 
   :placeholder-shown {
