@@ -303,11 +303,24 @@ label.btn-pill, label.btn-pill-sm {
 ///////////////////////////////////////////////////
 .btn-nav {
   border: solid 1px transparent; // Superstitious
+  border-radius: 2em;
   font-family: $body-typeface-semibold;
   font-size: 12px;
   padding: .97em 2em;
-
+  
   &:before { display: none; }
+
+  &:hover, &:focus {
+    border-color: $colour-dark-blue;
+  }
+}
+
+em.btn-nav.btn-nav {
+  &, &:hover {
+    border-color: $colour-dark-blue;
+    background: $colour-dark-blue;
+    color: $colour-off-white;
+  }
 }
 
 @include media-breakpoint-down(md) {
