@@ -315,7 +315,10 @@ label.btn-pill, label.btn-pill-sm {
   }
 }
 
-em.btn-nav.btn-nav {
+// This selector is subtle. It's to capture the following two markup contexts:
+// <em title="You are here" class="btn btn-nav">This is the current page</em>
+// <em><a href="/url/" class="btn btn-nav">This is the PARENT of the current page</a></em>
+em.btn-nav.btn-nav, em .btn-nav.btn-nav,  {
   &, &:hover {
     border-color: $colour-dark-blue;
     background: $colour-dark-blue;
