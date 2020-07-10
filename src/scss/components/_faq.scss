@@ -8,7 +8,10 @@
   margin-bottom: 1em;
 
   // Clicky parts
-  label { cursor: pointer; }
+  label {
+    border: solid 2px transparent;
+    cursor: pointer;
+  }
 
   // Expanded panels
   .details { display: none; }
@@ -22,11 +25,8 @@
 
   input:focus {
     ~ label {
-      // This is temporary
-      -webkit-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
-         -moz-box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
-              box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
-     }
+      border: solid 2px $colour-light-grey;
+    }
   }
 }
 
