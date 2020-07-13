@@ -64,6 +64,13 @@
   }
 }
 
+@include media-breakpoint-down(xs) {
+  // Not sure how wide to make this rule. .btn seems too wide.
+  .btn-primary, .btn-secondary {
+    &, &.btn-sm { min-width: 0; }
+  }
+}
+
 //////////////////////////////////////////////
 // White text on a blue gradient background.
 // Probably should only be used once per-page.
