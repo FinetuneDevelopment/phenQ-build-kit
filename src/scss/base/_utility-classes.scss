@@ -120,6 +120,9 @@
 
 // This is used to make round images sit uncomfortably close to each other
 .overlap-small { margin-top: -$space !important; }
+@include media-breakpoint-down(md) {
+  .overlap-small { margin-top: -5vw !important; }
+}
 
 // Used to add spacing above the language bar, but might be useful elsewhere
 .pt-small { padding-top: $gutter / 2;}
