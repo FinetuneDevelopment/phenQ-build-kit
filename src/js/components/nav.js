@@ -12,8 +12,8 @@ export default function formFactory() {
       // A long list of stuff which might both sit inside the navigation and fall into focus
       const navFocusEl = document.querySelectorAll('.logo-nav__nav a, .logo-nav__nav input, .logo-nav__nav button, .logo-nav__nav select');
 
-      window.addEventListener('resize', this.ariaUpdate);
       navCheckbox.addEventListener('change', this.ariaUpdate);
+      window.addEventListener('resize', this.ariaUpdate);
       this.ariaUpdate();
 
       // Listens for navigation items falling into focus, then
@@ -37,7 +37,7 @@ export default function formFactory() {
         }, true);
         // We also need to do this for click because there's
         // jump links in the nav and we need it to close after
-        // the user has whooshed their way down the page.
+        // the user has whooshed their way down the page
         thisAnchor.addEventListener('click', function (e) {
           if (e.target.id !== 'country-selector') {
             let focusOut = new Event('change');
