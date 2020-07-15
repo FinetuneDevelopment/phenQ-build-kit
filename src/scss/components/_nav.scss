@@ -102,7 +102,13 @@
     z-index: -1;
     
     .space-between {
-      display: block;
+      flex-direction: column;
+    }
+
+    // These are not used as contextual selectors elsewhere
+    .currency-selector,
+    .language-selector {
+      order: -1;
     }
   }
 

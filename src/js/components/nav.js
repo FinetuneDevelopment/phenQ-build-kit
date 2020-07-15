@@ -8,6 +8,7 @@ export default function formFactory() {
 
     if (document.getElementById('nav-toggle') && document.querySelectorAll('.logo-nav__nav a')) {
       const navCheckbox = document.getElementById('nav-toggle');
+      const navDad = navCheckbox.parentElement;
       // A long list of stuff which might both sit inside the navigation and fall into focus
       const navFocusEl = document.querySelectorAll('.logo-nav__nav a, .logo-nav__nav input, .logo-nav__nav button, .logo-nav__nav select');
 
@@ -24,10 +25,15 @@ export default function formFactory() {
           navCheckbox.checked = true;
           navCheckbox.dispatchEvent(focusIn);
         }, true);
-        thisAnchor.addEventListener('blur', function () {
-          let focusOut = new Event('change');
-          navCheckbox.checked = false;
-          navCheckbox.dispatchEvent(focusOut);
+        thisAnchor.addEventListener('blur', function (e) {
+          // The user might attempt to dismiss the tooltip by
+          // clicking outside of it, inadvertently closing
+          // the navigation.
+          if (e.target.id !== 'country-selector') {
+            let focusOut = new Event('change');
+            navCheckbox.checked = false;
+            navCheckbox.dispatchEvent(focusOut);
+          }
         }, true);
       }
     }

@@ -3,8 +3,6 @@
 export default function tabFactory() {
 
   let myFactory = {};
-  // https://itnext.io/different-ways-to-achieve-encapsulation-in-javascript-es6-7cb938e83f2d
-  //this.localVariable = 'Some string';
 
   // The functional aspects of tabs are handled by CSS but this handles overflow in a slightly
   // better way, updates aria attributes and so on.
