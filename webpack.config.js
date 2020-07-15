@@ -117,6 +117,14 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'index.html'),
         favicon: path.resolve(__dirname, 'src/img/favicon', 'favicon.ico'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'browserconfig.xml',
+        template: path.resolve(__dirname, 'src', 'browserconfig.xml'),
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'site.webmanifest',
+        template: path.resolve(__dirname, 'src', 'site.webmanifest'),
+      }),
       // Design guideline pages
       new HtmlWebpackPlugin({
         filename: 'guideline-typeface/index.html',
