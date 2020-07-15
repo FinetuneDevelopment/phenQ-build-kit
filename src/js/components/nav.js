@@ -35,6 +35,16 @@ export default function formFactory() {
             navCheckbox.dispatchEvent(focusOut);
           }
         }, true);
+        // We also need to do this for click because there's
+        // jump links in the nav and we need it to close after
+        // the user has whooshed their way down the page.
+        thisAnchor.addEventListener('click', function (e) {
+          if (e.target.id !== 'country-selector') {
+            let focusOut = new Event('change');
+            navCheckbox.checked = false;
+            navCheckbox.dispatchEvent(focusOut);
+          }
+        }, true);
       }
     }
 
