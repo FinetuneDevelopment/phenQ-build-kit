@@ -39,84 +39,84 @@
   <a href="#main" class="skip text-center type-source-semibold breath text-uppercase small">Skip to content</a>
   <main>
     <div class="bg-home gutter-medium">
-      <div class="container">
-        <form class="media logo-nav" method="post" action="#">
-          <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only" aria-controls="logo-nav__nav">
-          <p class="mr-3">
-            <img src="/img/include/logo-phenq.svg" alt="PhenQ" class="logo">
-          </p>
-          <p class="media-body d-md-none d-lg-none d-xl-none text-right logo-nav__toggle">
-            <a href="#order-now" class="btn btn-primary btn-sm d-inline-block d-md-none mr-3">Order now</a>
-            <label for="nav-toggle" aria-label="Toggle menu open and closed" title="Toggle menu open and closed">
-              <span class="logo-nav__text text-uppercase type-source-semibold small text-breath">Menu</span>
-              <span class="shape sh-burger"></span>
-            </label>
-          </p>
-          <nav class="logo-nav__nav media-body d-print-none" id="logo-nav__nav" aria-label="Main" itemscope itemtype="https://schema.org/SiteNavigationElement">
-            <ul class="space-between">
-              <li><a href="#body-sculpting" class="btn btn-nav" itemprop="name">How it works</a></li>
-              <!--li><a href="https://phenq.com/blog/" class="btn btn-nav" itemprop="name">Blog</a></li-->
-              <li><a href="#ingredients" class="btn btn-nav" itemprop="name">Ingredients</a></li>
-              <li><a href="#testimonials" class="btn btn-nav" itemprop="name">Testimonials</a></li>
-              <li><a href="#faq" class="btn btn-nav" itemprop="name"><abbr title="Frequenly Asked Questions">FAQ</abbr>s</a></li>
-              <li><a href="/contact-us/" class="btn btn-nav" itemprop="name">Contact us</a></li>
-              <li class="toolbar">
-                <a href="#order-now" class="btn btn-primary btn-sm d-none d-md-inline-block flush" itemprop="name">Order now</a>
-                <!-- Phase 2
+      <form class="container media logo-nav" method="post" action="#" data-js="logo-nav">
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only" aria-controls="logo-nav__nav">
+        <p class="mr-3">
+          <img src="/img/include/logo-phenq.svg" alt="PhenQ" class="logo">
+        </p>
+        <p class="media-body d-md-none d-lg-none d-xl-none text-right logo-nav__toggle">
+          <a href="#order-now" class="btn btn-primary btn-sm d-inline-block d-md-none mr-3 flush">Order now</a>
+          <label for="nav-toggle" aria-label="Toggle menu open and closed" title="Toggle menu open and closed">
+            <span class="logo-nav__text text-uppercase type-source-semibold small text-breath">Menu</span>
+            <span class="shape sh-burger"></span>
+          </label>
+        </p>
+        <nav class="logo-nav__nav media-body d-print-none" id="logo-nav__nav" aria-label="Main" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <ul class="space-between">
+            <li><a href="#body-sculpting" class="btn btn-nav" itemprop="name">How it works</a></li>
+            <!--li><a href="https://phenq.com/blog/" class="btn btn-nav" itemprop="name">Blog</a></li-->
+            <li><a href="#ingredients" class="btn btn-nav" itemprop="name">Ingredients</a></li>
+            <li><a href="#testimonials" class="btn btn-nav" itemprop="name">Testimonials</a></li>
+            <li><a href="#faq" class="btn btn-nav" itemprop="name"><abbr title="Frequenly Asked Questions">FAQ</abbr>s</a></li>
+            <!--li><a href="/contact-us/" class="btn btn-nav" itemprop="name">Contact us</a></li-->
+            <li class="toolbar">
+              <a href="#order-now" class="btn btn-primary btn-sm d-none d-md-inline-block mb-2" itemprop="name">Order now</a>
+              <!-- Phase 2
                 <a href="/cart/" class="btn btn-config" itemprop="name">Cart <strong>2</strong></a>
                 <a href="/profile/" class="btn btn-config" itemprop="name"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <path d="M57.8 60.083H42.2C21.653 60.1 4.994 73 4.97 87.015v8.387C4.97 97.1 6.986 100 9.473 100h81.055c2.487 0 4.503-2.902 4.503-4.598v-8.387C95.006 73 78.347 60.083 57.8 60.083zM86.024 92.33h-72.05v-5.315c0-10.638 12.64-19.26 28.234-19.26H57.8c15.593 0 28.234 8.624 28.234 19.26zM50 54.36a27.018 27.018 0 1 0-27.018-27.018A27.018 27.018 0 0 0 50 54.359zm0-45.03a18.012 18.012 0 1 1-18.012 18.012A18.012 18.012 0 0 1 50 9.328z" />
                   </svg></a>-->
-              </li>
-              <li class="form-compact form-compact-nobrd">
-                <span class="media">
-                  <select id="aelia_cs_currencies" class="media-body input-sm" name="aelia_cs_currency">
-                    <option value="GBP" selected>GBP</option>
-                    <option value="AUD">AUD</option>
-                    <option value="CAD">CAD</option>
-                    <option value="CHF">CHF</option>
-                    <option value="EUR">EUR</option>
-                    <option value="MXN">MXN</option>
-                    <option value="USD">USD</option>
-                  </select>
-                  <button title="Change Currency" aria-label="Change Currency" class="icon-x-small btn btn-clear kb-focus" data-js="hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                      <path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="#273583"></path>
-                    </svg>
-                  </button>
-                  <label for="aelia_cs_currencies" class="sr-only">Please select your preferred currency</label>
-                </span>
-              </li>
-              <li class="pos-rel">
-                <div class="country-selector tooltip tooltip-left" data-js="tooltip">
-                  <input type="checkbox" name="country-selector" id="country-selector" class="sr-only">
-                  <label for="country-selector" class="country-selector__label">
-                    <span class="fflag ff-md fflag-GB"></span>
-                    <span class="sr-only">United Kingdom</span>
-                  </label>
-                  <div class="details details-wide details-block small shadow-light radius-medium text-left">
-                    <div class="row list-flat">
-                      <p class="col-6"><a href="https://phenq.fr" lang="fr-FR"><span class="fflag ff-md fflag-FR"></span> &nbsp; Français</a></p>
-                      <p class="col-6"><a href="https://phenq.de" lang="de-DE"><span class="fflag ff-md fflag-DE"></span> &nbsp; Deutsch</a></p>
-                      <p class="col-6"><a href="https://phenq.com.au" lang="en-AU"><span class="fflag ff-md fflag-AU"></span> &nbsp; English (AU)</a></p>
-                      <p class="col-6"><a href="https://phenq.ca" lang="en-CA"><span class="fflag ff-md fflag-CA"></span> &nbsp; English (CA)</a></p>
-                      <p class="col-6"><a href="https://phenq.dk" lang="da-DK"><span class="fflag ff-md fflag-DK"></span> &nbsp; Dansk</a></p>
-                      <p class="col-6"><a href="https://phenq.nl" lang="nl-NL"><span class="fflag ff-md fflag-NL"></span> &nbsp; Nederlands</a></p>
-                      <p class="col-6"><a href="https://phenq.gr" lang="el-GR"><span class="fflag ff-md fflag-GR"></span> &nbsp; Ελληνικα</a></p>
-                      <p class="col-6"><a href="https://phenq.it" lang="it-IT"><span class="fflag ff-md fflag-IT"></span> &nbsp; Italiano</a></p>
-                      <p class="col-6"><a href="https://phenq.pt" lang="pt-BR"><span class="fflag ff-md fflag-PT"></span> &nbsp; Português</a></p>
-                      <p class="col-6"><a href="https://phenq.es" lang="es-ES"><span class="fflag ff-md fflag-ES"></span> &nbsp; Español</a></p>
-                      <p class="col-6"><a href="https://phenq.se" lang="sv-SE"><span class="fflag ff-md fflag-SE"></span> &nbsp; Svenska</a></p>
-                      <p class="col-6"><a href="https://phenq.com" lang="en-US"><span class="fflag ff-md fflag-US"></span> &nbsp; English (US)</a></p>
-                      <p class="col-6"><a href="https://phenq.pl" lang="pl-PL"><span class="fflag ff-md fflag-PL"></span> &nbsp; Polski</a></p>
-                      <p class="col-6"><a href="https://phenq.mx" lang="es-MX"><span class="fflag ff-md fflag-MX"></span> &nbsp; Español (MX)</a></p>
-                    </div>
+            </li>
+            <li class="form-compact form-compact-nobrd">
+              <span class="media">
+                <select id="aelia_cs_currencies" class="media-body input-sm" name="aelia_cs_currency">
+                  <option value="GBP" selected>GBP</option>
+                  <option value="AUD">AUD</option>
+                  <option value="CAD">CAD</option>
+                  <option value="CHF">CHF</option>
+                  <option value="EUR">EUR</option>
+                  <option value="MXN">MXN</option>
+                  <option value="USD">USD</option>
+                </select>
+                <button title="Change Currency" aria-label="Change Currency" class="icon-x-small btn btn-clear kb-focus" data-js="hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="#273583"></path>
+                  </svg>
+                </button>
+                <label for="aelia_cs_currencies" class="sr-only">Please select your preferred currency</label>
+              </span>
+            </li>
+            <li class="pos-rel">
+              <div class="country-selector tooltip tooltip-left" data-js="tooltip">
+                <input type="checkbox" name="country-selector" id="country-selector" class="sr-only">
+                <label for="country-selector" class="country-selector__label">
+                  <span class="fflag ff-md fflag-GB"></span>
+                  <span class="sr-only">United Kingdom</span>
+                </label>
+                <div class="details details-wide details-block small shadow-light radius-medium text-left">
+                  <div class="row list-flat">
+                    <p class="col-6"><a href="https://phenq.fr" lang="fr-FR"><span class="fflag ff-md fflag-FR"></span> &nbsp; Français</a></p>
+                    <p class="col-6"><a href="https://phenq.de" lang="de-DE"><span class="fflag ff-md fflag-DE"></span> &nbsp; Deutsch</a></p>
+                    <p class="col-6"><a href="https://phenq.com.au" lang="en-AU"><span class="fflag ff-md fflag-AU"></span> &nbsp; English (AU)</a></p>
+                    <p class="col-6"><a href="https://phenq.ca" lang="en-CA"><span class="fflag ff-md fflag-CA"></span> &nbsp; English (CA)</a></p>
+                    <p class="col-6"><a href="https://phenq.dk" lang="da-DK"><span class="fflag ff-md fflag-DK"></span> &nbsp; Dansk</a></p>
+                    <p class="col-6"><a href="https://phenq.nl" lang="nl-NL"><span class="fflag ff-md fflag-NL"></span> &nbsp; Nederlands</a></p>
+                    <p class="col-6"><a href="https://phenq.gr" lang="el-GR"><span class="fflag ff-md fflag-GR"></span> &nbsp; Ελληνικα</a></p>
+                    <p class="col-6"><a href="https://phenq.it" lang="it-IT"><span class="fflag ff-md fflag-IT"></span> &nbsp; Italiano</a></p>
+                    <p class="col-6"><a href="https://phenq.pt" lang="pt-BR"><span class="fflag ff-md fflag-PT"></span> &nbsp; Português</a></p>
+                    <p class="col-6"><a href="https://phenq.es" lang="es-ES"><span class="fflag ff-md fflag-ES"></span> &nbsp; Español</a></p>
+                    <p class="col-6"><a href="https://phenq.se" lang="sv-SE"><span class="fflag ff-md fflag-SE"></span> &nbsp; Svenska</a></p>
+                    <p class="col-6"><a href="https://phenq.com" lang="en-US"><span class="fflag ff-md fflag-US"></span> &nbsp; English (US)</a></p>
+                    <p class="col-6"><a href="https://phenq.pl" lang="pl-PL"><span class="fflag ff-md fflag-PL"></span> &nbsp; Polski</a></p>
+                    <p class="col-6"><a href="https://phenq.mx" lang="es-MX"><span class="fflag ff-md fflag-MX"></span> &nbsp; Español (MX)</a></p>
                   </div>
                 </div>
-              </li>
-            </ul>
-          </nav>
-        </form>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </form>
+      <div class="container">
         <!-- Heading and intro copy -->
         <header class="gutter-large bghome__header" aria-label="Burn Stored Fat, Reveal Your Dream Body" id="main">
           <div class="row">
@@ -466,7 +466,7 @@
             <br class="d-print-none">
             <br class="d-print-none">
             <h2>60 Day Money Back <em>Guarantee</em></h2>
-            <p class="lead">Each bottle will last 30 days but to see real results, you should take PhenQ for atleast 60 days. It's why we provide a 60 day guarantee. If you're not completely happy, with the results, <a href="/guarantee/">we'll refund you</a>.</p>
+            <p class="lead">Each bottle will last 30 days but to see real results, you should take PhenQ for at least 60 days. It's why we provide a 60 day guarantee. If you're not completely happy, with the results, we'll refund you.</p>
             <!--p class="d-print-none"><a href="/guarantee/" class="btn btn-primary flush">More <abbr title="Information">info</abbr></a></p-->
             <br class="d-print-none">
             <br class="d-print-none">
@@ -1012,7 +1012,7 @@
         </div>
       </section>
 
-      <section aria-label="More from PhenQ on our blog" class="gutter-medium d-print-none">
+      <!--section aria-label="More from PhenQ on our blog" class="gutter-medium d-print-none">
         <header class="row align-items-end gutter-small">
           <h2 class="h3 col-md-8 col-sm flush">More from PhenQ <br class="d-none d-sm-block"><em>on our blog</em></h2>
           <p class="col-md-4 col-sm text-right"><a href="https://phenq.com/blog/" class="btn btn-arrow text-nowrap">Check out our blog</a></p>
@@ -1057,7 +1057,7 @@
           </aside>
 
         </div>
-      </section>
+      </section-->
 
     </div><!-- .container -->
 

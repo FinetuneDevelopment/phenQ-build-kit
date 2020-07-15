@@ -133,8 +133,8 @@
 
 @include media-breakpoint-down(sm) {
   .bg-home {
-    background-position: 50% 28px;
-    background-size: 488px 265px;
+    background-position: 50% 0;
+    background-size: 488px 233px;
   }
 
   .bghome__header { margin-top: 40px; }

@@ -2,7 +2,28 @@
 // Main navigation, top
 ///////////////////////
 .logo-nav {
-  padding: 12px 0 75px;
+  margin-bottom: 75px;
+  padding-top: 12px;
+  transition: all .2s;
+
+  &.sticky {
+    background: $colour-off-white;
+    box-shadow: 0 .2em .5em 0 rgba(0,0,0,.1);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: -100%;
+    z-index: 1;
+    
+    // Not ideal, but I was having an inheritance fight
+    // with the background delcaration in the rule
+    // above (this class is toggled with JavaScript).
+    &.bg-light-grey { background: $colour-light-grey; }
+  }
+
+  &.sticky-show {
+    top: 0;
+  }
 
   // This only works for one specific SVG, regrettably
   .logo {
@@ -25,9 +46,10 @@
 
 .logo-nav__toggle label {
   cursor: pointer;
+  display: inline-block;
   outline: solid .8em transparent;
   // To give the illusion that it joins up with the mobile navigation menu
-  padding: 0 0 .8em;
+  padding: .7em 0 .1em;
   transition: all .2s;
 }
 
@@ -48,9 +70,9 @@
     outline-color: $colour-light-grey;
   }
 
-  // I personally think this is a lovely touch and wish I'd thought of it years ago.
-  .logo-nav__text::before {
-    content: "Close ";
+  @include media-breakpoint-up(sm) {
+    // I personally think this is a lovely touch and wish I'd thought of it years ago.
+    .logo-nav__text::before { content: "Close "; }
   }
 
   & .sh-burger {
@@ -67,9 +89,8 @@
   .logo-nav__nav {
     background: $colour-light-grey;
     display: block;
-    // This will probably be the distance between the burger
-    // menu and the bottom of the page, once the language
-    // bar has been moved into the navigation bar.
+    // This is roughly the distance between the burger
+    // menu and the bottom of the page.
     height: calc(100vh - 2.6em);
     // This should be enough space to clear the burger menu
     margin: 2.6em 0 0;
@@ -78,7 +99,7 @@
     right: 100%;
     transition: all .2s;
     width: 100%;
-    z-index: 1;
+    z-index: -1;
     
     .space-between {
       display: block;
@@ -88,6 +109,7 @@
   // Displays the menu
   [id="nav-toggle"]:checked ~ .logo-nav__nav {
     right: 0;
+    z-index: 1;
   }
 
   // For my keyboard navigation siblings
