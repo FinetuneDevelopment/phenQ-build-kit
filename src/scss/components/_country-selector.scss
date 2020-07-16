@@ -7,6 +7,10 @@
   }
 }
 
+@include media-breakpoint-up(sm) {
+  .country-selector__label { line-height: 40px; }
+}
+
 // Freak Flags, Copyright ©2020 Michael P. Cohen. Freak flags is licenced under the MIT licence.  
 // For complete information visit: www.freakflagsprite.com 
 .fflag {
