@@ -28,7 +28,6 @@ export default function faqFactory() {
   },
     // Deselects the associated radio button, if required
     myFactory.deselectRadio = function (e) {
-      console.log("deselectRadio run");
       let thisRadio = document.getElementById(this.getAttribute('for'));
       if (thisRadio.checked === true) {
         thisRadio.checked = false;
