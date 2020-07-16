@@ -46,40 +46,39 @@ export default function formFactory() {
           }
         }, true);
       }
+
+      // This makes the main naivgation "sticky", but only when the user scrolls up
+      if (document.querySelector('[data-js="logo-nav"]')) {
+        let lastScrollTop = 0;
+        let logoNav = document.querySelector('[data-js="logo-nav"]');
+        let logoNavDad = logoNav.parentElement;
+        // So if we're going to pull .logo-nav in and out of the document flow, we need
+        // something to take its place, to stop the rest of the document from shifting
+        // about. Rather than cloning it (and dealing with duplicate IDs), I'm going to
+        // measure its height and add it to the parent element.
+        let navHeight = logoNav.offsetHeight;
+
+        window.addEventListener('scroll', function () {
+          let st = window.pageYOffset || document.documentElement.scrollTop;
+          if (st > lastScrollTop) { // Scroll down
+            logoNav.classList.remove('sticky-show');
+          } else if (st === 0) { // Reached the top of the page
+            logoNav.classList.remove('sticky', 'sticky-show');
+            logoNavDad.style.paddingTop = 0;
+          } else { // Scroll up
+            logoNav.classList.add('sticky', 'sticky-show');
+            logoNavDad.style.paddingTop = navHeight + 'px';
+          }
+          lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        }, false);
+
+        // Recalculates the height of the navigation, when the user resizes the page
+        window.addEventListener('resize', function () {
+          navHeight = logoNav.offsetHeight;
+        });
+
+      }
     }
-
-    // This makes the main naivgation "sticky", but only when the user scrolls up
-    if (document.querySelector('[data-js="logo-nav"]')) {
-      let lastScrollTop = 0;
-      let logoNav = document.querySelector('[data-js="logo-nav"]');
-      let logoNavDad = logoNav.parentElement;
-      // So if we're going to pull .logo-nav in and out of the document flow, we need
-      // something to take its place, to stop the rest of the document from shifting
-      // about. Rather than cloning it (and dealing with duplicate IDs), I'm going to
-      // measure its height and add it to the parent element.
-      let navHeight = logoNav.offsetHeight;
-
-      window.addEventListener('scroll', function () {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop) { // Scroll down
-          logoNav.classList.remove('sticky-show');
-        } else if (st === 0) { // Reached the top of the page
-          logoNav.classList.remove('sticky', 'sticky-show');
-          logoNavDad.style.paddingTop = 0;
-        } else { // Scroll up
-          logoNav.classList.add('sticky', 'sticky-show');
-          logoNavDad.style.paddingTop = navHeight + 'px';
-        }
-        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-      }, false);
-
-      // Recalculates the height of the navigation, when the user resizes the page
-      window.addEventListener('resize', function () {
-        navHeight = logoNav.offsetHeight;
-      });
-
-    }
-
   },
     myFactory.ariaUpdate = function () {
       let theBody = document.querySelector('body');

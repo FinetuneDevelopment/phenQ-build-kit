@@ -138,3 +138,8 @@
     }
   }
 }
+
+// Just for the iPhone 6 from September 2014, running iOS 11
+@media (max-device-width: 375px) {
+  .logo-nav__text { display: none; }
+}
