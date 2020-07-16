@@ -80,7 +80,7 @@ export default function tabFactory() {
               let radio1 = tabRadios.item(0);
               radio1.focus();
               radio1.click();
-              radio1.ariaUpdate(this);
+              myFactory.ariaUpdate(radio1);
             }
             // User hits the end key, to move to the last tab
             else if (newKey === 'End' || oldKey === 35) {
@@ -88,7 +88,7 @@ export default function tabFactory() {
               let radioLast = tabRadios.item(tabRadios.length - 1);
               radioLast.focus();
               radioLast.click();
-              radioLast.ariaUpdate(this);
+              myFactory.ariaUpdate(radioLast);
             }
           });
 
@@ -98,9 +98,6 @@ export default function tabFactory() {
               let nextRadio = tabRadios[i + 1];
               nextRadio.checked = true;
               myFactory.ariaUpdate(nextRadio);
-              //myFactory.currentTab(nextRadio);
-              // This breaks iPhone 6
-              //nextRadio.dispatchEvent(new Event('input'));
             }
           });
           tabPanels[i].addEventListener('swiped-right', function () {
@@ -108,9 +105,6 @@ export default function tabFactory() {
               let prevRadio = tabRadios[i - 1];
               prevRadio.checked = true;
               myFactory.ariaUpdate(prevRadio);
-              //myFactory.currentTab(prevRadio);
-              // This breaks iPhone 6
-              //prevRadio.dispatchEvent(new Event('input'));
             }
           });
         }
