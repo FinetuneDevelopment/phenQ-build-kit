@@ -209,8 +209,10 @@ select {
     padding: 9px 0;
   }
 
-  // Used for the currency selector, at the top of the page.
-  .input-sm { padding: 0; }
+  @include media-breakpoint-down(sm) {
+    // Used for the currency selector, at the top of the page.
+    .input-sm { padding: 0; }
+  }
 
   label {
     font-size: 10px;
