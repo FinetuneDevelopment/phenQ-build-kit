@@ -6,6 +6,9 @@ import './polyfills/closest.js';
 
 import 'scroll-behavior-polyfill';
 
+import swipe from './components/swipe.js';
+swipe();
+
 import clicks from './components/clicks.js';
 const myClicks = new clicks();
 myClicks.init();

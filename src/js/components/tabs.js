@@ -87,6 +87,14 @@ export default function tabFactory() {
             radioLast.click();
           }
         });
+
+        // Custom swipe detection from swipe.js
+        tabPanels[i].addEventListener('swiped-left', function () {
+          if (i < (tabRadios.length - 1)) tabRadios[i + 1].click();
+        });
+        tabPanels[i].addEventListener('swiped-right', function () {
+          if (i > 0) tabRadios[i - 1].click();
+        });
       }
     }
   },
