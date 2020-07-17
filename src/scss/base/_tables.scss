@@ -3,6 +3,9 @@ table {
   width: 100%;
 }
 
+tr :first-child { padding-left:  0; }
+tr :last-child  { padding-right: 0; }
+
 caption { text-align: left; }
 
 th { font-weight: normal; }
@@ -19,12 +22,10 @@ th, td {
   th, td { padding: 0; }
 }
 
-thead {
-  // This could be achieved with utility classes, but I think it's a pattern
-  th, td {
-    font-family: $body-typeface-bold;
-    font-size: $font-size-mobile;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
+// This could be achieved with utility classes, but I think it's a pattern
+thead th, thead td, .theader {
+  font-family: $body-typeface-bold;
+  font-size: $font-size-mobile;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }

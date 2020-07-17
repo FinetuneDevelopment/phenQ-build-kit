@@ -161,12 +161,14 @@
 .txt-lemon       { color: $colour-lemon; }
 .txt-light-grey  { color: $colour-light-grey; }
 
-.text-left      { text-align: left; }
-.text-center    { text-align: center; }
-.text-right     { text-align: right; }
-.text-uppercase { text-transform: uppercase; }
-.text-breath    { letter-spacing: .08em; }
-.text-nowrap    { white-space: nowrap; }
+.text-left       { text-align: left; }
+.text-center     { text-align: center; }
+.text-right      { text-align: right; }
+.text-uppercase  { text-transform: uppercase; }
+.text-case-reset { text-transform: none; }
+.text-breath     { letter-spacing: .08em; }
+.text-tight      { letter-spacing: 0; }
+.text-nowrap     { white-space: nowrap; }
 // This class allows buttons to be put together closer than they usually would,
 // for example in a toolbar.
 .toolbar .btn { margin-right: 9px; }

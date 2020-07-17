@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Your account | PhenQ UK The Diet Pills Solution That Actually Works</title>
+  <title>Manage subscriptions | PhenQ UK The Diet Pills Solution That Actually Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" as="font" href="/fonts/GothamRounded-Bold.f80c31.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="/fonts/GothamRounded-Light.86592c.woff2" type="font/woff2" crossorigin>
@@ -14,12 +14,12 @@
   <link rel="preload" as="font" href="/fonts/Source-Sans-Pro-SemiBold.df087f.woff2" type="font/woff2" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="Your cart">
+  <meta name="description" content="Manage subscriptions">
   <meta property="fb:admins" content="1570989889829468">
-  <meta property="og:title" content="Your account | PhenQ UK The Diet Pills Solution That Actually Works">
-  <meta property="og:description" content="Your account">
+  <meta property="og:title" content="Manage subscriptions | PhenQ UK The Diet Pills Solution That Actually Works">
+  <meta property="og:description" content="Manage subscriptions">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/profile/">
+  <meta property="og:url" content="/subscriptions/">
   <meta property="og:site_name" content="PhenQ">
   <meta property="og:image" content="https://loremflickr.com/1200/627/athlete">
   <meta itemprop="image" content="https://loremflickr.com/1200/630/athlete">
@@ -71,8 +71,15 @@
         <nav class="col-md-4" aria-label="Hello, Firstname">
           <h2 class="h6 gutter-small">Hello, Firstname</h2>
           <ul class="nav-profile text-uppercase type-source-regular semi-small text-breath">
-            <li><strong title="You are here">My account</strong></li>
-            <li><a href="/subscriptions/">Manage subscriptions</a></li>
+            <li><a href="/account">My account</a></li>
+            <li>
+              <strong title="You are here">Manage subscriptions</strong>
+              <ul class="text-case-reset text-tight">
+                <li><em title="You are here">Subscriptions</em></li>
+                <li><a href="#">Billing Information</a></li>
+                <li><a href="#">Purchase History</a></li>
+              </ul>
+            </li>
             <li><a href="/orders/">Orders</a></li>
             <li class="gutter-tiny icon-x-small">
               <a href="/log-out/">
@@ -85,48 +92,89 @@
             </li>
           </ul>
         </nav>
-        <section class="col-md-8" aria-label="My account">
-          <h1 class="h3 type-gotham-medium">My account</h1>
-          <div class="row">
-            <div class="col col-lg-8">
-              <h2 class="h4 type-gotham-medium">Recent Order</h2>
-              <div class="row">
-                <section class="col" aria-label="Order number">
-                  <h3 class="small text-breath text-uppercase type-source-bold">Order <abbr title="number">no</abbr>.</h3>
-                  <p class="lead">#335019</p>
-                </section>
-                <section class="col" aria-label="Shipping status">
-                  <h3 class="small text-breath text-uppercase type-source-bold">Shipping status</h3>
-                  <p class="lead">Fulfilled</p>
-                </section>
-              </div>
-              <div class="row">
-                <section class="col" aria-label="Date">
-                  <h3 class="small text-breath text-uppercase type-source-bold">Date</h3>
-                  <p class="lead">May 13th, 2020</p>
-                </section>
-                <section class="col" aria-label="Total">
-                  <h3 class="small text-breath text-uppercase type-source-bold">Total</h3>
-                  <p class="lead">&pound;40.00</p>
-                </section>
-              </div><!-- .row -->
-              <p><a href="#" class="btn btn-arrow">View all orders</a></p>
-            </div><!-- .col -->
+        <section class="col-md-8" aria-label="Subscription Orders">
+          <h1 class="h3 type-gotham-medium">Subscription<br>Orders</h1>
+          <p>
+            Sir Boris Johnson<br>
+            10 Downing St,<br>
+            Westminster,<br>
+            London<br>
+            SW1A 2AA
+          </p>
 
-            <section class="col col-lg-4" aria-label="Address book">
-              <h2 class="h4 type-gotham-medium">Address book</h2>
-              <h3 class="small text-breath text-uppercase type-source-bold">Default address</h3>
-              <p class="lead">
-                Sir Boris Johnson<br>
-                10 Downing St,<br>
-                Westminster,<br>
-                London<br>
-                SW1A 2AA
-              </p>
-              <p><a href="#" class="btn btn-arrow">View all addresses (1)</a></p>
-            </section>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <p>Product</p>
+                </th>
+                <th scope="col" class="text-center">
+                  <p>Quantity</p>
+                </th>
+                <th scope="col" class="text-center">
+                  <p>Frequency</p>
+                </th>
+                <th scope="col" class="text-right">
+                  <p>Next charge</p>
+                </th>
+                <td>&nbsp;</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <p>2 bottles + 1 free &times;1</p>
+                </th>
+                <td class="text-center">
+                  <p>1</p>
+                </td>
+                <td class="text-center">
+                  <p>1 month</p>
+                </td>
+                <td class="text-right">
+                  <p><time datetime="2020-06-07">Sunday, June 07</time></p>
+                </td>
+                <td>
+                  <p><a href="#" class="btn btn-arrow btn-sm">Edit</a></p>
+                </td>
+              </tr>
+              <tr>
+                <th class="theader">
+                  <p>Product</p>
+                </th>
+                <th class="theader text-center">
+                  <p>Quantity</p>
+                </th>
+                <th class="theader text-center">
+                  <p>Frequency</p>
+                </th>
+                <th class="theader text-right">
+                  <p>Next charge</p>
+                </th>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <p>Bi-Monthly Magazine</p>
+                </th>
+                <td class="text-center">
+                  <p>1</p>
+                </td>
+                <td class="text-center">
+                  <p>2 month</p>
+                </td>
+                <td class="text-right">
+                  <p><time datetime="2020-06-07">Sunday, June 07</time></p>
+                </td>
+                <td>
+                  <p><a href="#" class="btn btn-arrow btn-sm">Edit</a></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-          </div><!-- .row -->
+          <p><a href="#" class="btn btn-arrow">View all orders</a></p>
+
         </section><!-- .col -->
       </div>
     </div>
