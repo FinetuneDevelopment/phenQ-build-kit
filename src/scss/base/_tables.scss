@@ -1,17 +1,30 @@
 table {
+  margin-bottom: 1em;
   width: 100%;
 }
 
-caption {
-  text-align: left;
-}
+caption { text-align: left; }
 
 th { font-weight: normal; }
 
 // The breath of an ant
 th, td {
   border-bottom: solid 1px $colour-light-grey;
-  padding: .5em 1em;
+  padding: 1em;
 
   *:last-child { margin-bottom: 0; }
+}
+
+.tight {
+  th, td { padding: 0; }
+}
+
+thead {
+  // This could be achieved with utility classes, but I think it's a pattern
+  th, td {
+    font-family: $body-typeface-bold;
+    font-size: $font-size-mobile;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
 }

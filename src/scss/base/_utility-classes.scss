@@ -208,6 +208,13 @@
 // Sometimes required to snap columns into two (or more) rows
 .w-100 { width: 100% !important; }
 
+// Used to push elements up and out of the document flow
+// ("FREE" on the cart page)
+.above {
+  position: absolute;
+  transform: translate(0, -100%);
+}
+
 .sr-only, .js.js [data-js="hidden"] {
   border: 0;
   clip: rect(0,0,0,0);
