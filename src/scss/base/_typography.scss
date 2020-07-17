@@ -102,6 +102,9 @@ strong, b {
     font-weight: normal;
 }
 
+// Not delighted about this
+.semi-small { font-size: $font-size-mobile; }
+
 .small, small {
   font-size: $font-size-small;
   line-height: 1.25;
