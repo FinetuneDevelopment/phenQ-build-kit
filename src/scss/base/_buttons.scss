@@ -155,55 +155,51 @@ input.btn.btn-secondary,
   color: $colour-dark-blue;
   font-family: $body-typeface-bold;
   font-size: 16px;
-  padding: 0 1.5em 0 0;
+  padding: 0 21px 0 0;
   position: relative;
   text-align: left;
   transition: all .2s;
 
   &:hover, &:focus {
     color: $colour-bright-blue;
-    padding-right: 2em;
+    padding-right: 31px;
   }
   
   // This makes up the ➜, plus there's an inheritance
   // squabble with the default anchor underline behaviour
   &::before, &::after {
     border: 0;
+    border-top: solid 1px $colour-dark-blue;
+    content: "";
     position: absolute;
     transition: all .2s;
   }
 
   // >
   &::after {
-    border-top: solid .15em $colour-dark-blue;
-    border-right: solid .15em $colour-dark-blue;
-    bottom: .55em;
-    content: "";
-    height: .6em;
-    right: .2em;
+    border-right: solid 1px $colour-dark-blue;
+    bottom: 8px;
+    height: 8px;
+    right: 3px;
     transform: rotate(45deg);
     transform-origin: bottom;
-    width: .6em;
+    width: 8px;
   }
   
   // The extending stalk of the arrow above
-  // This rule is full of magic numbers, which
-  // suggests it won't pass browser testing.
   &::before {
-    border-top: solid .15em $colour-dark-blue;
+    bottom: 0;
     // When the button wraps (on mobile, for example) the
     // arrow needs to align with the bottom line of text.
-    bottom: 0;
-    content: "";
-    height: .8em;
+    height: 11px;
     left: auto;
     right: 0;
-    width: .7em;
+    width: 11px;
   }
 
   // Pushes out the tail of the ➜
   &:hover::before, &:focus::before {
-    width: 1.2em;
+    width: 21px;
   }
   
   &:hover::before, &:focus::before,
@@ -212,30 +208,15 @@ input.btn.btn-secondary,
   }
 
   // Small variant, used inside tooltips
-  // Lord forgive me for these magic numbers
   &.btn-sm {
     font-size: 12px;
-    padding: 0 1.8em 0 0;
 
-    // That arrow is still nice and chunky though
-    // (which causes everything to be recalculated)
-    &::before, &::after {
-      font-size: $font-size-body;
-    }
-
-    &::before {
-      height: $font-size-body / 1.8;
-    }
+    // The arrow remains the same size,
+    // but the position is adjusted to
+    // account for line height
+    &::before { height: 9px; }
     
-    &::after {
-      bottom: .31em;
-      height: $font-size-body * .5;
-      width: $font-size-body * .5;
-    }
-
-    &:hover, &:focus {
-      padding-right: 2.6em;
-    }
+    &::after  { bottom: 6px; }
   }
 }
 
