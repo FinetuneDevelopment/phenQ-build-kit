@@ -94,22 +94,17 @@
   // Hoiks the nav off to the left
   .logo-nav__nav {
     background: $colour-light-grey;
+    bottom: 0;
     display: block;
-    // This is roughly the distance between the burger
-    // menu and the bottom of the page.
-    height: calc(100vh - 2.6em);
-    // This should be enough space to clear the burger menu
-    margin: 2.6em 0 0;
     padding: $gutter;
-    position: absolute;
+    position: fixed;
     right: 100%;
+    top: 4.4em;
     transition: all .2s;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
     
-    .space-between {
-      flex-direction: column;
-    }
+    .space-between { flex-direction: column; }
 
     // These are not used as contextual selectors elsewhere
     .currency-selector,
@@ -119,10 +114,7 @@
   }
 
   // Displays the menu
-  [id="nav-toggle"]:checked ~ .logo-nav__nav {
-    right: 0;
-    z-index: 1;
-  }
+  [id="nav-toggle"]:checked ~ .logo-nav__nav { right: 0; }
 
   // For my keyboard navigation siblings
   [id="nav-toggle"]:focus ~ .logo-nav__toggle label {
