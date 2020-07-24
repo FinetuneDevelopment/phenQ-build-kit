@@ -1,3 +1,6 @@
+// Used for .btn-arrow
+$arrow-padding: 21px; 
+
 // All button and some link styles
 .btn {
   -webkit-appearance: none;
@@ -123,6 +126,7 @@
     }
   }
 }
+
 // Fallback styles for "empty" tags and contexts where the gradient pseudo-element
 // will not work.
 input.btn.btn-secondary,
@@ -155,14 +159,14 @@ input.btn.btn-secondary,
   color: $colour-dark-blue;
   font-family: $body-typeface-bold;
   font-size: 16px;
-  padding: 0 21px 0 0;
+  padding: 0 $arrow-padding 0 0;
   position: relative;
   text-align: left;
   transition: all .2s;
 
   &:hover, &:focus {
     color: $colour-bright-blue;
-    padding-right: 31px;
+    padding-right: $arrow-padding + 10;
   }
   
   // This makes up the ➜, plus there's an inheritance
@@ -178,15 +182,15 @@ input.btn.btn-secondary,
   // >
   &::after {
     border-right: solid 1px $colour-dark-blue;
-    bottom: 8px;
+    bottom: 7px;
     height: 8px;
-    right: 3px;
+    right: 2px;
     transform: rotate(45deg);
-    transform-origin: bottom;
+    transform-origin: 50%;
     width: 8px;
   }
   
-  // The extending stalk of the arrow above
+  // The extending stalk of the arrow head above
   &::before {
     bottom: 0;
     // When the button wraps (on mobile, for example) the
@@ -216,7 +220,32 @@ input.btn.btn-secondary,
     // account for line height
     &::before { height: 9px; }
     
-    &::after  { bottom: 6px; }
+    &::after  { bottom: 5px; }
+  }
+
+  // Varient where the arrow points the other way
+  &.btn-arrow-left {
+    padding-left: $arrow-padding;
+    padding-right: 0;
+
+    &:hover, &:focus {
+      padding-left: $arrow-padding + 10;
+      padding-right: 0;
+    }  
+
+    // >
+    &::after {
+      left: 2px;
+      right: auto;
+      transform: rotate(-135deg);
+    }
+    
+    // The extending stalk of the arrow head above
+    &::before {
+      left: 0;
+      right: auto;
+    }
+
   }
 }
 
