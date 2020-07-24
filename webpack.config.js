@@ -260,6 +260,11 @@ const config = function (env, args) {
           to: path.resolve(__dirname, 'dist', 'img', 'include'),
           toType: 'dir',
         },
+        {
+          from: path.resolve(__dirname, 'src', 'img', 'og'),
+          to: path.resolve(__dirname, 'dist', 'img', 'og'),
+          toType: 'dir',
+        },
       ]),
     ],
   };
