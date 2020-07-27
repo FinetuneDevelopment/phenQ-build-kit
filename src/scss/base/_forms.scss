@@ -206,7 +206,9 @@ select {
   input, select, textarea {
     background-color: transparent;
     border: none;
+    display: block;
     padding: 9px 0;
+    width: 100%;
   }
 
   @include media-breakpoint-down(sm) {
