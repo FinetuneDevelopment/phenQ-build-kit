@@ -12,7 +12,6 @@ input, select, textarea {
   border: solid 1px $colour-grey;
   border-radius: $radius-small;
   color: $colour-grey;
-  //font-family: $body-typeface-semibold;
 }
 
 // Tricking select boxes into looking normal
@@ -137,11 +136,11 @@ select {
       left: 0;
       position: relative;
       top: 0;
-      &:before, &:after {
+      &::before, &::after {
           content: "";
       }
       // Frame for the inputs
-      &:before {
+      &::before {
         border: solid .2em $colour-dark-blue;
         display: inline-block;
         height: 1em;
@@ -150,14 +149,14 @@ select {
         width: 1em;
       }
       // "On" status
-      &:after {
+      &::after {
         position: absolute;
         transition: all .2s;
       }
     }
   }
 
-  [type="checkbox"] ~ label:after {
+  [type="checkbox"] ~ label::after {
     border: solid .2em transparent;
     left: .25em;
     height: .8em;
@@ -167,33 +166,53 @@ select {
   }
 
   // Selected state
-  [type="checkbox"]:checked ~ label:after {
+  [type="checkbox"]:checked ~ label::after {
     border-bottom-color: $colour-bright-blue;
     border-right-color: $colour-bright-blue;
     transform: rotate(45deg);
   }
 
   [type="radio"] ~ label {
-    &:before {border-radius: 50%;}
-    // Unselected state, as a first frame for the animation
-    &:after {
-      background: transparent;
+    &::before {border-radius: 50%;}
+
+    &::after {
+      background: $colour-bright-blue;
       border-radius: 50%;
-      height: 0;
-      left: .5em;
+      height: .4em;
+      left: .3em;
+      opacity: 0;
       position: absolute;
-      top: 56%;
-      width: 0;
+      top: 44%;
+      width: .4em;
     }
   }
 
   // Selected state
-  [type="radio"]:checked ~ label:after {
-    background: $colour-bright-blue;
-    height: .4em;
-    left: .3em;
-    top: 44%;
-    width: .4em;
+  [type="radio"]:checked ~ label::after {
+    opacity: 1;
+  }
+}
+
+// Used for the checkout to make radio buttons ... more chunky
+// Sorry for the horrible selector. Got in an inheritance fight.
+.label-block.label-block.label-block {
+  $block-padding: 5px;
+
+  display: block;
+  padding: $block-padding;
+
+  // Normally, the ::before of the checkbox is inline with the label.
+  // In this context, it's not, so I can stuff an entire Bootstrap
+  // row inside.
+  &::before {
+    left: $block-padding;
+    position: absolute;
+    top: $block-padding * 3;
+  }
+
+  &::after {
+    left: .55em;
+    top: $block-padding * 4;
   }
 }
 
