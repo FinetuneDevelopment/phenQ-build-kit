@@ -43,19 +43,157 @@
       </p>
       <!-- Heading and intro copy -->
       <form class="row gutter-medium" id="main" method="post" action="#" enctype="multipart/form-data">
-        <fieldset class="col">
+        <fieldset class="col-md col-lg-5">
           <legend class="sr-only">Your details</legend>
 
-          <p class="border-b border-grey v-pad-small"><a href="/cart/" class="btn btn-arrow btn-arrow-left">Return to cart</a></p>
+          <p class="border-b border-light-grey v-pad-small flush"><a href="/cart/" class="btn btn-arrow btn-arrow-left">Return to cart</a></p>
 
-          <h2 class="h6 border-b border-grey v-pad-small">
-            <span class="icon-disk icon-disk-small border-thin type-gotham-light">1</span>
-            Email address
+          <h2 class="h6 border-b border-light-grey v-pad-small media">
+            <span class="icon-disk icon-disk-small border-thin type-gotham-light mr-4"><span class="h6 type-gotham-light">1</span></span>
+            <span class="media-body align-self-center">Email address</span>
           </h2>
 
+          <fieldset class="border-b border-light-grey">
+            <legend class="semi-small text-uppercase text-breath type-source-bold">What's your email address?</legend>
+            <p class="form-molecule">
+              <input type="email" name="email6" id="email6" placeholder="Email address">
+              <label for="email6">Email address</label>
+            </p>
+            <p class="small">Have an account? <a href="/login/">Login</a></p>
+            <p class="flush"><input value="Continue" class="btn btn-primary"></p>
+          </fieldset>
+
+          <p class="h6 border-b border-light-grey v-pad-small media txt-grey">
+            <span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light mr-4"><span class="h6 type-gotham-light">2</span></span>
+            <span class="media-body align-self-center">Email address</span>
+          </p>
+
+          <p class="h6 border-b border-light-grey v-pad-small media txt-grey">
+            <span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light mr-4"><span class="h6 type-gotham-light">3</span></span>
+            <span class="media-body align-self-center">Payment</span>
+          </p>
+
+          <p class="h6 border-b border-light-grey v-pad-small media txt-grey">
+            <span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light mr-4"><span class="h6 type-gotham-light">4</span></span>
+            <span class="media-body align-self-center">Your Account</span>
+          </p>
+
         </fieldset>
-        <section class="col" aria-label="Order Summary">
-          <h2>Order Summary</h2>
+
+        <section class="col-md col-lg-5 offset-lg-2" aria-label="Order Summary">
+          <h2 class="h5 text-center">Order Summary</h2>
+
+          <table>
+            <tbody class="semi-small type-source-regular">
+              <tr>
+                <td>
+                  <p><img src="/img/content/img-product-two.png" width="35" height="35" alt=""></p>
+                </td>
+                <th scope="row">
+                  <p>2 bottles + 1 free &times;1</p>
+                </th>
+                <td class="text-right">
+                  <p>£91.90</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p><img src="/img/content/img-product-two.png" width="35" height="35" alt=""></p>
+                </td>
+                <th scope="row">
+                  <p>[BONUS] 10 Training &amp; Nutrition Guides + Free Subscription To Tips &amp; Tricks Newsletter</p>
+                </th>
+                <td class="text-right">
+                  <p class="flush text-uppercase txt-green type-source-semibold above">Free</p>
+                  <p>£149.95</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">
+                  <p>Subtotal:</p>
+                </th>
+                <td class="text-right">
+                  <p>£91.90</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">
+                  <p>Discount Applied:</p>
+                </th>
+                <td class="text-right txt-green">
+                  <p>-£5</p>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" colspan="2">
+                  <p>Shipping:</p>
+                </th>
+                <td class="text-right txt-green text-uppercase">
+                  <p>Free</p>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot class="h6">
+              <tr>
+                <th scope="row" colspan="2">
+                  <p>Total:</p>
+                </th>
+                <td class="text-right">
+                  <p>£86.90</p>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <p class="text-center">
+            <span class="logo-block bg-light-grey radius-small">
+              <img src="/img/include/logo-visa.svg" alt="Visa">
+            </span>
+            <span class="logo-block bg-light-grey radius-small">
+              <img src="/img/include/logo-mastercard.svg" alt="Mastercard">
+            </span>
+            <span class="logo-block bg-light-grey radius-small">
+              <img src="/img/include/logo-american-express.svg" alt="American Express">
+            </span>
+            <span class="logo-block bg-light-grey radius-small">
+              <img src="/img/include/logo-skrill.svg" alt="Skrill">
+            </span>
+            <span class="logo-block bg-light-grey radius-small">
+              <img src="/img/include/logo-paysafecard.svg" alt="Pay Safe Card">
+            </span>
+            <span class="logo-block bg-light-grey radius-small">
+              <img src="/img/include/logo-sezzle.svg" alt="Sezzle">
+            </span>
+          </p>
+
+          <div class="row">
+            <div class="col-10 offset-1 text-uppercase text-breath semi-small">
+              <p class="media">
+                <span class="icon-disk icon-disk-small border-thin mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" role="img" aria-label="Yes">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="media-body align-self-center">60-day money-back guarantee</span>
+              </p>
+              <p class="media">
+                <span class="icon-disk icon-disk-small border-thin mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" role="img" aria-label="Yes">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="media-body align-self-center">Fast Delivery 24 - 48hours</span>
+              </p>
+              <p class="media">
+                <span class="icon-disk icon-disk-small border-thin mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" role="img" aria-label="Yes">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span class="media-body align-self-center">Free Shipping</span>
+              </p>
+            </div>
+          </div>
         </section>
       </form>
     </div>
