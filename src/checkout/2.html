@@ -49,33 +49,103 @@
           <p class="border-b border-light-grey v-pad-small flush"><a href="/cart/" class="btn btn-arrow btn-arrow-left">Return to cart</a></p>
 
           <div class="border-b border-light-grey v-pad-small row align-items-center">
-            <p class="col-2"><span class="icon-disk icon-disk-small border-thin type-gotham-light"><span class="h6 type-gotham-light">1</span></span></p>
-            <h2 class="col-10 h6">Email address</h2>
+            <p class="col-1"><span class="icon-disk icon-disk-small bg-dark-blue type-gotham-light">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" role="img" aria-label="Yes">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span></p>
+            <h2 class="col-4 h6">Email address</h2>
+            <p class="col-5 semi-small">boris.johnson.mp@parliament.uk</p>
+            <p class="col-2 semi-small">(<a href="/checkout/">Edit</a>)</p>
           </div>
 
-          <fieldset class="border-b border-light-grey">
-            <legend class="semi-small text-uppercase text-breath type-source-bold">What's your email address?</legend>
-            <p class="form-molecule">
-              <input type="email" name="email6" id="email6" placeholder="Email address">
-              <label for="email6">Email address</label>
-            </p>
-            <p class="small">Have an account? <a href="/login/">Login</a></p>
+          <div class="border-b border-light-grey v-pad-small row align-items-center">
+            <p class="col-1 flush"><span class="icon-disk icon-disk-small border-thin type-gotham-light"><span class="h6 type-gotham-light">2</span></span></p>
+            <p class="col-11 h6">Shipping</p>
+          </div>
+
+          <fieldset class=" border-b border-light-grey">
+            <legend class="semi-small text-uppercase text-breath type-source-bold">Shipping address</legend>
+            <div class="row">
+              <div class="col-lg-9">
+                <p class="form-molecule">
+                  <select id="country" name="country">
+                    <option value="UK">United Kingdom</option>
+                    <option value="US">United States of America</option>
+                  </select>
+                  <label for="country">Shipping to</label>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg">
+                <p class="form-molecule">
+                  <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                  <label for="first-name">First Name</label>
+                </p>
+              </div>
+              <div class="col-lg">
+                <p class="form-molecule">
+                  <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                  <label for="last-name">Last Name</label>
+                </p>
+              </div>
+              <div class="col-lg-3"></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-9">
+                <p class="form-molecule">
+                  <input type="text" name="address" id="address" placeholder="Address">
+                  <label for="address">Address</label>
+                </p>
+                <p class="form-molecule">
+                  <input type="text" name="address-number" id="address-number" placeholder="Apt / Studio / Floor">
+                  <label for="address-number">Apt / Studio / Floor</label>
+                </p>
+                <p class="form-molecule">
+                  <input type="text" name="address-3" id="address-3" placeholder="Address (line 3)">
+                  <label for="address-3">Address (line 3)</label>
+                </p>
+                <p class="form-molecule">
+                  <input type="text" name="city" id="city" placeholder="City">
+                  <label for="city">City</label>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg">
+                <p class="form-molecule">
+                  <input type="text" name="county" id="county" placeholder="County">
+                  <label for="county">County</label>
+                </p>
+              </div>
+              <div class="col-lg">
+                <p class="form-molecule">
+                  <input type="text" name="postcode" id="postcode" placeholder="Postcode">
+                  <label for="postcode">Postcode</label>
+                </p>
+              </div>
+              <div class="col-lg-3"></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-9">
+                <p class="form-molecule">
+                  <input type="tel" name="phone" id="phone" placeholder="Phone">
+                  <label for="phone">Phone</label>
+                </p>
+              </div>
+            </div>
             <p class="flush"><input type="submit" value="Continue" class="btn btn-primary"></p>
           </fieldset>
 
           <div class="border-b border-light-grey v-pad-small row align-items-center txt-grey">
-            <p class="col-2 flush"><span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light"><span class="h6 type-gotham-light">2</span></span></p>
-            <p class="col-10 h6">Shipping</p>
+            <p class="col-1 flush"><span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light"><span class="h6 type-gotham-light">3</span></span></p>
+            <p class="col-11 flush h6">Payment</p>
           </div>
 
           <div class="border-b border-light-grey v-pad-small row align-items-center txt-grey">
-            <p class="col-2 flush"><span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light"><span class="h6 type-gotham-light">3</span></span></p>
-            <p class="col-10 flush h6">Payment</p>
-          </div>
-
-          <div class="border-b border-light-grey v-pad-small row align-items-center txt-grey">
-            <p class="col-2 flush"><span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light"><span class="h6 type-gotham-light">4</span></span></p>
-            <p class="col-10 flush h6">Your Account</p>
+            <p class="col-1 flush"><span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light"><span class="h6 type-gotham-light">4</span></span></p>
+            <p class="col-11 flush h6">Your Account</p>
           </div>
 
         </fieldset>
