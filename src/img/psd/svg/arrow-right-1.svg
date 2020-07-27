@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>21681EE7-22E7-4858-8A82-FF427D55667C</title>
-    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="phenqicons" transform="translate(-170.000000, -79.000000)">
-            <rect id="Rectangle-Copy" stroke="#979797" x="135.5" y="44.5" width="80" height="80"></rect>
-            <polygon id="arrow-right" fill="#273583" fill-rule="nonzero" points="175.678 90.356 181.356 84.678 175.678 79 174.675 80.003 178.636 83.981 170 83.981 170 85.375 178.636 85.375 174.675 89.353"></polygon>
-        </g>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>21681EE7-22E7-4858-8A82-FF427D55667C</title>
+  <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="phenqicons" transform="translate(-170.000000, -79.000000)">
+      <rect id="Rectangle-Copy" stroke="#979797" x="135.5" y="44.5" width="80" height="80"></rect>
+      <polygon id="arrow-right" fill="currentColor" fill-rule="nonzero" points="175.678 90.356 181.356 84.678 175.678 79 174.675 80.003 178.636 83.981 170 83.981 170 85.375 178.636 85.375 174.675 89.353"></polygon>
     </g>
+  </g>
 </svg>

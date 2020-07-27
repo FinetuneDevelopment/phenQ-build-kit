@@ -75,6 +75,7 @@
 // This is used to add a stroke around .icon-disk elements but, I dunno, it might be useful
 // elsewhere.
 .border-thin { border: solid 1px $colour-dark-blue; }
+.border-b { border-bottom: solid 1px $colour-dark-blue; }
 
 // Colouring borders in arbratory colours
 .border-bright-blue { border-color: $colour-bright-blue !important; }

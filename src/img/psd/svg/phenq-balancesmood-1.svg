@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>FED98B9C-6B0E-4AEC-9A13-236493873879</title>
-    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="phenqicons" transform="translate(-1014.000000, -145.000000)">
-            <rect id="Rectangle-Copy-22" stroke="#979797" x="1003.5" y="134.5" width="80" height="80"></rect>
-            <g id="phenq-balancesmood" transform="translate(1014.000000, 145.000000)">
-                <circle id="Oval" fill="#D7F4C8" cx="30" cy="30" r="30"></circle>
-                <g id="components/benefits/icons/reduceface" transform="translate(10.632911, 11.392405)" stroke="#273583" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4">
-                    <g id="Group">
-                        <g id="smiley-blessed">
-                            <path d="M25.3708465,24.7560635 C25.8807507,24.7553022 26.3622975,24.9905875 26.6750584,25.3933075 C26.9878194,25.7960275 27.0965739,26.3208313 26.9696071,26.8146756 C26.0342187,30.4587973 22.7495983,33.0067882 18.9873418,33.0067882 C15.2250853,33.0067882 11.9404648,30.4587973 11.0050765,26.8146756 C10.8781096,26.3208313 10.9868642,25.7960275 11.2996251,25.3933075 C11.6123861,24.9905875 12.0939329,24.7553022 12.603837,24.7560635 L25.3708465,24.7560635 Z" id="Shape"></path>
-                            <path d="M23.1078586,14.6888186 C23.8185053,15.8249879 25.0641604,16.5151107 26.4042722,16.5151107 C27.7443839,16.5151107 28.990039,15.8249879 29.7006857,14.6888186" id="Shape"></path>
-                            <path d="M14.8668249,14.6888186 C14.1561782,15.8249879 12.9105231,16.5151107 11.5704114,16.5151107 C10.2302997,16.5151107 8.98464456,15.8249879 8.27399789,14.6888186" id="Shape"></path>
-                            <circle id="Oval" cx="18.9873418" cy="18.9873418" r="18.9543776"></circle>
-                        </g>
-                    </g>
-                </g>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>FED98B9C-6B0E-4AEC-9A13-236493873879</title>
+  <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="phenqicons" transform="translate(-1014.000000, -145.000000)">
+      <rect id="Rectangle-Copy-22" stroke="#979797" x="1003.5" y="134.5" width="80" height="80"></rect>
+      <g id="phenq-balancesmood" transform="translate(1014.000000, 145.000000)">
+        <circle id="Oval" fill="#D7F4C8" cx="30" cy="30" r="30"></circle>
+        <g id="components/benefits/icons/reduceface" transform="translate(10.632911, 11.392405)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4">
+          <g id="Group">
+            <g id="smiley-blessed">
+              <path d="M25.3708465,24.7560635 C25.8807507,24.7553022 26.3622975,24.9905875 26.6750584,25.3933075 C26.9878194,25.7960275 27.0965739,26.3208313 26.9696071,26.8146756 C26.0342187,30.4587973 22.7495983,33.0067882 18.9873418,33.0067882 C15.2250853,33.0067882 11.9404648,30.4587973 11.0050765,26.8146756 C10.8781096,26.3208313 10.9868642,25.7960275 11.2996251,25.3933075 C11.6123861,24.9905875 12.0939329,24.7553022 12.603837,24.7560635 L25.3708465,24.7560635 Z" id="Shape"></path>
+              <path d="M23.1078586,14.6888186 C23.8185053,15.8249879 25.0641604,16.5151107 26.4042722,16.5151107 C27.7443839,16.5151107 28.990039,15.8249879 29.7006857,14.6888186" id="Shape"></path>
+              <path d="M14.8668249,14.6888186 C14.1561782,15.8249879 12.9105231,16.5151107 11.5704114,16.5151107 C10.2302997,16.5151107 8.98464456,15.8249879 8.27399789,14.6888186" id="Shape"></path>
+              <circle id="Oval" cx="18.9873418" cy="18.9873418" r="18.9543776"></circle>
             </g>
+          </g>
         </g>
+      </g>
     </g>
+  </g>
 </svg>
