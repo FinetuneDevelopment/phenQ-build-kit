@@ -73,5 +73,9 @@ $colour-mid-grey: #c3c3c3;
   margin: -1px 0 0;
 }
 
+.form-molecule .input-brick:placeholder-shown {
+  color: $colour-grey;
+}
+
 .radius-small-bl { border-bottom-left-radius:  $radius-small !important; }
 .radius-small-br { border-bottom-right-radius: $radius-small !important; }
