@@ -43,7 +43,7 @@
       </p>
       <!-- Heading and intro copy -->
       <form class="row gutter-medium" id="main" method="get" action="3.html" enctype="multipart/form-data">
-        <fieldset class="col-md-7">
+        <fieldset class="col-md-7 type-source-regular semi-small">
           <legend class="sr-only">Your details</legend>
 
           <p class="border-b border-light-grey v-pad-small flush"><a href="/cart/" class="btn btn-arrow btn-arrow-left">Return to cart</a></p>
@@ -55,8 +55,8 @@
                 </svg>
               </span></p>
             <h2 class="col-4 h6">Email address</h2>
-            <p class="col-5 semi-small">boris.johnson.mp@parliament.uk</p>
-            <p class="col-2 semi-small">(<a href="/checkout/">Edit</a>)</p>
+            <p class="col-5">boris.johnson.mp@parliament.uk</p>
+            <p class="col-2">(<a href="/checkout/">Edit</a>)</p>
           </div>
 
           <div class="border-b border-light-grey v-pad-small row">
@@ -66,52 +66,128 @@
                 </svg>
               </span></p>
             <p class="col-4 h6">Shipping</p>
-            <p class="col-5 semi-small">10 Downing St,<br>Westminster,<br>London<br>SW1A 2AA</p>
-            <p class="col-2 semi-small">(<a href="/checkout/">Edit</a>)</p>
+            <p class="col-5">10 Downing St,<br>Westminster,<br>London<br>SW1A 2AA</p>
+            <p class="col-2">(<a href="/checkout/">Edit</a>)</p>
           </div>
 
           <div class="border-b border-light-grey v-pad-small row align-items-center">
-            <p class="col-1 flush"><span class="icon-disk icon-disk-small border-thin type-gotham-light"><span class="h6 type-gotham-light">3</span></span></p>
+            <p class="col-1 flush"><span class="icon-disk icon-disk-small border-thin type-gotham-light"><span class="h6">3</span></span></p>
             <p class="col-11 flush h6">Payment</p>
           </div>
 
-          <fieldset class=" border-b border-light-grey">
+          <fieldset class="border-b border-light-grey">
             <legend class="semi-small text-uppercase text-breath type-source-bold">How do you want to pay?</legend>
             <div class="row">
               <div class="col-lg-9">
+
                 <p class="form-molecule">
-                  <input type="radio" name="radio-ingredients" value="radio-capsimax-powder" id="radio-capsimax-powder">
-                  <label for="radio-capsimax-powder" class="border-thin radius-small border-grey label-block">
+                  <input type="radio" name="payment-type" value="payment-card" id="payment-card">
+                  <label for="payment-card" class="border-thin radius-small border-grey label-block">
                     <span class="row">
                       <span class="col-1"></span>
-                      <span class="col-3 semi-small">Capsimax Powder</span>
-                      <span class="col-8 text-right">
-                        <span class="logo-block bg-light-grey radius-small">
-                          <img src="/img/include/logo-visa.svg" alt="Visa">
-                        </span>
-                        <span class="logo-block bg-light-grey radius-small">
-                          <img src="/img/include/logo-mastercard.svg" alt="Mastercard">
-                        </span>
-                        <span class="logo-block bg-light-grey radius-small">
-                          <img src="/img/include/logo-american-express.svg" alt="American Express">
-                        </span>
-                        <span class="logo-block bg-light-grey radius-small">
-                          <img src="/img/include/logo-skrill.svg" alt="Skrill">
-                        </span>
-                        <span class="logo-block bg-light-grey radius-small">
-                          <img src="/img/include/logo-paysafecard.svg" alt="Pay Safe Card">
-                        </span>
-                        <span class="logo-block bg-light-grey radius-small">
-                          <img src="/img/include/logo-sezzle.svg" alt="Sezzle">
-                        </span>
+                      <span class="col semi-small">Card</span>
+                      <span class="col text-right">
+                        <img src="/img/content/img-payment-cards.png" alt="Visa, Mastercard, American Express, Skrill, PaySafeCard, Sezzle">
                       </span>
                     </span>
                   </label>
                 </p>
+
+                <p class="form-molecule">
+                  <input type="radio" name="payment-type" value="payment-amazon" id="payment-amazon">
+                  <label for="payment-amazon" class="border-thin radius-small border-grey label-block">
+                    <span class="row">
+                      <span class="col-1"></span>
+                      <span class="col semi-small">Amazon Pay</span>
+                      <span class="col text-right">
+                        <img src="/img/content/img-payment-amazon-pay.png" alt="Amazon Pay">
+                      </span>
+                    </span>
+                  </label>
+                </p>
+
+                <p class="form-molecule">
+                  <input type="radio" name="payment-type" value="payment-klarna" id="payment-klarna">
+                  <label for="payment-klarna" class="border-thin radius-small border-grey label-block">
+                    <span class="row">
+                      <span class="col-1"></span>
+                      <span class="col semi-small">Klarna</span>
+                      <span class="col text-right">
+                        <img src="/img/content/img-payment-klarna.png" alt="Klarna">
+                      </span>
+                    </span>
+                  </label>
+                </p>
+
               </div>
             </div>
-            <p class="flush"><input type="submit" value="Continue" class="btn btn-primary"></p>
           </fieldset>
+
+          <fieldset class="border-b border-light-grey">
+            <legend class="text-uppercase text-breath type-source-bold">Billing address</legend>
+            <div class="row">
+              <div class="col-lg-9">
+
+                <p class="form-molecule">
+                  <input type="radio" name="billing-address" value="billing-shipping" id="billing-shipping" checked>
+                  <label for="billing-shipping" class="border-thin radius-small border-grey label-block">
+                    <span class="row">
+                      <span class="col-1"></span>
+                      <span class="col-8 semi-small">
+                        <strong class="type-source-bol semi-small">Same as shipping address</strong><br>
+                        10 Downing St,<br>
+                        Westminster,<br>
+                        London<br>
+                        SW1A 2AA
+                      </span>
+                      <span class="col-3 text-right icon-small">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Truck">
+                          <path d="M79 65a9.1 9.1 0 019.1 9 9.1 9.1 0 01-9.1 9.2 9.1 9.1 0 01-9.1-9.1 9.1 9.1 0 019-9.2zM79 79a5 5 0 100-10 5 5 0 000 10zM19.5 64.9a9.1 9.1 0 019.2 9.2 9.1 9.1 0 01-9.2 9 9.1 9.1 0 01-9-9c0-5 4-9.2 9-9.2zm0 14.2a5 5 0 100-10 5 5 0 000 10zM7 16.8h42.9c3.4 0 6.3 2.8 6.3 6.3l-.2 12.6h2.4c0-2.6 2-4.6 4.7-4.6h12.7a7.7 7.7 0 015.4 2.1l16 15.6a7.7 7.7 0 012.3 5.5v12.8c0 2.6-2.1 4.7-4.7 4.7h-4a12 12 0 00-23.5 0H31.3a12 12 0 00-23.5 0h-.9a6.3 6.3 0 01-6.3-6.3V23A6.3 6.3 0 017 16.8zm56.2 28.6c0 1 .9 2 2 2h18a2 2 0 001.3-3.4l-7.3-7.4a2 2 0 00-1.4-.5H65.1c-1.1 0-2 .8-2 2z" />
+                        </svg>
+                      </span>
+                    </span>
+                  </label>
+                </p>
+
+                <p class="form-molecule">
+                  <input type="radio" name="billing-address" value="billing-new" id="billing-new">
+                  <label for="billing-new" class="border-thin radius-small border-grey label-block">
+                    <span class="row">
+                      <span class="col-1"></span>
+                      <span class="col semi-small">Pick a different address</span>
+                    </span>
+                  </label>
+                </p>
+
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="border-b border-light-grey">
+            <legend class="text-uppercase text-breath type-source-bold">Billing address</legend>
+            <div class="row">
+              <div class="col-lg-9">
+
+                <p class="form-molecule">
+                  <input type="checkbox" name="newsletter-signup" id="newsletter-signup">
+                  <label for="newsletter-signup" class="border-thin radius-small border-grey label-block">
+                    <span class="row">
+                      <span class="col-1"></span>
+                      <span class="col semi-small">
+                        Sign up to get the latest news on all things PhenQ<br>
+                        <span class="small">By sharing your email address, you are agreeing to receive email marketing communications from PhenQ from time to time. We will not share your details with any 3rd parties. Please review our Privacy Policy for more information.</span>
+                      </span>
+                    </span>
+                  </label>
+                </p>
+
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="row">
+            <p class="col-lg-9 text-center"><input type="submit" value="Place my order" class="btn btn-primary"></p>
+          </div>
 
           <div class="border-b border-light-grey v-pad-small row align-items-center txt-grey">
             <p class="col-1 flush"><span class="icon-disk icon-disk-small border-thin border-grey type-gotham-light"><span class="h6 type-gotham-light">4</span></span></p>

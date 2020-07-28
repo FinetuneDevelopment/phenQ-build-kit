@@ -196,7 +196,7 @@ select {
 // Used for the checkout to make radio buttons ... more chunky
 // Sorry for the horrible selector. Got in an inheritance fight.
 .label-block.label-block.label-block {
-  $block-padding: 5px;
+  $block-padding: 10px;
 
   display: block;
   padding: $block-padding;
@@ -207,14 +207,30 @@ select {
   &::before {
     left: $block-padding;
     position: absolute;
-    top: $block-padding * 3;
+    top: 13px;
   }
 
   &::after {
-    left: .55em;
-    top: $block-padding * 4;
+    left: calc(#{$block-padding} + .3em);
   }
 }
+
+// The border colour is initiall added as a utility class, so needs
+// an !important.
+.form-molecule input:checked ~ .label-block {
+  border-color: $colour-dark-blue !important;
+}
+
+// Radio button position tweak
+.form-molecule input[type="radio"] ~ .label-block:after {
+  top: 18px
+}
+
+// Checkbox position tweak
+.form-molecule input[type="checkbox"] ~ .label-block:after {
+  top: 12px
+}
+
 
 // More compact forms can be found elsewhere - for example the email signup
 // in the site footer.
