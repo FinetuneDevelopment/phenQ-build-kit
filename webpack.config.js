@@ -207,6 +207,10 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'checkout/3.html'),
       }),
       new HtmlWebpackPlugin({
+        filename: 'checkout/4.html',
+        template: path.resolve(__dirname, 'src', 'checkout/4.html'),
+      }),
+      new HtmlWebpackPlugin({
         filename: 'guarantee/index.html',
         template: path.resolve(__dirname, 'src', 'guarantee/index.html'),
       }),

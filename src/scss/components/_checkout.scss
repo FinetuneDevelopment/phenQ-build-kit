@@ -1,0 +1,77 @@
+// The checkout process introduced a lot of proprietary stuff.
+// In case Shopify is as inflexible as I susupect, I've added
+// it all here.
+
+// Never used anywhere else
+$colour-mid-grey: #c3c3c3;
+
+// Used for the checkout to make radio buttons ... more chunky
+// Sorry for the horrible selector. Got in an inheritance fight.
+.label-block.label-block.label-block {
+  $block-padding: 10px;
+
+  display: block;
+  padding: $block-padding;
+
+  // Normally, the ::before of the checkbox is inline with the label.
+  // In this context, it's not, so I can stuff an entire Bootstrap
+  // row inside.
+  &::before {
+    left: $block-padding;
+    position: absolute;
+    top: 13px;
+  }
+
+  &::after {
+    left: calc(#{$block-padding} + .3em);
+  }
+}
+
+// The border colour is initially added as a utility class, so needs
+// an !important.
+.form-molecule input:checked ~ .label-block {
+  border-color: $colour-dark-blue !important;
+}
+
+// Radio button position tweak
+.form-molecule input[type="radio"] ~ .label-block:after {
+  top: 18px
+}
+
+// Checkbox position tweak
+.form-molecule input[type="checkbox"] ~ .label-block:after {
+  top: 12px
+}
+
+// Daft
+.form-molecule.faq .border-thin {
+  border-width: 1px;
+}
+
+// If a .form-molecule is used in conjunction with an .faq,
+// it's assumed that the additional inputs inside the
+// .details will form a complete curved box along with the
+// "cap" of the original .form-molecule.
+.form-molecule.faq input:checked ~ .label-block {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius:  0;
+}
+
+// Secure icon, used in form fields
+.back-secure {
+  background: 
+    url('data:image/svg+xml;utf8,<svg
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M24 30a9 9 0 00-9 9v52c0 5 4 9 9 9h52c5 0 9-4 9-9V39c0-5-4-9-9-9H24zm26 25a10 10 0 0110 10 10 10 0 11-20 0 10 10 0 0110-10z" fill="currentColor"/><path d="M36 30c0-31 30-31 30 0" fill="none" stroke="currentColor" stroke-width="5"/></svg>')
+    top 50% right 10px no-repeat;
+  background-size: 15px;
+  padding-right: 30px;
+}
+
+// This is an input style which stacks together with its peers, like bricks in a wall
+.input-brick {
+  border-radius: 0;
+  margin: -1px 0 0;
+}
+
+.radius-small-bl { border-bottom-left-radius:  $radius-small !important; }
+.radius-small-br { border-bottom-right-radius: $radius-small !important; }
