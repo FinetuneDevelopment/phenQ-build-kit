@@ -18,6 +18,13 @@
     transform: translate(-50%, -50%);
   }
 }
+.icon-disk-x-large {
+  height: 90px;
+  width: 90px;
+
+  svg { width: 50px; }
+}
+
 
 // Sizes need to be explicitly set, as these might sit
 // inside Media Object and contain vectors.
@@ -25,12 +32,12 @@
   height: 60px;
   width: 60px;
   
-  svg {width: 37px;}
+  svg { width: 37px; }
 }
 
 .icon-disk-small {
   height: 42px;
   width: 42px;
   
-  svg {width: 22px;}
+  svg { width: 22px; }
 }
