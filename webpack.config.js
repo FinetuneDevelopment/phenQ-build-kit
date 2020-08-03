@@ -183,6 +183,10 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'blog/article/index.html'),
       }),
       new HtmlWebpackPlugin({
+        filename: 'blog/3-day-detox-plan/index.html',
+        template: path.resolve(__dirname, 'src', 'blog/3-day-detox-plan/index.html'),
+      }),
+      new HtmlWebpackPlugin({
         filename: 'faq/index.html',
         template: path.resolve(__dirname, 'src', 'faq/index.html'),
       }),
@@ -275,6 +279,11 @@ const config = function (env, args) {
         {
           from: path.resolve(__dirname, 'src', 'img', 'og'),
           to: path.resolve(__dirname, 'dist', 'img', 'og'),
+          toType: 'dir',
+        },
+        {
+          from: path.resolve(__dirname, 'src', 'img', 'content/blog'),
+          to: path.resolve(__dirname, 'dist', 'img', 'content/blog'),
           toType: 'dir',
         },
       ]),
