@@ -187,6 +187,10 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'blog/3-day-detox-plan/index.html'),
       }),
       new HtmlWebpackPlugin({
+        filename: 'blog/detox-guide/index.html',
+        template: path.resolve(__dirname, 'src', 'blog/detox-guide/index.html'),
+      }),
+      new HtmlWebpackPlugin({
         filename: 'faq/index.html',
         template: path.resolve(__dirname, 'src', 'faq/index.html'),
       }),
