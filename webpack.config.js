@@ -195,6 +195,10 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'blog/nutrition-guide/index.html'),
       }),
       new HtmlWebpackPlugin({
+        filename: 'blog/supplements-guide/index.html',
+        template: path.resolve(__dirname, 'src', 'blog/supplements-guide/index.html'),
+      }),
+      new HtmlWebpackPlugin({
         filename: 'faq/index.html',
         template: path.resolve(__dirname, 'src', 'faq/index.html'),
       }),
