@@ -107,6 +107,7 @@
 
 @media print {
   .block-scroll, .block-scroll-xs {
+    display: block;
     flex-wrap: wrap;
   }
   .block-scroll__child,
