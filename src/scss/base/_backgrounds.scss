@@ -128,7 +128,7 @@
 
   // The content needs to push clear of the imagry, in tablet.
   // BEM naming altered to avoid .bg- inheretence matching
-  .bghome__header { margin-top: 135px; }
+  .bghome__header { margin-top: 200px; }
 }
 
 @include media-breakpoint-down(sm) {
@@ -137,7 +137,7 @@
     background-size: 488px 233px;
   }
 
-  .bghome__header { margin-top: 40px; }
+  .bghome__header { margin-top: 108px; }
 }
 
 .bg-night-girl {

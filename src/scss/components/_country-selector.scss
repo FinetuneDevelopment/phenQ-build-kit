@@ -1,3 +1,59 @@
+/* Currently removed from the site
+              <!-- Phase 2
+                <a href="/cart/" class="btn btn-config" itemprop="name">Cart <strong>2</strong></a>
+                <a href="/profile/" class="btn btn-config" itemprop="name"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M57.8 60.083H42.2C21.653 60.1 4.994 73 4.97 87.015v8.387C4.97 97.1 6.986 100 9.473 100h81.055c2.487 0 4.503-2.902 4.503-4.598v-8.387C95.006 73 78.347 60.083 57.8 60.083zM86.024 92.33h-72.05v-5.315c0-10.638 12.64-19.26 28.234-19.26H57.8c15.593 0 28.234 8.624 28.234 19.26zM50 54.36a27.018 27.018 0 1 0-27.018-27.018A27.018 27.018 0 0 0 50 54.359zm0-45.03a18.012 18.012 0 1 1-18.012 18.012A18.012 18.012 0 0 1 50 9.328z" />
+                  </svg></a>-->
+
+            <li class="form-compact form-compact-nobrd currency-selector">
+              <span class="media">
+                <select id="aelia_cs_currencies" class="media-body input-sm" name="aelia_cs_currency">
+                  <option value="GBP" selected>GBP</option>
+                  <option value="AUD">AUD</option>
+                  <option value="CAD">CAD</option>
+                  <option value="CHF">CHF</option>
+                  <option value="EUR">EUR</option>
+                  <option value="MXN">MXN</option>
+                  <option value="USD">USD</option>
+                </select>
+                <button title="Change Currency" aria-label="Change Currency" class="icon-x-small btn btn-clear kb-focus" data-js="hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M50.003-.148l-8.855 8.84L76.1 43.775H0v12.286h76.1l-34.942 35.09L50.003 100l50.078-50.078z" fill="currentColor"></path>
+                  </svg>
+                </button>
+                <label for="aelia_cs_currencies" class="sr-only">Please select your preferred currency</label>
+              </span>
+            </li>
+            <li class="pos-rel language-selector">
+              <div class="country-selector tooltip tooltip-left" data-js="tooltip">
+                <input type="checkbox" name="country-selector" id="country-selector" class="sr-only">
+                <label for="country-selector" class="country-selector__label">
+                  <span class="fflag ff-md fflag-GB"></span>
+                  <span class="sr-only">United Kingdom</span>
+                </label>
+                <div class="details details-wide details-block small shadow-light radius-medium text-left">
+                  <div class="row list-flat">
+                    <p class="col-6"><a href="https://phenq.fr" lang="fr-FR"><span class="fflag ff-md fflag-FR"></span> &nbsp; Français</a></p>
+                    <p class="col-6"><a href="https://phenq.de" lang="de-DE"><span class="fflag ff-md fflag-DE"></span> &nbsp; Deutsch</a></p>
+                    <p class="col-6"><a href="https://phenq.com.au" lang="en-AU"><span class="fflag ff-md fflag-AU"></span> &nbsp; English (AU)</a></p>
+                    <p class="col-6"><a href="https://phenq.ca" lang="en-CA"><span class="fflag ff-md fflag-CA"></span> &nbsp; English (CA)</a></p>
+                    <p class="col-6"><a href="https://phenq.dk" lang="da-DK"><span class="fflag ff-md fflag-DK"></span> &nbsp; Dansk</a></p>
+                    <p class="col-6"><a href="https://phenq.nl" lang="nl-NL"><span class="fflag ff-md fflag-NL"></span> &nbsp; Nederlands</a></p>
+                    <p class="col-6"><a href="https://phenq.gr" lang="el-GR"><span class="fflag ff-md fflag-GR"></span> &nbsp; Ελληνικα</a></p>
+                    <p class="col-6"><a href="https://phenq.it" lang="it-IT"><span class="fflag ff-md fflag-IT"></span> &nbsp; Italiano</a></p>
+                    <p class="col-6"><a href="https://phenq.pt" lang="pt-BR"><span class="fflag ff-md fflag-PT"></span> &nbsp; Português</a></p>
+                    <p class="col-6"><a href="https://phenq.es" lang="es-ES"><span class="fflag ff-md fflag-ES"></span> &nbsp; Español</a></p>
+                    <p class="col-6"><a href="https://phenq.se" lang="sv-SE"><span class="fflag ff-md fflag-SE"></span> &nbsp; Svenska</a></p>
+                    <p class="col-6"><a href="https://phenq.com" lang="en-US"><span class="fflag ff-md fflag-US"></span> &nbsp; English (US)</a></p>
+                    <p class="col-6"><a href="https://phenq.pl" lang="pl-PL"><span class="fflag ff-md fflag-PL"></span> &nbsp; Polski</a></p>
+                    <p class="col-6"><a href="https://phenq.mx" lang="es-MX"><span class="fflag ff-md fflag-MX"></span> &nbsp; Español (MX)</a></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+*/
+
 @include media-breakpoint-down(sm) {
   // Tooltips are a fixed height. This fudges it so that the tooltip appears in the
   // correct location on mobile.
