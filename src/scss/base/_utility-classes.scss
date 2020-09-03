@@ -149,18 +149,18 @@
 .bdr-bottom { border-bottom: solid 1px $colour-light-grey; }
 
 // Colouring text in arbratory colours
-.txt-bright-blue { color: $colour-bright-blue; }
-.txt-mid-blue    { color: $colour-mid-blue; }
-.txt-dark-blue   { color: $colour-dark-blue; }
-.txt-red         { color: $colour-red; }
-.txt-green       { color: $colour-green; }
-.txt-grey        { color: $colour-grey; }
-.txt-dark-grey   { color: $colour-dark-grey; }
-.txt-white       { color: $colour-white; }
-.txt-off-white   { color: $colour-off-white; }
-.txt-mint        { color: $colour-mint; }
-.txt-lemon       { color: $colour-lemon; }
-.txt-light-grey  { color: $colour-light-grey; }
+.text-bright-blue { color: $colour-bright-blue; }
+.text-mid-blue    { color: $colour-mid-blue; }
+.text-dark-blue   { color: $colour-dark-blue; }
+.text-red         { color: $colour-red; }
+.text-green       { color: $colour-green; }
+.text-grey        { color: $colour-grey; }
+.text-dark-grey   { color: $colour-dark-grey; }
+.text-white       { color: $colour-white; }
+.text-off-white   { color: $colour-off-white; }
+.text-mint        { color: $colour-mint; }
+.text-lemon       { color: $colour-lemon; }
+.text-light-grey  { color: $colour-light-grey; }
 
 .text-left       { text-align: left; }
 .text-center     { text-align: center; }
