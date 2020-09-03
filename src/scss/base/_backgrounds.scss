@@ -109,6 +109,7 @@
 ////////////////////
 .bg-home {
   background: $colour-off-white url(/img/bg/bg-home.jpg) 50% 0 no-repeat;
+  background-size: 1971px 788px;
   color: $colour-dark-blue;
   // This is to ensure that the following content gets pushed down,
   // if there's not enough content to do the job.
@@ -122,6 +123,7 @@
 @include media-breakpoint-down(md) {
   .bg-home {
     background-image: url(/img/bg/bg-home-mobile.jpg);
+    background-size: initial;
     background-position: 50% -28px;
     min-height: 0;
   }

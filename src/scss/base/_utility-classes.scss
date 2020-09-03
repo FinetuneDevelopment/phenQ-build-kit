@@ -252,13 +252,7 @@
 .pos-rel { position: relative; }
 
 // For debug purposes
-.input-radio {
-  -webkit-appearance: radio;
-     -moz-appearance: radio;
-      -ms-appearance: radio;
-       -o-appearance: radio;
-          appearance: radio;
-}
+.input-radio { appearance: radio; }
 
 // This is a small highlight used for wrapping around logos, to keep them in line
 .logo-block {

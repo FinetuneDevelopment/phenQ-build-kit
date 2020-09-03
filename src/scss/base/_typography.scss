@@ -7,12 +7,6 @@ body {
   line-height: 1.4;
 }
 
-@include media-breakpoint-down(sm) {
-  body {
-    font-size: $font-size-mobile;
-  }
-}
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   line-height: 1.1;
@@ -119,4 +113,10 @@ p {margin: 0 0 1em; }
 
 code, pre, kbd {
   font-family: monaco, Consolas, 'Lucida Console', monospace;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px currentColor;
+  margin: 0 0 1em;
 }
