@@ -167,8 +167,8 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'guideline-utility/index.html'),
       }),
       new HtmlWebpackPlugin({
-        filename: 'home/index.html',
-        template: path.resolve(__dirname, 'src', 'home/index.html'),
+        filename: 'guideline-home/index.html',
+        template: path.resolve(__dirname, 'src', 'guideline-home/index.html'),
       }),
       new HtmlWebpackPlugin({
         filename: 'about/index.html',
