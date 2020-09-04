@@ -170,6 +170,12 @@
 .text-breath     { letter-spacing: .08em; }
 .text-tight      { letter-spacing: 0; }
 .text-nowrap     { white-space: nowrap; }
+
+// Unacceptable.
+@include media-breakpoint-down(sm) {
+  .text-left-sm { text-align: left; }
+}
+
 // This class allows buttons to be put together closer than they usually would,
 // for example in a toolbar.
 .toolbar .btn { margin-right: 9px; }
