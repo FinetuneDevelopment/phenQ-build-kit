@@ -1,9 +1,9 @@
 // Generic block scrolling thing
 
 .block-scroll {
-  align-items: stretch;
+  // align-items: stretch;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   // Required, for the touch behaviour
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
