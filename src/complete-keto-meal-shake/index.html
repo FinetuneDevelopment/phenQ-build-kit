@@ -341,7 +341,7 @@
       </div>
     </section>
 
-    <section class="bleed-bisect gutter-medium" aria-label="Ingredient Spotlight" id="ingredients">
+    <section class="bleed-bisect gutter-medium" aria-label="Product Summary">
       <div class="bleed-bisect__child-right bg-dark-blue"></div>
       <div class="container">
         <div class="cta-box radius-big bg-dark-blue">
@@ -367,20 +367,22 @@
 
     <div class="container">
 
-      <section class="gutter-medium" aria-label="Choose your Complete Keto Meal Shake package now">
+      <section class="gutter-medium" aria-label="Free Delivery On All Complete Meal Shake Options">
 
         <header class="text-center">
-          <h2 class="h3 flush">Free Delivery On All <br class="d-xs-none d-md-block"><em>Complete Keto Meal Shake</em> Kit</h2>
+          <h2 class="h3 flush">Free Delivery On All <br class="d-xs-none d-md-block"><em>Complete Keto Meal Shake</em> Options</h2>
           <p class="small legal gutter-small">60-day money-back guarantee</p>
         </header>
 
         <div class="row text-center">
 
-          <section class="col-lg" aria-label="One sachet" itemscope itemtype="http://schema.org/Product">
+          <section class="col-lg" aria-label="One pack" itemscope itemtype="http://schema.org/Product">
             <div class="product-display bg-white shadow-light radius-big">
               <p><img src="/img/content/product-shake-1.png" alt="" class="img-fluid" itemprop="image"></p>
-              <h3 class="h4 heading-bold flush" itemprop="name">1 sachet</h3>
-              <p class="product-display__gsmall">1 month supply</p>
+              <div class="product-display__summary">
+                <h3 class="h4 heading-bold flush" itemprop="name">1 pack</h3>
+                <p class="text-uppercase text-breath">10 servings</p>
+              </div>
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <p class="text-uppercase text-breath">Retail:<del itemprop="highPrice">$79.95</del></p>
                 <p class="h2 type-gotham-medium flush"><span itemprop="priceCurrency">$</span><span itemprop="price">69.95</span></p>
@@ -418,8 +420,10 @@
                 <p class="type-source-bold text-breath text-uppercase flush">Most popular</p>
               </header>
               <p><img src="/img/content/product-shake-2+1.png" alt="" class="img-fluid" itemprop="image"></p>
-              <h3 class="h4 heading-bold flush" itemprop="name">Buy 2, get 1 free</h3>
-              <p class="product-display__gsmall text-uppercase text-breath">Includes 3 months</p>
+              <div class="product-display__summary">
+                <h3 class="h4 heading-bold flush" itemprop="name">Buy 2, get 1 free</h3>
+                <p class="text-uppercase text-breath">30 servings</p>
+              </div>
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <p class="text-uppercase text-breath">Retail:<del itemprop="highPrice">$79.95</del></p>
                 <p class="h2 type-gotham-medium flush"><span itemprop="priceCurrency">$</span><span itemprop="price">69.95</span></p>
@@ -454,10 +458,10 @@
           <section class="col-lg" aria-label="Buy two, get 50% off PhenQ" itemscope itemtype="http://schema.org/Product">
             <div class="product-display bg-white shadow-light radius-big">
               <p><img src="/img/content/product-shake-2+voucher.png" alt="" class="img-fluid" itemprop="image"></p>
-              <h3 class="h4 heading-bold" itemprop="name">Buy 2, get 50% off PhenQ</h3>
-              <!--p class="product-display__gsmall">
-                <span class="text-uppercase text-breath">&nbsp;</span>
-              </p-->
+              <div class="product-display__summary">
+                <h3 class="h4 heading-bold flush" itemprop="name">Buy 2, get 50% off PhenQ</h3>
+                <p class="text-uppercase text-breath">90 servings</p>
+              </div>
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <p class="text-uppercase text-breath">Retail:<del itemprop="highPrice">$79.95</del></p>
                 <p class="h2 type-gotham-medium flush"><span itemprop="priceCurrency">$</span><span itemprop="price">69.95</span></p>
@@ -492,6 +496,21 @@
         </div>
       </section>
 
+    </div>
+
+    <section class="bg-light-grey v-pad-large gutter-large" aria-label="60 Day Money Back Guarantee">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h2 class="h3">60 Day Money Back Guarantee</h2>
+            <p>Each pack will last 10 days and the longer you are in ketosis the more benefits you’ll see. So we provide a 60 Day Money Back Guarantee. If you're not completely happy, with the results, we'll refund you.</p>
+            <p class="flush"><a href="/guarantee/" class="btn btn-primary">Find out more<span class="sr-only"> about our 60 Day Money Back Guarantee</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+
       <section aria-label="If You Have Questions, We Have Answers" class="gutter-medium" id="faq">
         <h2 class="h3">If You Have Questions, <br class="d-none d-sm-block"><em>We Have Answers</em></h2>
         <div class="row">
@@ -506,6 +525,66 @@
             <div class="faq" itemscope itemtype="http://schema.org/Question">
               <input type="radio" name="faq" id="faq1" class="sr-only">
               <label for="faq1" class="row h5 v-pad-small" data-js="label-toggle">
+                <span class="h5 col-10" itemprop="text">Can I mix this with Milk?</span>
+                <span class="col-2 text-right">
+                  <span class="h4 type-gotham-medium faq__icon">+</span>
+                </span>
+              </label>
+              <div class="details row" role="region" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+                <div class="col-sm-10 col-11" itemprop="text">
+                  <p class="lead">We recommend water or plant milk but you could mix it with milk. Just remember to use whole milk for the higher fat content but watch out for amount of whole milk you use. One cup of whole milk contains 12g of carbohydrates.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq" itemscope itemtype="http://schema.org/Question">
+              <input type="radio" name="faq" id="faq2" class="sr-only">
+              <label for="faq2" class="row h5 v-pad-small" data-js="label-toggle">
+                <span class="h5 col-10" itemprop="text">How long should I stay in Ketosis for to benefit?</span>
+                <span class="col-2 text-right">
+                  <span class="h4 type-gotham-medium faq__icon">+</span>
+                </span>
+              </label>
+              <div class="details row" role="region" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+                <div class="col-sm-10 col-11" itemprop="text">
+                  <p class="lead">The first two to six weeks of keto diet is the adaption phase, where your body is getting use to relying on fat versus glucose or carbs for energy. To see the best results we really recommend you follow a keto diet for 3 months.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq" itemscope itemtype="http://schema.org/Question">
+              <input type="radio" name="faq" id="faq3" class="sr-only">
+              <label for="faq3" class="row h5 v-pad-small" data-js="label-toggle">
+                <span class="h5 col-10" itemprop="text">Can I take this as my only meal every day?</span>
+                <span class="col-2 text-right">
+                  <span class="h4 type-gotham-medium faq__icon">+</span>
+                </span>
+              </label>
+              <div class="details row" role="region" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+                <div class="col-sm-10 col-11" itemprop="text">
+                  <p class="lead">Although it is a complete meal within a shake, we do recommend it become part of a wider ketosis diet plan.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq" itemscope itemtype="http://schema.org/Question">
+              <input type="radio" name="faq" id="faq4" class="sr-only">
+              <label for="faq4" class="row h5 v-pad-small" data-js="label-toggle">
+                <span class="h5 col-10" itemprop="text">Can I take this with PhenQ?</span>
+                <span class="col-2 text-right">
+                  <span class="h4 type-gotham-medium faq__icon">+</span>
+                </span>
+              </label>
+              <div class="details row" role="region" itemprop="suggestedAnswer acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+                <div class="col-sm-10 col-11" itemprop="text">
+                  <p class="lead">CONTENT TO COME</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq" itemscope itemtype="http://schema.org/Question">
+              <input type="radio" name="faq" id="faq5" class="sr-only">
+              <label for="faq5" class="row h5 v-pad-small" data-js="label-toggle">
                 <span class="h5 col-10" itemprop="text">What is ketosis and why does it matter?</span>
                 <span class="col-2 text-right">
                   <span class="h4 type-gotham-medium faq__icon">+</span>
@@ -519,8 +598,8 @@
             </div>
 
             <div class="faq" itemscope itemtype="http://schema.org/Question">
-              <input type="radio" name="faq" id="faq2" class="sr-only">
-              <label for="faq2" class="row h5 v-pad-small" data-js="label-toggle">
+              <input type="radio" name="faq" id="faq6" class="sr-only">
+              <label for="faq6" class="row h5 v-pad-small" data-js="label-toggle">
                 <span class="h5 col-10" itemprop="text">What does the Keto Meal Shake help you with?</span>
                 <span class="col-2 text-right">
                   <span class="h4 type-gotham-medium faq__icon">+</span>
@@ -535,8 +614,8 @@
             </div>
 
             <div class="faq" itemscope itemtype="http://schema.org/Question">
-              <input type="radio" name="faq" id="faq4" class="sr-only">
-              <label for="faq4" class="row h5 v-pad-small" data-js="label-toggle">
+              <input type="radio" name="faq" id="faq7" class="sr-only">
+              <label for="faq7" class="row h5 v-pad-small" data-js="label-toggle">
                 <span class="h5 col-10" itemprop="text">What’s in it?</span>
                 <span class="col-2 text-right">
                   <span class="h4 type-gotham-medium faq__icon">+</span>
@@ -550,8 +629,8 @@
             </div>
 
             <div class="faq" itemscope itemtype="http://schema.org/Question">
-              <input type="radio" name="faq" id="faq5" class="sr-only">
-              <label for="faq5" class="row h5 v-pad-small" data-js="label-toggle">
+              <input type="radio" name="faq" id="faq8" class="sr-only">
+              <label for="faq8" class="row h5 v-pad-small" data-js="label-toggle">
                 <span class="h5 col-10" itemprop="text">How / when do you take it?</span>
                 <span class="col-2 text-right">
                   <span class="h4 type-gotham-medium faq__icon">+</span>
@@ -568,8 +647,8 @@
             </div>
 
             <div class="faq" itemscope itemtype="http://schema.org/Question">
-              <input type="radio" name="faq" id="faq6" class="sr-only">
-              <label for="faq6" class="row h5 v-pad-small" data-js="label-toggle">
+              <input type="radio" name="faq" id="faq9" class="sr-only">
+              <label for="faq9" class="row h5 v-pad-small" data-js="label-toggle">
                 <span class="h5 col-10" itemprop="text">Why this Keto shake vs competitors?</span>
                 <span class="col-2 text-right">
                   <span class="h4 type-gotham-medium faq__icon">+</span>

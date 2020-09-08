@@ -36,4 +36,5 @@ $product-padding-top: 50px;
 // same space as one, in very specific circumstances.
 @include media-breakpoint-up(lg) {
   .product-display__gsmall { min-height: 3.1em; }
+  .product-display__summary { min-height: 6em; }
 }
