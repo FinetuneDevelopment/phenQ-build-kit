@@ -128,7 +128,7 @@
 }
 
 @media print {
-  .bg-home { min-height: 0; }
+  .bg-home, .bg-keto-shake { min-height: 0; }
 }
 
 @include media-breakpoint-down(md) {
@@ -152,6 +152,26 @@
 
   .bghome__header { margin-top: 108px; }
 }
+
+.bg-keto-shake {
+  background: $colour-off-white url(/img/bg/bg-keto-shake.jpg) 50% 0 no-repeat;
+  background-size: 1971px 788px;
+  color: $colour-dark-blue;
+  // This is to ensure that the following content gets pushed down,
+  // if there's not enough content to do the job.
+  min-height: 800px;
+}
+
+@include media-breakpoint-down(md) {
+  .bg-keto-shake {
+    background-image: url(/img/bg/bg-keto-shake-mobile.jpg);
+    background-size: initial;
+    background-position: 50% -28px;
+    min-height: 0;
+  }
+}
+
+
 
 .bg-phenq-bottle-reflection {
   background: #018DC9 url(/img/bg/bg-phenq-bottle-reflection.jpg) 50% 100% no-repeat;
