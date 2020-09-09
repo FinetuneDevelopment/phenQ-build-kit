@@ -94,11 +94,26 @@
 }
 
 // These are light colours, broadly speaking
-.bg-white      { background: $colour-white; }
-.bg-off-white  { background: $colour-off-white; }
-.bg-mint       { background: $colour-mint; }
-.bg-lemon      { background: $colour-lemon; }
-.bg-light-grey { background: $colour-light-grey; }
+.bg-white {
+  background: $colour-white;
+  .peekaboo-target::after { color: $colour-white;}
+}
+.bg-off-white {
+  background: $colour-off-white;
+  .peekaboo-target::after { color: $colour-off-white;}
+}
+.bg-mint {
+  background: $colour-mint;
+  .peekaboo-target::after { color: $colour-mint;}
+}
+.bg-lemon {
+  background: $colour-lemon;
+  .peekaboo-target::after { color: $colour-lemon;}
+}
+.bg-light-grey {
+  background: $colour-light-grey;
+  .peekaboo-target::after { color: $colour-light-grey;}
+}
 .bg-white, .bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey,
 .bg-home {
     color: $colour-dark-blue;

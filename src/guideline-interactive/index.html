@@ -349,6 +349,132 @@
 
     </section>
 
+    <section class="gutter-medium" aria-label="Peekaboo">
+      <h2>Peekaboo</h2>
+
+      <div class="row">
+
+        <section class="col-md" aria-label="Description">
+          <div class="cta-box radius-medium bg-mint">
+            <input type="checkbox" name="description" id="description" class="sr-only peekaboo-trigger">
+            <div class="peekaboo-target">
+              <h3>Description</h3>
+              <p>Peekaboo panels allow the addition of large amounts of content into the page, most of which is hidden away.</p>
+              <p>The user is able to see a few lines of the content, before it fades out into the background colour.</p>
+              <p>Users can toggle this extra content on and off with a button at the bottom of the panel.</p>
+              <p>The fade at the bottom of the panel should match that of any solid background colour in use on the site.</p>
+            </div>
+            <p class="lead peekaboo-switch-dad text-center">
+              <label for="description">
+                <span class="btn btn-icon icon-x-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Toggle content">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </span>
+              </label>
+            </p>
+          </div>
+        </section>
+
+        <section class="col-md" aria-label="Markup">
+          <div class="cta-box radius-medium bg-lemon">
+            <input type="checkbox" name="markup" id="markup" class="sr-only peekaboo-trigger">
+            <div class="peekaboo-target">
+              <h3>Markup</h3>
+              <p>An <code>input</code> type <code>checkbox</code> controls the toggling of the panel (the functionality would presumably work with <code>radio</code>, but this is untested. The input should appear first in the markup.</p>
+              <p>A following sibling with the class <code>peekaboo-target</code> contains the content to be hidden. This will have a max-height, so there will need to be sufficient content for the excess to be hidden.</p>
+              <p>A second following sibling with the class <code>peekaboo-switch-dad</code> contains a label tag which triggers the change in state in the checkbox. This label tag can be styled in any required way but note that the CSS will add text using <code>before</code> and update that text with the current state of the peekaboo panel.</p>
+              <p>The <code>ID</code> used to trigger the checkbox can be any valid string - this does not appear in the CSS.</p>
+            </div>
+            <p class="lead peekaboo-switch-dad text-center">
+              <label for="markup">
+                <span class="btn btn-icon icon-x-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Toggle content">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </span>
+              </label>
+            </p>
+          </div>
+        </section>
+
+      </div>
+      <div class="row">
+
+        <section class="col-md" aria-label="Image example">
+          <div class="cta-box radius-medium bg-grey">
+            <input type="checkbox" name="image" id="image" class="sr-only peekaboo-trigger">
+            <div class="peekaboo-target">
+              <h3>Image example</h3>
+              <p class="text-center"><img src="/img/content/img-weights-women.jpg" alt=""></p>
+              <p class="text-center"><img src="/img/content/img-woman-jumping.jpg" alt=""></p>
+              <p class="text-center"><img src="/img/content/img-yoga.jpg" alt=""></p>
+            </div>
+            <p class="lead peekaboo-switch-dad text-center">
+              <label for="image">
+                <span class="btn btn-icon icon-x-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Toggle content">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </span>
+              </label>
+            </p>
+          </div>
+        </section>
+
+        <section class="col-md" aria-label="Table example">
+          <div class="cta-box radius-medium bg-bright-blue">
+            <input type="checkbox" name="table" id="table" class="sr-only peekaboo-trigger">
+            <div class="peekaboo-target">
+              <h3>Table example</h3>
+              <table>
+                <caption>Classnames in peekaboo</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Class name</th>
+                    <th scope="col">Purpose</th>
+                    <th scope="col">Markup position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><code>peekaboo-trigger</code></th>
+                    <td>Added to the checkbox or radio button which controls the showing and hiding</td>
+                    <td>First</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><code>peekaboo-target</code></th>
+                    <td>Added to the container for the content which is to be hidden</td>
+                    <td>Doesn't matter</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><code>peekaboo-switch-dad</code></th>
+                    <td>Added to the container for the label tag which controls the checkbox or radio button</td>
+                    <td>Doesn't matter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="lead peekaboo-switch-dad text-center">
+              <label for="table">
+                <span class="btn btn-icon icon-x-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Toggle content">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  </svg>
+                </span>
+              </label>
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+
   </main>
 </body>
 
