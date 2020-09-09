@@ -1,7 +1,12 @@
 // Height added for IE11. Assumes square icons, I guess, but will resize vectors inside the viewBox.
-.icon-x-small svg {
-  height: 14px;
-  width: 14px;
+.icon-x-small {
+	font-size: 30px;
+	text-align: center;
+
+	svg {
+		height: 14px;
+		width: 14px;
+	}
 }
 
 .icon-small svg   {
@@ -55,7 +60,7 @@
 }
 
 // Arrows, in both square and rounded style.
-   .sh-arrow-right, .sh-arrow-right-round, .sh-arrow-left, .sh-arrow-left-round {
+.sh-arrow-right, .sh-arrow-right-round, .sh-arrow-left, .sh-arrow-left-round {
 	background: $colour-dark-blue;
 	height: 2em;
 	margin: 7em 1em 7em 0;

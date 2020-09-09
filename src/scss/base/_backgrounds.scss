@@ -1,13 +1,34 @@
 // These are dark colours, broadly speaking
-.bg-bright-blue      { background: $colour-bright-blue; }
-.bg-mid-blue         { background: $colour-mid-blue; }
-.bg-dark-blue        { background: $colour-dark-blue; }
+.bg-bright-blue {
+  background: $colour-bright-blue;
+  .peekaboo-target::after { color: $colour-bright-blue;}
+}
+.bg-mid-blue {
+  background: $colour-mid-blue;
+  .peekaboo-target::after { color: $colour-mid-blue;}
+}
+.bg-dark-blue {
+  background: $colour-dark-blue;
+  .peekaboo-target::after { color: $colour-dark-blue;}
+}
 // Form states
-.bg-red              { background: $colour-red; }
-.bg-green            { background: $colour-green; }
+.bg-red {
+  background: $colour-red;
+  .peekaboo-target::after { color: $colour-red;}
+}
+.bg-green {
+  background: $colour-green;
+  .peekaboo-target::after { color: $colour-green;}
+}
 // Used in various places
-.bg-grey             { background: $colour-grey; }
-.bg-dark-grey        { background: $colour-dark-grey; }
+.bg-grey {
+  background: $colour-grey;
+  .peekaboo-target::after { color: $colour-grey;}
+}
+.bg-dark-grey {
+  background: $colour-dark-grey;
+  .peekaboo-target::after { color: $colour-dark-grey;}
+}
 // Gradients
 .bg-grad-light-blue  { background: $grad-light-blue; }
 .bg-grad-mid-blue    { background: $grad-mid-blue; }
@@ -66,16 +87,6 @@
   }
 
   .border-thin { border-color: inherit; }
-
-  // This is very clever and I deserve a prize.
-  // (note that SVGs need to be put together in a certain way)
-  [stroke="none"], [fill="#273583"], [fill^="url"] {
-    fill: inherit;
-  }
-
-  [fill="none"], [stroke="#273583"] {
-    stroke: inherit;
-  }
 
   .quote-banner footer, .form-compact {
     border-color: inherit;

@@ -1,0 +1,46 @@
+// This gives the user a wee peek at some content, which they need to click
+// on a doofer to expand, so they can see it all.
+// Markup structure:
+// <input type="checkbox" name="EXAMPLE" id="EXAMPLE" class="sr-only peekaboo-trigger">
+// <p class="lead peekaboo-switch-dad"><label for="EXAMPLE">Show more</label></p>
+// <div class="peekaboo-target">Peerkaboo content goes here</div>
+
+// Container for the content you want to tease
+.peekaboo-target {
+    max-height: 20em;
+    overflow: hidden;
+    position: relative;
+
+    // Fade
+    &::after {
+        background: linear-gradient(0deg, currentColor 20%, transparent 100%); 
+        bottom: 0;
+        content: "";
+        height: 5em;
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+// Switch, closed
+.peekaboo-switch-dad label {
+    cursor: pointer;
+
+    svg { transition: all .2s; }
+    &::before { content: "Show more "; }
+}
+
+// Switch, open
+.peekaboo-trigger:checked ~ .peekaboo-switch-dad {
+    label svg { transform: rotate(45deg) translate(-4px, -4px); }
+    label:before { content: "Hide "; }
+}
+
+// Showing all of the content
+.peekaboo-trigger:checked ~ .peekaboo-target {
+    max-height: none;
+
+    &::after { z-index: -1; }
+}
+
