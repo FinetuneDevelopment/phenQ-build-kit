@@ -117,14 +117,6 @@ const config = function (env, args) {
         template: path.resolve(__dirname, 'src', 'index.html'),
         favicon: path.resolve(__dirname, 'src/img/favicon', 'favicon.ico'),
       }),
-      new HtmlWebpackPlugin({
-        filename: 'browserconfig.xml',
-        template: path.resolve(__dirname, 'src', 'browserconfig.xml'),
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'site.webmanifest',
-        template: path.resolve(__dirname, 'src', 'site.webmanifest'),
-      }),
       // Design guideline pages
       new HtmlWebpackPlugin({
         filename: 'guideline-typeface/index.html',
@@ -276,9 +268,14 @@ const config = function (env, args) {
       }),
       new CopyWebpackPlugin([
         {
-          from: path.resolve(__dirname, 'src', 'img', 'content'),
-          to: path.resolve(__dirname, 'dist', 'img', 'content'),
-          toType: 'dir',
+          from: path.resolve(__dirname, 'src','browserconfig.xml'),
+          to: path.resolve(__dirname, 'dist','browserconfig.xml'),
+          toType: 'file',
+        },
+        {
+          from: path.resolve(__dirname, 'src', 'site.webmanifest'),
+          to: path.resolve(__dirname, 'dist', 'site.webmanifest'),
+          toType: 'file',
         },
         // Looks like each time a new folder is added inside img, a new rule will need to be added here.
         {
