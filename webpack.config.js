@@ -294,8 +294,13 @@ const config = function (env, args) {
           toType: 'dir',
         },
         {
-          from: path.resolve(__dirname, 'src', 'img', 'og'),
-          to: path.resolve(__dirname, 'dist', 'img', 'og'),
+          from: path.resolve(__dirname, 'src', 'img/og'),
+          to: path.resolve(__dirname, 'dist', 'img/og'),
+          toType: 'dir',
+        },
+        {
+          from: path.resolve(__dirname, 'src', 'img','content'),
+          to: path.resolve(__dirname, 'dist', 'img','content'),
           toType: 'dir',
         },
         {

@@ -26,6 +26,7 @@
 // Switch, closed
 .peekaboo-switch-dad label {
     cursor: pointer;
+    position: relative;
 
     svg { transition: all .2s; }
     &::before { content: "Show more "; }
@@ -35,6 +36,18 @@
 .peekaboo-trigger:checked ~ .peekaboo-switch-dad {
     label svg { transform: rotate(45deg) translate(-4px, -4px); }
     label:before { content: "Hide "; }
+}
+
+// Switch, focused
+.peekaboo-trigger:focus ~ .peekaboo-switch-dad label::after {
+    background: currentColor;
+    bottom: 0;
+    content: "";
+    height: .1em;
+    left: 0;
+    opacity: .3;
+    position: absolute;
+    right: 0;
 }
 
 // Showing all of the content
