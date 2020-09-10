@@ -3,8 +3,8 @@ table {
   width: 100%;
 }
 
-tr :first-child { padding-left:  0; }
-tr :last-child  { padding-right: 0; }
+tr > :first-child { padding-left:  0; }
+tr > :last-child  { padding-right: 0; }
 
 caption { text-align: left; }
 
