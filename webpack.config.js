@@ -254,6 +254,10 @@ const config = function (env, args) {
         filename: 'cart/index.html',
         template: path.resolve(__dirname, 'src', 'cart/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'home/index.html',
+        template: path.resolve(__dirname, 'src', 'home/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
