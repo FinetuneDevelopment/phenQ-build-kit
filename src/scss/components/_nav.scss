@@ -18,7 +18,7 @@
     // Not ideal, but I was having an inheritance fight
     // with the background delcaration in the rule
     // above (this class is toggled with JavaScript).
-    &.bg-light-grey { background: $colour-light-grey; }
+    &.bt-light-grey { background: $colour-light-grey; }
   }
 
   &.sticky-show {

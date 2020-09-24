@@ -95,11 +95,11 @@ export default function formFactory() {
         if (navCheckbox.checked) {
           navLabel.setAttribute('aria-expanded', 'true');
           theBody.style.overflow = 'hidden';
-          navDav.classList.add('bg-light-grey', 'sticky-show');
+          navDav.classList.add('bt-light-grey', 'sticky-show');
         } else {
           navLabel.setAttribute('aria-expanded', 'false');
           theBody.style.overflow = 'visible';
-          navDav.classList.remove('bg-light-grey');
+          navDav.classList.remove('bt-light-grey');
         }
       }
       // The navigation is in desktop mode

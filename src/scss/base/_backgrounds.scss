@@ -94,46 +94,37 @@
 }
 
 // These are light colours, broadly speaking
-.bg-white {
+.bt-white {
   background: $colour-white;
   .peekaboo-target::after { color: $colour-white;}
 }
-.bg-off-white {
+.bt-off-white {
   background: $colour-off-white;
   .peekaboo-target::after { color: $colour-off-white;}
 }
-.bg-mint {
+.bt-mint {
   background: $colour-mint;
   .peekaboo-target::after { color: $colour-mint;}
 }
-.bg-lemon {
+.bt-lemon {
   background: $colour-lemon;
   .peekaboo-target::after { color: $colour-lemon;}
 }
-.bg-light-grey {
+.bt-light-grey {
   background: $colour-light-grey;
   .peekaboo-target::after { color: $colour-light-grey;}
 }
-.bg-white, .bg-off-white, .bg-mint, .bg-lemon, .bg-light-grey,
-.bg-home {
+.bt-white, .bt-off-white, .bt-mint, .bt-lemon, .bt-light-grey,
+.bt-home {
     color: $colour-dark-blue;
 
     a { color: inherit; }
-
-    [stroke="none"], [fill="#273583"] {
-      fill: $colour-dark-blue;
-    }
-
-    [fill="none"], [stroke="#273583"] {
-      stroke: $colour-dark-blue;
-    }
-
 }
 
 ////////////////////
 // Background images
 ////////////////////
-.bg-home {
+.bt-home {
   background: $colour-off-white url(/img/bg/bg-home.jpg) 50% 0 no-repeat;
   background-size: 1971px 788px;
   color: $colour-dark-blue;
@@ -143,11 +134,11 @@
 }
 
 @media print {
-  .bg-home, .bg-keto-shake { min-height: 0; }
+  .bt-home, .bt-keto-shake { min-height: 0; }
 }
 
 @include media-breakpoint-down(md) {
-  .bg-home {
+  .bt-home {
     background-image: url(/img/bg/bg-home-mobile.jpg);
     background-size: initial;
     background-position: 50% -28px;
@@ -160,7 +151,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .bg-home {
+  .bt-home {
     background-position: 50% 0;
     background-size: 488px 233px;
   }
@@ -168,7 +159,7 @@
   .bghome__header { margin-top: 108px; }
 }
 
-.bg-keto-shake {
+.bt-keto-shake {
   background: $colour-off-white url(/img/bg/bg-keto-shake.jpg) 50% 0 no-repeat;
   background-size: 1971px 788px;
   color: $colour-dark-blue;
@@ -178,7 +169,7 @@
 }
 
 @include media-breakpoint-down(md) {
-  .bg-keto-shake {
+  .bt-keto-shake {
     background-image: url(/img/bg/bg-keto-shake-mobile.jpg);
     background-size: initial;
     background-position: 50% -28px;
@@ -186,14 +177,12 @@
   }
 }
 
-
-
 .bg-phenq-bottle-reflection {
   background: #018DC9 url(/img/bg/bg-phenq-bottle-reflection.jpg) 50% 100% no-repeat;
   background-size: contain;
 }
 
-.bg-mealshake {
+.bt-mealshake {
   background: #C5D6F0 url(/img/bg/bg-mealshake.jpg) 50% 100% no-repeat;
   background-size: contain;
 }
