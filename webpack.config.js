@@ -258,6 +258,14 @@ const config = function (env, args) {
         filename: 'home/index.html',
         template: path.resolve(__dirname, 'src', 'home/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'fr/blog/index.html',
+        template: path.resolve(__dirname, 'src', 'fr/blog/index.html'),
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'fr/blog/exercices-pour-bruler-les-graisses/index.html',
+        template: path.resolve(__dirname, 'src', 'fr/blog/exercices-pour-bruler-les-graisses/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
