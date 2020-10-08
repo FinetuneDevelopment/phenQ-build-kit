@@ -290,6 +290,10 @@ const config = function (env, args) {
         filename: 'fr/blog/meilleurs-collations-hypocaloriques/index.html',
         template: path.resolve(__dirname, 'src', 'fr/blog/meilleurs-collations-hypocaloriques/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'fr/blog/rester-motive-pour-la-perte-de-poids/index.html',
+        template: path.resolve(__dirname, 'src', 'fr/blog/rester-motive-pour-la-perte-de-poids/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
