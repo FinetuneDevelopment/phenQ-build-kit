@@ -278,6 +278,10 @@ const config = function (env, args) {
         filename: 'fr/blog/reduire-naturellement-les-niveaux-de-cortisol/index.html',
         template: path.resolve(__dirname, 'src', 'fr/blog/reduire-naturellement-les-niveaux-de-cortisol/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'fr/blog/comment-lire-les-etiquettes/index.html',
+        template: path.resolve(__dirname, 'src', 'fr/blog/comment-lire-les-etiquettes/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
