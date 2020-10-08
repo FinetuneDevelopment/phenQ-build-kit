@@ -286,6 +286,10 @@ const config = function (env, args) {
         filename: 'fr/blog/combien-de-calories-devrais-je-manger-pour-perdre-du-poids/index.html',
         template: path.resolve(__dirname, 'src', 'fr/blog/combien-de-calories-devrais-je-manger-pour-perdre-du-poids/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'fr/blog/meilleurs-collations-hypocaloriques/index.html',
+        template: path.resolve(__dirname, 'src', 'fr/blog/meilleurs-collations-hypocaloriques/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
