@@ -282,6 +282,10 @@ const config = function (env, args) {
         filename: 'fr/blog/comment-lire-les-etiquettes/index.html',
         template: path.resolve(__dirname, 'src', 'fr/blog/comment-lire-les-etiquettes/index.html'),
       }),
+      new HtmlWebpackPlugin({
+        filename: 'fr/blog/combien-de-calories-devrais-je-manger-pour-perdre-du-poids/index.html',
+        template: path.resolve(__dirname, 'src', 'fr/blog/combien-de-calories-devrais-je-manger-pour-perdre-du-poids/index.html'),
+      }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
